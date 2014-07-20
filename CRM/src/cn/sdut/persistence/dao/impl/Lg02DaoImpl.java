@@ -12,8 +12,6 @@ import cn.sdut.persistence.support.HibernatePageDaoSupport;
 import cn.sdut.system.Tools;
 
 public class Lg02DaoImpl extends HibernatePageDaoSupport implements Lg02Dao {
-    private Map dto=null;
-
     @Override
     public List query() throws Exception
     {
@@ -33,14 +31,14 @@ public class Lg02DaoImpl extends HibernatePageDaoSupport implements Lg02Dao {
          * 员工编号，员工姓名，员工部门，员工状态，入职时间
          */
         this.hql = new StringBuilder()
-        .append("select new map(a.lg2102 as lg2102,c.lg2102 as lg2102,a.lg0202 as lg0202,d.lg0402 as lg0402,")
+        .append("select new map(c.lg2102 as lg2102,a.lg0202 as lg0202,d.lg0402 as lg0402,")
         .append("               b.fname as cnlg0207,to_char(a.lg0208,'YYYY-MM-DD') as lg0208")
         .append(")")
-        .append("  from lg02 a,syscode b,lg21 c,lg04 d")
-        .append(" where a.lg0401=d.lg0401")
+        .append("  from Lg02 a,Syscode b,Lg21 c,Lg04 d")
+        .append(" where a.lg04.lg0401=d.lg0401")
         .append("   and c.lg2101=a.lg2101")
         .append("   and a.lg0207=b.fvalue")
-        .append("   and b.fcode='llg01'")
+        .append("   and b.fcode='LLG01'")
         ;
         //员工编号
         if(this.checkVal(lg2102))
@@ -78,7 +76,7 @@ public class Lg02DaoImpl extends HibernatePageDaoSupport implements Lg02Dao {
             this.hql.append(" and a.elg0208<=?");
             this.pars.add(elg0208);
         }
-        this.hql.append(" order by a.lg2102");
+        this.hql.append(" order by c.lg2102");
         return this.queryForList();
     }
 	
