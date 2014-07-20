@@ -4,8 +4,6 @@ String path = request.getContextPath();
 %>
 <html>
   <head>
-  
-  
   </head>
   <body>
   </body>
