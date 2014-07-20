@@ -6,7 +6,7 @@
 -->
 <hibernate-mapping>
     <class name="cn.sdut.persistence.bean.Lg04" table="LG04" schema="USER001">
-        <id name="lg0401" type="java.math.long">
+        <id name="lg0401" type="long">
             <column name="LG0401" precision="22" scale="0" />
             <generator class="sequence" />
         </id>
