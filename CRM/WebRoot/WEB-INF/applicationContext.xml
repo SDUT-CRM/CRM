@@ -8,6 +8,10 @@
  	<import resource="DBInfo.xml"/>
     <import resource="AopTransaction3.x.xml"/>
     <import resource="SYS.xml"/>
+  
+    <bean id="lg05dao" class="cn.sdut.persistence.dao.impl.Lg05DaoImpl">
+      <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
     
     <bean id="lg21dao" class="cn.sdut.persistence.dao.impl.Lg21DaoImpl">
       <property name="sessionFactory" ref="sessionFactory"/>
