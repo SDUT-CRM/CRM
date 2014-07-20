@@ -11,8 +11,6 @@ public interface Lg06Dao {
 	
 	public List query()throws Exception;
 	
-	public Map findById()throws Exception;
-	
 	public boolean modify()throws Exception;
 	
 	public boolean delete()throws Exception;
