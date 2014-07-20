@@ -22,13 +22,13 @@ public class Lg06DaoTest{
 	public static void main(String[] args) {
 		dao.setMapDto(dto);
 		try {
-			new Lg06DaoTest().addTest();
+			addTest();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	public void addTest() throws Exception{
+	public static void addTest() throws Exception{
 /*		Lg21 lg21 = new Lg21();
 		Lg01 lg01 = new Lg01();
 		Lg02 lg02 = new Lg02();

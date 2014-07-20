@@ -20,19 +20,10 @@ public class Lg02DaoTest {
 	public static void main(String[] args) {
 		dao.setMapDto(dto);
 		try {
-			getInstanceTest();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
-	private static void getInstanceTest() throws Exception{
-		dto.put("lg0401", "2");
-		Lg04Dao dao1 = act.getBean("lg04dao", Lg04Dao.class);
-		dao1.setMapDto(dto);
-		Lg04 lg04 = dao1.getInstance();
-		dto.put("lg04", lg04);
-		dto.put("lg2101", "0");
-		Lg02 lg02 = dao.getInstance();
-	}
 }
