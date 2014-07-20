@@ -1,18 +1,13 @@
 package cn.sdut.persistence.bean;
 
-import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
-
-/**
- * Lg21 entity. @author MyEclipse Persistence Tools
- */
 
 public class Lg21 implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal lg2101;
+	private long lg2101;
 	private String lg2102;
 	private String lg2103;
 	private String lg2104;
@@ -21,39 +16,13 @@ public class Lg21 implements java.io.Serializable {
 	private Set lg02s = new HashSet(0);
 	private Set lg01s = new HashSet(0);
 
-	// Constructors
-
-	/** default constructor */
-	public Lg21() {
-	}
-
-	/** minimal constructor */
-	public Lg21(BigDecimal lg2101, String lg2102, String lg2103) {
-		this.lg2101 = lg2101;
-		this.lg2102 = lg2102;
-		this.lg2103 = lg2103;
-	}
-
-	/** full constructor */
-	public Lg21(BigDecimal lg2101, String lg2102, String lg2103, String lg2104,
-			String lg2105, Set lg03s, Set lg02s, Set lg01s) {
-		this.lg2101 = lg2101;
-		this.lg2102 = lg2102;
-		this.lg2103 = lg2103;
-		this.lg2104 = lg2104;
-		this.lg2105 = lg2105;
-		this.lg03s = lg03s;
-		this.lg02s = lg02s;
-		this.lg01s = lg01s;
-	}
-
 	// Property accessors
 
-	public BigDecimal getLg2101() {
+	public long getLg2101() {
 		return this.lg2101;
 	}
 
-	public void setLg2101(BigDecimal lg2101) {
+	public void setLg2101(long lg2101) {
 		this.lg2101 = lg2101;
 	}
 

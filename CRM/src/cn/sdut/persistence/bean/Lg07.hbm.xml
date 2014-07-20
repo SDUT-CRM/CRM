@@ -6,9 +6,9 @@
 -->
 <hibernate-mapping>
     <class name="cn.sdut.persistence.bean.Lg07" table="LG07" schema="USER001">
-        <id name="lg0701" type="java.math.BigDecimal">
+        <id name="lg0701" type="java.math.long">
             <column name="LG0701" precision="22" scale="0" />
-            <generator class="assigned" />
+            <generator class="sequence" />
         </id>
         <many-to-one name="lg03" class="cn.sdut.persistence.bean.Lg03" fetch="select">
             <column name="LG2101" precision="22" scale="0" not-null="true" />
@@ -22,22 +22,22 @@
         <property name="lg0704" type="java.lang.Double">
             <column name="LG0704" precision="10" not-null="true" />
         </property>
-        <property name="lg0705" type="java.math.BigDecimal">
+        <property name="lg0705" type="java.math.long">
             <column name="LG0705" precision="22" scale="0" not-null="true" />
         </property>
-        <property name="lg0706" type="java.sql.Timestamp">
+        <property name="lg0706" type="java.util.Date">
             <column name="LG0706" length="7" not-null="true" />
         </property>
         <property name="lg0707" type="java.lang.String">
             <column name="LG0707" not-null="true" />
         </property>
-        <property name="lg0708" type="java.sql.Timestamp">
+        <property name="lg0708" type="java.util.Date">
             <column name="LG0708" length="7" not-null="true" />
         </property>
-        <property name="lg0709" type="java.sql.Timestamp">
+        <property name="lg0709" type="java.util.Date">
             <column name="LG0709" length="7" not-null="true" />
         </property>
-        <property name="lg0710" type="java.sql.Timestamp">
+        <property name="lg0710" type="java.util.Date">
             <column name="LG0710" length="7" not-null="true" />
         </property>
         <set name="lg08s" inverse="true">

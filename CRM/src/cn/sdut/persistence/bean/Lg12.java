@@ -1,52 +1,22 @@
 package cn.sdut.persistence.bean;
 
-import java.math.BigDecimal;
-
-/**
- * Lg12 entity. @author MyEclipse Persistence Tools
- */
-
 public class Lg12 implements java.io.Serializable {
 
 	// Fields
 
-	private BigDecimal lg1201;
+	private long lg1201;
 	private Lg11 lg11;
 	private Lg10 lg10;
 	private String lg1202;
 	private String lg1203;
 
-	// Constructors
-
-	/** default constructor */
-	public Lg12() {
-	}
-
-	/** minimal constructor */
-	public Lg12(BigDecimal lg1201, Lg11 lg11, Lg10 lg10, String lg1202) {
-		this.lg1201 = lg1201;
-		this.lg11 = lg11;
-		this.lg10 = lg10;
-		this.lg1202 = lg1202;
-	}
-
-	/** full constructor */
-	public Lg12(BigDecimal lg1201, Lg11 lg11, Lg10 lg10, String lg1202,
-			String lg1203) {
-		this.lg1201 = lg1201;
-		this.lg11 = lg11;
-		this.lg10 = lg10;
-		this.lg1202 = lg1202;
-		this.lg1203 = lg1203;
-	}
-
 	// Property accessors
 
-	public BigDecimal getLg1201() {
+	public long getLg1201() {
 		return this.lg1201;
 	}
 
-	public void setLg1201(BigDecimal lg1201) {
+	public void setLg1201(long lg1201) {
 		this.lg1201 = lg1201;
 	}
 

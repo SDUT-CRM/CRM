@@ -6,9 +6,9 @@
 -->
 <hibernate-mapping>
     <class name="cn.sdut.persistence.bean.Lg19" table="LG19" schema="USER001">
-        <id name="lg1901" type="java.math.BigDecimal">
+        <id name="lg1901" type="java.math.long">
             <column name="LG1901" precision="22" scale="0" />
-            <generator class="assigned" />
+            <generator class="sequence" />
         </id>
         <many-to-one name="lg01" class="cn.sdut.persistence.bean.Lg01" fetch="select">
             <column name="LG0101" precision="22" scale="0" not-null="true" />
@@ -16,13 +16,13 @@
         <many-to-one name="lg02" class="cn.sdut.persistence.bean.Lg02" fetch="select">
             <column name="LG0201" precision="22" scale="0" not-null="true" />
         </many-to-one>
-        <property name="lg1801" type="java.math.BigDecimal">
+        <property name="lg1801" type="java.math.long">
             <column name="LG1801" precision="22" scale="0" not-null="true" />
         </property>
         <property name="lg1902" type="java.lang.String">
             <column name="LG1902" not-null="true" />
         </property>
-        <property name="lg1903" type="java.sql.Timestamp">
+        <property name="lg1903" type="java.util.Date">
             <column name="LG1903" length="7" not-null="true" />
         </property>
     </class>

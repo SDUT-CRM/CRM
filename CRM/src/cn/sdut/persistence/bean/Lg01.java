@@ -4,10 +4,6 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Lg01 entity. @author MyEclipse Persistence Tools
- */
-
 public class Lg01 implements java.io.Serializable {
 
 	// Fields
