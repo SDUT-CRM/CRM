@@ -8,7 +8,9 @@
     <class name="cn.sdut.persistence.bean.Lg18" table="LG18" schema="USER001">
         <id name="lg1801" type="long">
             <column name="LG1801" precision="22" scale="0" />
-            <generator class="sequence" />
+            <generator class="sequence">
+            	<param name="sequence">S_LG18</param>
+            </generator>
         </id>
         <many-to-one name="lg17" class="cn.sdut.persistence.bean.Lg17" fetch="select">
             <column name="LG1701" precision="22" scale="0" />
@@ -16,9 +18,9 @@
         <many-to-one name="lg02" class="cn.sdut.persistence.bean.Lg02" fetch="select">
             <column name="LG0201" precision="22" scale="0" not-null="true" />
         </many-to-one>
-        <property name="lg0101" type="java.lang.String">
-            <column name="LG0101" length="10" not-null="true" />
-        </property>
+        <many-to-one name="lg01" class="cn.sdut.persistence.bean.Lg01" fetch="select">
+            <column name="LG0101" precision="22" scale="0" not-null="true" />
+        </many-to-one>
         <property name="lg1802" type="java.util.Date">
             <column name="LG1802" length="7" not-null="true" />
         </property>
@@ -27,6 +29,9 @@
         </property>
         <property name="lg1804" type="java.lang.String">
             <column name="LG1804" not-null="true" />
+        </property>
+        <property name="lg1805" type="java.lang.String">
+            <column name="LG1805" not-null="true" />
         </property>
     </class>
 </hibernate-mapping>

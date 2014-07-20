@@ -9,15 +9,24 @@ public class Lg18 implements java.io.Serializable {
 	private long lg1801;
 	private Lg17 lg17;
 	private Lg02 lg02;
-	private String lg0101;
+	private Lg01 lg01;
 	private Date lg1802;
 	private Date lg1803;
 	private String lg1804;
+	private String lg1805;
 
 	// Property accessors
 
 	public long getLg1801() {
 		return this.lg1801;
+	}
+
+	public Lg01 getLg01() {
+		return lg01;
+	}
+
+	public void setLg01(Lg01 lg01) {
+		this.lg01 = lg01;
 	}
 
 	public void setLg1801(long lg1801) {
@@ -38,14 +47,6 @@ public class Lg18 implements java.io.Serializable {
 
 	public void setLg02(Lg02 lg02) {
 		this.lg02 = lg02;
-	}
-
-	public String getLg0101() {
-		return this.lg0101;
-	}
-
-	public void setLg0101(String lg0101) {
-		this.lg0101 = lg0101;
 	}
 
 	public Date getLg1802() {
@@ -71,5 +72,15 @@ public class Lg18 implements java.io.Serializable {
 	public void setLg1804(String lg1804) {
 		this.lg1804 = lg1804;
 	}
+
+	public String getLg1805() {
+		return lg1805;
+	}
+
+	public void setLg1805(String lg1805) {
+		this.lg1805 = lg1805;
+	}
+	
+	
 
 }
