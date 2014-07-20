@@ -49,7 +49,6 @@ public class Lg02DaoTest
         // Object elg0208=this.dto.get("elg0208"); //入职时间 开始
         // dto.put("lg", "");
         
-        
         List list = dao.query();
         System.out.println(list);
         /**
