@@ -19,7 +19,7 @@ public class Lg05DaoImpl extends HibernatePageDaoSupport implements Lg05Dao {
 	 */
 	@Override
 	public List query() throws Exception {
-		Object lg0509 = this.dto.get("lg0509");
+		Object lg0501 = this.dto.get("lg0501");
 		this.pars = new ArrayList();
 		this.hql = new StringBuilder()
 				.append("select new map(x.lg0501 as lg0501,x.lg0502 as lg0502,")
@@ -29,9 +29,9 @@ public class Lg05DaoImpl extends HibernatePageDaoSupport implements Lg05Dao {
 				.append("       x.lg0509 as lg0509, x.lg0510 as lg0510")
 				.append("       )")
 				.append("  from Lg05 x").append(" where 1=1");
-		if (checkVal(lg0509)) {
-			this.hql.append(" and x.lg0509=?");
-			this.pars.add(lg0509);
+		if (checkVal(lg0501)) {
+			this.hql.append(" and x.lg0501=?");
+			this.pars.add(Long.parseLong(lg0501.toString()));
 		}
 		return this.queryForList();
 	}
