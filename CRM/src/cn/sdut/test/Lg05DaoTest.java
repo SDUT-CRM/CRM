@@ -20,18 +20,11 @@ public class Lg05DaoTest {
 	public static void main(String[] args) {
 		dao.setMapDto(dto);
 		try {
-			getInstanceTest();
+			queryTest();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
-	private static void getInstanceTest() throws Exception{
-		dto.put("lg0501", "1");
-		Lg05 lg05 = dao.getInstance();
-		System.out.println("sasas:::"+lg05);
-	}
-	
 	private static void queryTest() throws Exception {
 		dto.put("lg0509", "1");
 		List ins = dao.query();

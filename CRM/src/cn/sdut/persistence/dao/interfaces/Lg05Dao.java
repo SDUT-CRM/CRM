@@ -11,5 +11,5 @@ public interface Lg05Dao {
 
 	public List query() throws Exception;
 	
-	public Lg05 getInstance() throws Exception;
+
 }
