@@ -10,7 +10,7 @@ public class Lg07DaoImpl extends HibernatePageDaoSupport implements Lg07Dao {
 
 	@Override
 	public boolean add() throws Exception {
-		// TODO Auto-generated method stub
+
 		return false;
 	}
 
