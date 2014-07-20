@@ -46,13 +46,13 @@ public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
 		Object lg0601 = this.dto.get("lg0601");
 		this.pars = new ArrayList();
 		this.hql = new StringBuilder()
-				.append("select new map(x.lg0601 as lg0601,x.lg01.lg2101 as lg2101,")
-				.append("       x.lg05.lg0501 as lg0501, x.lg02.lg2101 as lg0201,")
-				.append("       x.lg0602 as lg0602, x.lg0603 as lg0603,")
-				.append("       x.lg0604 as lg0604")
-				.append("       )")
-				.append("  from Lg06 x")
-				.append(" where 1=1 and x.lg0602 < '5'");
+		.append("select new map(x.lg0601 as lg0601,x.lg01.lg2101 as lg2101,")
+		.append("       x.lg05.lg0501 as lg0501, x.lg02.lg2101 as lg0201,")
+		.append("       x.lg0602 as lg0602, x.lg0603 as lg0603,")
+		.append("       x.lg0604 as lg0604")
+		.append("       )")
+		.append("  from Lg06 x")
+		.append(" where 1=1 and x.lg0602 < '5'");
 		if (checkVal(lg0601)) {
 			this.hql.append(" and x.lg0601=?");
 			this.pars.add(Long.parseLong(lg0601.toString()));
