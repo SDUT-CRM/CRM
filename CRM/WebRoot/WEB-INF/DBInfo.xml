@@ -29,4 +29,27 @@
 				</prop>
 			</props>
 		</property>
-	</bean></beans>
+		<property name="mappingResources">
+			<list>
+				<value>cn/sdut/persistence/bean/Lg12.hbm.xml</value>
+				<value>cn/sdut/persistence/bean/Lg13.hbm.xml</value>
+				<value>cn/sdut/persistence/bean/Lg14.hbm.xml</value>
+				<value>cn/sdut/persistence/bean/Lg15.hbm.xml</value>
+				<value>cn/sdut/persistence/bean/Lg16.hbm.xml</value>
+				<value>cn/sdut/persistence/bean/Lg17.hbm.xml</value>
+				<value>cn/sdut/persistence/bean/Lg18.hbm.xml</value>
+				<value>cn/sdut/persistence/bean/Lg19.hbm.xml</value>
+				<value>cn/sdut/persistence/bean/Lg09.hbm.xml</value>
+				<value>cn/sdut/persistence/bean/Lg08.hbm.xml</value>
+				<value>cn/sdut/persistence/bean/Lg07.hbm.xml</value>
+				<value>cn/sdut/persistence/bean/Lg06.hbm.xml</value>
+				<value>cn/sdut/persistence/bean/Lg05.hbm.xml</value>
+				<value>cn/sdut/persistence/bean/Lg04.hbm.xml</value>
+				<value>cn/sdut/persistence/bean/Lg03.hbm.xml</value>
+				<value>cn/sdut/persistence/bean/Lg02.hbm.xml</value>
+				<value>cn/sdut/persistence/bean/Lg01.hbm.xml</value>
+				<value>cn/sdut/persistence/bean/Lg21.hbm.xml</value>
+				<value>cn/sdut/persistence/bean/Lg20.hbm.xml</value>
+				<value>cn/sdut/persistence/bean/Lg11.hbm.xml</value>
+				<value>cn/sdut/persistence/bean/Lg10.hbm.xml</value></list>
+		</property></bean></beans>
