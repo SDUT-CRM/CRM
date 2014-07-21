@@ -13,6 +13,10 @@
     		action="<%=path%>/a1012Action.action";
     	}
     }
+    function onNext1()
+    {
+    	document.forms[0].elements[7].value="";
+    }
 </script>
 </head>
 <body>
@@ -58,12 +62,12 @@
   <tr>
       <td colspan="100" align="center">
         <s:submit name="next" value="ÉêÇë" onclick="return onNext()"/>
-        <s:submit name="next" value="·µ»Ø"/>
+        <s:submit name="next" value="·µ»Ø " onclick="return onNext1()"/>
       </td>
     </tr>
  </table>
  <s:hidden name="lg0501"/>
-  <s:hidden name="lg2101" value="2"/>
+ <s:hidden name="lg2101" value="2"/>
 </s:form>
 	</body>
 </html>
