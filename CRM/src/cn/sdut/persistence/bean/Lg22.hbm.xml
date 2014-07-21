@@ -24,7 +24,7 @@
         <property name="lg2202" type="java.lang.String">
             <column name="LG2202" not-null="true" />
         </property>
-        <property name="lg2203" type="java.utol.Date">
+        <property name="lg2203" type="java.util.Date">
             <column name="LG2203" length="7" not-null="true" />
         </property>
     </class>
