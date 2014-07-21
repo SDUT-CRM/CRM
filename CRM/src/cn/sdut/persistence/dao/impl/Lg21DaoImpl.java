@@ -2,11 +2,26 @@ package cn.sdut.persistence.dao.impl;
 
 import java.util.Map;
 
+import cn.sdut.persistence.bean.Lg02;
+import cn.sdut.persistence.bean.Lg04;
+import cn.sdut.persistence.bean.Lg21;
 import cn.sdut.persistence.dao.interfaces.Lg21Dao;
 import cn.sdut.persistence.support.HibernatePageDaoSupport;
 import cn.sdut.system.Tools;
 
 public class Lg21DaoImpl extends HibernatePageDaoSupport implements Lg21Dao {
+    
+    @Override
+    public long addUser() throws Exception
+    {
+        this.dto.put("lg2102", this.getObject("lg2102"));
+        this.dto.put("lg2103", this.getObject("lg2103"));
+        this.dto.put("lg2104", this.getObject("lg2104"));
+        this.dto.put("lg2105", this.getObject("lg2105"));
+        Lg21 lg21 =  this.addObject(Lg21.class);
+        this.dto.put("lg21", lg21);
+        return lg21.getLg2101();
+    }
 
 	@Override
 	public Map checkUser() throws Exception {

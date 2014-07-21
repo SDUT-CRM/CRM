@@ -5,5 +5,8 @@
 		<action name="c1010Action" class="c1010">
 			<result name="main">/C1/C1010.jsp</result>
 		</action>
+		<action name="c1011Action" class="c1011">
+			<result name="main">/C1/C1010.jsp</result>
+		</action>
 	</package>
 </struts>    

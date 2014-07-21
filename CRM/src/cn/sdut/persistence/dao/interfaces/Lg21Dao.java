@@ -6,4 +6,6 @@ public interface Lg21Dao {
 	public void setMapDto(Map dto);
 	
 	public Map checkUser()throws Exception;
+	
+	public long addUser() throws Exception;
 }

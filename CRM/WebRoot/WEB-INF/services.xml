@@ -16,5 +16,6 @@
 	
 	<bean id="c1010services" class="cn.sdut.services.impl.C1010ServicesImpl">
 		<property name="lg02Dao" ref="lg02dao"/>
+		<property name="lg21Dao" ref="lg21dao"/>
 	</bean>
 </beans>

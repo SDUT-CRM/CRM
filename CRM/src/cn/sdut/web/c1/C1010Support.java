@@ -12,6 +12,44 @@ public abstract class C1010Support
     protected String msg;
     protected List rows;
     
+    protected List oclg0401=null;
+    protected List oclg0207=null;
+    protected String qlg0401;
+    protected String qlg0207;
+    
+    
+    public String getQlg0401()
+    {
+        return qlg0401;
+    }
+    public void setQlg0401(String qlg0401)
+    {
+        this.qlg0401 = qlg0401;
+    }
+    public String getQlg0207()
+    {
+        return qlg0207;
+    }
+    public void setQlg0207(String qlg0207)
+    {
+        this.qlg0207 = qlg0207;
+    }
+    public List getOclg0401()
+    {
+        return oclg0401;
+    }
+    public void setOclg0401(List oclg0401)
+    {
+        this.oclg0401 = oclg0401;
+    }
+    public List getOclg0207()
+    {
+        return oclg0207;
+    }
+    public void setOclg0207(List oclg0207)
+    {
+        this.oclg0207 = oclg0207;
+    }
     public List getRows()
     {
         return rows;

@@ -29,11 +29,11 @@ public class Lg01 implements java.io.Serializable {
 	}
 
 	public long getLg2101() {
-		return lg2101;
+		return this.lg21.getLg2101();
 	}
 
 	public void setLg2101(long lg2101) {
-		this.lg2101 = lg2101;
+		this.lg21.setLg2101(lg2101);
 	}
 
 	public void setLg21(Lg21 lg21) {
