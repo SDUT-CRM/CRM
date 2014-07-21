@@ -18,7 +18,7 @@
 						员工编号
 					</TD>
 					<TD>
-						<s:textfield name="lg2102" />
+						<s:textfield name="qlg2102" />
 					</TD>
 					<TD>
 						员工部门
@@ -35,7 +35,7 @@
 						员工姓名
 					</TD>
 					<TD>
-						<s:textfield name="lg0202" />
+						<s:textfield name="qlg0202" />
 					</TD>
 					<TD>
 						员工状态

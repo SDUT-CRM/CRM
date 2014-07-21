@@ -48,9 +48,9 @@ public class Lg02DaoImpl extends HibernatePageDaoSupport implements Lg02Dao
         /**
          * 
          */
-        Object lg2102 = this.dto.get("lg2102"); // 员工编号
+        Object lg2102 = this.dto.get("qlg2102"); // 员工编号
         Object lg0401 = this.dto.get("qlg0401"); // 员工部门
-        Object lg0202 = this.dto.get("lg0202"); // 员工姓名
+        Object lg0202 = this.dto.get("qlg0202"); // 员工姓名
         Object lg0207 = this.dto.get("qlg0207"); // 员工状态
 
         Object blg0208 = this.dto.get("blg0208");// this.dto.get("blg0208");

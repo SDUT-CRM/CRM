@@ -8,5 +8,8 @@
 		<action name="c1011Action" class="c1011">
 			<result name="main">/C1/C1010.jsp</result>
 		</action>
+		<action name="c1012Action" class="c1012">
+			<result name="main">/C1/C1011.jsp</result>
+		</action>
 	</package>
 </struts>    

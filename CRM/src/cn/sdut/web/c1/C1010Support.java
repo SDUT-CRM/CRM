@@ -16,8 +16,117 @@ public abstract class C1010Support
     protected List oclg0207=null;
     protected String qlg0401;
     protected String qlg0207;
+    protected String qlg2102;//员工编号
+    protected String qlg0202;//员工姓名
+    
+    protected String lg2102;
+    protected String lg2103;
+    protected String lg2104;
+    protected String lg2105;
+    protected String lg0202;
+    protected String lg0203;
+    protected String lg0204;
+    protected String lg0205;
+    protected String lg0206;
+    protected String lg0207;
+    protected String lg0208;
+    protected String lg0209;
+    protected String lg0401;
+    protected String blg0208;
+    protected String elg0208;
     
     
+    
+    
+    
+    public String getLg2103()
+    {
+        return lg2103;
+    }
+    public void setLg2103(String lg2103)
+    {
+        this.lg2103 = lg2103;
+    }
+    public String getLg2104()
+    {
+        return lg2104;
+    }
+    public void setLg2104(String lg2104)
+    {
+        this.lg2104 = lg2104;
+    }
+    public String getLg2105()
+    {
+        return lg2105;
+    }
+    public void setLg2105(String lg2105)
+    {
+        this.lg2105 = lg2105;
+    }
+    public String getLg0203()
+    {
+        return lg0203;
+    }
+    public void setLg0203(String lg0203)
+    {
+        this.lg0203 = lg0203;
+    }
+    public String getLg0204()
+    {
+        return lg0204;
+    }
+    public void setLg0204(String lg0204)
+    {
+        this.lg0204 = lg0204;
+    }
+    public String getLg0205()
+    {
+        return lg0205;
+    }
+    public void setLg0205(String lg0205)
+    {
+        this.lg0205 = lg0205;
+    }
+    public String getLg0206()
+    {
+        return lg0206;
+    }
+    public void setLg0206(String lg0206)
+    {
+        this.lg0206 = lg0206;
+    }
+    public String getLg0207()
+    {
+        return lg0207;
+    }
+    public void setLg0207(String lg0207)
+    {
+        this.lg0207 = lg0207;
+    }
+    public String getLg0208()
+    {
+        return lg0208;
+    }
+    public void setLg0208(String lg0208)
+    {
+        this.lg0208 = lg0208;
+    }
+    public String getLg0209()
+    {
+        return lg0209;
+    }
+    public void setLg0209(String lg0209)
+    {
+        this.lg0209 = lg0209;
+    }
+    public String getLg0401()
+    {
+        return lg0401;
+    }
+    public void setLg0401(String lg0401)
+    {
+        this.lg0401 = lg0401;
+    }
     public String getQlg0401()
     {
         return qlg0401;
@@ -75,12 +184,7 @@ public abstract class C1010Support
     {
         this.c1010Services = c1010Services;
     }
-    protected String lg2102;//员工编号
-    protected String lg0401;//员工部门
-    protected String lg0202;//员工姓名
-    protected String lg0207;//员工状态
-    protected String blg0208;
-    protected String elg0208;
+
     public String getLg2102()
     {
         return lg2102;
@@ -89,14 +193,7 @@ public abstract class C1010Support
     {
         this.lg2102 = lg2102;
     }
-    public String getLg0401()
-    {
-        return lg0401;
-    }
-    public void setLg0401(String lg0401)
-    {
-        this.lg0401 = lg0401;
-    }
+    
     public String getLg0202()
     {
         return lg0202;
@@ -105,13 +202,22 @@ public abstract class C1010Support
     {
         this.lg0202 = lg0202;
     }
-    public String getLg0207()
+    
+    public String getQlg2102()
     {
-        return lg0207;
+        return qlg2102;
     }
-    public void setLg0207(String lg0207)
+    public void setQlg2102(String qlg2102)
     {
-        this.lg0207 = lg0207;
+        this.qlg2102 = qlg2102;
+    }
+    public String getQlg0202()
+    {
+        return qlg0202;
+    }
+    public void setQlg0202(String qlg0202)
+    {
+        this.qlg0202 = qlg0202;
     }
     public String getBlg0208()
     {
