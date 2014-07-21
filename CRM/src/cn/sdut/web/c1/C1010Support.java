@@ -177,12 +177,12 @@ public abstract class C1010Support
     }
     public C1010Services getC1010Services()
     {
-        this.c1010Services.setMapDto(Tools.describe());
         return c1010Services;
     }
     public void setC1010Services(C1010Services c1010Services)
     {
         this.c1010Services = c1010Services;
+        this.c1010Services.setMapDto(Tools.describe());
     }
 
     public String getLg2102()

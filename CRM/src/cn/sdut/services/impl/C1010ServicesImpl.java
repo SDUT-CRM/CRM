@@ -1,5 +1,8 @@
 package cn.sdut.services.impl;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -16,8 +19,9 @@ public class C1010ServicesImpl implements C1010Services
     @Override
     public boolean addEmployee() throws Exception
     {
+        DateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
+        dto.put("lg0209", dt.format(new Date()));
         lg21Dao.addUser();
-        
         lg02Dao.addEmployee();
         System.out.println(dto);
         return true;
@@ -50,18 +54,6 @@ public class C1010ServicesImpl implements C1010Services
     public void setLg02Dao(Lg02Dao lg02Dao)
     {
         this.lg02Dao = lg02Dao;
-    }
-
-    public Map getDto()
-    {
-        return dto;
-    }
-
-    public void setDto(Map dto)
-    {
-        this.dto = dto;
-        this.lg02Dao.setMapDto(dto);
-        this.lg21Dao.setMapDto(dto);
     }
 
     @Override

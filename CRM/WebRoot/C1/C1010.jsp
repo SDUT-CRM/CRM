@@ -130,7 +130,7 @@
 				<TR>
 					<TD colspan="100" align="center">
 						<s:submit value="²éÑ¯" name="next" />
-						<s:submit value="Ìí¼Ó" name="next2" />
+						<s:submit value="Ìí¼Ó" name="next2"  />
 					</TD>
 				</TR>
 

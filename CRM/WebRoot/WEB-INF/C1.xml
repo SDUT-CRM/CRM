@@ -13,7 +13,8 @@
 			scope="prototype">
 	<property name="c1010Services" ref="c1010services"/>
 	</bean>
-	<bean id="c1012" class="cn.sdut.web.c1.impl.C1012Action">
+	<bean id="c1012" class="cn.sdut.web.c1.impl.C1012Action"
+			scope="prototype">
 	<property name="c1010Services" ref="c1010services"/>
 	</bean>
 </beans>
