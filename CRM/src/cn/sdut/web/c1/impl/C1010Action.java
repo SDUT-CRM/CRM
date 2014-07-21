@@ -14,8 +14,6 @@ public class C1010Action extends C1010Support
     @Override
     public String execute() throws Exception
     {
-        this.oclg0401=Tools.getOptions("LLG02");
-        this.oclg0207=Tools.getOptions("LLG01");
         List rows = this.getC1010Services().query();
         if (rows.size() > 0)
         {
@@ -31,5 +29,4 @@ public class C1010Action extends C1010Support
         }   
         return "main";
     }
-
 }

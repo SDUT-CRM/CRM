@@ -5,6 +5,15 @@
 %>
 <html>
 	<head>
+	<script type="text/javascript">
+	function onNext2()
+	{
+	 with(document.forms[0])
+	 {
+	 	action="<%=path%>/c1012Action.action";
+	 }
+	}
+	</script>
 	</head>
 	<body>
 		<s:form action="c1010Action">
@@ -24,10 +33,9 @@
 						员工部门
 					</TD>
 					<TD>
-						<s:select name="qlg0401" list="oclg0401" 
-						listKey="key" listValue="value" 
-						headerKey="" headerValue="==不限=="
-					    cssStyle="width:153px" />
+						<s:select name="qlg0401" list="oclg0401" listKey="key"
+							listValue="value" headerKey="" headerValue="==不限=="
+							cssStyle="width:153px" />
 					</TD>
 				</TR>
 				<TR>
@@ -41,10 +49,9 @@
 						员工状态
 					</TD>
 					<TD>
-						<s:select name="qlg0207" list="oclg0207" 
-						listKey="key" listValue="value" 
-						headerKey="" headerValue="==不限=="
-					    cssStyle="width:153px" />
+						<s:select name="qlg0207" list="oclg0207" listKey="key"
+							listValue="value" headerKey="" headerValue="==不限=="
+							cssStyle="width:153px" />
 					</TD>
 				</TR>
 				<TR>
@@ -120,17 +127,17 @@
 					</TR>
 				</s:if>
 				<s:else>
-				<TR>
-				<TD colspan="100">
-				<s:property value="msg"/>
-				</TD>
-				</TR>
+					<TR>
+						<TD colspan="100">
+							<s:property value="msg" />
+						</TD>
+					</TR>
 				</s:else>
 				<!-- 按钮 -->
 				<TR>
 					<TD colspan="100" align="center">
 						<s:submit value="查询" name="next" />
-						<s:submit value="添加" name="next2"  />
+						<s:submit value="添加" name="next2" onclick="return onNext2()" />
 					</TD>
 				</TR>
 

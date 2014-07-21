@@ -18,6 +18,8 @@ public abstract class C1010Support
     protected String qlg0207;
     protected String qlg2102;//员工编号
     protected String qlg0202;//员工姓名
+    protected String blg0208;
+    protected String elg0208;
     
     protected String lg2102;
     protected String lg2103;
@@ -32,11 +34,18 @@ public abstract class C1010Support
     protected String lg0208;
     protected String lg0209;
     protected String lg0401;
-    protected String blg0208;
-    protected String elg0208;
     
     
+    private void initMain() throws Exception
+    {
+        this.oclg0401=Tools.getOptions("LLG02");
+        this.oclg0207=Tools.getOptions("LLG01");
+    }
     
+    private void initEdit() throws Exception
+    {
+        this.oclg0401=Tools.getOptions("LLG02");
+    }
     
     
     public String getLg2103()

@@ -5,6 +5,15 @@
 %>
 <html>
 	<head>
+	<script type="text/javascript">
+	function onNext2()
+	{
+		with(document.forms[0])
+		{
+			action="<%=path%>/c1010Action.action";
+		}
+	}
+	</script>
 	</head>
 	<body>
 		<s:property value="msg" />
@@ -89,7 +98,7 @@
 				<TR>
 					<TD colspan="100" align="center">
 						<s:submit name="next" value="Ìí¼Ó" />
-						<s:submit name="next2" value="·µ»Ø" />
+						<s:submit name="next2" value="·µ»Ø" onclick="return onNext2()"/>
 					</TD>
 				</TR>
 			</TABLE>
@@ -97,6 +106,12 @@
 			<input type="hidden" name="edit" value="1" />
 			<input type="hidden" name="lg0207" value="1" />
 			<input type="hidden" name="lg2105" value="1" />
+			<s:hidden name="qlg0401"/>
+			<s:hidden name="qlg0207"/>
+			<s:hidden name="qlg2102"/>
+			<s:hidden name="qlg0202"/>
+			<s:hidden name="blg0208"/>
+			<s:hidden name="elg0208"/>
 		</s:form>
 
 	</body>

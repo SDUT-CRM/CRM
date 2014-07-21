@@ -12,14 +12,13 @@ public class C1012Action extends C1010Support
     {
         if (edit!=null&&edit.equals("1"))
         {
-            this.oclg0401=Tools.getOptions("LLG02");
+            
             System.out.println();
             msg=this.c1010Services.addEmployee()?"添加成功!":"添加失败！";
             return "main";
         }
         else
         {
-            this.oclg0401=Tools.getOptions("LLG02");
             return "main";
         }
     }
