@@ -34,7 +34,7 @@ public class Lg02DaoTest
      * @参数说明 
      * @返回值  
      * @功能说明 
-     * @作者    
+     * @作者    明睿
      * @创建日期 2014-7-20
      * @更新日期 
      * @更新内容
@@ -49,6 +49,12 @@ public class Lg02DaoTest
         // Object elg0208=this.dto.get("elg0208"); //入职时间 开始
         // dto.put("lg", "");
         
+        dto.put("blg0208", "2012-01-01");
+        dto.put("elg0208", "2014-05-05");
+       // dto.put("lg2102", "E10000");
+        //dto.put("lg2102", "E10001");
+        //dto.put("lg0401", "1");
+        //dto.put("lg0202", "李");
         List list = dao.query();
         System.out.println(list);
         /**
