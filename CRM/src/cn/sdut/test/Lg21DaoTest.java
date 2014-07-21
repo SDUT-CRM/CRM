@@ -21,12 +21,33 @@ public class Lg21DaoTest
         try
         {
            // checkUserTest();
-            Lg21DaoTest.addUserTest();
+            Lg21DaoTest
+            .UpdateUserTest()
+            //.addUserTest()
+            ;
         }
         catch (Exception e)
         {
             e.printStackTrace();
         }
+    }
+    
+    public static void UpdateUserTest() throws Exception
+    {
+        /**
+         * this.getObject("lg2103"),
+          this.getObject("lg2104"),
+          this.getObject("lg2105"),
+          this.getObject("lg2101")
+         */
+        
+        dto.put("lg2101", "146");
+        dto.put("lg2103", "bccc");
+        dto.put("lg2104", "我是管理员");
+        dto.put("lg2105", "2");
+        boolean tag = dao.UpdateUser();
+        System.out.println(tag);
+        
     }
 
     private static void checkUserTest() throws Exception

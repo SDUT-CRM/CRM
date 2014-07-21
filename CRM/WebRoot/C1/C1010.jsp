@@ -13,6 +13,14 @@
 	 	action="<%=path%>/c1012Action.action";
 	 }
 	}
+	function onEdit(obj)
+	{
+	with(document.forms[0])
+	{
+		action="<%=path%>/c1013Action.action?lg2101="+obj;
+		submit();
+	}
+	}
 	</script>
 	</head>
 	<body>
@@ -117,7 +125,7 @@
 											<s:property value="lg0208" />
 										</td>
 										<td>
-											<a href="#" onclick="onEdit(<s:property value="pas001"/>)">±à¼­</a>
+											<a href="#" onclick="onEdit(<s:property value="lg2101"/>)">±à¼­</a>
 										</td>
 									</tr>
 								</s:iterator>

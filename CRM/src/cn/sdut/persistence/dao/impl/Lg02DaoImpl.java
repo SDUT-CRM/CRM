@@ -17,6 +17,30 @@ import cn.sdut.system.Tools;
 public class Lg02DaoImpl extends HibernatePageDaoSupport implements Lg02Dao
 {
 
+    
+    @Override
+    public boolean updateEmployee() throws Exception
+    {
+        StringBuilder hql = new StringBuilder()
+        .append("update Lg02")
+        .append("   set lg0202=?,lg0204=?,lg0205=?,")
+        .append("       lg0206=?,lg04=?,lg0207=?,lg0209=?")
+        .append(" where lg2101=?")
+        ;
+        Lg04 lg04 = new Lg04();
+        lg04.setLg0401(this.getLong("lg0401"));
+        Object args[]={
+          this.getObject("lg0202"),      
+          this.getObject("lg0204"),      
+          this.getObject("lg0205"),      
+          this.getObject("lg0206"),      
+          lg04,
+          this.getObject("lg0207"),
+          this.getUDate("lg0209"),
+          this.getLong("lg2101")
+        };
+        return this.update(hql.toString(), args);
+    }
     /**
      * 
      */
@@ -62,7 +86,7 @@ public class Lg02DaoImpl extends HibernatePageDaoSupport implements Lg02Dao
          * 需要查到 员工编号，员工姓名，员工部门，员工状态，入职时间
          */
         this.hql = new StringBuilder()
-                .append("select new map(c.lg2102 as lg2102,a.lg0202 as lg0202,e.fvalue as cnlg0402,")
+                .append("select new map(c.lg2101 as lg2101,c.lg2102 as lg2102,a.lg0202 as lg0202,e.fvalue as cnlg0402,")
                 .append("               b.fvalue as cnlg0207,to_char(a.lg0208,'YYYY-MM-DD') as lg0208")
                 .append(")").append("  from Lg02 a,Syscode b,Lg21 c,Lg04 d,Syscode e")
                 .append(" where a.lg04.lg0401=d.lg0401")

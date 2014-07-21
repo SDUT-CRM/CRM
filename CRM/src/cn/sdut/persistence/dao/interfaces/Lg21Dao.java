@@ -8,4 +8,6 @@ public interface Lg21Dao {
 	public Map checkUser()throws Exception;
 	
 	public long addUser() throws Exception;
+	
+	public boolean UpdateUser() throws Exception;
 }

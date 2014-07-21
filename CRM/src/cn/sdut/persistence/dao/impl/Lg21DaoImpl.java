@@ -11,6 +11,29 @@ import cn.sdut.system.Tools;
 
 public class Lg21DaoImpl extends HibernatePageDaoSupport implements Lg21Dao {
     
+    
+    @Override
+    public boolean UpdateUser() throws Exception
+    {
+        //this.dto.put("lg2101", this.getObject("lg2101"));
+        //this.dto.put("lg2103", this.getObject("lg2103"));
+       //// this.dto.put("lg2104", this.getObject("lg2104"));
+       // this.dto.put("lg2105", this.getObject("lg2105"));
+        StringBuilder hql=new StringBuilder()
+        .append("update Lg21")
+        .append("   set lg2103=?,lg2104=?,lg2105=?")
+        .append(" where lg2101=?")
+        ;
+        Object[] args={
+          this.getObject("lg2103"),
+          this.getObject("lg2104"),
+          this.getObject("lg2105"),
+          this.getLong("lg2101")
+        };
+        this.update(hql.toString(), args);
+        return true;
+    }
+    
     @Override
     public long addUser() throws Exception
     {
