@@ -10,6 +10,7 @@ public class A1012Action {
 
 	public String execute() throws Exception{
 		a1011Services.setMapDto(Tools.describe());
+		System.out.println("111");
 		boolean res = a1011Services.add();
 		if(res==false){
 			this.msg = "…Í«Î ß∞‹!";

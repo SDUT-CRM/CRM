@@ -7,6 +7,7 @@ import java.util.Map;
 import cn.sdut.persistence.bean.Lg01;
 import cn.sdut.persistence.bean.Lg02;
 import cn.sdut.persistence.bean.Lg05;
+import cn.sdut.persistence.bean.Lg21;
 import cn.sdut.persistence.dao.interfaces.Lg06Dao;
 import cn.sdut.services.A1011Services;
 
@@ -17,18 +18,19 @@ public class A1011ServicesImpl implements A1011Services {
 
 	@Override
 	public boolean add() throws Exception {
-		
+
 		Lg01 lg01 = new Lg01();
 		Lg02 lg02 = new Lg02();
 		Lg05 lg05 = new Lg05();
-		lg01.setLg2101(Long.parseLong(this.dto.get("lg2101").toString()));
-		lg02.setLg2101(22L);
+
+		lg01.setLg21011(Long.parseLong(this.dto.get("lg2101").toString()));
+		lg02.setLg21011(22L);
 		lg05.setLg0501(Long.parseLong(this.dto.get("lg0501").toString()));
-		
-		Date date=new Date();
+
+		Date date = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 		String da = formatter.format(date);
-		
+
 		this.dto.put("lg0602", "2");
 		this.dto.put("lg0603", da);
 		this.dto.put("lg0604", da);
@@ -36,9 +38,10 @@ public class A1011ServicesImpl implements A1011Services {
 		this.dto.put("lg02", lg02);
 		this.dto.put("lg05", lg05);
 
+		System.out.println("ds::::" + this.dto);
 		return lg06Dao.add();
 	}
-	
+
 	@Override
 	public void setMapDto(Map dto) {
 		this.dto = dto;

@@ -16,13 +16,17 @@ public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
 	@Override
 	public boolean add() throws Exception {
 
+		System.out.println(this.dto);
+		
 		this.dto.put("lg0602", this.getObject("lg0602"));
 		this.dto.put("lg0603", this.getUDate("lg0603"));
 		this.dto.put("lg0604", this.getUDate("lg0604"));
+		
 		Lg05 lg05 = (Lg05)dto.get("lg05");
 		Lg01 lg01 = (Lg01)dto.get("lg01");
 		Lg02 lg02 = (Lg02)dto.get("lg02");
 		
+		System.out.println(":::::::::"+dto);
 		Lg06 lg06 = this.addObject(Lg06.class);
 		
 		this.dto.put("lg06", lg06);
