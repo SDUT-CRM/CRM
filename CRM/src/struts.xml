@@ -4,4 +4,4 @@
 <include file="constant.xml"/>
 <include file="C1.xml"/>
 <include file="A1.xml"/>
-</struts>    
+</struts>

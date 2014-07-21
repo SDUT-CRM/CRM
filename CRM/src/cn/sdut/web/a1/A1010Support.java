@@ -23,10 +23,19 @@ public abstract class A1010Support {
 	protected String lg0506 = null;
 	protected String lg0507 = null;
 	protected String lg0508 = null;
+	protected String lg0509 = null;
 	protected String cnlg0509 = null;
 	protected String lg0510 = null;
 	
 	
+	public String getLg0509() {
+		return lg0509;
+	}
+
+	public void setLg0509(String lg0509) {
+		this.lg0509 = lg0509;
+	}
+
 	public String getLg0501() {
 		return lg0501;
 	}

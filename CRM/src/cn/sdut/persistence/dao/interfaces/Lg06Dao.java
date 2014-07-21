@@ -15,4 +15,6 @@ public interface Lg06Dao {
 	
 	public boolean delete()throws Exception;
 	
+	public boolean check() throws Exception;
+	
 }

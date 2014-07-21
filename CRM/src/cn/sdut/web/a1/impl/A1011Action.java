@@ -13,6 +13,9 @@ public class A1011Action extends A1010Support {
 		try {
 			Map ins = this.getA1010Services().getInstance();
 			if (ins != null) {
+				if(ins.get("lg0509").toString().equals("2")){
+					this.msg = "提示：该业务已停止办理!";
+				}
 				BeanUtils.populate(this, ins);
 			} else {
 				this.msg = "该数据不存在!";

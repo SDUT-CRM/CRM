@@ -81,5 +81,14 @@ public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
 		};
 		return this.update(hql.toString(), args);
 	}
-
+	
+	@Override
+	public boolean check() throws Exception {
+		StringBuilder hql=new StringBuilder()
+		.append("update Lg06 x")
+		.append("   set x.lg0602=?")
+		.append(" where x.lg0601=?")
+		;
+		return false;
+	}
 }
