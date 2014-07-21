@@ -25,7 +25,7 @@ public class C1010Action extends C1010Support
         {
             this.msg="没有符合条件的数据!";
         }   
-        return null;
+        return "main";
     }
 
 }

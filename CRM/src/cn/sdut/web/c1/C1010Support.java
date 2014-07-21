@@ -3,6 +3,7 @@ package cn.sdut.web.c1;
 import java.util.List;
 
 import cn.sdut.services.C1010Services;
+import cn.sdut.system.Tools;
 
 public abstract class C1010Support
 {
@@ -29,6 +30,7 @@ public abstract class C1010Support
     }
     public C1010Services getC1010Services()
     {
+        this.c1010Services.setMapDto(Tools.describe());
         return c1010Services;
     }
     public void setC1010Services(C1010Services c1010Services)
