@@ -17,4 +17,8 @@ public interface Lg06Dao {
 	
 	public boolean check() throws Exception;
 	
+	public List queryForPage() throws Exception;
+	
+	public String getPageInfo(String url);
+	
 }

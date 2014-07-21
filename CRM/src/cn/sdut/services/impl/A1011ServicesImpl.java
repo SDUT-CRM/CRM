@@ -2,12 +2,12 @@ package cn.sdut.services.impl;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 import cn.sdut.persistence.bean.Lg01;
 import cn.sdut.persistence.bean.Lg02;
 import cn.sdut.persistence.bean.Lg05;
-import cn.sdut.persistence.bean.Lg21;
 import cn.sdut.persistence.dao.interfaces.Lg06Dao;
 import cn.sdut.services.A1011Services;
 
@@ -65,4 +65,13 @@ public class A1011ServicesImpl implements A1011Services {
 		this.lg06Dao.setMapDto(dto);
 	}
 
+	@Override
+	public List query() throws Exception {
+		return this.lg06Dao.queryForPage();
+	}
+	
+	@Override
+	public String getPageInfo(String url) {
+		return this.lg06Dao.getPageInfo(url);
+	}
 }

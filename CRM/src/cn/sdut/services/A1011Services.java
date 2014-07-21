@@ -7,5 +7,8 @@ public interface A1011Services {
 	public void setMapDto(Map dto);
 
 	public boolean add() throws Exception;
-
+	
+	public List query() throws Exception;
+	
+	public String getPageInfo(String url);
 }

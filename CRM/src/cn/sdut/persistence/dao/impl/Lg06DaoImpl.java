@@ -13,11 +13,37 @@ import cn.sdut.persistence.support.HibernatePageDaoSupport;
 
 public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
 
+	
+	@Override
+	public List queryForPage() throws Exception {
+		Object lg2101 = this.dto.get("lg2101");
+		Object lg0501 = this.dto.get("lg0501");
+		this.pars = new ArrayList();
+		this.hql = new StringBuilder()
+		.append("select new map(x.lg0601 as lg0601,x.lg01.lg2101 as lg0101,")
+		.append("       x.lg05.lg0501 as lg0501, x.lg02.lg2101 as lg0201,")
+		.append("       x.lg0602 as lg0602, to_char(x.lg0603,'YYYY-MM-DD') as lg0603,")
+		.append("       b.fvalue as cnlg0602,to_char(x.lg0604,'YYYY-MM-DD') as lg0604,")
+		.append("       y.lg0503 as lg0503, y.lg0506 as lg0506")
+		.append("       )")
+		.append("  from Lg06 x, Lg05 y, Syscode b")
+		.append(" where 1=1")
+        .append("   and x.lg0602=b.fcode")
+        .append("   and b.fname='LG0602'")
+		.append("   and y.lg0501=x.lg05.lg0501");
+
+        if (this.checkVal(lg2101)){
+            this.hql.append(" and x.lg01.lg2101=?");
+            this.pars.add(this.getLong("lg2101"));
+        }
+		this.hql.append(" order by x.lg0601");
+		return this.queryForList();
+	}
+	
+	
 	@Override
 	public boolean add() throws Exception {
 
-		System.out.println(this.dto);
-		
 		this.dto.put("lg0602", this.getObject("lg0602"));
 		this.dto.put("lg0603", this.getUDate("lg0603"));
 		this.dto.put("lg0604", this.getUDate("lg0604"));
