@@ -1,6 +1,7 @@
 package cn.sdut.test;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.context.ApplicationContext;
@@ -18,10 +19,32 @@ public class Lg18DaoTest {
 	public static void main(String[] args) {
 		dao.setMapDto(dto);
 		try {
-			addTest();
+			modifyTest();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	private static void modifyTest() throws Exception {
+		dto.put("lg0201", "0");
+		dto.put("lg1803","2014-07-21");
+		dto.put("lg1804","5");
+		dto.put("lg1805","3");
+		dto.put("lg1801","3");
+		boolean res = dao.modify();
+		System.out.println(res);
+	}
+	
+	private static void queryTest() throws Exception {
+		dto.put("lg1801", "3");
+		List res = dao.query();
+		System.out.println(res);
+	}
+	
+	private static void deleteTest() throws Exception {
+		dto.put("lg1801", "3");
+		boolean res = dao.delete();
+		System.out.println(res);
 	}
 	
 	private static void addTest() throws Exception {

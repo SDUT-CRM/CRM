@@ -1,5 +1,6 @@
 package cn.sdut.persistence.dao.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import cn.sdut.persistence.bean.Lg01;
@@ -41,20 +42,54 @@ public class Lg18DaoImpl extends HibernatePageDaoSupport implements Lg18Dao {
 
 	@Override
 	public List query() throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		Object lg1801 = this.dto.get("lg1801");
+		this.pars = new ArrayList();
+		this.hql = new StringBuilder()
+		.append("select new map(x.lg1801 as lg1801,x.lg01.lg2101 as lg2101,")
+		.append("       x.lg02.lg2101 as lg0201, x.lg17.lg1701 as lg1701,")
+		.append("       x.lg1802 as lg1802, x.lg1803 as lg1803,")
+		.append("       x.lg1804 as lg1804")
+		.append("       )")
+		.append("  from Lg18 x")
+		.append(" where 1=1 and x.lg1804 < '6'");
+		if (checkVal(lg1801)) {
+			this.hql.append(" and x.lg1801=?");
+			this.pars.add(Long.parseLong(lg1801.toString()));
+		}
+		return this.queryForList();
 	}
 
 	@Override
 	public boolean modify() throws Exception {
-		// TODO Auto-generated method stub
-		return false;
+		StringBuilder hql=new StringBuilder()
+		.append("update Lg18 x")
+		.append("   set x.lg02.lg2101=?, x.lg1803=?, x.lg1804=?,x.lg1805=?")
+		.append(" where x.lg1801=?")
+		;
+		System.out.println("dto=="+dto);
+		Object args[]={
+			this.getLong("lg0201"),
+			this.getUDate("lg1803"),
+			this.dto.get("lg1804"),
+			this.dto.get("lg1805"),
+			this.getLong("lg1801")
+		};
+		return this.update(hql.toString(), args);
 	}
 
 	@Override
 	public boolean delete() throws Exception {
-		// TODO Auto-generated method stub
-		return false;
+		StringBuilder hql=new StringBuilder()
+		.append("update Lg18 x")
+		.append("   set x.lg1804=?")
+		.append(" where x.lg1801=?")
+		;
+		System.out.println("dto=="+dto);
+		Object args[]={
+			"6",
+			this.getLong("lg1801")
+		};
+		return this.update(hql.toString(), args);
 	}
 
 }
