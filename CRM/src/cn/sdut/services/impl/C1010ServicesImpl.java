@@ -11,6 +11,13 @@ public class C1010ServicesImpl implements C1010Services
     private Lg02Dao lg02Dao = null;
     private Map dto = null;
 
+    @Override
+    public String getPageInfo(String url)
+    {
+        // TODO Auto-generated method stub
+        return this.lg02Dao
+    }
+    
     public Lg02Dao getLg02Dao()
     {
         return lg02Dao;
