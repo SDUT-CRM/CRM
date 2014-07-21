@@ -24,13 +24,17 @@
 				<TD>代称</TD>
 				<TD><s:textfield name="lg2104"/></TD>
 				<TD>类别</TD>
-				<TD><s:textfield name="cnlg2105"/></TD>
+				<TD>
+				<s:select name="lg2105" list="oclg2105" listKey="key"
+							listValue="value"
+							cssStyle="width:153px" disabled="true"/>
+				</TD>
 				</TR>
 				<TR>
 				<TD>姓名</TD>
 				<TD><s:textfield name="lg0202"/></TD>
 				<TD>身份证号码</TD>
-				<TD><s:textfield name="lg0202"/></TD>
+				<TD><s:textfield name="lg0203"/></TD>
 				</TR>
 				<TR>
 				<TD>地址</TD>
@@ -42,25 +46,26 @@
 				<TD>E-Mail</TD>
 				<TD><s:textfield name="lg0206"/></TD>
 				<TD>部门</TD>
-				<TD><s:textfield name="cnlg0401"/></TD>
+				<TD>
+				<s:select name="lg0401" list="oclg0401" listKey="key"
+							listValue="value"
+							cssStyle="width:153px"/>
+				</TD>
 				</TR>
 				<TR>
 				<TD>状态</TD>
-				<TD><s:textfield name="cnlg0207"/></TD>
+				<TD>
+				<s:select name="lg0207" list="oclg0207" listKey="key"
+							listValue="value"
+							cssStyle="width:153px"/>
+				</TD>
 				<TD>入职日期</TD>
-				<TD><s:textfield name="lg0208"/></TD>
-				</TR>
+				<TD><s:textfield name="lg0208" disabled="true"/></TD>
 				<TR>
-				<TD></TD>
-				<TD></TD>
-				<TD></TD>
-				<TD></TD>
-				</TR>
-				<TR>
-				<TD></TD>
-				<TD></TD>
-				<TD></TD>
-				<TD></TD>
+				<TD colspan="100" align="center">
+				<s:submit name="next" value="确认"/>
+				<s:submit name="next2" value="返回"/>
+				</TD>
 				</TR>
 			</TABLE>
 

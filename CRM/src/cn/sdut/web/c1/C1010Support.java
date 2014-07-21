@@ -16,6 +16,7 @@ public abstract class C1010Support
     
     protected List oclg0401=null;
     protected List oclg0207=null;
+    protected List oclg2105=null;
     protected String qlg0401;
     protected String qlg0207;
     protected String qlg2102;//Ô±¹¤±àºÅ
@@ -45,6 +46,16 @@ public abstract class C1010Support
     
     
     
+    public List getOclg2105()
+    {
+        return oclg2105;
+    }
+
+    public void setOclg2105(List oclg2105)
+    {
+        this.oclg2105 = oclg2105;
+    }
+
     public String getCnlg2105()
     {
         return cnlg2105;
@@ -85,6 +96,13 @@ public abstract class C1010Support
         this.maps = maps;
     }
 
+    private void initEdit2() throws Exception
+    {
+        this.oclg0401=Tools.getOptions("LLG02");
+        this.oclg0207=Tools.getOptions("LLG01");
+        this.oclg2105=Tools.getOptions("LLG03");
+    }
+    
     private void initMain() throws Exception
     {
         this.oclg0401=Tools.getOptions("LLG02");
