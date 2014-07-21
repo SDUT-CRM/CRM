@@ -28,7 +28,17 @@ public class Lg02DaoTest
             e.printStackTrace();
         }
     }
-
+    /**
+     * 
+     * @函数名  queryTest
+     * @参数说明 
+     * @返回值  
+     * @功能说明 
+     * @作者    
+     * @创建日期 2014-7-20
+     * @更新日期 
+     * @更新内容
+     */
     public static void queryTest() throws Exception
     {
         // Object lg2102=this.dto.get("lg2102"); //员工编号
@@ -38,8 +48,13 @@ public class Lg02DaoTest
         // Object blg0208=this.dto.get("blg0208"); //入职时间 开始
         // Object elg0208=this.dto.get("elg0208"); //入职时间 开始
         // dto.put("lg", "");
+        
         List list = dao.query();
         System.out.println(list);
+        /**
+         * [{lg2102=E10000, lg0208=2014-01-01, lg0402=售后服务部, lg0202=张三, cnlg0207=在职}, 
+         * {lg2102=E10001, lg0208=2014-01-01, lg0402=业务部, lg0202=李四, cnlg0207=在职}]
+         */
     }
 
 }
