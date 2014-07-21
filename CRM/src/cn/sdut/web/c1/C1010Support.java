@@ -3,13 +3,14 @@ package cn.sdut.web.c1;
 import java.util.List;
 
 import cn.sdut.services.C1010Services;
+import cn.sdut.system.Tools;
 
 public abstract class C1010Support
 {
     public  abstract String execute()throws Exception;
-    private C1010Services c1010Services;
-    private String msg;
-    private List rows;
+    protected C1010Services c1010Services;
+    protected String msg;
+    protected List rows;
     
     public List getRows()
     {
@@ -29,18 +30,19 @@ public abstract class C1010Support
     }
     public C1010Services getC1010Services()
     {
+        this.c1010Services.setMapDto(Tools.describe());
         return c1010Services;
     }
     public void setC1010Services(C1010Services c1010Services)
     {
         this.c1010Services = c1010Services;
     }
-    private String lg2102;//员工编号
-    private String lg0401;//员工部门
-    private String lg0202;//员工姓名
-    private String lg0207;//员工状态
-    private String blg0208;
-    private String elg0208;
+    protected String lg2102;//员工编号
+    protected String lg0401;//员工部门
+    protected String lg0202;//员工姓名
+    protected String lg0207;//员工状态
+    protected String blg0208;
+    protected String elg0208;
     public String getLg2102()
     {
         return lg2102;
