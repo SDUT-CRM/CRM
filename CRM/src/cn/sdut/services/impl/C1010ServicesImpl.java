@@ -12,6 +12,34 @@ public class C1010ServicesImpl implements C1010Services
     private Map dto = null;
 
     @Override
+    public String getPageInfo(String url)
+    {
+        // TODO Auto-generated method stub
+        return this.lg02Dao
+    }
+    
+    public Lg02Dao getLg02Dao()
+    {
+        return lg02Dao;
+    }
+
+    public void setLg02Dao(Lg02Dao lg02Dao)
+    {
+        this.lg02Dao = lg02Dao;
+    }
+
+    public Map getDto()
+    {
+        return dto;
+    }
+
+    public void setDto(Map dto)
+    {
+        this.dto = dto;
+        this.lg02Dao.setMapDto(dto);
+    }
+
+    @Override
     public List query() throws Exception
     {
         return this.lg02Dao.queryForPage();
@@ -20,7 +48,8 @@ public class C1010ServicesImpl implements C1010Services
     @Override
     public void setMapDto(Map dto)
     {
-        // TODO Auto-generated method stub
+        this.dto =dto;
+        this.lg02Dao.setMapDto(dto);
 
     }
 }
