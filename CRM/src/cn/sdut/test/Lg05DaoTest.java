@@ -13,7 +13,7 @@ import cn.sdut.persistence.dao.interfaces.Lg05Dao;
 public class Lg05DaoTest {
 	
 	private static ApplicationContext act = new FileSystemXmlApplicationContext(
-	"C:/Users/Administrator/git/CRM/CRM/WebRoot/WEB-INF/applicationContext.xml");
+		"C:/Users/Administrator/git/CRM/CRM/WebRoot/WEB-INF/applicationContext.xml");
 	private static Lg05Dao dao = act.getBean("lg05dao", Lg05Dao.class);
 	private static Map dto = new HashMap();
 
@@ -25,6 +25,7 @@ public class Lg05DaoTest {
 			e.printStackTrace();
 		}
 	}
+	
 	private static void queryTest() throws Exception {
 		dto.put("lg0509", "1");
 		List ins = dao.query();

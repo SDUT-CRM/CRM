@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
-<include file="constant.xml"/>
-<include file="C1.xml"/>
-<include file="A1.xml"/>
+	<package name="A1" extends="struts-default">
+		<action name="a1010Action" class="a1010">
+			<result name="main">/A1/A1010.jsp</result>
+		</action>
+	</package>
 </struts>    

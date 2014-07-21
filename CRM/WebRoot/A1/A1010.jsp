@@ -4,55 +4,38 @@
     String path = request.getContextPath();
 %>
 <html>
-	<head>
-	</head>
-	<body>
-		<TABLE border="1" align="center" width="850px">
-		<caption>
-		员工信息管理界面
-		<hr width="320">
-		</caption>
-			<TR>
-				<TD>员工编号</TD>
-				<TD>
-				<s:textfield name="lg2102"/>
-				</TD>
-				<TD>员工部门</TD>
-				<TD>
-				<select>
-				<option value="a">行政部</option>				
-				</select>
-				</TD>
-			</TR>
-			<TR>
-			<TD>员工姓名</TD>
-			<TD><s:textfield name="lg0202"/></TD>
-			<TD>员工状态</TD>
-			<TD>
-			<select>
-				<option value="1">在职</option>				
-				<option value="2">离职</option>				
-				<option value="3">过世</option>				
-				</select>
-			</TD>
-			</TR>
-			<TR>
-				<TD>入职时间(起始)</TD>
-				<TD><s:textfield name="blg0208"/></TD>
-				<TD>入职时间(结束)</TD>
-				<TD><s:textfield name="elg0208"/></TD>
-			</TR>
-			<!-- 迭代数据 -->
-			<TR>
-			</TR>
-			<!-- 按钮 -->
-			<TR>
-				<TD colspan="100" align="center">
-					<s:submit value="查询" name="next"/>
-					<s:submit value="添加" name="next2"/>
-				</TD>
-			</TR>
-			
-		</TABLE>
+<head>
+</head>
+<body>
+<s:property value="msg"/>
+<s:if test="rows!=null">   
+   <TR>
+     <TD>
+       <table border="1" width="100%">
+         <tr>
+           <td>序号</td>
+           <td>业务名称</td>
+           <td>业务价格</td>
+           <td>添加日期</td>
+           <td>业务状态</td>
+           <td>&nbsp;</td>
+         </tr>
+         <s:iterator value="rows" status="st">
+	         <tr>
+	           <td><s:property value="#st.count"/></td>
+	           <td><s:property value="lg0503"/></td>
+	           <td><s:property value="lg0506"/></td>
+	           <td><s:property value="lg0507"/></td>
+	           <td><s:property value="cnlg0509"/></td>
+	            <td>
+	              <a href="#" onclick="onSelect(<s:property value="lg0501"/>)">查看详情</a>
+	            </td>
+	         </tr>
+         </s:iterator>
+       </table>
+       ${requestScope.pageinfo }
+     </TD>
+   </TR>
+   </s:if>
 	</body>
 </html>
