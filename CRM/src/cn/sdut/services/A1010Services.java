@@ -8,6 +8,8 @@ public interface A1010Services {
 
 	public List query() throws Exception;
 
-	//public String getPageInfo(String url);
+	public String getPageInfo(String url);
+	
+	public Map getInstance() throws Exception;
 
 }

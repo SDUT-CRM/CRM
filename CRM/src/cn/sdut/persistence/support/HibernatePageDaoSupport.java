@@ -319,6 +319,7 @@ public abstract class HibernatePageDaoSupport extends HibernateDaoSupport {
 					public Map doInHibernate(Session session)
 							throws HibernateException, SQLException {
 						Query q = session.createQuery(hql.toString());
+						System.out.println("nani::"+dto.get(idname).toString());
 						q.setParameter(0,
 								Long.parseLong(dto.get(idname).toString()));
 						return (Map) q.uniqueResult();

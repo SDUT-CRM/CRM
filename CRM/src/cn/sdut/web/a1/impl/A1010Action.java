@@ -15,9 +15,9 @@ public class A1010Action extends A1010Support {
 			List rows = this.getA1010Services().query();
 			if (rows.size() > 0) {
 				this.rows = rows;
-				//String pageinfo = this.services.getPageInfo("s1010Action");
-				//Map request = (Map) ActionContext.getContext().get("request");
-				//request.put("pageinfo", pageinfo);
+				String pageinfo = this.getA1010Services().getPageInfo("a1010Action");
+				Map request = (Map) ActionContext.getContext().get("request");
+				request.put("pageinfo", pageinfo);
 			} else {
 				this.msg = "没有符合条件的数据";
 			}
