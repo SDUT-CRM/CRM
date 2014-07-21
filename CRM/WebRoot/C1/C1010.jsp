@@ -24,11 +24,10 @@
 						员工部门
 					</TD>
 					<TD>
-						<select>
-							<option value="a">
-								行政部
-							</option>
-						</select>
+						<s:select name="qlg0401" list="oclg0401" 
+						listKey="key" listValue="value" 
+						headerKey="" headerValue="==不限=="
+					    cssStyle="width:153px" />
 					</TD>
 				</TR>
 				<TR>
@@ -42,7 +41,7 @@
 						员工状态
 					</TD>
 					<TD>
-						<s:select name="qlg0401" list="oclg0401" 
+						<s:select name="qlg0207" list="oclg0207" 
 						listKey="key" listValue="value" 
 						headerKey="" headerValue="==不限=="
 					    cssStyle="width:153px" />
@@ -102,7 +101,7 @@
 											<s:property value="lg0202" />
 										</td>
 										<td>
-											<s:property value="lg0402" />
+											<s:property value="cnlg0402" />
 										</td>
 										<td>
 											<s:property value="cnlg0207" />
@@ -120,6 +119,13 @@
 						</TD>
 					</TR>
 				</s:if>
+				<s:else>
+				<TR>
+				<TD colspan="100">
+				<s:property value="msg"/>
+				</TD>
+				</TR>
+				</s:else>
 				<!-- 按钮 -->
 				<TR>
 					<TD colspan="100" align="center">

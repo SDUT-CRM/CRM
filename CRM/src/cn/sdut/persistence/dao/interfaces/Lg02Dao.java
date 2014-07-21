@@ -8,7 +8,6 @@ import cn.sdut.persistence.bean.Lg02;
 public interface Lg02Dao {
 	
 	public void setMapDto(Map dto);
-	public List query() throws Exception;
 	public List queryForPage() throws Exception;
 	public String getPageInfo(String url);
 }
