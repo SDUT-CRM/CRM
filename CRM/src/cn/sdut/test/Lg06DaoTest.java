@@ -18,17 +18,25 @@ public class Lg06DaoTest{
 	public static void main(String[] args) {
 		dao.setMapDto(dto);
 		try {
-			queryTest();
+			checkTest();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
+	public static void checkTest() throws Exception {
+		dto.put("lg2101","2");
+		dto.put("lg0501","1");
+		boolean res = dao.check();
+		System.out.println(res);
+	}
+	
 	public static void deleteTest() throws Exception {
 		dto.put("lg0601","9");
 		boolean res = dao.delete();
 		System.out.println(res);
 	}
+	
 	public static void modifyTest() throws Exception {
 		dto.put("lg0501", "1");
 		dto.put("lg0201", "0");

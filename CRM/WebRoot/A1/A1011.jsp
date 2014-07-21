@@ -57,7 +57,7 @@
    </tr>
   <tr>
       <td colspan="100" align="center">
-      	 <s:if test="lg0509==1">
+      	 <s:if test="msg==null">
       		<s:submit name="next" value="ÉêÇë" onclick="return onNext()"/>
       	</s:if>
         <s:submit name="next" value="·µ»Ø "/>

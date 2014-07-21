@@ -11,5 +11,7 @@ public interface A1010Services {
 	public String getPageInfo(String url);
 	
 	public Map getInstance() throws Exception;
+	
+	public boolean check() throws Exception;
 
 }

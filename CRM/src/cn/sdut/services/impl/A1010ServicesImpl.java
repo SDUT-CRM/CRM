@@ -11,7 +11,7 @@ public class A1010ServicesImpl implements A1010Services {
 	private Lg05Dao lg05Dao = null;
 	private Lg06Dao lg06Dao = null;
 	private Map dto = null;
-
+	
 	@Override
 	public Map getInstance() throws Exception{
 		return this.lg05Dao.getInstance();
@@ -58,5 +58,10 @@ public class A1010ServicesImpl implements A1010Services {
 		this.dto = dto;
 		this.lg05Dao.setMapDto(dto);
 		this.lg06Dao.setMapDto(dto);
+	}
+
+	@Override
+	public boolean check() throws Exception {
+		return this.lg06Dao.check();
 	}
 }

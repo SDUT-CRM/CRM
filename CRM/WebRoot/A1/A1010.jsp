@@ -52,6 +52,7 @@
      </TD>
    </TR>
    </s:if>
+    <s:hidden name="lg2101" value="2"/>
    </s:form>
 	</body>
 </html>

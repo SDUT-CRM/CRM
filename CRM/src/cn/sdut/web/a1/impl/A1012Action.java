@@ -2,8 +2,9 @@ package cn.sdut.web.a1.impl;
 
 import cn.sdut.services.A1011Services;
 import cn.sdut.system.Tools;
+import cn.sdut.web.a1.A1010Support;
 
-public class A1012Action {
+public class A1012Action extends A1010Support {
 	
 	protected A1011Services a1011Services = null;
 	protected String msg = null;

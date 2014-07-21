@@ -390,7 +390,7 @@ public abstract class HibernatePageDaoSupport extends HibernateDaoSupport {
 	 * @param args
 	 * @return
 	 */
-	protected Number queryFroNumber(final String hql, final Object... args) {
+	protected Number queryForNumber(final String hql, final Object... args) {
 		return this.getHibernateTemplate().execute(
 				new HibernateCallback<Number>() {
 					@Override

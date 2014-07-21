@@ -88,11 +88,16 @@ public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
 	
 	@Override
 	public boolean check() throws Exception {
+		Object args[]={
+			this.getLong("lg2101"),
+			this.getLong("lg0501")
+		};
 		StringBuilder hql=new StringBuilder()
-		.append("update Lg06 x")
-		.append("   set x.lg0602=?")
-		.append(" where x.lg0601=?")
+		.append("select count(*)")
+		.append("  from Lg06 x")
+		.append(" where x.lg01.lg2101 = ? and x.lg05.lg0501 = ?")
+		.append("       and x.lg0602<4");
 		;
-		return false;
+		return this.queryForNumber(hql.toString(), args).intValue()==0;
 	}
 }
