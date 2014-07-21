@@ -12,7 +12,7 @@ public class A1010Action extends A1010Support {
 	@Override
 	public String execute() throws Exception {
 		try {
-			List rows = this.services.query();
+			List rows = this.getA1010Services().query();
 			if (rows.size() > 0) {
 				this.rows = rows;
 				//String pageinfo = this.services.getPageInfo("s1010Action");

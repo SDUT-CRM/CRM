@@ -17,8 +17,19 @@ public class A1010ServicesImpl implements A1010Services {
 	 * this.lg05Dao.getPageInfo(url); }
 	 */
 
+	
 	public Lg05Dao getLg05Dao() {
 		return lg05Dao;
+	}
+
+	public Map getDto() {
+		return dto;
+	}
+
+	public void setDto(Map dto) {
+		this.dto = dto;
+		this.lg05Dao.setMapDto(dto);
+		this.lg06Dao.setMapDto(dto);
 	}
 
 	public void setLg05Dao(Lg05Dao lg05Dao) {

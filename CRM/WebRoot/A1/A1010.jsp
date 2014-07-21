@@ -7,6 +7,7 @@
 <head>
 </head>
 <body>
+<s:property value="msg"/>
 <s:if test="rows!=null">   
    <TR>
      <TD>

@@ -9,7 +9,7 @@ public abstract class A1010Support {
 
 	public abstract String execute() throws Exception;
 
-	protected A1010Services services = null;
+	protected A1010Services a1010Services = null;
 
 	protected String msg = null;
 	protected List rows = null;
@@ -107,13 +107,13 @@ public abstract class A1010Support {
 		this.lg0510 = lg0510;
 	}
 
-	public A1010Services getServices() {
-		return services;
+	public A1010Services getA1010Services() {
+		this.a1010Services.setMapDto(Tools.describe());
+		return a1010Services;
 	}
 
-	public void setServices(A1010Services services) {
-		this.services = services;
-		this.services.setMapDto(Tools.describe());
+	public void setA1010Services(A1010Services a1010Services) {
+		this.a1010Services = a1010Services;
 	}
 
 	public String getMsg() {
