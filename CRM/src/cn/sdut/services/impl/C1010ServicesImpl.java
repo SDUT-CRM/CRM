@@ -17,6 +17,14 @@ public class C1010ServicesImpl implements C1010Services
     private Map dto = null;
     
     @Override
+    public boolean updateEmployee() throws Exception
+    {
+        this.lg21Dao.UpdateUser();
+        this.lg02Dao.updateEmployee();
+        return true;
+    }
+    
+    @Override
     public boolean addEmployee() throws Exception
     {
         DateFormat dt = new SimpleDateFormat("yyyy-MM-dd");

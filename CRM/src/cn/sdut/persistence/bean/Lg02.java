@@ -6,8 +6,6 @@ import java.util.Set;
 
 public class Lg02 implements java.io.Serializable {
 
-	// Fields
-
 	private long lg2101;
 	private Lg21 lg21;
 	private Lg04 lg04;
