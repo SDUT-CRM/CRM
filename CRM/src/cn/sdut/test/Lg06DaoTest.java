@@ -11,7 +11,7 @@ import cn.sdut.persistence.dao.interfaces.Lg06Dao;
 
 public class Lg06DaoTest{
 	private static ApplicationContext act = new FileSystemXmlApplicationContext(
-	"C:/Users/Administrator/git/CRM/CRM/WebRoot/WEB-INF/applicationContext.xml");
+		"C:/Users/Administrator/git/CRM/CRM/WebRoot/WEB-INF/applicationContext.xml");
 	private static Lg06Dao dao = act.getBean("lg06dao", Lg06Dao.class);
 	private static Map dto = new HashMap();
 	

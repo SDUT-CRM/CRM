@@ -8,7 +8,9 @@
     <class name="cn.sdut.persistence.bean.Lg21" table="LG21" schema="USER001">
         <id name="lg2101" type="long">
             <column name="LG2101" precision="22" scale="0" />
-            <generator class="sequence" />
+            <generator class="sequence">
+            	<param name="sequence">S_LG21</param>
+            </generator>
         </id>
         <property name="lg2102" type="java.lang.String">
             <column name="LG2102" not-null="true" />

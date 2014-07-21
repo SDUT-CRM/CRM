@@ -52,5 +52,6 @@
 				<value>cn/sdut/persistence/bean/Lg20.hbm.xml</value>
 				<value>cn/sdut/persistence/bean/Lg11.hbm.xml</value>
 				<value>cn/sdut/persistence/bean/Lg10.hbm.xml</value>
-				<value>cn/sdut/persistence/bean/Syscode.hbm.xml</value></list>
+				<value>cn/sdut/persistence/bean/Syscode.hbm.xml</value>
+				<value>cn/sdut/persistence/bean/Lg22.hbm.xml</value></list>
 		</property></bean></beans>
