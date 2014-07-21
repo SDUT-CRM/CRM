@@ -11,5 +11,10 @@ public interface Lg05Dao {
 
 	public List query() throws Exception;
 	
+	public List queryForPage() throws Exception;
+	
+	public String getPageInfo(String url);
+	
+	public Map getInstance() throws Exception;
 
 }

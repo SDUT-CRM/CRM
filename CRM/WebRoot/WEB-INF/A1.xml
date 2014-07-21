@@ -5,6 +5,16 @@
 	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
+	<bean id="a1012" class="cn.sdut.web.a1.impl.A1012Action"
+			scope="prototype">
+		<property name="a1011Services" ref="a1011services"/>
+	</bean>	
+
+	<bean id="a1011" class="cn.sdut.web.a1.impl.A1011Action"
+			scope="prototype">
+		<property name="a1010Services" ref="a1010services"/>
+	</bean>	
+
 	<bean id="a1010" class="cn.sdut.web.a1.impl.A1010Action"
 			scope="prototype">
 		<property name="a1010Services" ref="a1010services"/>

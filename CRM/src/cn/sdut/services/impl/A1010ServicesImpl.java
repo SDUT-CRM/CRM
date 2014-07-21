@@ -12,12 +12,16 @@ public class A1010ServicesImpl implements A1010Services {
 	private Lg06Dao lg06Dao = null;
 	private Map dto = null;
 
-	/*
-	 * @Override public String getPageInfo(String url) { return
-	 * this.lg05Dao.getPageInfo(url); }
-	 */
-
+	@Override
+	public Map getInstance() throws Exception{
+		return this.lg05Dao.getInstance();
+	}
 	
+	@Override
+	public String getPageInfo(String url) {
+		return this.lg05Dao.getPageInfo(url);
+	}
+
 	public Lg05Dao getLg05Dao() {
 		return lg05Dao;
 	}
@@ -46,7 +50,7 @@ public class A1010ServicesImpl implements A1010Services {
 
 	@Override
 	public List query() throws Exception {
-		return this.lg05Dao.query();
+		return this.lg05Dao.queryForPage();
 	}
 
 	@Override
