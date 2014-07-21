@@ -10,4 +10,5 @@ public interface C1010Services
     public List query()throws Exception;
     
     public String getPageInfo(String url);
+    
 }

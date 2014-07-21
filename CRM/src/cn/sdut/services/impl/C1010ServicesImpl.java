@@ -14,8 +14,7 @@ public class C1010ServicesImpl implements C1010Services
     @Override
     public String getPageInfo(String url)
     {
-        // TODO Auto-generated method stub
-        return this.lg02Dao
+             return this.lg02Dao.getPageInfo(url);
     }
     
     public Lg02Dao getLg02Dao()
