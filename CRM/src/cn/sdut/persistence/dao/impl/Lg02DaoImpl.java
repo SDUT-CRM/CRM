@@ -9,6 +9,7 @@ import java.util.Map;
 import org.apache.commons.beanutils.BeanUtils;
 
 import cn.sdut.persistence.bean.Lg02;
+import cn.sdut.persistence.bean.Lg04;
 import cn.sdut.persistence.dao.interfaces.Lg02Dao;
 import cn.sdut.persistence.support.HibernatePageDaoSupport;
 import cn.sdut.system.Tools;
@@ -16,6 +17,31 @@ import cn.sdut.system.Tools;
 public class Lg02DaoImpl extends HibernatePageDaoSupport implements Lg02Dao
 {
 
+    /**
+     * 
+     */
+    @Override
+    public boolean addEmployee() throws Exception
+    {
+        //this.dto.put("lg0401", this.getObject("lg0401"));
+        Lg04 lg04 = new Lg04();
+        lg04.setLg0401(this.getLong("lg0401"));
+        this.dto.put("lg04", lg04);
+        this.dto.put("lg0202", this.getObject("lg0202"));
+        this.dto.put("lg0203", this.getObject("lg0203"));
+        this.dto.put("lg0204", this.getObject("lg0204"));
+        this.dto.put("lg0205", this.getObject("lg0205"));
+        this.dto.put("lg0206", this.getObject("lg0206"));
+        this.dto.put("lg0207", this.getObject("lg0207"));
+        this.dto.put("lg0208", this.getUDate("lg0208"));
+        this.dto.put("lg0209", this.getUDate("lg0209"));
+        this.dto.put("lg020", this.getObject("lg020"));
+        Lg02 lg02 = this.addObject(Lg02.class);
+        return false;
+    }
+    /**
+     * 
+     */
     @Override
     public List queryForPage() throws Exception
     {

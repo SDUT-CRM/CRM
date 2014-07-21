@@ -82,4 +82,14 @@ public class Lg21 implements java.io.Serializable {
 		this.lg01s = lg01s;
 	}
 
+    @Override
+    public String toString()
+    {
+        return "Lg21 [lg2101=" + lg2101 + ", lg2102=" + lg2102 + ", lg2103="
+                + lg2103 + ", lg2104=" + lg2104 + ", lg2105=" + lg2105
+                + ", lg03s=" + lg03s + ", lg02s=" + lg02s + ", lg01s=" + lg01s
+                + "]";
+    }
+
+	
 }

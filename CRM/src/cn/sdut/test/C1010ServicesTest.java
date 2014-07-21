@@ -20,13 +20,35 @@ public class C1010ServicesTest
         services.setMapDto(dto);
         try
         {
-            C1010ServicesTest.queryTest();
+            C1010ServicesTest
+            .addEmployeeTest()
+            ;
+            //.queryTest();
         }
         catch (Exception e)
         {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+    }
+    
+    public static void addEmployeeTest() throws Exception
+    {
+        dto.put("lg2102", "TEST999");
+        dto.put("lg2103", "f40ed289d89877f1cdcc6ec056a7ce95");
+        dto.put("lg2104", "测试用户999");
+        dto.put("lg2105", "2");
+        dto.put("lg0202", "测试用户");
+        dto.put("lg0203", "123456789012345678");
+        dto.put("lg0204", "山东省淄博市");
+        dto.put("lg0205", "13145677894");
+        dto.put("lg0206", "test@crm.com");
+        dto.put("lg0207", "1");
+        dto.put("lg0401", "1");
+        dto.put("lg0208", "2014-01-08");
+        dto.put("lg0209", "2014-07-21");
+        boolean tag=services.addEmployee();
+        System.out.println(tag);
     }
     /**
      * lg2102=E10000, lg0208=2014-01-01, lg0402=售后服务部, lg0202=张三, cnlg0207=在职

@@ -8,7 +8,7 @@
     <class name="cn.sdut.persistence.bean.Lg03" table="LG03" schema="USER001">
         <id name="lg2101" type="long">
             <column name="LG2101" precision="22" scale="0" />
-            <generator class="sequence" />
+            <generator class="assigned"></generator>
         </id>
         <many-to-one name="lg21" class="cn.sdut.persistence.bean.Lg21" update="false" insert="false" fetch="select">
             <column name="LG2101" precision="22" scale="0" not-null="true" unique="true" />

@@ -10,4 +10,5 @@ public interface Lg02Dao {
 	public void setMapDto(Map dto);
 	public List queryForPage() throws Exception;
 	public String getPageInfo(String url);
+	public boolean addEmployee() throws Exception;
 }
