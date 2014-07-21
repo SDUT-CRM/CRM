@@ -42,17 +42,10 @@
 						员工状态
 					</TD>
 					<TD>
-						<select>
-							<option value="1">
-								在职
-							</option>
-							<option value="2">
-								离职
-							</option>
-							<option value="3">
-								过世
-							</option>
-						</select>
+						<s:select name="qlg0401" list="oclg0401" 
+						listKey="key" listValue="value" 
+						headerKey="" headerValue="==不限=="
+					    cssStyle="width:153px" />
 					</TD>
 				</TR>
 				<TR>
