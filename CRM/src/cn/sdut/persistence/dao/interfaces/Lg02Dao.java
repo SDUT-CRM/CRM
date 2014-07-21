@@ -11,4 +11,5 @@ public interface Lg02Dao {
 	public List queryForPage() throws Exception;
 	public String getPageInfo(String url);
 	public boolean addEmployee() throws Exception;
+	public boolean updateEmployee() throws Exception;
 }

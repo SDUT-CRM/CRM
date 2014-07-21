@@ -14,4 +14,6 @@ public interface C1010Services
     public String getPageInfo(String url);
     @Transactional
     public boolean addEmployee() throws Exception;
+    @Transactional
+    public boolean updateEmployee() throws Exception;
 }
