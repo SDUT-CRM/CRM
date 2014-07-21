@@ -22,7 +22,8 @@ public class Lg21DaoTest
         {
            // checkUserTest();
             Lg21DaoTest
-            .UpdateUserTest()
+           // .UpdateUserTest()
+            .getInstance()
             //.addUserTest()
             ;
         }
@@ -32,6 +33,28 @@ public class Lg21DaoTest
         }
     }
     
+    
+    public static void getInstance() throws Exception
+    {
+        dto.put("lg2101", "0");
+        Map map=dao.getInstance();
+        System.out.println(map);
+    }
+    
+    
+    
+    
+    /**
+     * 
+     * @函数名  UpdateUserTest
+     * @参数说明 
+     * @返回值  
+     * @功能说明 
+     * @作者    
+     * @创建日期 2014-7-21
+     * @更新日期 
+     * @更新内容
+     */
     public static void UpdateUserTest() throws Exception
     {
         /**

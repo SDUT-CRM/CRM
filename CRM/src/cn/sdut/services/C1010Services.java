@@ -16,4 +16,6 @@ public interface C1010Services
     public boolean addEmployee() throws Exception;
     @Transactional
     public boolean updateEmployee() throws Exception;
+    
+    public Map getEmployee() throws Exception;
 }

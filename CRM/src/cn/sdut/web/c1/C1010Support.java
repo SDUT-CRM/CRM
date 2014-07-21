@@ -1,6 +1,7 @@
 package cn.sdut.web.c1;
 
 import java.util.List;
+import java.util.Map;
 
 import cn.sdut.services.C1010Services;
 import cn.sdut.system.Tools;
@@ -11,6 +12,7 @@ public abstract class C1010Support
     protected C1010Services c1010Services;
     protected String msg;
     protected List rows;
+    protected Map maps;
     
     protected List oclg0401=null;
     protected List oclg0207=null;
@@ -35,7 +37,54 @@ public abstract class C1010Support
     protected String lg0209;
     protected String lg0401;
     
+    protected String cnlg2105;
+    protected String cnlg0401;
+    protected String cnlg0207;
     
+    
+    
+    
+    
+    public String getCnlg2105()
+    {
+        return cnlg2105;
+    }
+
+    public void setCnlg2105(String cnlg2105)
+    {
+        this.cnlg2105 = cnlg2105;
+    }
+
+    public String getCnlg0401()
+    {
+        return cnlg0401;
+    }
+
+    public void setCnlg0401(String cnlg0401)
+    {
+        this.cnlg0401 = cnlg0401;
+    }
+
+    public String getCnlg0207()
+    {
+        return cnlg0207;
+    }
+
+    public void setCnlg0207(String cnlg0207)
+    {
+        this.cnlg0207 = cnlg0207;
+    }
+
+    public Map getMaps()
+    {
+        return maps;
+    }
+
+    public void setMaps(Map maps)
+    {
+        this.maps = maps;
+    }
+
     private void initMain() throws Exception
     {
         this.oclg0401=Tools.getOptions("LLG02");
