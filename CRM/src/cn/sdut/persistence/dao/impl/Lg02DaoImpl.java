@@ -18,6 +18,8 @@ public class Lg02DaoImpl extends HibernatePageDaoSupport implements Lg02Dao
 {
 
     
+    
+    
     @Override
     public boolean updateEmployee() throws Exception
     {

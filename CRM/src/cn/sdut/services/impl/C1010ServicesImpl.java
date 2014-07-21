@@ -16,6 +16,14 @@ public class C1010ServicesImpl implements C1010Services
     private Lg21Dao lg21Dao =null;
     private Map dto = null;
     
+    
+    @Override
+    public Map getEmployee() throws Exception
+    {
+        return this.lg21Dao.getInstance();
+    }
+    
+    
     @Override
     public boolean updateEmployee() throws Exception
     {
