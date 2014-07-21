@@ -11,4 +11,5 @@
 	<import resource="dao.xml"/>
     <import resource="services.xml"/>
     <import resource="C1.xml"/>
+    <import resource="A1.xml"/>
 </beans>
