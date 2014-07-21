@@ -22,7 +22,7 @@
 					<table>
 						<tr>
 							<td>
-								<a href="<%=path%>/C1/C1010.jsp" target="WORK">员工管理</a>
+								<a href="<%=path%>/C1/c1011Action.action" target="WORK">员工管理</a>
 							</td>
 						</tr>
 						<tr>
