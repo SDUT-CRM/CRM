@@ -8,6 +8,9 @@
     <bean id="lg18dao" class="cn.sdut.persistence.dao.impl.Lg18DaoImpl">
       <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
+    <bean id="lg14dao" class="cn.sdut.persistence.dao.impl.Lg14DaoImpl">
+      <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
     <bean id="lg08dao" class="cn.sdut.persistence.dao.impl.Lg08DaoImpl">
       <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
