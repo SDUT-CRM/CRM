@@ -9,5 +9,5 @@ public interface Lg14Dao {
 	
 	public void setMapDto(Map dto);
 	public List queryForPage() throws Exception;
-
+	public String getPageInfo(String url);
 }

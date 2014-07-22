@@ -26,7 +26,10 @@ public class Lg14DaoTest {
 	
 	public static void queryForPageTest() throws Exception
 	{
+	    //dto.put("lg0302", "Íõ");
+	    dto.put("lg1303", "Ë®");
 	    List list = dao.queryForPage();
+	    
 	    System.out.println(list);
 	}
 }
