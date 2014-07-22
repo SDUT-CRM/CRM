@@ -32,6 +32,25 @@ public abstract class C2020Support
     protected String cnlg0402;
     
     protected String qlg1302;
+    protected String qlg1303;
+    protected String qlg0402;
+    protected String qlg0202;
+    protected String qlg0302;
+    protected String blg1402;
+    protected String elg1402;
+    protected String blg1404;
+    protected String elg1404;
+    protected String blg1405;
+    protected String elg1405;
+    
+    /*
+     * Object blg1402=this.dto.get("blg1402");//申请开始时间
+     Object elg1402=this.dto.get("elg1402");//申请结束时间
+     Object blg1404=this.dto.get("blg1404");//审核开始时间
+     Object elg1404=this.dto.get("elg1404");//审核结束时间
+     Object blg1405=this.dto.get("blg1405");//领取开始时间
+     Object elg1405=this.dto.get("elg1405");//领取结束时间
+     */
     
     
     private void initMain() throws Exception
@@ -78,6 +97,7 @@ public abstract class C2020Support
     public void setC2020Services(C2020Services c2020Services)
     {
         this.c2020Services = c2020Services;
+        this.c2020Services.setMapDto(Tools.describe());
     }
 
     public List getOclg0402()

@@ -1,5 +1,7 @@
 package cn.sdut.persistence.dao.impl;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -90,6 +92,65 @@ public class Lg14DaoImpl extends HibernatePageDaoSupport implements Lg14Dao{
        {
            this.hql.append(" and e.lg0302 like ?");
            this.pars.add("%"+lg0302+"%");
+       }
+       
+       
+       /*
+        * Object blg1402=this.dto.get("blg1402");//申请开始时间
+        Object elg1402=this.dto.get("elg1402");//申请结束时间
+        Object blg1404=this.dto.get("blg1404");//审核开始时间
+        Object elg1404=this.dto.get("elg1404");//审核结束时间
+        Object blg1405=this.dto.get("blg1405");//领取开始时间
+        Object elg1405=this.dto.get("elg1405");//领取结束时间
+        */
+       
+    // 申请时间 开始
+       if (this.checkVal(blg1402))
+       {
+           DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+           blg1402=df.parseObject((String)blg1402);
+           this.hql.append(" and a.lg1402>=?");
+           this.pars.add(blg1402);
+       }
+       // 申请时间 结束
+       if (this.checkVal(elg1402))
+       {
+           DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+           elg1402=df.parseObject((String)elg1402);
+           this.hql.append(" and a.lg1402<=?");
+           this.pars.add(elg1402);
+       }
+    // 审核时间 开始
+       if (this.checkVal(blg1404))
+       {
+           DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+           blg1404=df.parseObject((String)blg1404);
+           this.hql.append(" and a.lg1404>=?");
+           this.pars.add(blg1404);
+       }
+       // 审核时间 结束
+       if (this.checkVal(elg1404))
+       {
+           DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+           elg1404=df.parseObject((String)elg1404);
+           this.hql.append(" and a.lg1404<=?");
+           this.pars.add(elg1404);
+       }
+    // 审核时间 开始
+       if (this.checkVal(blg1405))
+       {
+           DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+           blg1405=df.parseObject((String)blg1405);
+           this.hql.append(" and a.lg1405>=?");
+           this.pars.add(blg1405);
+       }
+       // 审核时间 结束
+       if (this.checkVal(elg1405))
+       {
+           DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+           elg1405=df.parseObject((String)elg1405);
+           this.hql.append(" and a.lg1405<=?");
+           this.pars.add(elg1405);
        }
        this.hql.append(" order by a.lg1401");
        return this.queryForList();

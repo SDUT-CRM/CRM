@@ -26,6 +26,7 @@ public class C2020ServicesImpl implements C2020Services
     public void setMapDto(Map dto)
     {
         this.dto=dto;
+        this.lg14Dao.setMapDto(dto);
         
     }
 

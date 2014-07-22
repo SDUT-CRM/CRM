@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
-	<package name="C2" extends="struts-default">
-		<action name="c2020Action" class="c2020">
-			<result name="main">/C2/C2020.jsp</result>
+	<package name="C1" extends="struts-default">
+		<action name="c1014Action" class="c1014">
+		    <result name="main">/C1/C1012.jsp</result>
+		</action>
+		<action name="c1013Action" class="c1013">
+		    <result name="main">/C1/C1012.jsp</result>
+		</action>
+		<action name="c1010Action" class="c1010">
+			<result name="main">/C1/C1010.jsp</result>
+		</action>
+		<action name="c1011Action" class="c1011">
+			<result name="main">/C1/C1010.jsp</result>
+		</action>
+		<action name="c1012Action" class="c1012">
+			<result name="main">/C1/C1011.jsp</result>
 		</action>
 	</package>
 </struts>    

@@ -23,42 +23,84 @@
 						<s:textfield name="qlg1302" />
 					</TD>
 					<TD>
-						员工部门
+						配件名称
 					</TD>
 					<TD>
-						<s:select name="qlg0401" list="oclg0401" listKey="key"
-							listValue="value" headerKey="" headerValue="==不限=="
-							cssStyle="width:153px" />
+						<s:textfield name="qlg1303" />
 					</TD>
 				</TR>
 				<TR>
 					<TD>
-						员工姓名
+						申领部门
+					</TD>
+					<TD>
+						<s:select name="qlg0402" list="oclg0402" listKey="key"
+							listValue="value" headerKey="" headerValue="==不限=="
+							cssStyle="width:153px" />
+					</TD>
+					<TD>
+						申领人
 					</TD>
 					<TD>
 						<s:textfield name="qlg0202" />
 					</TD>
+				</TR>
+				<TR>
 					<TD>
-						员工状态
+						审核状态
 					</TD>
 					<TD>
-						<s:select name="qlg0207" list="oclg0207" listKey="key"
+						<s:select name="qlg1403" list="oclg1403" listKey="key"
 							listValue="value" headerKey="" headerValue="==不限=="
 							cssStyle="width:153px" />
+					</TD>
+					<TD>
+						经手人
+					</TD>
+					<TD>
+						<s:textfield name="qlg0302" />
 					</TD>
 				</TR>
 				<TR>
 					<TD>
-						入职时间(起始)
+						申请开始时间
 					</TD>
 					<TD>
-						<s:textfield name="blg0208" />
+						<s:textfield name="blg1402" />
 					</TD>
 					<TD>
-						入职时间(结束)
+						申请结束时间
 					</TD>
 					<TD>
-						<s:textfield name="elg0208" />
+						<s:textfield name="elg1402" />
+					</TD>
+				</TR>
+				<TR>
+					<TD>
+						审核开始时间
+					</TD>
+					<TD>
+						<s:textfield name="blg1404" />
+					</TD>
+					<TD>
+						审核结束时间
+					</TD>
+					<TD>
+						<s:textfield name="elg1404" />
+					</TD>
+				</TR>
+				<TR>
+					<TD>
+						领取开始时间
+					</TD>
+					<TD>
+						<s:textfield name="blg1405" />
+					</TD>
+					<TD>
+						领取结束时间
+					</TD>
+					<TD>
+						<s:textfield name="elg1405" />
 					</TD>
 				</TR>
 				<!-- 迭代数据 -->
