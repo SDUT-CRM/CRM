@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<s:property value="msg" />
-		<s:form action="c1012Action">
+		<s:form action="c1014Action">
 			<TABLE border="1" align="center" width="850px">
 				<caption>
 					编辑员工信息界面
@@ -17,8 +17,9 @@
 				<TR>
 				<TD>账号</TD>
 				<TD><s:textfield name="lg2102" disabled="true"/></TD>
-				<TD>密码</TD>
-				<TD><s:textfield name="lg2103"/></TD>
+				 <TD>入职日期</TD>
+				<TD><s:textfield name="lg0208" disabled="true"/></TD>
+				<TR>
 				</TR>
 				<TR>
 				<TD>代称</TD>
@@ -59,25 +60,27 @@
 							listValue="value"
 							cssStyle="width:153px"/>
 				</TD>
-				<TD>入职日期</TD>
-				<TD><s:textfield name="lg0208" disabled="true"/></TD>
+				<TD colspan="100"></TD>
+				</TR>
 				<TR>
 				<TD colspan="100" align="center">
-				<s:submit name="next" value="确认"/>
+				<s:submit name="next" value="更新"/>
 				<s:submit name="next2" value="返回"/>
 				</TD>
 				</TR>
 			</TABLE>
 
-			<input type="hidden" name="edit" value="1" />
-			<input type="hidden" name="lg0207" value="1" />
 			<input type="hidden" name="lg2105" value="1" />
+			<s:hidden name="lg2102"/>
+			<s:hidden name="lg"/>
+			<s:hidden name="lg2101"/>
 			<s:hidden name="qlg0401"/>
 			<s:hidden name="qlg0207"/>
 			<s:hidden name="qlg2102"/>
 			<s:hidden name="qlg0202"/>
 			<s:hidden name="blg0208"/>
 			<s:hidden name="elg0208"/>
+			<s:debug/>
 		</s:form>
 
 	</body>

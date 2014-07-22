@@ -148,7 +148,6 @@
 						<s:submit value="Ìí¼Ó" name="next2" onclick="return onNext2()" />
 					</TD>
 				</TR>
-
 			</TABLE>
 		</s:form>
 	</body>

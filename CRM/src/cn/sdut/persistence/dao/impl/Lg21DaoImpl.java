@@ -27,8 +27,8 @@ public class Lg21DaoImpl extends HibernatePageDaoSupport implements Lg21Dao {
         .append(")")
         .append("  from Lg21 a,Lg02 b,Syscode c,Syscode d,Lg04 e,Syscode f")
         .append(" where a.lg2101=b.lg2101")
-        .append("   and a.lg2105=f.fcode")
         .append("   and e.lg0401=b.lg04.lg0401")
+        .append("   and a.lg2105=f.fcode")
         .append("   and d.fcode=e.lg0402")
         .append("   and c.fcode=b.lg0207")
         .append("   and d.fname='LLG02'")
@@ -49,13 +49,12 @@ public class Lg21DaoImpl extends HibernatePageDaoSupport implements Lg21Dao {
        // this.dto.put("lg2105", this.getObject("lg2105"));
         StringBuilder hql=new StringBuilder()
         .append("update Lg21")
-        .append("   set lg2103=?,lg2104=?,lg2105=?")
+        .append("   set lg2104=?")
         .append(" where lg2101=?")
         ;
+        System.out.println(dto);
         Object[] args={
-          this.getObject("lg2103"),
           this.getObject("lg2104"),
-          this.getObject("lg2105"),
           this.getLong("lg2101")
         };
         this.update(hql.toString(), args);

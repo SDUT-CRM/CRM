@@ -25,16 +25,18 @@ public class Lg02DaoImpl extends HibernatePageDaoSupport implements Lg02Dao
     {
         StringBuilder hql = new StringBuilder()
         .append("update Lg02")
-        .append("   set lg0202=?,lg0204=?,lg0205=?,")
+        .append("   set lg0202=?,lg0204=?,lg0205=?,lg0203=?,")
         .append("       lg0206=?,lg04=?,lg0207=?,lg0209=?")
         .append(" where lg2101=?")
         ;
         Lg04 lg04 = new Lg04();
         lg04.setLg0401(this.getLong("lg0401"));
+        System.out.println(dto);
         Object args[]={
           this.getObject("lg0202"),      
           this.getObject("lg0204"),      
-          this.getObject("lg0205"),      
+          this.getObject("lg0205"),  
+          this.getObject("lg0203"),
           this.getObject("lg0206"),      
           lg04,
           this.getObject("lg0207"),
