@@ -6,7 +6,7 @@
 <html>
 <head>
 <script type="text/javascript">
-    function onSelect(obj)
+   	function onSelect(obj)
 	{
 		with(document.forms[0])
 		{
@@ -18,7 +18,7 @@
 	{
 		with(document.forms[0])
 		{
-			action="<%=path%>/a1014Action.action?lg0601="+obj;
+			action="<%=path%>/a1024Action.action?lg0801="+obj;
 			submit();
 		}
 	}
@@ -54,8 +54,13 @@
 	           <td align="center">
 	           	   <a href="#" onclick="onSelect(<s:property value="lg0701"/>)">查看详情</a>
 	           </td>
-	           <td align="center">
-	               <a href="#" onclick="onCancel(<s:property value="lg0801"/>)">取消办理</a>
+	            <td align="center">
+	            <s:if test="lg0804==1">
+	               <a href="#" onclick="onCancel(<s:property value="lg0801"/>)">取消参加</a>
+	            </s:if>
+				<s:else>
+					已取消
+				</s:else>	            
 	           </td>
 	         </tr>
          </s:iterator>

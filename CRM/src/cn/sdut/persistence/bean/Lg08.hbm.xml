@@ -16,7 +16,7 @@
             <column name="LG2101" precision="22" scale="0" not-null="true" />
         </many-to-one>
         <many-to-one name="lg07" class="cn.sdut.persistence.bean.Lg07" fetch="select">
-            <column name="LG0701" precision="22" scale="0" not-null="true" />
+            <column name="LG0701" precision="22" scale="0" not-null="false" />
         </many-to-one>
         <property name="lg0802" type="java.util.Date">
             <column name="LG0802" length="7" not-null="true" />

@@ -43,7 +43,6 @@ public class A1011ServicesImpl implements A1011Services {
 		this.dto.put("lg02", lg02);
 		this.dto.put("lg05", lg05);
 
-		System.out.println("ds::::" + this.dto);
 		return lg06Dao.add();
 	}
 

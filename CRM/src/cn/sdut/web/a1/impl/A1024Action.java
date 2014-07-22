@@ -3,25 +3,25 @@ package cn.sdut.web.a1.impl;
 import java.util.List;
 import java.util.Map;
 
-import cn.sdut.web.a1.A1012Support;
+import cn.sdut.web.a1.A1022Support;
 
 import com.opensymphony.xwork2.ActionContext;
 
-public class A1024Action extends A1012Support {
+public class A1024Action extends A1022Support {
 
 	@Override
 	public String execute() throws Exception {
 		try {
-			boolean res = this.getA1011Services().cancel();
+			boolean res = this.getA1021Services().cancel();
 			if (res == true) {
 				this.msg = "取消成功";
 			} else {
 				this.msg = "取消失败";
 			}
-			List rows = this.getA1011Services().query();
+			List rows = this.getA1021Services().query();
 			this.rows = rows;
-			String pageinfo = this.getA1011Services()
-					.getPageInfo("a1013Action");
+			String pageinfo = this.getA1021Services()
+					.getPageInfo("a1023Action");
 			Map request = (Map) ActionContext.getContext().get("request");
 			request.put("pageinfo", pageinfo);
 		} catch (Exception e) {

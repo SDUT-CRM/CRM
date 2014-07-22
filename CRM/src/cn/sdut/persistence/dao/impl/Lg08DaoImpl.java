@@ -29,23 +29,13 @@ public class Lg08DaoImpl extends HibernatePageDaoSupport implements Lg08Dao{
 	
 	@Override
 	public boolean add() throws Exception {
-		this.dto.put("lg2101", this.getObject("lg2101"));
-		this.dto.put("lg0701", this.getObject("lg0701"));
 		this.dto.put("lg0802", this.getUDate("lg0802"));
 		this.dto.put("lg0803", this.getUDate("lg0803"));
 		this.dto.put("lg0804", this.getObject("lg0804"));
+
+		Lg01 lg01 = (Lg01)dto.get("lg01");
+		Lg07 lg07 = (Lg07)dto.get("lg07");
 		
-		Lg01 lg01 = new Lg01();
-		Lg07 lg07 = new Lg07();
-		
-		//lg01.setLg2101(Long.parseLong(this.dto.get("lg2101").toString()));
-		lg01.setLg2101(Long.parseLong(this.dto.get("lg2101").toString()));
-		lg07.setLg0701(Long.parseLong(this.dto.get("lg0701").toString()));
-		
-		this.dto.put("lg01", lg01);
-		this.dto.put("lg07", lg07);
-		
-		System.out.println(dto);
 		Lg08 lg08 = this.addObject(Lg08.class);
 		this.dto.put("lg08", lg08);
 		return lg08.getLg0801()>0;

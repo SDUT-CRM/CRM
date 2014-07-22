@@ -10,7 +10,7 @@
     {
     	with(document.forms[0])
     	{
-    		action="<%=path%>/a1012Action.action";
+    		action="<%=path%>/a1022Action.action";
     	}
     }
     function onNext1()

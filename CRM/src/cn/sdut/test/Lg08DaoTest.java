@@ -19,7 +19,7 @@ public class Lg08DaoTest {
 	public static void main(String[] args) {
 		dao.setMapDto(dto);
 		try {
-			queryTest();
+			addTest();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

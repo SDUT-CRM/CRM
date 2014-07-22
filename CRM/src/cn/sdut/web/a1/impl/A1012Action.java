@@ -5,23 +5,23 @@ import cn.sdut.system.Tools;
 import cn.sdut.web.a1.A1010Support;
 
 public class A1012Action extends A1010Support {
-	
+
 	protected A1011Services a1011Services = null;
 	protected String msg = null;
 
 	public String execute() throws Exception{
 		a1011Services.setMapDto(Tools.describe());
-		System.out.println("111");
 		boolean res = a1011Services.add();
+		System.out.println("ssss:::::"+res);
 		if(res==false){
-			this.msg = "…Í«Î ß∞‹!";
+			this.msg = "…Í«Î ß∞‹";
 		}
 		else{
 			this.msg = "…Í«Î≥…π¶!";
 		}
 		return "main";
 	}
-	
+
 	public A1011Services getA1011Services() {
 		return a1011Services;
 	}
@@ -39,4 +39,3 @@ public class A1012Action extends A1010Support {
 	}
 
 }
-
