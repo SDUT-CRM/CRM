@@ -5,6 +5,15 @@
 %>
 <html>
 	<head>
+	<script type="text/javascript">
+	function onNext2()
+	{
+		with(document.forms[0])
+		{
+			action="<%=path%>/c1010Action.action";
+		}
+	}
+	</script>
 	</head>
 	<body>
 		<s:property value="msg" />
@@ -65,7 +74,7 @@
 				<TR>
 				<TD colspan="100" align="center">
 				<s:submit name="next" value="更新"/>
-				<s:submit name="next2" value="返回"/>
+				<s:submit name="next2" value="返回" onclick="return onNext2()"/>
 				</TD>
 				</TR>
 			</TABLE>
