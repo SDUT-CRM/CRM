@@ -10,7 +10,7 @@
 	{
 		with(document.forms[0])
 		{
-			action="<%=path%>/a1011Action.action?lg0501="+obj;
+			action="<%=path%>/a1021Action.action?lg0701="+obj;
 			submit();
 		}
 	}
@@ -45,7 +45,7 @@
 	           <td align="center"><s:property value="lg0705"/></td>
 	           <td align="center"><s:property value="cnlg0707"/></td>
 	            <td align="center">
-	              <a href="#" onclick="onSelect(<s:property value="lg0501"/>)">查看详情</a>
+	              <a href="#" onclick="onSelect(<s:property value="lg0701"/>)">查看详情</a>
 	            </td>
 	         </tr>
          </s:iterator>
