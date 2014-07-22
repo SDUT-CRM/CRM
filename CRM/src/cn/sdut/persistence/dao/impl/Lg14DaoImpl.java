@@ -19,6 +19,13 @@ public class Lg14DaoImpl extends HibernatePageDaoSupport implements Lg14Dao{
         Object lg1303=this.dto.get("lg1303");//配件名称
         Object lg1403=this.dto.get("lg1403");//审核状态编号
         Object lg0302=this.dto.get("lg0302");//经手人姓名
+        Object blg1402=this.dto.get("blg1402");//申请开始时间
+        Object elg1402=this.dto.get("elg1402");//申请结束时间
+        Object blg1404=this.dto.get("blg1404");//审核开始时间
+        Object elg1404=this.dto.get("elg1404");//审核结束时间
+        Object blg1405=this.dto.get("blg1405");//领取开始时间
+        Object elg1405=this.dto.get("elg1405");//领取结束时间
+        
         this.pars = new ArrayList();
        this.hql=new StringBuilder()
         .append("select  new map(a.lg1401 as lg1401,h.fvalue as cnlg0402,")

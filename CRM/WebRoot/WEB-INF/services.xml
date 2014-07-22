@@ -27,4 +27,7 @@
 		<property name="lg02Dao" ref="lg02dao"/>
 		<property name="lg21Dao" ref="lg21dao"/>
 	</bean>
+	<bean id="c2020services" class="cn.sdut.services.impl.C2020ServicesImpl">
+		<property name="lg14Dao" ref="lg14dao"/>
+	</bean>
 </beans>

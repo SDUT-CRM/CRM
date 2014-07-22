@@ -4,13 +4,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
- 	
- 	<import resource="DBInfo.xml"/>
-    <import resource="AopTransaction3.x.xml"/>
-    <import resource="SYS.xml"/>
-	<import resource="dao.xml"/>
-    <import resource="services.xml"/>
-    <import resource="C1.xml"/>
-    <import resource="C2.xml"/>
-    <import resource="A1.xml"/>
+	<bean id="c2020" class="cn.sdut.web.c2.impl.C2020Action"
+	      scope="prototype" init-method="initMain">
+	      <property name="c2020Services" ref="c2020services"/>
+	</bean>
 </beans>
