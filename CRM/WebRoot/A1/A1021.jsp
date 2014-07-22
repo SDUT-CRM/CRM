@@ -17,7 +17,7 @@
     {
     	with(document.forms[0])
     	{
-    		action="<%=path%>/a1013Action.action";
+    		action="<%=path%>/a1023Action.action";
     	}
     }
 </script>
