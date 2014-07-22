@@ -24,6 +24,7 @@ public abstract class C1010Support
     protected String blg0208;
     protected String elg0208;
     
+    protected String lg2101;
     protected String lg2102;
     protected String lg2103;
     protected String lg2104;
@@ -46,6 +47,16 @@ public abstract class C1010Support
     
     
     
+    public String getLg2101()
+    {
+        return lg2101;
+    }
+
+    public void setLg2101(String lg2101)
+    {
+        this.lg2101 = lg2101;
+    }
+
     public List getOclg2105()
     {
         return oclg2105;

@@ -85,7 +85,7 @@
 					</TD>
 					<TD>
 						<s:select name="lg0401" list="oclg0401" listKey="key"
-							listValue="value" headerKey="" headerValue="==²»ÏÞ=="
+							listValue="value"
 							cssStyle="width:153px" />
 					</TD>
 					<TD>

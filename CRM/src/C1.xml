@@ -2,6 +2,9 @@
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
 	<package name="C1" extends="struts-default">
+		<action name="c1014Action" class="c1014">
+		    <result name="main">/C1/C1012.jsp</result>
+		</action>
 		<action name="c1013Action" class="c1013">
 		    <result name="main">/C1/C1012.jsp</result>
 		</action>

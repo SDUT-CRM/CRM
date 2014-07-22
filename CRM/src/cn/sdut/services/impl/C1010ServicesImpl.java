@@ -27,6 +27,8 @@ public class C1010ServicesImpl implements C1010Services
     @Override
     public boolean updateEmployee() throws Exception
     {
+        DateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
+        dto.put("lg0209", dt.format(new Date()));
         this.lg21Dao.UpdateUser();
         this.lg02Dao.updateEmployee();
         return true;
