@@ -34,6 +34,7 @@ public abstract class C2020Support
     protected String lg1406;
     protected String lg1403;
     protected String lg0302;
+    
 
     protected String cnlg1403;
     protected String cnlg0402;

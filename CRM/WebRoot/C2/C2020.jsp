@@ -5,14 +5,29 @@
 %>
 <html>
 	<head>
-	<script type="text/javascript">
+		<script type="text/javascript">
+	var count = 0;
+	function onSelect(obj) {
+		with (document.forms[0]) {
+			obj ? ++count : --count;
+			next[2].disabled = (count == 0);
+		}
+	}
+	function onNext2(obj)
+	{
+	    with(document.forms[0])
+	    {
+	    
+	    }
+	}
 	</script>
 	</head>
 	<body>
 		<s:form action="c2020Action">
 			<TABLE border="1" align="center" width="1000px">
 				<caption>
-					配件信息管理界面<s:debug/>
+					配件信息管理界面
+					<s:debug />
 					<hr width="320">
 				</caption>
 				<TR>
@@ -107,8 +122,11 @@
 				<s:if test="rows!=null">
 					<TR>
 						<TD colspan="100">
-							<table border="1" width="100%" >
+							<table border="1" width="100%">
 								<tr>
+									<td>
+										&nbsp;
+									</td>
 									<td>
 										序号
 									</td>
@@ -119,7 +137,7 @@
 										配件名称
 									</td>
 									<td>
-									        申请数量
+										申请数量
 									</td>
 									<td>
 										领取部门
@@ -128,22 +146,22 @@
 										领取人编号
 									</td>
 									<td>
-									         领取人姓名
+										领取人姓名
 									</td>
 									<td>
-									         审核状态
+										审核状态
 									</td>
 									<td>
-									         经办人姓名
+										经办人姓名
 									</td>
 									<td>
-									         申请时间
+										申请时间
 									</td>
 									<td>
-									         审核时间
+										审核时间
 									</td>
 									<td>
-									         领取时间
+										领取时间
 									</td>
 									<td>
 										&nbsp;
@@ -151,6 +169,16 @@
 								</tr>
 								<s:iterator value="rows" status="st">
 									<tr>
+										<td>
+										<s:if test="lg1403==1">
+											<input type="checkbox" name="parsList"
+												onclick="onSelect(this.checked)"
+												value="<s:property value="lg1401"/>">
+									    </s:if>
+									    <s:else>
+									    &nbsp;&nbsp;&nbsp;
+									    </s:else>
+										</td>
 										<td>
 											<s:property value="#st.count" />
 										</td>
@@ -188,8 +216,9 @@
 											<s:property value="lg1405" />
 										</td>
 										<td>
-										<a href="#" >审核</a>
-										</td>								    </tr>
+											<a href="#">修改</a>
+										</td>
+									</tr>
 								</s:iterator>
 							</table>
 							${requestScope.pageinfo }
@@ -207,10 +236,11 @@
 				<TR>
 					<TD colspan="100" align="center">
 						<s:submit value="查询" name="next" />
-						<s:submit value="添加配件" name="next2" onclick="return onNext2()" />
+						<s:submit value="通过" name="next2" onclick="return onNext2('2')" />
 					</TD>
 				</TR>
 			</TABLE>
+			<input type="hidden" name="parsList">
 		</s:form>
 	</body>
 </html>
