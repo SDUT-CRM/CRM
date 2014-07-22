@@ -18,10 +18,22 @@ public class Lg07DaoTest {
 	public static void main(String[] args) {
 		dao.setMapDto(dto);
 		try {
-			queryTest();
+			decreaseTest();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public static void decreaseTest() throws Exception {
+		dto.put("lg0701", "1");
+		boolean res = dao.decrease();
+		System.out.println(res);
+	}
+	
+	public static void increaseTest() throws Exception {
+		dto.put("lg0701", "1");
+		boolean res = dao.increase();
+		System.out.println(res);
 	}
 	
 	public static void queryTest() throws Exception {

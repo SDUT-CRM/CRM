@@ -21,4 +21,6 @@ public interface Lg08Dao {
 	
 	public String getPageInfo(String url);
 	
+	public int getNum() throws Exception;
+	
 }

@@ -19,11 +19,17 @@ public class Lg08DaoTest {
 	public static void main(String[] args) {
 		dao.setMapDto(dto);
 		try {
-			addTest();
+			getNumTest();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
+	}
+	
+	public static void getNumTest() throws Exception{
+		dto.put("lg0701", "1");
+		int num = dao.getNum();
+		System.out.println(num);
 	}
 	
 	public static void queryTest() throws Exception{

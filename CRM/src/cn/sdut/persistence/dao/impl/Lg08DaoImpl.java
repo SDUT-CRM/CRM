@@ -11,9 +11,23 @@ import cn.sdut.persistence.support.HibernatePageDaoSupport;
 
 public class Lg08DaoImpl extends HibernatePageDaoSupport implements Lg08Dao{
 	
+	
+	@Override
+	public int getNum() throws Exception {
+		Object args[] = {
+			this.getLong("lg0701"),
+			"1"
+		};
+		StringBuilder hql = new StringBuilder()
+		.append("select count(*)")
+		.append("  from Lg08 x ")
+		.append(" where x.lg07.lg0701=? and x.lg0804=?")
+		;
+		return this.queryForNumber(hql.toString(), args).intValue();
+	}
+	
 	@Override
 	public boolean check() throws Exception {
-		System.out.println(dto);
 		Object args[]={
 			this.getLong("lg2101"),
 			this.getLong("lg0701")

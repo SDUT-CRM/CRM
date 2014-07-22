@@ -13,6 +13,11 @@ public class A1020ServicesImpl implements A1020Services {
 	private Map dto = null;
 
 	@Override
+	public int getNum() throws Exception {
+		return lg08Dao.getNum();
+	}
+	
+	@Override
 	public Map getInstance() throws Exception {
 		return lg07Dao.getInstance();
 	}

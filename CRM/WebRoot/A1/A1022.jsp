@@ -14,11 +14,11 @@
 			submit();
 		}
 	}
-	function onCancel(obj)
+	function onCancel(obj1, obj2)
 	{
 		with(document.forms[0])
 		{
-			action="<%=path%>/a1024Action.action?lg0801="+obj;
+			action="<%=path%>/a1024Action.action?lg0801="+obj1+"&lg0701="+obj2;
 			submit();
 		}
 	}
@@ -56,7 +56,7 @@
 	           </td>
 	            <td align="center">
 	            <s:if test="lg0804==1">
-	               <a href="#" onclick="onCancel(<s:property value="lg0801"/>)">取消参加</a>
+	               <a href="#" onclick="onCancel(<s:property value="lg0801"/>,<s:property value="lg0701"/>)">取消参加</a>
 	            </s:if>
 				<s:else>
 					已取消

@@ -13,5 +13,7 @@ public interface A1020Services {
 	public Map getInstance() throws Exception;
 	
 	public boolean check() throws Exception;
+	
+	public int getNum() throws Exception;
 
 }

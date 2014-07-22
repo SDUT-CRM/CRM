@@ -19,4 +19,8 @@ public interface Lg07Dao {
 	public String getPageInfo(String url);
 	
 	public Map getInstance() throws Exception;
+	
+	public boolean decrease() throws Exception;
+	
+	public boolean increase() throws Exception;
 }

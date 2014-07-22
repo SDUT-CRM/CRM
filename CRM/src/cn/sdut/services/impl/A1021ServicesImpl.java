@@ -7,17 +7,20 @@ import java.util.Map;
 
 import cn.sdut.persistence.bean.Lg01;
 import cn.sdut.persistence.bean.Lg07;
+import cn.sdut.persistence.dao.interfaces.Lg07Dao;
 import cn.sdut.persistence.dao.interfaces.Lg08Dao;
 import cn.sdut.services.A1021Services;
 
 public class A1021ServicesImpl implements A1021Services {
 
+	private Lg07Dao lg07Dao = null;
 	private Lg08Dao lg08Dao = null;
 	private Map dto = null;
 
 	@Override
 	public boolean cancel() throws Exception {
-		return lg08Dao.delete();
+		System.out.println(dto);
+		return lg07Dao.increase()&&lg08Dao.delete();
 	}
 	
 	@Override
@@ -26,7 +29,6 @@ public class A1021ServicesImpl implements A1021Services {
 		Lg01 lg01 = new Lg01();
 		Lg07 lg07 = new Lg07();
 
-		System.out.println(this.dto.get("lg0701").toString());
 		lg01.setLg21011(Long.parseLong(this.dto.get("lg2101").toString()));
 		lg07.setLg0701(Long.parseLong(this.dto.get("lg0701").toString()));
 
@@ -39,14 +41,22 @@ public class A1021ServicesImpl implements A1021Services {
 		this.dto.put("lg0803", da);
 		this.dto.put("lg01", lg01);
 		this.dto.put("lg07", lg07);
-
-		return lg08Dao.add();
+		return lg07Dao.decrease()&&lg08Dao.add();
 	}
 
 	@Override
 	public void setMapDto(Map dto) {
 		this.dto = dto;
 		this.lg08Dao.setMapDto(dto);
+		this.lg07Dao.setMapDto(dto);
+	}
+
+	public Lg07Dao getLg07Dao() {
+		return lg07Dao;
+	}
+
+	public void setLg07Dao(Lg07Dao lg07Dao) {
+		this.lg07Dao = lg07Dao;
 	}
 
 	public Lg08Dao getLg08Dao() {
@@ -64,6 +74,7 @@ public class A1021ServicesImpl implements A1021Services {
 	public void setDto(Map dto) {
 		this.dto = dto;
 		this.lg08Dao.setMapDto(dto);
+		this.lg07Dao.setMapDto(dto);
 	}
 
 	@Override

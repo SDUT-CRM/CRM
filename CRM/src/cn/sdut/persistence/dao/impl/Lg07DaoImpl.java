@@ -10,6 +10,34 @@ import cn.sdut.persistence.support.HibernatePageDaoSupport;
 public class Lg07DaoImpl extends HibernatePageDaoSupport implements Lg07Dao {
 
 	@Override
+	public boolean increase() throws Exception {
+		Object args[] = {
+			this.getLong("lg0701")
+		};
+		this.hql = new StringBuilder()
+		.append("update Lg07 ")
+		.append("   set lg0705 = lg0705+1 ")
+		.append(" where lg0705>0 and lg0701=?")
+		;
+		boolean tag = this.update(hql.toString(), args);
+		return tag;
+	}
+	
+	@Override
+	public boolean decrease() throws Exception {
+		Object args[] = {
+			this.getLong("lg0701")
+		};
+		this.hql = new StringBuilder()
+		.append("update Lg07 ")
+		.append("   set lg0705 = lg0705-1 ")
+		.append(" where lg0705>0 and lg0701=?")
+		;
+		boolean tag = this.update(hql.toString(), args);
+		return tag;
+	}
+	
+	@Override
 	public Map getInstance() throws Exception {
 		this.hql = new StringBuilder()
 		.append("select new map(x.lg0701 as lg0701,x.lg03.lg2101 as lg0301,")
