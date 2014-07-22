@@ -80,7 +80,5 @@ public class Lg18 implements java.io.Serializable {
 	public void setLg1805(String lg1805) {
 		this.lg1805 = lg1805;
 	}
-	
-	
 
 }

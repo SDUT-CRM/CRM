@@ -19,7 +19,7 @@ public class Lg18DaoTest {
 	public static void main(String[] args) {
 		dao.setMapDto(dto);
 		try {
-			modifyTest();
+			addTest();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
