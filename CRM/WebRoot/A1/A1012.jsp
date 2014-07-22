@@ -10,7 +10,15 @@
 	{
 		with(document.forms[0])
 		{
-			action="<%=path%>/a1011Action.action?lg0501="+obj;
+			action="<%=path%>/a1011Action.action?path=a&lg0501="+obj;
+			submit();
+		}
+	}
+	function onCancel(obj)
+	{
+		with(document.forms[0])
+		{
+			action="<%=path%>/a1014Action.action?lg0601="+obj;
 			submit();
 		}
 	}
@@ -32,7 +40,8 @@
            <td align="center">业务名称</td>
            <td align="center">业务资费</td>
            <td align="center">办理日期</td>
-           <td align="center">业务状态</td>
+           <td align="center">办理状态</td>
+           <td>&nbsp;</td>
            <td>&nbsp;</td>
          </tr>
          <s:iterator value="rows" status="st">
@@ -42,9 +51,12 @@
 	           <td align="center"><s:property value="lg0506"/></td>
 	           <td align="center"><s:property value="lg0603"/></td>
 	           <td align="center"><s:property value="cnlg0602"/></td>
-	            <td align="center">
-	              <a href="#" onclick="onSelect(<s:property value="lg0501"/>)">查看详情</a>
-	            </td>
+	           <td align="center">
+	           	   <a href="#" onclick="onSelect(<s:property value="lg0501"/>)">查看详情</a>
+	           </td>
+	           <td align="center">
+	               <a href="#" onclick="onCancel(<s:property value="lg0601"/>)">取消办理</a>
+	           </td>
 	         </tr>
          </s:iterator>
        </table>

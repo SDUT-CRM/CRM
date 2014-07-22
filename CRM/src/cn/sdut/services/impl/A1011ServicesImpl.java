@@ -17,6 +17,11 @@ public class A1011ServicesImpl implements A1011Services {
 	private Map dto = null;
 
 	@Override
+	public boolean cancel() throws Exception {
+		return lg06Dao.delete();
+	}
+	
+	@Override
 	public boolean add() throws Exception {
 
 		Lg01 lg01 = new Lg01();

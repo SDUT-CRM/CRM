@@ -102,7 +102,7 @@ public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
 		StringBuilder hql=new StringBuilder()
 		.append("update Lg06 x")
 		.append("   set x.lg0602=?")
-		.append(" where x.lg0601=?")
+		.append(" where x.lg0601=? and x.lg0602=1")
 		;
 		System.out.println("dto=="+dto);
 		Object args[]={

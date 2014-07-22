@@ -3,6 +3,10 @@
 <struts>
 	<package name="A1" extends="struts-default">
 
+		<action name="a1014Action" class="a1014">
+			<result name="main">/A1/A1012.jsp</result>
+		</action>
+
 		<action name="a1013Action" class="a1013">
 			<result name="main">/A1/A1012.jsp</result>
 		</action>

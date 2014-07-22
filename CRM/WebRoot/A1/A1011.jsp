@@ -6,11 +6,18 @@
 <html>
 <head>
 <script type="text/javascript">
-    function onNext()
+	function onNext()
     {
     	with(document.forms[0])
     	{
     		action="<%=path%>/a1012Action.action";
+    	}
+    }
+    function onNext1()
+    {
+    	with(document.forms[0])
+    	{
+    		action="<%=path%>/a1013Action.action";
     	}
     }
 </script>
@@ -57,10 +64,15 @@
    </tr>
   <tr>
       <td colspan="100" align="center">
-      	 <s:if test="msg==null">
+      	<s:if test="msg==null">
       		<s:submit name="next" value="ÉêÇë" onclick="return onNext()"/>
       	</s:if>
+      	<s:if test="path!=null">
+        <s:submit name="next" value="·µ»Ø " onclick="return onNext1()"/>
+        </s:if>
+        <s:else>
         <s:submit name="next" value="·µ»Ø "/>
+        </s:else>
       </td>
     </tr>
  </table>

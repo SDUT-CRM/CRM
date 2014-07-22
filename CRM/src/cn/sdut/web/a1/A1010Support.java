@@ -14,7 +14,8 @@ public abstract class A1010Support {
 	protected String msg = null;
 	protected List rows = null;
 	protected String query = null;
-
+	protected String path = null;
+	
 	protected String lg0501 = null;
 	protected String lg0502 = null;
 	protected String lg0503 = null;
@@ -27,7 +28,14 @@ public abstract class A1010Support {
 	protected String cnlg0509 = null;
 	protected String lg0510 = null;
 	
-	
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
+	}
+
 	public String getLg0509() {
 		return lg0509;
 	}

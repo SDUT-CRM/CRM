@@ -11,4 +11,7 @@ public interface A1011Services {
 	public List query() throws Exception;
 	
 	public String getPageInfo(String url);
+	
+	public boolean cancel() throws Exception;
+	
 }
