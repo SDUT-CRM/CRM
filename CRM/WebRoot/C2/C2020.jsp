@@ -5,14 +5,29 @@
 %>
 <html>
 	<head>
-	<script type="text/javascript">
+		<script type="text/javascript">
+	var count = 0;
+	function onSelect(obj) {
+		with (document.forms[0]) {
+			obj ? ++count : --count;
+			next[2].disabled = (count == 0);
+		}
+	}
+	function onNext2(obj)
+	{
+	    with(document.forms[0])
+	    {
+	    
+	    }
+	}
 	</script>
 	</head>
 	<body>
-		<s:form action="c1010Action">
-			<TABLE border="1" align="center" width="850px">
+		<s:form action="c2020Action">
+			<TABLE border="1" align="center" width="1000px">
 				<caption>
 					配件信息管理界面
+					<s:debug />
 					<hr width="320">
 				</caption>
 				<TR>
@@ -23,42 +38,84 @@
 						<s:textfield name="qlg1302" />
 					</TD>
 					<TD>
-						员工部门
+						配件名称
 					</TD>
 					<TD>
-						<s:select name="qlg0401" list="oclg0401" listKey="key"
-							listValue="value" headerKey="" headerValue="==不限=="
-							cssStyle="width:153px" />
+						<s:textfield name="qlg1303" />
 					</TD>
 				</TR>
 				<TR>
 					<TD>
-						员工姓名
+						申领部门
+					</TD>
+					<TD>
+						<s:select name="qlg0402" list="oclg0402" listKey="key"
+							listValue="value" headerKey="" headerValue="==不限=="
+							cssStyle="width:153px" />
+					</TD>
+					<TD>
+						申领人
 					</TD>
 					<TD>
 						<s:textfield name="qlg0202" />
 					</TD>
+				</TR>
+				<TR>
 					<TD>
-						员工状态
+						审核状态
 					</TD>
 					<TD>
-						<s:select name="qlg0207" list="oclg0207" listKey="key"
+						<s:select name="qlg1403" list="oclg1403" listKey="key"
 							listValue="value" headerKey="" headerValue="==不限=="
 							cssStyle="width:153px" />
+					</TD>
+					<TD>
+						经手人
+					</TD>
+					<TD>
+						<s:textfield name="qlg0302" />
 					</TD>
 				</TR>
 				<TR>
 					<TD>
-						入职时间(起始)
+						申请开始时间
 					</TD>
 					<TD>
-						<s:textfield name="blg0208" />
+						<s:textfield name="blg1402" />
 					</TD>
 					<TD>
-						入职时间(结束)
+						申请结束时间
 					</TD>
 					<TD>
-						<s:textfield name="elg0208" />
+						<s:textfield name="elg1402" />
+					</TD>
+				</TR>
+				<TR>
+					<TD>
+						审核开始时间
+					</TD>
+					<TD>
+						<s:textfield name="blg1404" />
+					</TD>
+					<TD>
+						审核结束时间
+					</TD>
+					<TD>
+						<s:textfield name="elg1404" />
+					</TD>
+				</TR>
+				<TR>
+					<TD>
+						领取开始时间
+					</TD>
+					<TD>
+						<s:textfield name="blg1405" />
+					</TD>
+					<TD>
+						领取结束时间
+					</TD>
+					<TD>
+						<s:textfield name="elg1405" />
 					</TD>
 				</TR>
 				<!-- 迭代数据 -->
@@ -68,29 +125,100 @@
 							<table border="1" width="100%">
 								<tr>
 									<td>
+										&nbsp;
+									</td>
+									<td>
 										序号
 									</td>
 									<td>
-										员工编号
+										配件编号
 									</td>
 									<td>
-										员工姓名
+										配件名称
 									</td>
 									<td>
-										员工部门
+										申请数量
 									</td>
 									<td>
-										员工状态
+										领取部门
 									</td>
 									<td>
-										入职时间
+										领取人编号
+									</td>
+									<td>
+										领取人姓名
+									</td>
+									<td>
+										审核状态
+									</td>
+									<td>
+										经办人姓名
+									</td>
+									<td>
+										申请时间
+									</td>
+									<td>
+										审核时间
+									</td>
+									<td>
+										领取时间
 									</td>
 									<td>
 										&nbsp;
 									</td>
 								</tr>
 								<s:iterator value="rows" status="st">
-									
+									<tr>
+										<td>
+										<s:if test="lg1403==1">
+											<input type="checkbox" name="parsList"
+												onclick="onSelect(this.checked)"
+												value="<s:property value="lg1401"/>">
+									    </s:if>
+									    <s:else>
+									    &nbsp;&nbsp;&nbsp;
+									    </s:else>
+										</td>
+										<td>
+											<s:property value="#st.count" />
+										</td>
+										<td>
+											<s:property value="lg1302" />
+										</td>
+										<td>
+											<s:property value="lg1303" />
+										</td>
+										<td>
+											<s:property value="lg1406" />
+										</td>
+										<td>
+											<s:property value="cnlg0402" />
+										</td>
+										<td>
+											<s:property value="lg2102" />
+										</td>
+										<td>
+											<s:property value="lg0202" />
+										</td>
+										<td>
+											<s:property value="cnlg1403" />
+										</td>
+										<td>
+											<s:property value="lg0302" />
+										</td>
+										<td>
+											<s:property value="lg1402" />
+										</td>
+										<td>
+											<s:property value="lg1404" />
+										</td>
+										<td>
+											<s:property value="lg1405" />
+										</td>
+										<td>
+											<a href="#">修改</a>
+										</td>
+									</tr>
 								</s:iterator>
 							</table>
 							${requestScope.pageinfo }
@@ -108,10 +236,11 @@
 				<TR>
 					<TD colspan="100" align="center">
 						<s:submit value="查询" name="next" />
-						<s:submit value="添加" name="next2" onclick="return onNext2()" />
+						<s:submit value="通过" name="next2" onclick="return onNext2('2')" />
 					</TD>
 				</TR>
 			</TABLE>
+			<input type="hidden" name="parsList">
 		</s:form>
 	</body>
 </html>

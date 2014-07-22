@@ -1,5 +1,8 @@
 package cn.sdut.services.impl;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -11,6 +14,14 @@ public class C2020ServicesImpl implements C2020Services
     private Map dto = null;
     private Lg14Dao lg14Dao;
     
+    
+    @Override
+    public boolean batchModify() throws Exception
+    {
+        DateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
+        dto.put("lg1404", dt.format(new Date()));
+        return this.lg14Dao.batchModify();
+    }
     
     public Lg14Dao getLg14Dao()
     {
@@ -26,6 +37,7 @@ public class C2020ServicesImpl implements C2020Services
     public void setMapDto(Map dto)
     {
         this.dto=dto;
+        this.lg14Dao.setMapDto(dto);
         
     }
 

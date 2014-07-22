@@ -8,4 +8,8 @@
 	      scope="prototype" init-method="initMain">
 	      <property name="c2020Services" ref="c2020services"/>
 	</bean>
+	<bean id="c2021" class="cn.sdut.web.c2.impl.C2021Action"
+	      scope="prototype" init-method="initMain">
+		<property name="c2020Services" ref="c2020services"/>
+	</bean>
 </beans>
