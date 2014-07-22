@@ -5,5 +5,8 @@
 		<action name="c2020Action" class="c2020">
 			<result name="main">/C2/C2020.jsp</result>
 		</action>
+		<action name="c2021Action" class="c2021">
+			<result name="main">/C2/C2020.jsp</result>
+		</action>
 	</package>
 </struts>    

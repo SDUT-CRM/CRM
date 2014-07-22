@@ -14,13 +14,13 @@ public class Lg14DaoImpl extends HibernatePageDaoSupport implements Lg14Dao{
     public List queryForPage() throws Exception
     {
         
-        Object lg0402=this.dto.get("lg0402");//部门编号
-        Object lg2102=this.dto.get("lg2102");//员工编号
-        Object lg0202=this.dto.get("lg0202");//员工姓名
-        Object lg1302=this.dto.get("lg1302");//配件编号
-        Object lg1303=this.dto.get("lg1303");//配件名称
-        Object lg1403=this.dto.get("lg1403");//审核状态编号
-        Object lg0302=this.dto.get("lg0302");//经手人姓名
+        Object lg0402=this.dto.get("qlg0402");//部门编号
+        Object lg2102=this.dto.get("qlg2102");//员工编号
+        Object lg0202=this.dto.get("qlg0202");//员工姓名
+        Object lg1302=this.dto.get("qlg1302");//配件编号
+        Object lg1303=this.dto.get("qlg1303");//配件名称
+        Object lg1403=this.dto.get("qlg1403");//审核状态编号
+        Object lg0302=this.dto.get("qlg0302");//经手人姓名
         Object blg1402=this.dto.get("blg1402");//申请开始时间
         Object elg1402=this.dto.get("elg1402");//申请结束时间
         Object blg1404=this.dto.get("blg1404");//审核开始时间
@@ -29,7 +29,7 @@ public class Lg14DaoImpl extends HibernatePageDaoSupport implements Lg14Dao{
         Object elg1405=this.dto.get("elg1405");//领取结束时间
         
         this.pars = new ArrayList();
-       this.hql=new StringBuilder()
+        this.hql=new StringBuilder()
         .append("select  new map(a.lg1401 as lg1401,h.fvalue as cnlg0402,")
         .append("                f.lg2102 as lg2102,c.lg0202 as lg0202,")
         .append("                b.lg1302 as lg1302,b.lg1303 as lg1303,")
@@ -51,7 +51,7 @@ public class Lg14DaoImpl extends HibernatePageDaoSupport implements Lg14Dao{
         .append("   and d.fname='LLG04'")
         .append("   and h.fname='LLG02'")
         ;
-       System.out.println(this.dto);
+       
        if (this.checkVal(lg0402))
        {
            this.hql.append(" and g.lg0402=?");
@@ -66,7 +66,7 @@ public class Lg14DaoImpl extends HibernatePageDaoSupport implements Lg14Dao{
        
        if (this.checkVal(lg0202))
        {
-           this.hql.append(" and c.lg0202 like ？");
+           this.hql.append(" and c.lg0202 like ?");
            this.pars.add("%"+lg0202+"%");
        }
        

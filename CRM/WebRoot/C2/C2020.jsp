@@ -9,10 +9,10 @@
 	</script>
 	</head>
 	<body>
-		<s:form action="c1010Action">
-			<TABLE border="1" align="center" width="850px">
+		<s:form action="c2020Action">
+			<TABLE border="1" align="center" width="1000px">
 				<caption>
-					配件信息管理界面
+					配件信息管理界面<s:debug/>
 					<hr width="320">
 				</caption>
 				<TR>
@@ -107,32 +107,89 @@
 				<s:if test="rows!=null">
 					<TR>
 						<TD colspan="100">
-							<table border="1" width="100%">
+							<table border="1" width="100%" >
 								<tr>
 									<td>
 										序号
 									</td>
 									<td>
-										员工编号
+										配件编号
 									</td>
 									<td>
-										员工姓名
+										配件名称
 									</td>
 									<td>
-										员工部门
+									        申请数量
 									</td>
 									<td>
-										员工状态
+										领取部门
 									</td>
 									<td>
-										入职时间
+										领取人编号
+									</td>
+									<td>
+									         领取人姓名
+									</td>
+									<td>
+									         审核状态
+									</td>
+									<td>
+									         经办人姓名
+									</td>
+									<td>
+									         申请时间
+									</td>
+									<td>
+									         审核时间
+									</td>
+									<td>
+									         领取时间
 									</td>
 									<td>
 										&nbsp;
 									</td>
 								</tr>
 								<s:iterator value="rows" status="st">
-									
+									<tr>
+										<td>
+											<s:property value="#st.count" />
+										</td>
+										<td>
+											<s:property value="lg1302" />
+										</td>
+										<td>
+											<s:property value="lg1303" />
+										</td>
+										<td>
+											<s:property value="lg1406" />
+										</td>
+										<td>
+											<s:property value="cnlg0402" />
+										</td>
+										<td>
+											<s:property value="lg2102" />
+										</td>
+										<td>
+											<s:property value="lg0202" />
+										</td>
+										<td>
+											<s:property value="cnlg1403" />
+										</td>
+										<td>
+											<s:property value="lg0302" />
+										</td>
+										<td>
+											<s:property value="lg1402" />
+										</td>
+										<td>
+											<s:property value="lg1404" />
+										</td>
+										<td>
+											<s:property value="lg1405" />
+										</td>
+										<td>
+										<a href="#" >审核</a>
+										</td>								    </tr>
 								</s:iterator>
 							</table>
 							${requestScope.pageinfo }
@@ -150,7 +207,7 @@
 				<TR>
 					<TD colspan="100" align="center">
 						<s:submit value="查询" name="next" />
-						<s:submit value="添加" name="next2" onclick="return onNext2()" />
+						<s:submit value="添加配件" name="next2" onclick="return onNext2()" />
 					</TD>
 				</TR>
 			</TABLE>

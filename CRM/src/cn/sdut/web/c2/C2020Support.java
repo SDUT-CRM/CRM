@@ -6,6 +6,13 @@ import java.util.Map;
 import cn.sdut.services.C2020Services;
 import cn.sdut.system.Tools;
 
+/**
+ * @功能说明:
+ * @作者   :
+ * @创建日期:2014-7-22
+ * @更新日期:
+ * @更新内容:
+ */
 public abstract class C2020Support
 {
     public abstract String execute() throws Exception;
@@ -34,6 +41,7 @@ public abstract class C2020Support
     protected String qlg1302;
     protected String qlg1303;
     protected String qlg0402;
+    protected String qlg1403;
     protected String qlg0202;
     protected String qlg0302;
     protected String blg1402;
@@ -43,20 +51,130 @@ public abstract class C2020Support
     protected String blg1405;
     protected String elg1405;
     
-    /*
-     * Object blg1402=this.dto.get("blg1402");//申请开始时间
-     Object elg1402=this.dto.get("elg1402");//申请结束时间
-     Object blg1404=this.dto.get("blg1404");//审核开始时间
-     Object elg1404=this.dto.get("elg1404");//审核结束时间
-     Object blg1405=this.dto.get("blg1405");//领取开始时间
-     Object elg1405=this.dto.get("elg1405");//领取结束时间
-     */
-    
-    
+    public String getQlg1403()
+    {
+        return qlg1403;
+    }
+
+    public void setQlg1403(String qlg1403)
+    {
+        this.qlg1403 = qlg1403;
+    }
+
     private void initMain() throws Exception
     {
         this.oclg0402=Tools.getOptions("LLG02");
         this.oclg1403=Tools.getOptions("LLG04");
+    }
+
+    public String getQlg1302()
+    {
+        return qlg1302;
+    }
+
+    public void setQlg1302(String qlg1302)
+    {
+        this.qlg1302 = qlg1302;
+    }
+
+    public String getQlg1303()
+    {
+        return qlg1303;
+    }
+
+    public void setQlg1303(String qlg1303)
+    {
+        this.qlg1303 = qlg1303;
+    }
+
+    public String getQlg0402()
+    {
+        return qlg0402;
+    }
+
+    public void setQlg0402(String qlg0402)
+    {
+        this.qlg0402 = qlg0402;
+    }
+
+    public String getQlg0202()
+    {
+        return qlg0202;
+    }
+
+    public void setQlg0202(String qlg0202)
+    {
+        this.qlg0202 = qlg0202;
+    }
+
+    public String getQlg0302()
+    {
+        return qlg0302;
+    }
+
+    public void setQlg0302(String qlg0302)
+    {
+        this.qlg0302 = qlg0302;
+    }
+
+    public String getBlg1402()
+    {
+        return blg1402;
+    }
+
+    public void setBlg1402(String blg1402)
+    {
+        this.blg1402 = blg1402;
+    }
+
+    public String getElg1402()
+    {
+        return elg1402;
+    }
+
+    public void setElg1402(String elg1402)
+    {
+        this.elg1402 = elg1402;
+    }
+
+    public String getBlg1404()
+    {
+        return blg1404;
+    }
+
+    public void setBlg1404(String blg1404)
+    {
+        this.blg1404 = blg1404;
+    }
+
+    public String getElg1404()
+    {
+        return elg1404;
+    }
+
+    public void setElg1404(String elg1404)
+    {
+        this.elg1404 = elg1404;
+    }
+
+    public String getBlg1405()
+    {
+        return blg1405;
+    }
+
+    public void setBlg1405(String blg1405)
+    {
+        this.blg1405 = blg1405;
+    }
+
+    public String getElg1405()
+    {
+        return elg1405;
+    }
+
+    public void setElg1405(String elg1405)
+    {
+        this.elg1405 = elg1405;
     }
 
     public String getMsg()

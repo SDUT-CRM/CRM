@@ -13,7 +13,7 @@ public class C2020Action extends C2020Support
     @Override
     public String execute() throws Exception
     {
-        List list=this.c2020Services.query();
+        List rows=this.c2020Services.query();
         if (rows.size() > 0)
         {
             this.rows = rows;
@@ -25,8 +25,8 @@ public class C2020Action extends C2020Support
         {
             this.rows=null;
             this.msg="没有符合条件的数据!";
-        }   
-        return null;
+        }
+        return "main";
     }
 
 }
