@@ -75,13 +75,17 @@ String path = request.getContextPath();
     <tr>
        <td>评价等级</td>
           <td>
-            <s:radio list="#{'1':'一星','2':'二星','3':'三星','4':'四星','5':'五星'}" />
+            <s:radio name = "lg1902" list="#{'1':'一星','2':'二星','3':'三星','4':'四星','5':'五星'}" />
            </td>
      </tr> 
    </TABLE>
+   <center>
    <s:submit name="next" value="提交" />
+   </center>
+   <s:hidden name="lg0201"/>
+   <s:hidden name="lg2101"/>
+   <s:hidden name="lg1801"/>
 </s:form>
-
 </s:if>
 
 </body>

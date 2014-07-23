@@ -1,9 +1,11 @@
-package cn.sdut.persistence.dao.interfaces;
+package cn.sdut.services;
 
 import java.util.Map;
 
-public interface Lg19Dao {
+public interface A1031Services {
+
 	public void setMapDto(Map dto);
-	
+
 	public boolean add() throws Exception;
+
 }

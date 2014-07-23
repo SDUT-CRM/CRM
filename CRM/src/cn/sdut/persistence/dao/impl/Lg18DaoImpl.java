@@ -37,7 +37,7 @@ public class Lg18DaoImpl extends HibernatePageDaoSupport implements Lg18Dao {
 		this.dto.put("lg1805", this.getObject("lg1805"));
 
 		Lg18 lg18 = this.addObject(Lg18.class);
-		this.dto.put("lg06", lg18);
+		this.dto.put("lg18", lg18);
 		return lg18.getLg1801()>0;
 	}
 
