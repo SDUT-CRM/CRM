@@ -19,10 +19,22 @@ public class Lg18DaoTest {
 	public static void main(String[] args) {
 		dao.setMapDto(dto);
 		try {
-			addTest();
+			queryForPageTest();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	private static void queryForPageTest() throws Exception {
+		List res = dao.queryForPage();
+		System.out.println(res);
+	}
+	
+	private static void getInstanceTest() throws Exception {
+		dto.put("lg1801", "21");
+		Map res = dao.getInstance();
+		System.out.println(res);
+		
 	}
 	
 	private static void modifyTest() throws Exception {

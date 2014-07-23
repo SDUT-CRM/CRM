@@ -18,7 +18,14 @@ public abstract class A1030Support {
 
 	protected List oclg1701 = null;
 	protected String lg1701 = null;
+	protected String lg1801 = null;
+	protected String lg1802 = null;
+	protected String lg1803 = null;
+	protected String lg1804 = null;
 	protected String lg1805 = null;
+	protected String lg2101 = null;
+	protected String lg0201 = null;
+	protected String cnlg1804 = null;
 
 	public String getPath() {
 		return path;
@@ -85,4 +92,60 @@ public abstract class A1030Support {
 		this.lg1805 = lg1805;
 	}
 
+	public String getLg1801() {
+		return lg1801;
+	}
+
+	public void setLg1801(String lg1801) {
+		this.lg1801 = lg1801;
+	}
+
+	public String getLg1802() {
+		return lg1802;
+	}
+
+	public void setLg1802(String lg1802) {
+		this.lg1802 = lg1802;
+	}
+
+	public String getLg1803() {
+		return lg1803;
+	}
+
+	public void setLg1803(String lg1803) {
+		this.lg1803 = lg1803;
+	}
+
+	public String getLg1804() {
+		return lg1804;
+	}
+
+	public void setLg1804(String lg1804) {
+		this.lg1804 = lg1804;
+	}
+
+	public String getLg2101() {
+		return lg2101;
+	}
+
+	public void setLg2101(String lg2101) {
+		this.lg2101 = lg2101;
+	}
+
+	public String getLg0201() {
+		return lg0201;
+	}
+
+	public void setLg0201(String lg0201) {
+		this.lg0201 = lg0201;
+	}
+
+	public String getCnlg1804() {
+		return cnlg1804;
+	}
+
+	public void setCnlg1804(String cnlg1804) {
+		this.cnlg1804 = cnlg1804;
+	}
+	
 }

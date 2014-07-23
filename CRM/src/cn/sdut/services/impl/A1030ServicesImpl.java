@@ -41,7 +41,7 @@ public class A1030ServicesImpl implements A1030Services {
 
 	@Override
 	public List query() throws Exception {
-		return null;
+		return lg18Dao.queryForPage();
 	}
 
 	@Override
@@ -51,7 +51,7 @@ public class A1030ServicesImpl implements A1030Services {
 
 	@Override
 	public Map getInstance() throws Exception {
-		return null;
+		return lg18Dao.getInstance();
 	}
 
 	@Override

@@ -11,7 +11,13 @@ public interface Lg18Dao {
 	
 	public List query()throws Exception;
 	
+	public List queryForPage() throws Exception;
+	
+	public String getPageInfo(String url);
+	
 	public boolean modify()throws Exception;
 	
 	public boolean delete()throws Exception;
+	
+	public Map getInstance()throws Exception;
 }
