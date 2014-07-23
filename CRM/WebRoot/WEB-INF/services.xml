@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans
-	xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:p="http://www.springframework.org/schema/p"
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 	<bean id="a1030services" class="cn.sdut.services.impl.A1030ServicesImpl">
 	</bean>
 
 	<bean id="a1021services" class="cn.sdut.services.impl.A1021ServicesImpl">
-		<property name="lg08Dao" ref="lg08dao"/>
-		<property name="lg07Dao" ref="lg07dao"/>
+		<property name="lg08Dao" ref="lg08dao" />
+		<property name="lg07Dao" ref="lg07dao" />
 	</bean>
 
 	<bean id="a1020services" class="cn.sdut.services.impl.A1020ServicesImpl">
-		<property name="lg07Dao" ref="lg07dao"/>
-		<property name="lg08Dao" ref="lg08dao"/>
+		<property name="lg07Dao" ref="lg07dao" />
+		<property name="lg08Dao" ref="lg08dao" />
 	</bean>
 
 	<bean id="a1011services" class="cn.sdut.services.impl.A1011ServicesImpl">
-		<property name="lg06Dao" ref="lg06dao"/>
+		<property name="lg06Dao" ref="lg06dao" />
 	</bean>
-	
+
 	<bean id="a1010services" class="cn.sdut.services.impl.A1010ServicesImpl">
-		<property name="lg05Dao" ref="lg05dao"/>
-		<property name="lg06Dao" ref="lg06dao"/>
+		<property name="lg05Dao" ref="lg05dao" />
+		<property name="lg06Dao" ref="lg06dao" />
 	</bean>
-	
+
 	<bean id="c1010services" class="cn.sdut.services.impl.C1010ServicesImpl">
-		<property name="lg02Dao" ref="lg02dao"/>
-		<property name="lg21Dao" ref="lg21dao"/>
+		<property name="lg02Dao" ref="lg02dao" />
+		<property name="lg21Dao" ref="lg21dao" />
 	</bean>
 	<bean id="c2020services" class="cn.sdut.services.impl.C2020ServicesImpl">
-		<property name="lg14Dao" ref="lg14dao"/>
+		<property name="lg14Dao" ref="lg14dao" />
+	</bean>
+	<bean id="c3030services" class="cn.sdut.services.impl.C3030ServicesImpl">
+		<property name="lg07Dao" ref="lg07dao" />
 	</bean>
 </beans>
