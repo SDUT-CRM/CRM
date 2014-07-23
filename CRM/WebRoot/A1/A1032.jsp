@@ -65,5 +65,24 @@ String path = request.getContextPath();
  <s:hidden name="lg2101" value="2"/>
  <s:hidden name="lg1801"/>
 </s:form>
+<s:if test="lg1804==3">
+<s:form action="a1036Action">
+<TABLE border="1" width="80%" align="center">
+   <caption>
+        请对我们的服务进行评价
+    <hr width="160"> 
+    </caption>
+    <tr>
+       <td>评价等级</td>
+          <td>
+            <s:radio list="#{'1':'一星','2':'二星','3':'三星','4':'四星','5':'五星'}" />
+           </td>
+     </tr> 
+   </TABLE>
+   <s:submit name="next" value="提交" />
+</s:form>
+
+</s:if>
+
 </body>
 </html>
