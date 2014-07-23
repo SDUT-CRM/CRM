@@ -15,6 +15,10 @@ public class Lg05DaoImpl extends HibernatePageDaoSupport implements Lg05Dao {
 	 */
 	@Override
 	public List queryForPage() throws Exception {
+		Object qlg0503 = this.getObject("qlg0503");
+		Object qlg0509 = this.getObject("qlg0509");
+		Object bqlg0507 = this.getObject("bqlg0507");
+		Object eqlg0507 = this.getObject("eqlg0507");
 		Object lg0501 = this.dto.get("lg0501");
 		this.pars = new ArrayList();
 		this.hql = new StringBuilder()
@@ -28,7 +32,24 @@ public class Lg05DaoImpl extends HibernatePageDaoSupport implements Lg05Dao {
 		.append(" where 1=1")
         .append("   and x.lg0509=b.fcode")
         .append("   and b.fname='LG0509'");
-		this.hql.append(" order by x.lg0501");
+		if (this.checkVal(qlg0503)){
+            this.hql.append(" and x.lg0503 like ?");
+            this.pars.add("%"+qlg0503+"%");
+        }
+        if (this.checkVal(qlg0509)){
+            this.hql.append(" and x.lg0509 = ?");
+            this.pars.add(qlg0509);
+        }
+        if (this.checkVal(bqlg0507)){
+            this.hql.append(" and x.lg0507 >= ?");
+            this.pars.add(this.getUDate("bqlg0507"));
+        }
+        if (this.checkVal(eqlg0507)){
+            this.hql.append(" and x.lg0507 <= ?");
+            this.pars.add(this.getUDate("eqlg0507"));
+        }
+		this.hql.append(" order by x.lg0501 desc");
+		
 		return this.queryForList();
 	}
 

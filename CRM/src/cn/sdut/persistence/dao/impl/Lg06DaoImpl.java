@@ -15,6 +15,13 @@ public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
 	
 	@Override
 	public List queryForPage() throws Exception {
+		Object qlg0503 = this.getObject("qlg0503");
+		Object qlg0602 = this.getObject("qlg0602");
+		Object bqlg0603 = this.getObject("bqlg0603");
+		Object eqlg0603 = this.getObject("eqlg0603");
+		Object bqlg0604 = this.getObject("bqlg0604");
+		Object eqlg0604 = this.getObject("eqlg0604");
+		
 		Object lg2101 = this.dto.get("lg2101");
 		Object lg0501 = this.dto.get("lg0501");
 		this.pars = new ArrayList();
@@ -31,11 +38,35 @@ public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
         .append("   and b.fname='LG0602'")
 		.append("   and y.lg0501=x.lg05.lg0501");
 
+        if (this.checkVal(qlg0503)){
+            this.hql.append(" and y.lg0503 like ?");
+            this.pars.add("%"+qlg0503+"%");
+        }
+        if (this.checkVal(qlg0602)){
+            this.hql.append(" and x.lg0602 = ?");
+            this.pars.add(qlg0602);
+        }
+        if (this.checkVal(bqlg0603)){
+            this.hql.append(" and x.lg0603 >= ?");
+            this.pars.add(this.getUDate("bqlg0603"));
+        }
+        if (this.checkVal(eqlg0603)){
+            this.hql.append(" and x.lg0603 <= ?");
+            this.pars.add(this.getUDate("eqlg0603"));
+        }
+        if (this.checkVal(bqlg0604)){
+            this.hql.append(" and x.lg0604 >= ?");
+            this.pars.add(this.getUDate("bqlg0604"));
+        }
+        if (this.checkVal(eqlg0604)){
+            this.hql.append(" and x.lg0604 <= ?");
+            this.pars.add(this.getUDate("eqlg0604"));
+        }
         if (this.checkVal(lg2101)){
             this.hql.append(" and x.lg01.lg2101=?");
             this.pars.add(this.getLong("lg2101"));
         }
-		this.hql.append(" order by x.lg0601");
+		this.hql.append(" order by x.lg0601 desc");
 		return this.queryForList();
 	}
 	

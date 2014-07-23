@@ -29,6 +29,51 @@ public abstract class A1020Support {
 	protected String lg0709 = null;
 	protected String lg0710 = null;
 	protected String cnlg0707 = null;
+	protected List oclg0707 = null;
+	protected String qlg0702 = null;
+	protected String qlg0707 = null;
+	protected String bqlg0708 = null;
+	protected String eqlg0708 = null;
+
+	public List getOclg0707() {
+		return oclg0707;
+	}
+
+	public void setOclg0707(List oclg0707) {
+		this.oclg0707 = oclg0707;
+	}
+
+	public String getQlg0702() {
+		return qlg0702;
+	}
+
+	public void setQlg0702(String qlg0702) {
+		this.qlg0702 = qlg0702;
+	}
+
+	public String getQlg0707() {
+		return qlg0707;
+	}
+
+	public void setQlg0707(String qlg0707) {
+		this.qlg0707 = qlg0707;
+	}
+
+	public String getBqlg0708() {
+		return bqlg0708;
+	}
+
+	public void setBqlg0708(String bqlg0708) {
+		this.bqlg0708 = bqlg0708;
+	}
+
+	public String getEqlg0708() {
+		return eqlg0708;
+	}
+
+	public void setEqlg0708(String eqlg0708) {
+		this.eqlg0708 = eqlg0708;
+	}
 
 	public String getLg2101() {
 		return lg2101;

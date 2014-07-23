@@ -27,7 +27,52 @@ public abstract class A1010Support {
 	protected String lg0509 = null;
 	protected String cnlg0509 = null;
 	protected String lg0510 = null;
+	protected List oclg0509 = null;
+	protected String qlg0503 = null;
+	protected String qlg0509 = null;
+	protected String bqlg0507 = null;
+	protected String eqlg0507 = null;
 	
+	public String getBqlg0507() {
+		return bqlg0507;
+	}
+
+	public void setBqlg0507(String bqlg0507) {
+		this.bqlg0507 = bqlg0507;
+	}
+
+	public String getEqlg0507() {
+		return eqlg0507;
+	}
+
+	public void setEqlg0507(String eqlg0507) {
+		this.eqlg0507 = eqlg0507;
+	}
+
+	public List getOclg0509() {
+		return oclg0509;
+	}
+
+	public void setOclg0509(List oclg0509) {
+		this.oclg0509 = oclg0509;
+	}
+
+	public String getQlg0503() {
+		return qlg0503;
+	}
+
+	public void setQlg0503(String qlg0503) {
+		this.qlg0503 = qlg0503;
+	}
+
+	public String getQlg0509() {
+		return qlg0509;
+	}
+
+	public void setQlg0509(String qlg0509) {
+		this.qlg0509 = qlg0509;
+	}
+
 	public String getPath() {
 		return path;
 	}

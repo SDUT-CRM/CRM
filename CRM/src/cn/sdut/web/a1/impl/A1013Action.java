@@ -3,6 +3,7 @@ package cn.sdut.web.a1.impl;
 import java.util.List;
 import java.util.Map;
 
+import cn.sdut.system.Tools;
 import cn.sdut.web.a1.A1012Support;
 
 import com.opensymphony.xwork2.ActionContext;
@@ -12,6 +13,7 @@ public class A1013Action extends A1012Support {
 	@Override
 	public String execute() throws Exception {
 		try {
+			this.oclg0602 = Tools.getOptions("LG0602");
 			List rows = this.getA1011Services().query();
 			if (rows.size() > 0) {
 				this.rows = rows;
