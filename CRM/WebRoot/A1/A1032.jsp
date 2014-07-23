@@ -6,6 +6,22 @@ String path = request.getContextPath();
 <html>
 <head>
 	<title>My JSP 'A1032.jsp' starting page</title>
+	<script type="text/javascript">
+	function onNext()
+    {
+    	with(document.forms[0])
+    	{
+    		action="<%=path%>/a1034Action.action";
+    	}
+    }
+	function onNext1()
+    {
+    	with(document.forms[0])
+    	{
+    		action="<%=path%>/a1032Action.action";
+    	}
+    }
+	</script>
 </head>
 <body>
 <s:property value="msg"/>
@@ -40,13 +56,14 @@ String path = request.getContextPath();
    <TR>
      <TD align="center">
      <s:if test="lg1804==1">
-       <s:submit name="next" value="修改"/>
+       <s:submit name="next" value="修改" />
      </s:if>
-       <s:submit name="next" value="返回"/>
+       <s:submit name="next" value="返回" onclick="return onNext1()"/>
      </TD>
    </TR>
  </TABLE>
  <s:hidden name="lg2101" value="2"/>
+ <s:hidden name="lg1801"/>
 </s:form>
 </body>
 </html>

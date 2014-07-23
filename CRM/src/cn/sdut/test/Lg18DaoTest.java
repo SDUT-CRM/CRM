@@ -19,10 +19,21 @@ public class Lg18DaoTest {
 	public static void main(String[] args) {
 		dao.setMapDto(dto);
 		try {
-			queryForPageTest();
+			modifyTest();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	private static void modifyTest() throws Exception{
+		dto.put("lg1801", "3");
+		dto.put("lg0201", "2");
+		dto.put("lg1701", "2");
+		dto.put("lg1803", "2014-11-11");
+		dto.put("lg1804", "2");
+		dto.put("lg1805", "’‚√¥øÏ");
+		boolean res = dao.modify();
+		System.out.println(res);
 	}
 	
 	private static void queryForPageTest() throws Exception {
@@ -37,15 +48,6 @@ public class Lg18DaoTest {
 		
 	}
 	
-	private static void modifyTest() throws Exception {
-		dto.put("lg0201", "0");
-		dto.put("lg1803","2014-07-21");
-		dto.put("lg1804","5");
-		dto.put("lg1805","3");
-		dto.put("lg1801","3");
-		boolean res = dao.modify();
-		System.out.println(res);
-	}
 	
 	private static void queryTest() throws Exception {
 		dto.put("lg1801", "3");

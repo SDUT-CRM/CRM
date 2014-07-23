@@ -62,20 +62,35 @@ public class Lg18DaoImpl extends HibernatePageDaoSupport implements Lg18Dao {
 
 	@Override
 	public boolean modify() throws Exception {
+		List args = new ArrayList();
 		StringBuilder hql=new StringBuilder()
 		.append("update Lg18 x")
-		.append("   set x.lg02.lg2101=?, x.lg1803=?, x.lg1804=?,x.lg1805=?")
-		.append(" where x.lg1801=?")
-		;
-		System.out.println("dto=="+dto);
-		Object args[]={
-			this.getLong("lg0201"),
-			this.getUDate("lg1803"),
-			this.dto.get("lg1804"),
-			this.dto.get("lg1805"),
-			this.getLong("lg1801")
-		};
-		return this.update(hql.toString(), args);
+		.append("   set x.lg1801 = x.lg1801");
+		if(checkVal(this.dto.get("lg0201"))){
+			hql.append(",x.lg02.lg2101=?");
+			args.add(this.getLong("lg0201"));
+		}
+		if(checkVal(this.dto.get("lg1701"))){
+			hql.append(",x.lg17.lg1701=?");
+			args.add(this.getLong("lg1701"));
+		}
+		if(checkVal(this.dto.get("lg1803"))){
+			hql.append(",x.lg1803=?");
+			args.add(this.getUDate("lg1803"));
+		}
+		if(checkVal(this.dto.get("lg1804"))){
+			hql.append(",x.lg1804=?");
+			args.add(this.getObject("lg1804"));
+		}
+		if(checkVal(this.dto.get("lg1805"))){
+			hql.append(",x.lg1805=?");
+			args.add(this.getObject("lg1805"));
+		}
+		hql.append(" where x.lg1801=?");
+		args.add(this.getLong("lg1801"));
+		
+		System.out.println("hql=="+hql+"\n args=="+args.toString());
+		return this.update(hql.toString(), args.toArray());
 	}
 
 	@Override

@@ -86,7 +86,7 @@ public class A1030ServicesImpl implements A1030Services {
 
 	@Override
 	public boolean modify() throws Exception {
-		return false;
+		return lg18Dao.modify();
 	}
 
 }
