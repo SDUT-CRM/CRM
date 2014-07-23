@@ -64,12 +64,13 @@ public class Lg07DaoImpl extends HibernatePageDaoSupport implements Lg07Dao {
         Object lg0703 = this.dto.get("qlg0703");
         Object lg0704 = this.dto.get("qlg0704");
         Object lg0705 = this.dto.get("qlg0705");
+        Object lg0707 = this.dto.get("qlg0707");
         Object lg0302 = this.dto.get("qlg0302");
         Object blg0706 = this.dto.get("blg0706");
         Object elg0706 = this.dto.get("elg0706");
         Object blg0708 = this.dto.get("blg0708");
         Object elg0708 = this.dto.get("elg0708");
-
+        System.out.println(this.dto);
         this.pars = new ArrayList();
         this.hql = new StringBuilder()
                 .append("select new map(x.lg0701 as lg0701,x.lg03.lg2101 as lg0301,")
@@ -120,9 +121,13 @@ public class Lg07DaoImpl extends HibernatePageDaoSupport implements Lg07Dao {
             hql.append("  and x.lg0706<=?");
             pars.add(Tools.parseDate(elg0706));
         }
-
+        if (this.checkVal(lg0707))
+        {
+            hql.append("  and x.lg0707=?");
+            pars.add(lg0707);
+        }
         // 举行活动时间
-
+        
         if (this.checkVal(blg0708))
         {
             hql.append("  and x.lg0708>=?");

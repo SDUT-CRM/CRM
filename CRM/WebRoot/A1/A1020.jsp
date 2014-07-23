@@ -47,8 +47,8 @@
          <tr>
            <td>活动日期</td>
            <td colspan="200">
-            <s:textfield name="bqlg0708" onclick="calendar.show(this);" readonly="true"/>
-           	- <s:textfield name="eqlg0708" onclick="calendar.show(this);" readonly="true"/>
+            <s:textfield name="blg0708" onclick="calendar.show(this);" readonly="true"/>
+           	- <s:textfield name="elg0708" onclick="calendar.show(this);" readonly="true"/>
            </td>
          </tr>
        </table>

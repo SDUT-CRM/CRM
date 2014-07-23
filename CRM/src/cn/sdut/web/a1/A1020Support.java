@@ -32,8 +32,8 @@ public abstract class A1020Support {
 	protected List oclg0707 = null;
 	protected String qlg0702 = null;
 	protected String qlg0707 = null;
-	protected String bqlg0708 = null;
-	protected String eqlg0708 = null;
+	protected String blg0708 = null;
+	protected String elg0708 = null;
 
 	public List getOclg0707() {
 		return oclg0707;
@@ -59,20 +59,20 @@ public abstract class A1020Support {
 		this.qlg0707 = qlg0707;
 	}
 
-	public String getBqlg0708() {
-		return bqlg0708;
+	public String getBlg0708() {
+		return blg0708;
 	}
 
-	public void setBqlg0708(String bqlg0708) {
-		this.bqlg0708 = bqlg0708;
+	public void setBlg0708(String blg0708) {
+		this.blg0708 = blg0708;
 	}
 
-	public String getEqlg0708() {
-		return eqlg0708;
+	public String getElg0708() {
+		return elg0708;
 	}
 
-	public void setEqlg0708(String eqlg0708) {
-		this.eqlg0708 = eqlg0708;
+	public void setElg0708(String elg0708) {
+		this.elg0708 = elg0708;
 	}
 
 	public String getLg2101() {
