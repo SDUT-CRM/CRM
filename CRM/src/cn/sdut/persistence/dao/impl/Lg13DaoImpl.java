@@ -10,7 +10,9 @@ import cn.sdut.persistence.support.HibernatePageDaoSupport;
 
 public class Lg13DaoImpl extends HibernatePageDaoSupport implements Lg13Dao{
 
-    
+    /**
+     * Ming
+     */
     @Override
     public List queryForPage() throws Exception
     {

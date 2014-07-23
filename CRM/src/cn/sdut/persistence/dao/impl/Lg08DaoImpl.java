@@ -91,7 +91,7 @@ public class Lg08DaoImpl extends HibernatePageDaoSupport implements Lg08Dao{
 		.append("select new map(x.lg0801 as lg0801,x.lg01.lg2101 as lg0101,")
 		.append("       x.lg07.lg0701 as lg0701, to_char(x.lg0802,'YYYY-MM-DD') as lg0802,")
 		.append("       to_char(x.lg0803,'YYYY-MM-DD') as lg0803, b.fvalue as cnlg0707,")
-		.append("       y.lg0707 as lg0707, y.lg0702 as lg0702, ")
+		.append("       y.lg0707 as lg0707, y.lg0702 as lg0702,")
 		.append("       x.lg0804 as lg0804, c.fvalue as cnlg0804, ")
 		.append("       to_char(y.lg0708,'YYYY-MM-DD') as lg0708")
 		.append("       )")

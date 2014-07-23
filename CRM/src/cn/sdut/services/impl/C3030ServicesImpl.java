@@ -17,7 +17,6 @@ public class C3030ServicesImpl implements C3030Services
     {
         this.dto=dto;
         this.lg07Dao.setMapDto(dto);
-        
     }
 
     @Override
