@@ -98,12 +98,13 @@ public class Lg18DaoImpl extends HibernatePageDaoSupport implements Lg18Dao {
 		StringBuilder hql=new StringBuilder()
 		.append("update Lg18 x")
 		.append("   set x.lg1804=?")
-		.append(" where x.lg1801=?")
+		.append(" where x.lg1801=? and x.lg1804=?")
 		;
 		System.out.println("dto=="+dto);
 		Object args[]={
 			"6",
-			this.getLong("lg1801")
+			this.getLong("lg1801"),
+			"1"
 		};
 		return this.update(hql.toString(), args);
 	}
