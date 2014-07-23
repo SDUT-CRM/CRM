@@ -13,6 +13,37 @@ import cn.sdut.persistence.support.HibernatePageDaoSupport;
 
 public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
 	
+    
+    
+    @Override
+    public List queryForForms() throws Exception
+    {
+        Object blg0604=this.getObject("blg0604");
+        Object elg0604=this.getObject("elg0604");
+        this.hql=new StringBuilder()//成本，价格
+        .append("select new map(a.lg05.lg0505 as lg0505,a.lg05.lg0506 as lg0506,")
+        .append("               a.lg02.lg2101 as lg2101,a.lg02.lg0202 as lg0202")
+        .append(")")
+        .append("  from Lg06 a")
+        .append(" where 1=1")
+        ;
+        this.pars=new ArrayList();
+        if(this.checkVal(blg0604))
+        {
+            blg0604=this.getUDate("blg0604");
+            this.hql.append("  and lg0604>=?");
+            pars.add(blg0604);
+        }
+        if(this.checkVal(elg0604))
+        {
+            elg0604=this.getUDate("elg0604");
+            this.hql.append("  and lg0604<=?");
+            pars.add(elg0604);
+        }
+        System.out.println(pars);
+        return this.queryForList(10000);
+    }
+    
 	@Override
 	public List queryForPage() throws Exception {
 		Object qlg0503 = this.getObject("qlg0503");
@@ -106,6 +137,7 @@ public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
 			this.hql.append(" and x.lg0601=?");
 			this.pars.add(Long.parseLong(lg0601.toString()));
 		}
+		
 		return this.queryForList();
 	}
 

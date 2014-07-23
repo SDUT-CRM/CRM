@@ -21,4 +21,6 @@ public interface Lg06Dao {
 	
 	public String getPageInfo(String url);
 	
+	public List queryForForms()throws Exception;
+	
 }

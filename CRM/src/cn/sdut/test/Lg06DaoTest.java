@@ -18,12 +18,24 @@ public class Lg06DaoTest{
 	public static void main(String[] args) {
 		dao.setMapDto(dto);
 		try {
-			queryForPageTest();
+			//queryForPageTest();
+		    Lg06DaoTest.queryForFormsTest();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
+	
+	
+	public static void queryForFormsTest() throws Exception
+	{
+	    dto.put("blg0604", "2014-05-05");
+	    List lists = dao.queryForForms();
+	    System.out.println(lists);
+	}
+	
+	
+	
 	public static void queryForPageTest() throws Exception{
 		dto.put("lg2101", "2");
 		List res = dao.queryForPage();

@@ -32,7 +32,7 @@
 						</tr>
 						<tr>
 							<td>
-								<a href="#" target="WORK">活动管理</a>
+								<a href="<%=path%>/C1/c3030Action.action" target="WORK">活动信息</a>
 							</td>
 						</tr>
 						<tr>
