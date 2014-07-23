@@ -14,10 +14,23 @@ public class Lg16 implements java.io.Serializable {
 	private String lg1603;
 	private Date lg1604;
 	private Date lg1605;
+	private double lg1606;
 
-	// Property accessors
 
-	public long getLg1601() {
+	
+	
+	
+	public double getLg1606()
+    {
+        return lg1606;
+    }
+
+    public void setLg1606(double lg1606)
+    {
+        this.lg1606 = lg1606;
+    }
+
+    public long getLg1601() {
 		return this.lg1601;
 	}
 

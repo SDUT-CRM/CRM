@@ -31,5 +31,8 @@
         <property name="lg1605" type="java.util.Date">
             <column name="LG1605" length="7" not-null="true" />
         </property>
+        <property name="lg1606" type="double">
+            <column name="LG1606" not-null="true" />
+        </property>
     </class>
 </hibernate-mapping>
