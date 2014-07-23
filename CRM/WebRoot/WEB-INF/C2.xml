@@ -16,4 +16,13 @@
 		  scope="prototype" init-method="initMain">
 		<property name="c2020Services" ref="c2020services"/>
 	</bean>
+	<bean id="c2023" class="cn.sdut.web.c2.impl.C2023Action"
+	      scope="prototype" init-method="initEdit">
+	    <property name="c2020Services" ref="c2020services"/>
+	</bean>
+	<bean id="c2024" class="cn.sdut.web.c2.impl.C2024Action"
+	      scope="prototype" init-method="initEdit">
+	      <property name="c2020Services" ref="c2020services"/>
+	</bean>
+	
 </beans>

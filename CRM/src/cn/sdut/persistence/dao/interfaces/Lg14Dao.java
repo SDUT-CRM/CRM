@@ -11,4 +11,6 @@ public interface Lg14Dao {
 	public List queryForPage() throws Exception;
 	public String getPageInfo(String url);
 	public boolean batchModify() throws Exception;
+	public Map getInstance() throws Exception;
+	public boolean update() throws Exception;
 }

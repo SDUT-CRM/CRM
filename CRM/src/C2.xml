@@ -11,5 +11,11 @@
 		<action name="c2022Action" class="c2022">
 			<result name="main">/C2/C2020.jsp</result>
 		</action>
+		<action name="c2023Action" class="c2023">
+			<result name="main">/C2/C2021.jsp</result>
+		</action>
+		<action name="c2024Action" class="c2024">
+		    <result name="main">/C2/C2021.jsp</result>
+		</action>
 	</package>
 </struts>    

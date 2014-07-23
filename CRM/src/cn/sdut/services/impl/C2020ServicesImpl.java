@@ -16,6 +16,25 @@ public class C2020ServicesImpl implements C2020Services
     
     
     @Override
+    public Map getInstance() throws Exception
+    {
+        return this.lg14Dao.getInstance();
+    }
+    
+    
+    @Override
+    public boolean update() throws Exception
+    {
+        this.dto.put("lg0301", this.dto.get("SYSUID"));
+        DateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
+        dto.put("lg1404", dt.format(new Date()));
+        return this.lg14Dao.update();
+    }
+    
+    
+    
+    
+    @Override
     public boolean batchModify() throws Exception
     {
         DateFormat dt = new SimpleDateFormat("yyyy-MM-dd");

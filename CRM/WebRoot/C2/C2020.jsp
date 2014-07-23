@@ -30,6 +30,18 @@
 	    	action="<%=path%>/c2022Action.action?type="+obj;
 	    }
 	}
+	
+	function onEdit(obj1,obj4)
+	{
+		with(document.forms[0])
+	    {
+	    	action="<%=path%>/c2023Action.action?"
+	    	+"lg1401="+obj1
+	    	+"&lg1406="+obj4
+	    	;
+	    	submit();
+	    }
+	}
 	</script>
 	</head>
 	<body>
@@ -220,13 +232,23 @@
 											<s:property value="lg1402" />
 										</td>
 										<td>
-											<s:property value="lg1404" />
+										<s:if test="lg1403!=1">
+										<s:property value="lg1404" />
+										</s:if>
+											
 										</td>
 										<td>
+										<s:if test="lg1403==3">
 											<s:property value="lg1405" />
+									    </s:if>
 										</td>
 										<td>
-											<a href="#">ÐÞ¸Ä</a>
+											<a href="#" 
+											onclick="onEdit(
+											'<s:property value="lg1401" />',
+											'<s:property value="lg1406" />'
+											)"
+											>ÐÞ¸Ä</a>
 										</td>
 									</tr>
 								</s:iterator>

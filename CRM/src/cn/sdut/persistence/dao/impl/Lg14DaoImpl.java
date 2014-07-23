@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import cn.sdut.persistence.dao.interfaces.Lg14Dao;
 import cn.sdut.persistence.support.HibernatePageDaoSupport;
@@ -12,6 +13,49 @@ import cn.sdut.system.Tools;
 public class Lg14DaoImpl extends HibernatePageDaoSupport implements Lg14Dao
 {
 
+    
+    @Override
+    public boolean update() throws Exception
+    {
+        this.hql=new StringBuilder()
+        .append("update Lg14")
+        .append("   set lg1403=?,lg1404=?,lg03.lg2101=?")
+        .append(" where lg1401=?")
+        .append("")
+        .append("")
+        ;
+        Object args[]={
+                this.getObject("lg1403"),
+                this.getUDate("lg1404"),
+                this.getLong("lg0301"),
+                this.getLong("lg1401")
+        };
+        return this.update(hql.toString(), args);
+    }
+    
+    
+    
+    @Override
+    public Map getInstance() throws Exception
+    {
+        this.hql=new StringBuilder()
+        .append("select new map(a.lg1401 as lg1401,a.lg02.lg2101 as lg2101,")
+        .append("               a.lg13.lg1301 as lg1301,to_char(a.lg1402,'yyyy-MM-dd') as lg1402,")
+        .append("               a.lg1403 as lg1403,a.lg1405 as lg1405,a.lg03.lg2101 as lg0301")
+        .append("              )")
+        .append("  from Lg14 a")
+        .append(" where a.lg1401=?")
+        ;
+        this.dto.put("lg1401", this.getLong("lg1401"));
+        return this.queryForMap("lg1401");
+    }
+    
+    
+    
+    
+    /**
+     * 
+     */
     @Override
     public List queryForPage() throws Exception
     {

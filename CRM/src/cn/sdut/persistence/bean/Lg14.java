@@ -4,7 +4,6 @@ import java.util.Date;
 
 public class Lg14 implements java.io.Serializable {
 
-	// Fields
 
 	private long lg1401;
 	private Lg02 lg02;
@@ -18,7 +17,6 @@ public class Lg14 implements java.io.Serializable {
 	
 	
 
-	// Property accessors
 
 	public long getLg1406()
     {
