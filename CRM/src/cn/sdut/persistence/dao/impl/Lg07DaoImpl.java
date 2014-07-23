@@ -44,16 +44,17 @@ public class Lg07DaoImpl extends HibernatePageDaoSupport implements Lg07Dao {
 		.append("select new map(x.lg0701 as lg0701,x.lg03.lg2101 as lg0301,")
 		.append("       x.lg0702 as lg0702, x.lg0703 as lg0703,")
 		.append("       x.lg0704 as lg0704, x.lg0705 as lg0705,")
-		.append("       x.lg0706 as lg0706, x.lg0707 as lg0707,")
+		.append("       to_char(x.lg0706,'YYYY-MM-DD') as lg0706, x.lg0707 as lg0707,")
 		.append("       to_char(x.lg0708,'YYYY-MM-DD') as lg0708, to_char(x.lg0709,'YYYY-MM-DD') as lg0709,")
 		.append("       to_char(x.lg0710,'YYYY-MM-DD') as lg0710, b.fvalue as cnlg0707")
 		.append("       )")
 		.append("  from Lg07 x, Syscode b")
-		.append(" where x.lg0701=?")
-		.append("   and x.lg0707=b.fcode")
-        .append("   and b.fname='LG0707'");
+		.append(" where x.lg0707=b.fcode")
+		.append("   and b.fname='LG0707'")
+        .append("   and x.lg0701=?");
 		return this.queryForMap("lg0701");
 	}
+	
 	
     @Override
     public List queryForPage() throws Exception
@@ -76,7 +77,7 @@ public class Lg07DaoImpl extends HibernatePageDaoSupport implements Lg07Dao {
                 .append("select new map(x.lg0701 as lg0701,x.lg03.lg2101 as lg0301,")
                 .append("               x.lg0702 as lg0702, x.lg0703 as lg0703,")
                 .append("               x.lg0704 as lg0704, x.lg0705 as lg0705,")
-                .append("               x.lg0706 as lg0706, x.lg0707 as lg0707,")
+                .append("               to_char(x.lg0706,'YYYY-MM-DD')as lg0706, x.lg0707 as lg0707,")
                 .append("               to_char(x.lg0708,'YYYY-MM-DD') as lg0708, to_char(x.lg0709,'YYYY-MM-DD') as lg0709,")
                 .append("               to_char(x.lg0710,'YYYY-MM-DD') as lg0710, b.fvalue as cnlg0707,")
                 .append("               x.lg03.lg0302 as lg0302")

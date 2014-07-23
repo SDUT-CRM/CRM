@@ -19,9 +19,9 @@ public class Lg14DaoTest {
 		dao.setMapDto(dto);
 		try {
 			Lg14DaoTest
-			//.queryForPageTest()
+			.queryForPageTest()
 			//.getInstanceTest()
-			.updateTest()
+			//.updateTest()
 			;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -56,7 +56,7 @@ public class Lg14DaoTest {
 	public static void queryForPageTest() throws Exception
 	{
 	    //dto.put("lg0302", "Íõ");
-	    dto.put("lg1303", "Ë®");
+	   // dto.put("lg1303", "Ë®");
 	    List list = dao.queryForPage();
 	    
 	    System.out.println(list);

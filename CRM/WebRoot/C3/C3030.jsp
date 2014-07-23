@@ -78,9 +78,7 @@
 				<s:if test="rows!=null">
 				<TR><TD colspan="100"><table border="1" width="100%">
 					<TR>
-						<TD>
-							&nbsp;
-						</TD>
+		
 
 						<TD>
 							ÐòºÅ
@@ -114,13 +112,10 @@
 							¸ºÔðÈË
 						</TD>
 
-						<TD>
-							&nbsp;
-						</TD>
 					</TR>
 					<s:iterator value="rows" status="st">
 						<TR>
-						<TD>&nbsp;</TD>
+					
 							<TD>
 								<s:property value="#st.count" />
 							</TD>
@@ -153,9 +148,7 @@
 								<s:property value="lg0302" />
 							</TD>
 
-							<TD>
-								&nbsp;
-							</TD>
+							
 						</TR>
 					</s:iterator>
 					</table>
