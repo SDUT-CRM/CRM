@@ -11,13 +11,23 @@
 		with (document.forms[0]) {
 			obj ? ++count : --count;
 			next[2].disabled = (count == 0);
+			next[1].disabled = (count == 0);
 		}
 	}
+	
 	function onNext2(obj)
 	{
 	    with(document.forms[0])
 	    {
-	    
+	    	action="<%=path%>/c2022Action.action?type="+obj;
+	    }
+	}
+	
+	function onNext3(obj)
+	{
+	    with(document.forms[0])
+	    {
+	    	action="<%=path%>/c2022Action.action?type="+obj;
 	    }
 	}
 	</script>
@@ -171,12 +181,12 @@
 									<tr>
 										<td>
 										<s:if test="lg1403==1">
-											<input type="checkbox" name="parsList"
-												onclick="onSelect(this.checked)"
-												value="<s:property value="lg1401"/>">
+											<input type="checkbox" name="parsList" 
+												onclick="onSelect(this.checked)" 
+												value="<s:property value="lg1401"/>" >
 									    </s:if>
 									    <s:else>
-									    &nbsp;&nbsp;&nbsp;
+									    &nbsp;&nbsp;
 									    </s:else>
 										</td>
 										<td>
@@ -236,7 +246,8 @@
 				<TR>
 					<TD colspan="100" align="center">
 						<s:submit value="查询" name="next" />
-						<s:submit value="通过" name="next2" onclick="return onNext2('2')" />
+						<s:submit value="通过" name="next" onclick="return onNext2('2')" disabled="true"/>
+						<s:submit value="拒绝" name="next" onclick="return onNext3('4')" disabled="true"/>
 					</TD>
 				</TR>
 			</TABLE>

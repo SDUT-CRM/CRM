@@ -65,7 +65,7 @@ public class Lg21DaoImpl extends HibernatePageDaoSupport implements Lg21Dao {
     public long addUser() throws Exception
     {
         this.dto.put("lg2102", this.getObject("lg2102"));
-        this.dto.put("lg2103", this.getObject("lg2103"));
+        this.dto.put("lg2103", Tools.getMd5(this.getObject("lg2103")));
         this.dto.put("lg2104", this.getObject("lg2104"));
         this.dto.put("lg2105", this.getObject("lg2105"));
         Lg21 lg21 =  this.addObject(Lg21.class);
