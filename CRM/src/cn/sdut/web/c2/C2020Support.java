@@ -67,6 +67,11 @@ public abstract class C2020Support
         this.oclg0402=Tools.getOptions("LLG02");
         this.oclg1403=Tools.getOptions("LLG04");
     }
+    
+    private void initEdit() throws Exception
+    {
+        this.oclg1403=Tools.getOptions("LLG04");
+    }
 
     public String getQlg1302()
     {

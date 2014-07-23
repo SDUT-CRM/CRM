@@ -76,9 +76,9 @@ public class Tools {
 			dto.put("SYSUNAME", userinfo.get("pas002")); // 登录名
 			dto.put("SYSCNNAME", userinfo.get("pas003")); // 中文名
 		} else {
-			dto.put("SYSUID", "2"); // 用户流水号
-			dto.put("SYSUNAME", "null"); // 登录名
-			dto.put("SYSCNNAME", "null"); // 中文名
+			dto.put("SYSUID", "6"); // 用户流水号
+			dto.put("SYSUNAME", "M10002"); // 登录名
+			dto.put("SYSCNNAME", "钱六"); // 中文名
 		}
 		return dto;
 	}

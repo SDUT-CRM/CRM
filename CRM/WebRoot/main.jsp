@@ -27,7 +27,7 @@
 						</tr>
 						<tr>
 							<td>
-								<a href="#" target="WORK">配件管理</a>
+								<a href="<%=path%>/C1/c2021Action.action" target="WORK">配件管理</a>
 							</td>
 						</tr>
 						<tr>
