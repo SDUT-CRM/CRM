@@ -43,7 +43,7 @@ String path = request.getContextPath();
      </TD>
    </TR>
  </TABLE>
- <s:hidden name="lg2101"/>
+ <s:hidden name="lg2101" value="2"/>
 </s:form>
 </body>
 </html>

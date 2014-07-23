@@ -17,6 +17,8 @@ public abstract class A1030Support {
 	protected String path = null;
 
 	protected List oclg1701 = null;
+	protected String lg1701 = null;
+	protected String lg1805 = null;
 
 	public String getPath() {
 		return path;
@@ -66,5 +68,21 @@ public abstract class A1030Support {
 	public void setOclg1701(List oclg1701) {
 		this.oclg1701 = oclg1701;
 	}
-	
+
+	public String getLg1701() {
+		return lg1701;
+	}
+
+	public void setLg1701(String lg1701) {
+		this.lg1701 = lg1701;
+	}
+
+	public String getLg1805() {
+		return lg1805;
+	}
+
+	public void setLg1805(String lg1805) {
+		this.lg1805 = lg1805;
+	}
+
 }

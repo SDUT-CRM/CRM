@@ -6,6 +6,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 	<bean id="a1030services" class="cn.sdut.services.impl.A1030ServicesImpl">
+		<property name="lg18Dao" ref="lg18dao"/>
 	</bean>
 
 	<bean id="a1021services" class="cn.sdut.services.impl.A1021ServicesImpl">

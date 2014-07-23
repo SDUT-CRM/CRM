@@ -12,7 +12,6 @@ import cn.sdut.persistence.dao.interfaces.Lg06Dao;
 import cn.sdut.persistence.support.HibernatePageDaoSupport;
 
 public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
-
 	
 	@Override
 	public List queryForPage() throws Exception {
