@@ -69,8 +69,8 @@ public class Lg07DaoImpl extends HibernatePageDaoSupport implements Lg07Dao {
 		.append("  from Lg07 x, Syscode b")
 		.append(" where 1=1")
 		.append("   and x.lg0707=b.fcode")
-        .append("   and b.fname='LG0707'");
-		this.hql.append(" order by x.lg0701");
+        .append("   and b.fname='LG0707'")
+		.append(" order by x.lg0701");
 		return this.queryForList();
 	}
 
@@ -92,7 +92,8 @@ public class Lg07DaoImpl extends HibernatePageDaoSupport implements Lg07Dao {
 		.append("       x.lg0708 as lg0708, x.lg0709 as lg0709,")
 		.append("       x.lg0710 as lg0710")
 		.append("       )")
-		.append("  from Lg07 x").append(" where 1=1");
+		.append("  from Lg07 x")
+		.append(" where 1=1");
 		if (checkVal(lg0701)) {
 			this.hql.append(" and x.lg0701=?");
 			this.pars.add(Long.parseLong(lg0701.toString()));
