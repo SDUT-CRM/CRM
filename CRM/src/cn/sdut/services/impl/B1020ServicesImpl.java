@@ -45,7 +45,7 @@ public class B1020ServicesImpl implements B1020Services {
 
 	@Override
 	public List query() throws Exception {
-		
+		this.dto.put("qlg0602", "1");
 		return this.lg06Dao.queryForPage();
 	}
 

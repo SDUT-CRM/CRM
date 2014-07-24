@@ -58,16 +58,17 @@ public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
 		this.pars = new ArrayList();
 		this.hql = new StringBuilder()
 		.append("select new map(x.lg0601 as lg0601,x.lg01.lg2101 as lg0101,")
-		.append("       x.lg05.lg0501 as lg0501, x.lg02.lg2101 as lg0201,")
+		.append("       x.lg05.lg0501 as lg0501, x.lg05.lg0502 as lg0502, x.lg02.lg2101 as lg0201,")
 		.append("       x.lg0602 as lg0602, to_char(x.lg0603,'YYYY-MM-DD') as lg0603,")
 		.append("       b.fvalue as cnlg0602,to_char(x.lg0604,'YYYY-MM-DD') as lg0604,")
-		.append("       y.lg0503 as lg0503, y.lg0506 as lg0506")
+		.append("       y.lg0503 as lg0503, y.lg0506 as lg0506, z.lg0102 as lg0102")
 		.append("       )")
-		.append("  from Lg06 x, Lg05 y, Syscode b")
-		.append(" where 1=1")
-        .append("   and x.lg0602=b.fcode")
-        .append("   and b.fname='LG0602'")
-		.append("   and y.lg0501=x.lg05.lg0501");
+		.append("  from Lg06 x, Lg05 y, Lg01 z, Syscode b")
+		.append(" where 1 = 1")
+        .append("   and x.lg0602 = b.fcode")
+        .append("   and b.fname = 'LG0602'")
+		.append("   and y.lg0501 = x.lg05.lg0501")
+		.append("   and x.lg01.lg2101 = z.lg2101");
 
         if (this.checkVal(qlg0503)){
             this.hql.append(" and y.lg0503 like ?");
