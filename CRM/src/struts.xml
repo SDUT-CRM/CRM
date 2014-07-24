@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
-<include file="constant.xml"/>
-<include file="C1.xml"/>
-<include file="C2.xml"/>
-<include file="C3.xml"/>
-<include file="C4.xml"/>
-<include file="A1.xml"/>
+	<include file="constant.xml" />
+	<include file="C1.xml" />
+	<include file="C2.xml" />
+	<include file="C3.xml" />
+	<include file="C4.xml" />
+	<include file="A1.xml" />
 </struts>
 

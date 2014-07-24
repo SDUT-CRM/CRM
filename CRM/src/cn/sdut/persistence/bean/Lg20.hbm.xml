@@ -35,9 +35,6 @@
        	<property name="lg2007" type="java.lang.String">
             <column name="LG2007" not-null="false" />
         </property>
-       	<property name="lg2007" type="java.lang.String">
-            <column name="LG2007" not-null="false" />
-        </property>
         
     </class>
 </hibernate-mapping>
