@@ -8,5 +8,8 @@
 		<action name="c3031Action" class="c3031">
 			<result name="main">/C3/C3030.jsp</result>
 		</action>
+		<action name="c3040Action" class="c3040">
+		    <result name="main">/C3/C3031.jsp</result>
+		</action>
 	</package>
 </struts>    
