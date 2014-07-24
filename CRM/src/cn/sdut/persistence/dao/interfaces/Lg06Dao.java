@@ -25,4 +25,6 @@ public interface Lg06Dao {
 	
 	public List queryForForms()throws Exception;
 	
+	public boolean updateDate() throws Exception;
+	
 }

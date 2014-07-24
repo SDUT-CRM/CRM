@@ -1,8 +1,8 @@
 package cn.sdut.persistence.dao.impl;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 import cn.sdut.persistence.bean.Lg01;
 import cn.sdut.persistence.bean.Lg02;
@@ -52,7 +52,7 @@ public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
 		Object eqlg0603 = this.getObject("eqlg0603");
 		Object bqlg0604 = this.getObject("bqlg0604");
 		Object eqlg0604 = this.getObject("eqlg0604");
-		
+		Object lg0201 = this.getObject("lg0201");
 		Object lg2101 = this.dto.get("lg2101");
 		Object lg0501 = this.dto.get("lg0501");
 		this.pars = new ArrayList();
@@ -76,8 +76,14 @@ public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
             this.pars.add("%"+qlg0503+"%");
         }
         if (this.checkVal(qlg0602)){
-            this.hql.append(" and x.lg0602 = ?");
-            this.pars.add(qlg0602);
+        	if(qlg0602.toString().equals("0")){
+        		this.hql.append(" and x.lg0602 between ? and ? ");
+        		this.pars.add("1");
+        		this.pars.add("3");
+        	}else{
+                this.hql.append(" and x.lg0602 = ?");
+                this.pars.add(qlg0602);       		
+        	}
         }
         if (this.checkVal(bqlg0603)){
             this.hql.append(" and x.lg0603 >= ?");
@@ -98,6 +104,10 @@ public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
         if (this.checkVal(lg2101)){
             this.hql.append(" and x.lg01.lg2101=?");
             this.pars.add(this.getLong("lg2101"));
+        }
+        if (this.checkVal(lg0201)){
+            this.hql.append(" and x.lg02.lg2101=?");
+            this.pars.add(this.getLong("lg0201"));
         }
 		this.hql.append(" order by x.lg0601 desc");
 		return this.queryForList();
@@ -145,14 +155,27 @@ public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
 
 	@Override
 	public boolean setOk() throws Exception {
+		System.out.println("dao::"+dto);
 		StringBuilder hql = new StringBuilder()
 		.append("update Lg06 x")
 		.append("   set x.lg0602 = ?")
 		.append(" where x.lg0601 in (:lg0601)")
 		;
 		Object parsList[] = this.getIdArray("parsList");
-		System.out.println(parsList);
-		return this.batchUpdate(hql.toString(), parsList, "lg0601", "2");
+		Object lg0602 = this.dto.get("lg0602");
+		return this.batchUpdate(hql.toString(), parsList, "lg0601", lg0602);
+	}
+	
+	public boolean updateDate() throws Exception{
+		System.out.println("dao::"+dto);
+		StringBuilder hql = new StringBuilder()
+		.append("update Lg06 x")
+		.append("   set x.lg0604 = ?")
+		.append(" where x.lg0601 in (:lg0601)")
+		;
+		Object parsList[] = this.getIdArray("parsList");
+		Date lg0604 = this.getUDate("lg0604");
+		return this.batchUpdate(hql.toString(), parsList, "lg0601", lg0604);
 	}
 	
 	@Override

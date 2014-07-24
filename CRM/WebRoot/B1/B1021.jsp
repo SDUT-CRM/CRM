@@ -14,22 +14,20 @@
     	{
     	   obj?++count:--count;
     	   next[1].disabled=(count==0);
-    	   next[2].disabled=(count==0);
     	}
     }
 	function onCancel(obj)
 	{
 		with(document.forms[0])
 		{
-			action="<%=path%>/a1014Action.action?lg0601="+obj;
-			submit();
+			action="<%=path%>/b1023Action.action?lg0602="+obj;
 		}
 	}
-	function  onNext2(obj)
+	function  onNext2()
     {
     	with(document.forms[0])
     	{
-    		action="<%=path%>/b1021Action.action?lg0602="+obj;
+    		action="<%=path%>/b1021Action.action";
     	}
     }
 </script>
@@ -38,10 +36,10 @@
 <s:property value="msg"/>
 <br>
 <br>
-<s:form action="b1020Action">
+<s:form action="b1022Action">
 <TABLE border="1" width="80%" align="center">
    <caption>
-        业务申请审核
+        业务审核记录
     <hr width="160">  
    </caption>
    <TR>
@@ -56,6 +54,13 @@
            <td colspan="200">
             <s:textfield name="bqlg0603" onclick="calendar.show(this);" readonly="true"/>
            	- <s:textfield name="eqlg0603" onclick="calendar.show(this);" readonly="true"/>
+           </td>
+         </tr>
+         <tr>
+           <td>审核日期</td>
+           <td colspan="200">
+            <s:textfield name="bqlg0604" onclick="calendar.show(this);" readonly="true"/>
+           	- <s:textfield name="eqlg0604" onclick="calendar.show(this);" readonly="true"/>
            </td>
          </tr>
        </table>
@@ -73,6 +78,7 @@
            <td align="center">客户姓名</td>
            <td align="center">业务资费</td>
            <td align="center">申请日期</td>
+           <td align="center">审核日期</td>
          </tr>
          <s:iterator value="rows" status="st">
 	         <tr>
@@ -86,6 +92,7 @@
 	           <td align="center"><s:property value="lg0102"/></td>
 	           <td align="center"><s:property value="lg0506"/></td>
 	           <td align="center"><s:property value="lg0603"/></td>
+	           <td align="center"><s:property value="lg0604"/></td>
 	         </tr>
          </s:iterator>
        </table>
@@ -98,8 +105,7 @@
        <TR>
      <TD align="center">
        <s:submit  name="next" value="查询"/>
-       <s:submit name="next" value="审核通过" onclick="return onNext2('2')" disabled="true"/>
-       <s:submit name="next" value="审核不通过" onclick="return onNext2('3')" disabled="true"/>
+        <s:submit name="next" value="取消审核" onclick="return onCancel('1')" disabled="true"/>
      </TD>
    </TR>
  </TABLE>

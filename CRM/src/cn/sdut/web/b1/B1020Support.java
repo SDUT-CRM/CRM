@@ -17,6 +17,8 @@ public abstract class B1020Support {
 	protected String query = null;
 	protected String path = null;
 	
+	protected String lg0602 = null;
+	protected String lg0201 = null;
 	protected String lg0501 = null;
 	protected String lg0502 = null;
 	protected String lg0503 = null;
@@ -40,6 +42,22 @@ public abstract class B1020Support {
 	protected String eqlg0604 = null;
 	protected List oclg0602 = null;
 	
+	public String getLg0602() {
+		return lg0602;
+	}
+
+	public void setLg0602(String lg0602) {
+		this.lg0602 = lg0602;
+	}
+
+	public String getLg0201() {
+		return lg0201;
+	}
+
+	public void setLg0201(String lg0201) {
+		this.lg0201 = lg0201;
+	}
+
 	public String getQlg0602() {
 		return qlg0602;
 	}

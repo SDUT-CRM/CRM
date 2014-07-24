@@ -50,15 +50,20 @@ public class B1020ServicesImpl implements B1020Services {
 		this.dto.put("qlg0602", "1");
 		return this.lg06Dao.queryForPage();
 	}
+	
+	@Override
+	public List query1() throws Exception {
+		this.dto.put("qlg0602", "0");
+		return this.lg06Dao.queryForPage();
+	}
 
 	@Override
 	public boolean setOk() throws Exception {
 		Date date = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 		String da = formatter.format(date);
-		this.dto.put("lg0602", "2");
 		this.dto.put("lg0604", da);
-		return lg06Dao.setOk();
+		return lg06Dao.setOk() && lg06Dao.updateDate();
 	}
 
 	@Override

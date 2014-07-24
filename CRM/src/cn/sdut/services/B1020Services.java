@@ -12,4 +12,6 @@ public interface B1020Services {
 	
 	public boolean setOk() throws Exception;
 	
+	public List query1() throws Exception;
+	
 }

@@ -4,17 +4,17 @@ import java.util.List;
 
 import cn.sdut.web.b1.B1020Support;
 
-public class B1021Action extends B1020Support {
+public class B1023Action extends B1020Support {
 
 	@Override
 	public String execute() throws Exception {
 		boolean res = this.getB1020Services().setOk();
 		if (res == true) {
-			this.msg = "审核成功!";
+			this.msg = "取消成功!";
 		} else {
-			this.msg = "审核失败!";
+			this.msg = "取消失败!";
 		}
-		List rows = this.getB1020Services().query();
+		List rows = this.getB1020Services().query1();
 		if (rows.size() > 0) {
 			this.rows = rows;
 		} else {
