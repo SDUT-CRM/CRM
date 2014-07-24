@@ -30,7 +30,10 @@
             <column name="LG2005" length="7" not-null="false" />
         </property>
         <property name="lg2006" type="long">
-            <column name="LG2006" precision="22" scale="0" not-null="true" />
+            <column name="LG2006" precision="22" scale="0" not-null="false" />
+        </property>
+       	<property name="lg2007" type="java.lang.String">
+            <column name="LG2007" not-null="false" />
         </property>
        	<property name="lg2007" type="java.lang.String">
             <column name="LG2006" not-null="false" />

@@ -18,7 +18,8 @@ public class Lg20DaoTest {
 	public static void main(String[] args) {
 		dao.setMapDto(dto);
 		try {
-			queryByIdTest();
+			//queryByIdTest();
+			queryForPageTest();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -27,6 +28,12 @@ public class Lg20DaoTest {
 	private static void queryByIdTest() throws Exception{
 		dto.put("lg2001", "1");
 		List res = dao.queryById();
+		System.out.println(res);
+	}
+	
+	private static void queryForPageTest() throws Exception{
+		dto.put("qlg2002", "ак");
+		List res = dao.queryForPage();
 		System.out.println(res);
 	}
 	

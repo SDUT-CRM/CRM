@@ -15,6 +15,11 @@
 		<property name="a1041Services" ref="a1041services"/>
 	</bean>	
 
+	<bean id="a1040" class="cn.sdut.web.a1.impl.A1040Action"
+			scope="prototype">
+		<property name="a1041Services" ref="a1041services"/>
+	</bean>	
+
 	<bean id="a1036" class="cn.sdut.web.a1.impl.A1036Action"
 			scope="prototype">
 		<property name="a1031Services" ref="a1031services"/>

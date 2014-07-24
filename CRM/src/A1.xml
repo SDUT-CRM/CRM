@@ -11,6 +11,10 @@
 			<result name="main">/A1/A1042.jsp</result>
 		</action>
 		
+		<action name="a1040Action" class="a1040">
+			<result name="main">/A1/A1040.jsp</result>
+		</action>
+		
 		<action name="a1036Action" class="a1036">
 			<result name="main">/A1/A1032.jsp</result>
 		</action>

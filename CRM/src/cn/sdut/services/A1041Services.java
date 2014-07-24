@@ -12,5 +12,7 @@ public interface A1041Services {
 	public String getPageInfo(String url);
 	
 	public boolean add() throws Exception;
+	
+	public List query() throws Exception;
 
 }

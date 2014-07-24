@@ -11,7 +11,7 @@ String path = request.getContextPath();
 <s:property value="msg"/>
 <br>
 <br>
-<s:form action="a1041Action">
+<s:form action="a1040Action">
  <TABLE border="1" width="80%" align="center">
    <caption>
         在线提问
@@ -23,7 +23,7 @@ String path = request.getContextPath();
          <tr>
            <td>请简要描述您的问题</td>
            <td>
-            <s:textarea name="lg2004" rows="20" cssStyle="width:500px"/>
+            <s:textarea name="lg2002" rows="20" cssStyle="width:500px"/>
            </td>
          </tr>
        </table>
