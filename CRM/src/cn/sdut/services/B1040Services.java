@@ -12,4 +12,7 @@ public interface B1040Services {
 	
 	public boolean get() throws Exception;
 	
+	public List queryForPage() throws Exception;
+	
+	public boolean add() throws Exception;
 }

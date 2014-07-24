@@ -14,4 +14,5 @@ public interface Lg14Dao {
 	public Map getInstance() throws Exception;
 	public boolean update() throws Exception;
 	public boolean get() throws Exception;
+	public boolean add() throws Exception;
 }

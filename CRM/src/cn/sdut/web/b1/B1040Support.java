@@ -31,7 +31,25 @@ public abstract class B1040Support {
 	protected String lg1403 = null;
 	protected String lg1401 = null;
 	protected String lg0201 = null;
-	
+	protected String qlg1302 = null;
+	protected String lg1305 = null;
+
+	public String getQlg1302() {
+		return qlg1302;
+	}
+
+	public void setQlg1302(String qlg1302) {
+		this.qlg1302 = qlg1302;
+	}
+
+	public String getLg1305() {
+		return lg1305;
+	}
+
+	public void setLg1305(String lg1305) {
+		this.lg1305 = lg1305;
+	}
+
 	public String getLg0201() {
 		return lg0201;
 	}

@@ -3,7 +3,15 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
+	<bean id="b1043" class="cn.sdut.web.b1.impl.B1043Action" scope="prototype">
+		<property name="b1040Services" ref="b1040services" />
+	</bean>
+	
 	<bean id="b1042" class="cn.sdut.web.b1.impl.B1042Action" scope="prototype">
+		<property name="b1040Services" ref="b1040services" />
+	</bean>
+
+	<bean id="b1041" class="cn.sdut.web.b1.impl.B1041Action" scope="prototype">
 		<property name="b1040Services" ref="b1040services" />
 	</bean>
 

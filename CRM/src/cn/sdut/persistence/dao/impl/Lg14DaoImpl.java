@@ -6,12 +6,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import cn.sdut.persistence.bean.Lg14;
 import cn.sdut.persistence.dao.interfaces.Lg14Dao;
 import cn.sdut.persistence.support.HibernatePageDaoSupport;
 import cn.sdut.system.Tools;
 
 public class Lg14DaoImpl extends HibernatePageDaoSupport implements Lg14Dao
 {
+	
+	@Override
+	public boolean add() throws Exception {
+		System.out.println("sd"+dto);
+        Lg14 lg14 = this.addObject(Lg14.class);
+        this.dto.put("lg14", lg14);
+        return lg14.getLg1401() > 0;
+	}
 
     @Override
     public boolean get() throws Exception {
