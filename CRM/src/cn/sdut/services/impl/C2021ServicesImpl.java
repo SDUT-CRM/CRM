@@ -68,7 +68,7 @@ public class C2021ServicesImpl implements C2021Services
     @Override
     public boolean update() throws Exception
     {
-        return false;
+        return this.lg13Dao.update();
     }
 
 }

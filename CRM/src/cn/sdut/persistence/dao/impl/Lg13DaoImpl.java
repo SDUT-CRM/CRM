@@ -14,21 +14,37 @@ import cn.sdut.persistence.support.HibernatePageDaoSupport;
 public class Lg13DaoImpl extends HibernatePageDaoSupport implements Lg13Dao
 {
 
-    
+    @Override
+    public boolean update() throws Exception
+    {
+        this.hql = new StringBuilder().append("update Lg13 a")
+                .append("   set a.lg1302=?,a.lg1303=?,")
+                .append("       a.lg1304=?,a.lg1305=?")
+                .append(" where a.lg1301=?");
+
+        Object args[] =
+        { 
+           this.getObject("lg1302"),
+           this.getObject("lg1303"),
+           this.getDouble("lg1304"),
+           this.getLong("lg1305"),
+           this.getLong("lg1301")
+        };
+        return this.update(hql.toString(), args);
+    }
+
     @Override
     public Map getInstance() throws Exception
     {
-        this.hql=new StringBuilder()
-        .append("select new map(a.lg1301 as lg1301,a.lg1302 as lg1302,")
-        .append("               a.lg1303 as lg1303,a.lg1304 as lg1304,")
-        .append("               a.lg1305 as lg1305")
-        .append("              )")
-        .append("  from Lg13 a")
-        .append(" where a.lg1301=?")
-        ;
+        this.hql = new StringBuilder()
+                .append("select new map(a.lg1301 as lg1301,a.lg1302 as lg1302,")
+                .append("               a.lg1303 as lg1303,a.lg1304 as lg1304,")
+                .append("               a.lg1305 as lg1305")
+                .append("              )").append("  from Lg13 a")
+                .append(" where a.lg1301=?");
         return this.queryForMap("lg1301");
     }
-    
+
     @Override
     public List queryForPageForpz() throws Exception
     {

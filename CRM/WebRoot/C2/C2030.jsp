@@ -6,7 +6,14 @@
 <html>
 	<head>
 		<script type="text/javascript">
-	
+	function onEdit(obj)
+	{
+		with(document.forms[0])
+		{
+			action="<%=path%>/c2032Action.action?lg1301="+obj;
+			submit();
+		}
+	}
 </script>
 	</head>
 	<body>
@@ -55,7 +62,7 @@
 									<td><s:property value="lg1303" /></td>
 									<td><s:property value="lg1304" /></td>
 									<td><s:property value="lg1305" /></td>
-									<td><a href="#">ÐÞ¸Ä</a></td>
+									<td><a href="#" onclick="onEdit(<s:property value="lg1301" />)">ÐÞ¸Ä</a></td>
 								</tr>
 								</s:iterator>
 							</table>
@@ -63,6 +70,11 @@
 						</TD>
 					</TR>
 				</s:if>
+				<s:else>
+				<TR>
+				<TD colspan="100" align="center"><s:property value="msg" /></TD>
+				</TR>
+				</s:else>
 				<TR>
 					<TD colspan="100" align="center">
 					<s:submit name="next" value="²éÑ¯"/>
