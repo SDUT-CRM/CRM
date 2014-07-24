@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans
-	xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:p="http://www.springframework.org/schema/p"
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-	<bean id="c2020" class="cn.sdut.web.c2.impl.C2020Action"
-	      scope="prototype" init-method="initMain">
-	      <property name="c2020Services" ref="c2020services"/>
+	<bean id="c2020" class="cn.sdut.web.c2.impl.C2020Action" scope="prototype"
+		init-method="initMain">
+		<property name="c2020Services" ref="c2020services" />
 	</bean>
-	<bean id="c2021" class="cn.sdut.web.c2.impl.C2021Action"
-	      scope="prototype" init-method="initMain">
-		<property name="c2020Services" ref="c2020services"/>
+	<bean id="c2021" class="cn.sdut.web.c2.impl.C2021Action" scope="prototype"
+		init-method="initMain">
+		<property name="c2020Services" ref="c2020services" />
 	</bean>
-	<bean id="c2022" class="cn.sdut.web.c2.impl.C2022Action"
-		  scope="prototype" init-method="initMain">
-		<property name="c2020Services" ref="c2020services"/>
+	<bean id="c2022" class="cn.sdut.web.c2.impl.C2022Action" scope="prototype"
+		init-method="initMain">
+		<property name="c2020Services" ref="c2020services" />
 	</bean>
-	<bean id="c2023" class="cn.sdut.web.c2.impl.C2023Action"
-	      scope="prototype" init-method="initEdit">
-	    <property name="c2020Services" ref="c2020services"/>
+	<bean id="c2023" class="cn.sdut.web.c2.impl.C2023Action" scope="prototype"
+		init-method="initEdit">
+		<property name="c2020Services" ref="c2020services" />
 	</bean>
-	<bean id="c2024" class="cn.sdut.web.c2.impl.C2024Action"
-	      scope="prototype" init-method="initEdit">
-	      <property name="c2020Services" ref="c2020services"/>
+	<bean id="c2024" class="cn.sdut.web.c2.impl.C2024Action" scope="prototype"
+		init-method="initEdit">
+		<property name="c2020Services" ref="c2020services" />
 	</bean>
-	
+	<bean id="c2030" class="cn.sdut.web.c2.impl.C2030Action" scope="prototype">
+		<property name="c2021Services" ref="c2021services" />
+	</bean>
 </beans>

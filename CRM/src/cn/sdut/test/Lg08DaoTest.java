@@ -21,7 +21,8 @@ public class Lg08DaoTest {
 		try {
 			//getNumTest();
 		    Lg08DaoTest
-		    .getActivityTest()
+		   // .getActivityTest()
+		    .modifyTest();
 		    //.queryForPageTest()
 		    ;
 		} catch (Exception e) {
@@ -32,7 +33,8 @@ public class Lg08DaoTest {
 	
 	public static void modifyTest() throws Exception
 	{
-	    
+	    dto.put("lg0801", "31");
+	    dao.modify();
 	}
 	
 	public static void getActivityTest() throws Exception

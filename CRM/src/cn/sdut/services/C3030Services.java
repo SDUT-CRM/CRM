@@ -7,7 +7,29 @@ public interface C3030Services
 {
     public String getPageInfo2(String url) throws Exception;
     public List getActivity()throws Exception;
-    
+    /**
+     * 
+     * @函数名  updateStatus
+     * @参数说明 
+     * @返回值  
+     * @功能说明 
+     * @作者    
+     * @创建日期 2014-7-24
+     * @更新日期 
+     * @更新内容
+     */
+    public boolean updateStatus()throws Exception;
+    /**
+     * 
+     * @函数名  setMapDto
+     * @参数说明 
+     * @返回值  
+     * @功能说明 
+     * @作者    
+     * @创建日期 2014-7-24
+     * @更新日期 
+     * @更新内容
+     */
     public void setMapDto(Map dto);
     
     /**

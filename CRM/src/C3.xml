@@ -11,5 +11,8 @@
 		<action name="c3040Action" class="c3040">
 		    <result name="main">/C3/C3031.jsp</result>
 		</action>
+		<action name="c3041Action" class="c3041">
+		    <result name="main">/C3/C3031.jsp</result>
+		</action>
 	</package>
 </struts>    

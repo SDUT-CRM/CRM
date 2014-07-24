@@ -7,6 +7,10 @@
  
  	
  	
+ 	<bean id="lg13dao" class="cn.sdut.persistence.dao.impl.Lg13DaoImpl">
+ 	  <property name="sessionFactory" ref="sessionFactory"/>
+ 	</bean>
+ 	
   	<bean id="lg20dao" class="cn.sdut.persistence.dao.impl.Lg20DaoImpl">
       <property name="sessionFactory" ref="sessionFactory"/>
     </bean>

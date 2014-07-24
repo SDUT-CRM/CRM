@@ -6,7 +6,14 @@
 <html>
 	<head>
 		<script type="text/javascript">
-	
+	function onEdit(obj)
+	{
+		with(document.forms[0])
+		{
+			action="<%=path%>/c3040Action.action?lg0701="+obj;
+			submit();
+		}
+	}
 </script>
 	</head>
 	<body>
@@ -111,6 +118,10 @@
 						<TD>
 							负责人
 						</TD>
+						
+						<TD>
+							详情
+						</TD>
 
 					</TR>
 					<s:iterator value="rows" status="st">
@@ -148,6 +159,9 @@
 								<s:property value="lg0302" />
 							</TD>
 
+							<TD>
+								<a href="#" onclick="onEdit(<s:property value="lg0701"/>)">详情</a>
+							</TD>
 							
 						</TR>
 					</s:iterator>
@@ -159,10 +173,6 @@
 				<TR>
 					<TD colspan="100" align="center">
 						<s:submit value="查询" name="next" />
-						<s:submit value="通过" name="next" onclick="return onNext2('2')"
-							disabled="true" />
-						<s:submit value="拒绝" name="next" onclick="return onNext3('4')"
-							disabled="true" />
 					</TD>
 				</TR>
 			</TABLE>

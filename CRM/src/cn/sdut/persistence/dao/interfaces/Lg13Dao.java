@@ -10,4 +10,7 @@ public interface Lg13Dao {
 	public void setMapDto(Map dto);
 	public List queryForPage() throws Exception;
 	public String getPageInfo(String url);
+	
+	public List queryForPageForpz() throws Exception;
+    public String getPageInfoForpz(String url);
 }
