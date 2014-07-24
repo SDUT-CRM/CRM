@@ -60,13 +60,6 @@ public class Lg20DaoImpl extends HibernatePageDaoSupport implements Lg20Dao {
 		Object eqlg2004 = this.getObject("eqlg2004");
 		Object lg2007 = this.getObject("qlg2007");
 
-		/*
-		 * SELECT * FROM LG20 WHERE LG2006 = 0 
-		 * AND LG2001 IN(SELECT LG2006 FROM LG20 
-		 * WHERE LG2002 LIKE '%ак%') 
-		 * OR LG2001 IN(SELECT LG2001 FROM 
-		 * LG20 WHERE LG2002 LIKE '%ак%')
-		 */
 		this.pars = new ArrayList();
 		this.hql = new StringBuilder()
 		.append("select new map(x.lg2001 as lg2001,x.lg01.lg2101 as lg2101,")

@@ -20,6 +20,7 @@ public class A1032Action extends A1030Support {
 				this.rows = rows;
 				String pageinfo = this.getA1030Services().getPageInfo(
 						"a1032Action");
+				System.out.println(pageinfo);
 				Map request = (Map) ActionContext.getContext().get("request");
 				request.put("pageinfo", pageinfo);
 			} else {

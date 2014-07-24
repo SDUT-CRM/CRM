@@ -78,7 +78,6 @@
            <td align="center">提问时间</td>
            <td align="center">状态</td>
            <td>&nbsp;</td>
-           <td>&nbsp;</td>
          </tr>
          <s:iterator value="rows" status="st">
 	         <tr>
@@ -89,17 +88,17 @@
 	           <td align="center">
 	           	   <a href="#" onclick="onSelect(<s:property value="lg2001"/>, <s:property value="lg2007"/>)">查看</a>
 	           </td>
-	            <td align="center">
+	            <!--<td align="center">
 	            <s:if test="lg2007==1">
-	               <a href="#" onclick="onCancel(<s:property value="lg1801"/>)">删除</a>
+	               <a href="#" onclick="onCancel(<s:property value="lg1801"/>)">取消提问</a>
 	            </s:if>
 	          	<s:elseif test="lg2007==3">
-	          		已删除
+	          		已取消
 	          	</s:elseif>
 				<s:else>
-					不可删除
+					不可取消
 				</s:else>	            
-	           </td>
+	           </td>-->
 	         </tr>
          </s:iterator>
        </table>

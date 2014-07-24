@@ -3,6 +3,8 @@ package cn.sdut.web.a1.impl;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.beanutils.BeanUtils;
+
 import cn.sdut.system.Tools;
 import cn.sdut.web.a1.A1031Support;
 
@@ -19,11 +21,13 @@ public class A1036Action extends A1031Support {
 			} else {
 				this.msg = "∆¿º€ ß∞‹";
 			}
+			Map ins = this.getA1031Services().getInstance();
+			BeanUtils.populate(this, ins);
+			this.oclg1701 = Tools.getOptions("LG1701");
 		} catch (Exception e) {
 			this.msg = "Õ¯¬Áπ ’œ";
 			e.printStackTrace();
 		}
-		this.oclg1701 = Tools.getOptions("LG1701");
 		return "main";
 	}
 

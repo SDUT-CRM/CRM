@@ -2,6 +2,7 @@ package cn.sdut.services.impl;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 import cn.sdut.persistence.bean.Lg01;
@@ -69,4 +70,8 @@ public class A1031ServicesImpl implements A1031Services {
 		return lg18Dao.modify() && lg19Dao.add();
 	}
 
+	@Override
+	public Map getInstance() throws Exception {
+		return lg18Dao.getInstance();
+	}
 }

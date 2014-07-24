@@ -46,7 +46,7 @@ public class A1030ServicesImpl implements A1030Services {
 
 	@Override
 	public String getPageInfo(String url) {
-		return null;
+		return lg18Dao.getPageInfo(url);
 	}
 
 	@Override
