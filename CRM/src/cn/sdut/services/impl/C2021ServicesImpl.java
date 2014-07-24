@@ -17,6 +17,12 @@ public class C2021ServicesImpl implements C2021Services
         this.lg13Dao.setMapDto(dto);
     }
     
+    @Override
+    public boolean add() throws Exception
+    {
+        return this.lg13Dao.add();
+    }
+    
     
     
     public Map getDto()

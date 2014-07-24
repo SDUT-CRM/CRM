@@ -6,7 +6,8 @@ import java.util.Map;
 import cn.sdut.persistence.bean.Lg02;
 
 public interface Lg13Dao {
-	
+	public boolean add() throws Exception;
+    
 	public void setMapDto(Map dto);
 	public List queryForPage() throws Exception;
 	public String getPageInfo(String url);
