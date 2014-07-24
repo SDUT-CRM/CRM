@@ -6,7 +6,14 @@
 <html>
 	<head>
 		<script type="text/javascript">
-	
+	var count = 0;
+	function onSelect(obj) {
+		with (document.forms[0]) {
+			obj ? ++count : --count;
+			next[2].disabled = (count == 0);
+			next[1].disabled = (count == 0);
+		}
+	}
 </script>
 	</head>
 	<body>
@@ -16,94 +23,37 @@
 					活动管理界面
 					<hr width="320">
 				</caption>
-				<TR>
-					<TD>
-						活动名称
-					</TD>
-					<TD>
-						<s:textfield name="lg0702" disabled="true"/>
-					</TD>
-					<TD>
-						活动内容
-					</TD>
-					<TD>
-						<s:textfield name="lg0703" disabled="true"/>
-					</TD>
-				</TR>
-				<TR>
-					<TD>
-						负责人
-					</TD>
-					<TD>
-						<s:textfield name="lg0302" disabled="true"/>
-					</TD>
-					<TD>
-						活动状态
-					</TD>
-					<TD>
-						<s:select name="lg0707" list="oclg0707" listKey="key"
-							listValue="value" headerKey="" headerValue="==不限=="
-							cssStyle="width:153px" disabled="true"/>
-					</TD>
-				</TR>
-				<TR>
-					<TD>
-						报名开始时间
-					</TD>
-					<TD>
-						<s:textfield name="lg0706" disabled="true"/>
-					</TD>
-				</TR>
-				<TR>
-					<TD>
-						活动开始时间
-					</TD>
-					<TD>
-						<s:textfield name="lg0708" />
-					</TD>
-				</TR>
 				<!-- 迭代数据 -->
 				<s:if test="rows!=null">
 				<TR><TD colspan="100"><table border="1" width="100%">
 					<TR>
-		
-
+					<TD>&nbsp;</TD>
 						<TD>
 							序号
 						</TD>
-
 						<TD>
 							活动名称
 						</TD>
-
+						
 						<TD>
-							活动内容
+						    参与者姓名
 						</TD>
-
+						
 						<TD>
-							预算
+						  审核状态
 						</TD>
-
-						<TD>
-							人数
-						</TD>
-
-						<TD>
-							报名截止时间
-						</TD>
-
-						<TD>
-							举行活动时间
-						</TD>
-
-						<TD>
-							负责人
-						</TD>
+						
 
 					</TR>
 					<s:iterator value="rows" status="st">
 						<TR>
-					
+							<TD>
+							<s:if test="lg0804==1">
+											<input type="checkbox" name="parsList" 
+												onclick="onSelect(this.checked)" 
+												value="<s:property value="lg1401"/>" >
+									    </s:if>
+							</TD>
 							<TD>
 								<s:property value="#st.count" />
 							</TD>
@@ -111,32 +61,12 @@
 							<TD>
 								<s:property value="lg0702" />
 							</TD>
-
 							<TD>
-								<s:property value="lg0703" />
+								<s:property value="lg0102" />
 							</TD>
-
 							<TD>
-								<s:property value="lg0704" />
+							    <s:property value="cnlg0804"/>
 							</TD>
-
-							<TD>
-								<s:property value="lg0705" />
-							</TD>
-
-							<TD>
-								<s:property value="lg0706" />
-							</TD>
-
-							<TD>
-								<s:property value="lg0708" />
-							</TD>
-
-							<TD>
-								<s:property value="lg0302" />
-							</TD>
-
-							
 						</TR>
 					</s:iterator>
 					</table>
@@ -146,11 +76,9 @@
 				<!-- 按钮 -->
 				<TR>
 					<TD colspan="100" align="center">
-						<s:submit value="查询" name="next" />
-						<s:submit value="通过" name="next" onclick="return onNext2('2')"
-							disabled="true" />
 						<s:submit value="拒绝" name="next" onclick="return onNext3('4')"
 							disabled="true" />
+					    <s:submit value="返回" name="next"/>
 					</TD>
 				</TR>
 			</TABLE>

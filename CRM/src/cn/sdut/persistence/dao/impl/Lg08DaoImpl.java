@@ -104,8 +104,7 @@ public class Lg08DaoImpl extends HibernatePageDaoSupport implements Lg08Dao
     @Override
     public boolean modify() throws Exception
     {
-        // TODO Auto-generated method stub
-        return false;
+        return true;
     }
 
     @Override
