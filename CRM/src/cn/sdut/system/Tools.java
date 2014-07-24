@@ -63,6 +63,9 @@ public class Tools {
 			val = entry.getValue();
 			if (val.length == 1) {
 				dto.put(entry.getKey(), val[0]);
+				if(entry.getKey().equals("rows")){
+					dto.put(entry.getKey(), val[0]);
+				}
 			} else {
 				dto.put(entry.getKey(), val);
 			}

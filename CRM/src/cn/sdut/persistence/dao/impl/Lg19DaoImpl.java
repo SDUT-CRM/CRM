@@ -9,7 +9,6 @@ public class Lg19DaoImpl extends HibernatePageDaoSupport implements Lg19Dao {
 	@Override
 	public boolean add() throws Exception {
 		this.dto.put("lg2101", this.getLong("lg2101"));
-		this.dto.put("lg0201", this.getLong("lg0201"));
 		this.dto.put("lg1801", this.getLong("lg1801"));
 		this.dto.put("lg1903", this.getUDate("lg1903"));
 		this.dto.put("lg1902", this.getObject("lg1902"));

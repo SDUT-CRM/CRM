@@ -82,7 +82,14 @@
       </td>
     </tr>
  </table>
+  <s:hidden name="qlg0702"/>
+ <s:hidden name="qlg0804"/>
+ <s:hidden name="bqlg0708"/>
+ <s:hidden name="eqlg0708"/>
+ <s:hidden name="bqlg0802"/>
+ <s:hidden name="eqlg0802"/>
  <s:hidden name="lg0701"/>
+  <s:hidden name="lg0707"/>
  <s:hidden name="lg2101" value="2"/>
 </s:form>
 	</body>

@@ -10,7 +10,18 @@ import cn.sdut.persistence.support.HibernatePageDaoSupport;
 public class Lg20DaoImpl extends HibernatePageDaoSupport implements Lg20Dao {
 
 	@Override
+	public boolean update() throws Exception {
+		String hql = "update Lg20 set lg2007=2 where lg2001=? or lg2006=?";
+		Object args[] = {
+			this.getLong("lg2001"),
+			this.getLong("lg2001")
+		};
+		return this.update(hql, args);
+	}
+	
+	@Override
 	public List queryById() throws Exception {
+		System.out.println(dto);
 		this.hql = new StringBuilder()
 		.append("select new map(x.lg2001 as lg2001, x.lg01.lg2101 as lg0101, ")
 		.append("               x.lg02.lg2101 as lg0201, x.lg2002 as lg2002, ")
@@ -26,6 +37,8 @@ public class Lg20DaoImpl extends HibernatePageDaoSupport implements Lg20Dao {
 		pars.add(this.getLong("lg2001"));
 		pars.add(this.getLong("lg2001"));
 		pars.add(this.getLong("lg2101"));
+		
+		System.out.println(pars);
 		return this.queryForList();
 	}
 	
@@ -34,12 +47,6 @@ public class Lg20DaoImpl extends HibernatePageDaoSupport implements Lg20Dao {
 		this.dto.put("lg2004", this.getUDate1("lg2004"));
 		Lg20 lg20 = this.addObject(Lg20.class);
 		return lg20.getLg2001()>0;
-	}
-
-	@Override
-	public boolean append() throws Exception {
-		// TODO Auto-generated method stub
-		return false;
 	}
 
 	@Override
@@ -56,13 +63,6 @@ public class Lg20DaoImpl extends HibernatePageDaoSupport implements Lg20Dao {
 		Object eqlg2004 = this.getObject("eqlg2004");
 		Object lg2007 = this.getObject("qlg2007");
 
-		/*
-		 * SELECT * FROM LG20 WHERE LG2006 = 0 
-		 * AND LG2001 IN(SELECT LG2006 FROM LG20 
-		 * WHERE LG2002 LIKE '%ак%') 
-		 * OR LG2001 IN(SELECT LG2001 FROM 
-		 * LG20 WHERE LG2002 LIKE '%ак%')
-		 */
 		this.pars = new ArrayList();
 		this.hql = new StringBuilder()
 		.append("select new map(x.lg2001 as lg2001,x.lg01.lg2101 as lg2101,")
@@ -78,19 +78,19 @@ public class Lg20DaoImpl extends HibernatePageDaoSupport implements Lg20Dao {
         .append("   and b.fname='LG2007'");
 		
 		if(this.checkVal(lg2002)){
-			hql.append("   and x.lg2001 in (select y.lg2006 as lg2006" +
+			hql.append("   and( x.lg2001 in (select y.lg2006 as lg2006" +
 					" from Lg20 y where y.lg2002 like ?) or x.lg2001 in " +
 					" (select y.lg2001 as lg2001 from Lg20 y" +
-					" where y.lg2002 like ?)");
+					" where y.lg2002 like ?))");
 			this.pars.add("%"+lg2002+"%");
 			this.pars.add("%"+lg2002+"%");
 		}
 		
 		if(this.checkVal(lg2003)){
-			hql.append("   and x.lg2001 in (select y.lg2006 as lg2006" +
+			hql.append("   and( x.lg2001 in (select y.lg2006 as lg2006" +
 					" from Lg20 y where y.lg2003 like ?) or x.lg2001 in " +
 					" (select y.lg2001 as lg2001 from Lg20 y" +
-					" where y.lg2003 like ?)");
+					" where y.lg2003 like ?))");
 			this.pars.add("%"+lg2003+"%");
 			this.pars.add("%"+lg2003+"%");
 		}

@@ -8,26 +8,25 @@ import com.opensymphony.xwork2.ActionContext;
 import cn.sdut.system.Tools;
 import cn.sdut.web.a1.A1041Support;
 
-public class A1040Action extends A1041Support
-{
+public class A1040Action extends A1041Support {
 
-    @Override
+	@Override
 	public String execute() throws Exception {
 		try {
-			List rows = this.getA1041Services().queryById();
+			/*List rows = this.getA1041Services().queryById();
 			if (rows.size() > 0) {
 				this.rows = rows;
-				String pageinfo = this.getA1041Services().getPageInfo("a1042Action");
+				String pageinfo = this.getA1041Services().getPageInfo(
+						"a1042Action");
 				Map request = (Map) ActionContext.getContext().get("request");
 				request.put("pageinfo", pageinfo);
 			} else {
 				this.msg = "没有符合条件的数据";
-			}
+			}*/
 			boolean res = this.getA1041Services().add();
-			if(res==true){
+			if (res == true) {
 				this.msg = "提问成功!";
-		}
-			else{
+			} else {
 				this.msg = "提问失败!";
 			}
 		} catch (Exception e) {
@@ -35,6 +34,6 @@ public class A1040Action extends A1041Support
 			e.printStackTrace();
 		}
 		return "main";
-		}
+	}
 
 }

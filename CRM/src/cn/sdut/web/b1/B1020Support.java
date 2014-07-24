@@ -1,11 +1,11 @@
-package cn.sdut.web.a1;
+package cn.sdut.web.b1;
 
 import java.util.List;
 
 import cn.sdut.services.A1010Services;
 import cn.sdut.system.Tools;
 
-public abstract class A1010Support {
+public abstract class B1020Support {
 
 	public abstract String execute() throws Exception;
 
@@ -32,61 +32,7 @@ public abstract class A1010Support {
 	protected String qlg0509 = null;
 	protected String bqlg0507 = null;
 	protected String eqlg0507 = null;
-	protected String qlg0602 = null;
-	protected String bqlg0603 = null;
-	protected String eqlg0603 = null;
-	protected String bqlg0604 = null;
-	protected String eqlg0604 = null;
-	protected List oclg0602 = null;
 	
-	public String getQlg0602() {
-		return qlg0602;
-	}
-
-	public void setQlg0602(String qlg0602) {
-		this.qlg0602 = qlg0602;
-	}
-
-	public String getBqlg0603() {
-		return bqlg0603;
-	}
-
-	public void setBqlg0603(String bqlg0603) {
-		this.bqlg0603 = bqlg0603;
-	}
-
-	public String getEqlg0603() {
-		return eqlg0603;
-	}
-
-	public void setEqlg0603(String eqlg0603) {
-		this.eqlg0603 = eqlg0603;
-	}
-
-	public String getBqlg0604() {
-		return bqlg0604;
-	}
-
-	public void setBqlg0604(String bqlg0604) {
-		this.bqlg0604 = bqlg0604;
-	}
-
-	public String getEqlg0604() {
-		return eqlg0604;
-	}
-
-	public void setEqlg0604(String eqlg0604) {
-		this.eqlg0604 = eqlg0604;
-	}
-
-	public List getOclg0602() {
-		return oclg0602;
-	}
-
-	public void setOclg0602(List oclg0602) {
-		this.oclg0602 = oclg0602;
-	}
-
 	public String getBqlg0507() {
 		return bqlg0507;
 	}

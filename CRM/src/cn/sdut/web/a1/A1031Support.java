@@ -16,7 +16,8 @@ public abstract class A1031Support {
 	protected List rows = null;
 	protected String query = null;
 	protected String path = null;
-
+	
+	protected List oclg1804 = null;
 	protected List oclg1701 = null;
 	protected String lg1801 = null;
 	protected String lg1901 = null;
@@ -26,6 +27,14 @@ public abstract class A1031Support {
 	protected String lg1805 = null;
 	protected String lg2101 = null;
 	protected String lg0201 = null;
+
+	public List getOclg1804() {
+		return oclg1804;
+	}
+
+	public void setOclg1804(List oclg1804) {
+		this.oclg1804 = oclg1804;
+	}
 
 	public List getOclg1701() {
 		return oclg1701;

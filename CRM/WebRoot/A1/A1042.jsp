@@ -9,9 +9,9 @@ String path = request.getContextPath();
 	<script type="text/javascript">
 	function onNext()
     {
-    	with(document.forms[0])
+    	with(document.forms[1])
     	{
-    		action="<%=path%>/a1034Action.action";
+    		action="<%=path%>/a1041Action.action";
     	}
     }
 	function onNext1()
@@ -56,7 +56,7 @@ String path = request.getContextPath();
 	           <td><s:property value="lg2003"/></td>
 	           <td><s:property value="lg2005"/></td>
 	         </tr>
-	          <s:if test="#st.count == rows.size() && lg2003!=null && lg2003 != ''">
+	          <s:if test="#st.count == rows.size() && lg2003!=null && lg2003 != '' &&lg2007==1">
 	           <tr>
            		<td>追加问题</td>
            		<td>
@@ -66,6 +66,7 @@ String path = request.getContextPath();
            		<s:hidden name="lg0101"/>
  				<s:hidden name="lg0201"/>
  				<s:hidden name="lg2006"/>
+ 				<s:hidden name="lg2001"/>
            		 <s:submit  name="next" value="追加"/>
            		</td>
          		</tr>
@@ -78,7 +79,9 @@ String path = request.getContextPath();
  </TABLE>
 
 </s:form>
-<s:form action="a1036Action">
+
+<s:form action="a1044Action">
+<s:if test="lg2007==1">
 <TABLE border="1" width="80%" align="center">
    <caption>
         如果回答已经解决了您的问题，请对我们的服务进行评价
@@ -93,7 +96,21 @@ String path = request.getContextPath();
    </TABLE>
    <center>
    <s:submit name="next" value="确认评价" disabled="true"/>
+   </s:if>
+   <s:else>
    </center>
+   <center>
+   </s:else>
+      <s:submit name="next1" value="返回 " onclick="return onNext()"/>
+   </center>
+
+   <s:hidden name="lg2001"/>
+   <s:hidden name="lg2101"/>
+   <s:hidden name="qlg2002"/>
+   <s:hidden name="qlg2003"/>
+   <s:hidden name="qlg2007"/>
+   <s:hidden name="bqlg2004"/>
+   <s:hidden name="eqlg2004"/>
 </s:form>
 
 </body>

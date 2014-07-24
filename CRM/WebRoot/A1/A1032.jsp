@@ -71,6 +71,10 @@ String path = request.getContextPath();
  </TABLE>
  <s:hidden name="lg2101" value="2"/>
  <s:hidden name="lg1801"/>
+ <s:hidden name="qlg1804"/>
+ <s:hidden name="qlg1701"/>
+ <s:hidden name="bqlg1802"/>
+ <s:hidden name="eqlg1802"/>
 </s:form>
 <s:if test="lg1804==3">
 <s:form action="a1036Action">
@@ -92,6 +96,7 @@ String path = request.getContextPath();
    <s:hidden name="lg0201"/>
    <s:hidden name="lg2101"/>
    <s:hidden name="lg1801"/>
+   
 </s:form>
 </s:if>
 

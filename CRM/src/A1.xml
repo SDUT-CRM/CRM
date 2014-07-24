@@ -3,18 +3,26 @@
 <struts>
 	<package name="A1" extends="struts-default">
 
+		<action name="a1044Action" class="a1044">
+			<result name="main">/A1/A1042.jsp</result>
+		</action>
+
 		<action name="a1043Action" class="a1043">
 			<result name="main">/A1/A1042.jsp</result>
 		</action>
-		
+
 		<action name="a1042Action" class="a1042">
 			<result name="main">/A1/A1042.jsp</result>
+		</action>
+
+		<action name="a1041Action" class="a1041">
+			<result name="main">/A1/A1041.jsp</result>
 		</action>
 		
 		<action name="a1040Action" class="a1040">
 			<result name="main">/A1/A1040.jsp</result>
 		</action>
-		
+
 		<action name="a1036Action" class="a1036">
 			<result name="main">/A1/A1032.jsp</result>
 		</action>
@@ -26,7 +34,7 @@
 		<action name="a1034Action" class="a1034">
 			<result name="main">/A1/A1032.jsp</result>
 		</action>
-		
+
 		<action name="a1033Action" class="a1033">
 			<result name="main">/A1/A1032.jsp</result>
 		</action>
@@ -50,11 +58,11 @@
 		<action name="a1023Action" class="a1023">
 			<result name="main">/A1/A1022.jsp</result>
 		</action>
-		
+
 		<action name="a1022Action" class="a1022">
 			<result name="main">/A1/A1021.jsp</result>
-		</action>	
-		
+		</action>
+
 		<action name="a1021Action" class="a1021">
 			<result name="main">/A1/A1021.jsp</result>
 		</action>
@@ -62,7 +70,7 @@
 		<action name="a1020Action" class="a1020">
 			<result name="main">/A1/A1020.jsp</result>
 		</action>
-		
+
 		<action name="a1014Action" class="a1014">
 			<result name="main">/A1/A1012.jsp</result>
 		</action>
@@ -70,15 +78,15 @@
 		<action name="a1013Action" class="a1013">
 			<result name="main">/A1/A1012.jsp</result>
 		</action>
-		
+
 		<action name="a1012Action" class="a1012">
 			<result name="main">/A1/A1011.jsp</result>
 		</action>
-	
+
 		<action name="a1011Action" class="a1011">
 			<result name="main">/A1/A1011.jsp</result>
 		</action>
-	
+
 		<action name="a1010Action" class="a1010">
 			<result name="main">/A1/A1010.jsp</result>
 		</action>

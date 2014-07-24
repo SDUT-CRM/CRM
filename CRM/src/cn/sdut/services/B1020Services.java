@@ -3,12 +3,15 @@ package cn.sdut.services;
 import java.util.List;
 import java.util.Map;
 
-public interface A1031Services {
-
+public interface B1020Services {
 	public void setMapDto(Map dto);
 
-	public boolean add() throws Exception;
+	public List query() throws Exception;
+
+	public String getPageInfo(String url);
 	
 	public Map getInstance() throws Exception;
+	
+	public boolean check() throws Exception;
 
 }
