@@ -43,6 +43,9 @@
 	<bean id="c2020services" class="cn.sdut.services.impl.C2020ServicesImpl">
 		<property name="lg14Dao" ref="lg14dao" />
 	</bean>
+	<bean id="c2021services" class="cn.sdut.services.impl.C2021ServicesImpl">
+	    <property name="lg13Dao" ref="lg13dao"/>
+	</bean>
 	<bean id="c3030services" class="cn.sdut.services.impl.C3030ServicesImpl">
 		<property name="lg07Dao" ref="lg07dao" />
 		<property name="lg08Dao" ref="lg08dao"/>

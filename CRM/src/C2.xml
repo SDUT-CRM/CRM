@@ -17,5 +17,8 @@
 		<action name="c2024Action" class="c2024">
 		    <result name="main">/C2/C2021.jsp</result>
 		</action>
+		<action name="c2030Action" class="c2030">
+			<result name="main">/C2/C2030.jsp</result>
+		</action>
 	</package>
 </struts>    

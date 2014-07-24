@@ -5,11 +5,51 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.aspectj.weaver.patterns.ThisOrTargetAnnotationPointcut;
+
 import cn.sdut.persistence.dao.interfaces.Lg13Dao;
 import cn.sdut.persistence.support.HibernatePageDaoSupport;
 
 public class Lg13DaoImpl extends HibernatePageDaoSupport implements Lg13Dao{
 
+    @Override
+    public String getPageInfoForpz(String url)
+    {
+        
+        return null;
+    }
+    
+    
+    
+    @Override
+    public List queryForPageForpz() throws Exception
+    {
+        Object lg1302=this.dto.get("lg1302");
+        Object lg1303=this.dto.get("lg1303");
+        this.hql=new StringBuilder()
+        .append("select new map(a.lg1301 as lg1301,a.lg1302 as lg1302,")
+        .append("               a.lg1303 as lg1303,a.lg1304 as lg1304,")
+        .append("               a.lg1305 as lg1305")
+        .append("              )")
+        .append("  from Lg13 a")
+        .append(" where 1=1")
+        ;
+        this.pars=new ArrayList();
+        if(this.checkVal(lg1302))
+        {
+            this.hql.append("  and a.lg1302=?");
+            pars.add(lg1302);
+        }
+        if(this.checkVal(lg1303))
+        {
+            this.hql.append("  and a.lg1303=?");
+            pars.add(lg1303);
+        }
+        this.hql.append(" order by a.lg1301");
+        return this.queryForList();
+    }
+    
+    
     /**
      * Ming
      */
