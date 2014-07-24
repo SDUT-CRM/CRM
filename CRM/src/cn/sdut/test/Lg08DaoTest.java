@@ -21,12 +21,21 @@ public class Lg08DaoTest {
 		try {
 			//getNumTest();
 		    Lg08DaoTest
-		    .queryForPageTest()
+		    .getActivityTest()
+		    //.queryForPageTest()
 		    ;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
+	}
+	
+	public static void getActivityTest() throws Exception
+	{
+	    dto.put("lg0701", "2");
+	    List rows=dao.getActivity();
+	    
+	    System.out.println(rows);
 	}
 	
 	public static void queryForPageTest() throws Exception

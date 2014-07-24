@@ -12,7 +12,19 @@ public abstract class C4040Support
     protected JFreeChart chart;
     protected String begintime;
     protected String endtime;
+    protected String cha;
     
+    
+    public String getCha()
+    {
+        return cha;
+    }
+
+    public void setCha(String cha)
+    {
+        this.cha = cha;
+    }
+
     public String getBegintime()
     {
         return begintime;

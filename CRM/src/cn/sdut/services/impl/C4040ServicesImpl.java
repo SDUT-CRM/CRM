@@ -112,19 +112,21 @@ public class C4040ServicesImpl implements C4040Services
         //成本blg0604
         //报销blg1605
         Object begintime=this.dto.get("begintime");
-        if(begintime!=null&&begintime.equals(""))
+        if(begintime!=null&&!begintime.equals(""))
         {
             this.dto.put("blg0604", begintime);
             this.dto.put("blg1605", begintime);
         }
         Object endtime=this.dto.get("endtime");
-        if(endtime!=null&&endtime.equals(""))
+        if(endtime!=null&&!endtime.equals(""))
         {
             
             this.dto.put("elg0604", endtime);
             this.dto.put("elg1605", endtime);
             
         }
+        
+        
         
         List list1=this.lg06Dao.queryForForms();
         List list2=this.lg16Dao.queryForForms();
@@ -181,5 +183,11 @@ public class C4040ServicesImpl implements C4040Services
         this.dto=dto;
         this.lg06Dao.setMapDto(dto);
         this.lg16Dao.setMapDto(dto);
+    }
+
+    @Override
+    public Map getMapDto()
+    {
+        return this.dto;
     }
 }
