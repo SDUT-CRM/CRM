@@ -21,6 +21,7 @@ public class Lg20DaoImpl extends HibernatePageDaoSupport implements Lg20Dao {
 	
 	@Override
 	public List queryById() throws Exception {
+		System.out.println(dto);
 		this.hql = new StringBuilder()
 		.append("select new map(x.lg2001 as lg2001, x.lg01.lg2101 as lg0101, ")
 		.append("               x.lg02.lg2101 as lg0201, x.lg2002 as lg2002, ")
@@ -36,6 +37,8 @@ public class Lg20DaoImpl extends HibernatePageDaoSupport implements Lg20Dao {
 		pars.add(this.getLong("lg2001"));
 		pars.add(this.getLong("lg2001"));
 		pars.add(this.getLong("lg2101"));
+		
+		System.out.println(pars);
 		return this.queryForList();
 	}
 	

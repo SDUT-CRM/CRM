@@ -13,7 +13,7 @@ public class A1040Action extends A1041Support {
 	@Override
 	public String execute() throws Exception {
 		try {
-			List rows = this.getA1041Services().queryById();
+			/*List rows = this.getA1041Services().queryById();
 			if (rows.size() > 0) {
 				this.rows = rows;
 				String pageinfo = this.getA1041Services().getPageInfo(
@@ -22,7 +22,7 @@ public class A1040Action extends A1041Support {
 				request.put("pageinfo", pageinfo);
 			} else {
 				this.msg = "没有符合条件的数据";
-			}
+			}*/
 			boolean res = this.getA1041Services().add();
 			if (res == true) {
 				this.msg = "提问成功!";

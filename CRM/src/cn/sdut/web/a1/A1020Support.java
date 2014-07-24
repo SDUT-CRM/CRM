@@ -34,6 +34,15 @@ public abstract class A1020Support {
 	protected String qlg0707 = null;
 	protected String blg0708 = null;
 	protected String elg0708 = null;
+	protected String qlg0804 = null;
+	
+	public String getQlg0804() {
+		return qlg0804;
+	}
+
+	public void setQlg0804(String qlg0804) {
+		this.qlg0804 = qlg0804;
+	}
 
 	public List getOclg0707() {
 		return oclg0707;

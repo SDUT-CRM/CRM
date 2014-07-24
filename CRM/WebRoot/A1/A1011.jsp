@@ -76,6 +76,12 @@
       </td>
     </tr>
  </table>
+  <s:hidden name="qlg0503"/>
+ <s:hidden name="qlg0602"/>
+ <s:hidden name="bqlg0603"/>
+ <s:hidden name="eqlg0603"/>
+ <s:hidden name="bqlg0604"/>
+ <s:hidden name="eqlg0604"/>
  <s:hidden name="lg0501"/>
  <s:hidden name="lg2101" value="2"/>
 </s:form>

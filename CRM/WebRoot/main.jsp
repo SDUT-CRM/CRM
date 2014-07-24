@@ -50,7 +50,12 @@
 						</tr>
 						<tr>
 							<td>
-								<a href="#" target="WORK">调查问卷</a>
+								<a href="<%=path%>/A1/A1040.jsp" target="WORK">在线提问</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="<%=path%>/A1/a1041Action.action" target="WORK">提问历史</a>
 							</td>
 						</tr>
 					</table>

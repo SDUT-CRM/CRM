@@ -66,6 +66,7 @@ String path = request.getContextPath();
            		<s:hidden name="lg0101"/>
  				<s:hidden name="lg0201"/>
  				<s:hidden name="lg2006"/>
+ 				<s:hidden name="lg2001"/>
            		 <s:submit  name="next" value="×·¼Ó"/>
            		</td>
          		</tr>
