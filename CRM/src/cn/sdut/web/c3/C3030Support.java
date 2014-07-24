@@ -48,6 +48,8 @@ public abstract class C3030Support
     protected String lg0708;
     protected String lg0709;
     protected String lg0710;
+    protected String lg0701;
+    
     
     protected String cnlg0707;
 
@@ -55,6 +57,25 @@ public abstract class C3030Support
     
     
     
+    
+    
+    
+    public String getLg0701()
+    {
+        return lg0701;
+    }
+
+
+
+
+    public void setLg0701(String lg0701)
+    {
+        this.lg0701 = lg0701;
+    }
+
+
+
+
     public String getQlg0703()
     {
         return qlg0703;

@@ -19,4 +19,8 @@
 	      scope="prototype" init-method="initMain">
 	      <property name="c3030Services" ref="c3030services"/>
 	</bean>
+	<bean id="c3041" class="cn.sdut.web.c3.impl.C3041Action"
+	      scope="prototype">
+	      <property name="c3030Services" ref="c3030services"/>
+	</bean>
 </beans>

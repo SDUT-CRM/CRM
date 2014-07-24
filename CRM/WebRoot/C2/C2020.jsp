@@ -49,7 +49,6 @@
 			<TABLE border="1" align="center" width="1000px">
 				<caption>
 					配件信息管理界面
-					<s:debug />
 					<hr width="320">
 				</caption>
 				<TR>

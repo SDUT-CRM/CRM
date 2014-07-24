@@ -16,6 +16,12 @@ public class C3030ServicesImpl implements C3030Services
     private Map dto;
     
     
+    @Override
+    public boolean updateStatus() throws Exception
+    {
+        return this.lg08Dao.modify();
+    }
+    
     public Lg08Dao getLg08Dao()
     {
         return lg08Dao;
