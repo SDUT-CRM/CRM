@@ -73,7 +73,7 @@ public class Lg07DaoImpl extends HibernatePageDaoSupport implements Lg07Dao {
         Object elg0708 = this.dto.get("elg0708");
         System.out.println(this.dto);
         this.pars = new ArrayList();
-       /* this.hql = new StringBuilder()
+        this.hql = new StringBuilder()
                 .append("select new map(x.lg0701 as lg0701,x.lg03.lg2101 as lg0301,")
                 .append("               x.lg0702 as lg0702, x.lg0703 as lg0703,")
                 .append("               x.lg0704 as lg0704, x.lg0705 as lg0705,")
@@ -83,26 +83,9 @@ public class Lg07DaoImpl extends HibernatePageDaoSupport implements Lg07Dao {
                 .append("               x.lg03.lg0302 as lg0302")
                 .append("               )").append("  from Lg07 x, Syscode b")
                 .append(" where x.lg0707=b.fcode")
-                .append("   and b.fname='LG0707'");*/
-        
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-   
-  
-    
-  
+                .append("   and b.fname='LG0707'");
            
-           
-           
-        this.hql=new StringBuilder()
+        /*this.hql=new StringBuilder()
         .append("select new map(a.lg0701 as lg0701,a.lg03.lg2101 as lg2101,")
         .append("               a.lg0702 as lg0702,a.lg0703 as lg0703,")
         .append("               a.lg0704 as lg0704,a.lg0705 as lg0705,")
@@ -122,29 +105,29 @@ public class Lg07DaoImpl extends HibernatePageDaoSupport implements Lg07Dao {
         .append("          a.lg0704,a.lg0705,a.lg0706,a.lg0707,")
         .append("          a.lg0708,a.lg0709,a.lg0710,c.fname,")
         .append("          c.fvalue,b.lg07.lg0701")
-        ;
+        ;*/
 
         if (this.checkVal(lg2101))
         {
-            hql.append("  and a.lg03.lg2101=?");
+            hql.append("  and x.lg03.lg2101=?");
             pars.add(lg2101);
         }
 
         if (this.checkVal(lg0302))
         {
-            hql.append("  and a.lg03.lg0302 like ?");
+            hql.append("  and x.lg03.lg0302 like ?");
             pars.add("%" + lg0302 + "%");
         }
 
         if (this.checkVal(lg0702))
         {
-            hql.append("  and a.lg0702 like ?");
+            hql.append("  and x.lg0702 like ?");
             pars.add("%" + lg0702 + "%");
         }
 
         if (this.checkVal(lg0703))
         {
-            hql.append("  and a.lg0703 like ?");
+            hql.append("  and x.lg0703 like ?");
             pars.add("%" + lg0703 + "%");
         }
 
@@ -152,35 +135,35 @@ public class Lg07DaoImpl extends HibernatePageDaoSupport implements Lg07Dao {
 
         if (this.checkVal(blg0706))
         {
-            hql.append("  and a.lg0706>=?");
+            hql.append("  and x.lg0706>=?");
             pars.add(Tools.parseDate(blg0706));
         }
 
         if (this.checkVal(elg0706))
         {
-            hql.append("  and a.lg0706<=?");
+            hql.append("  and x.lg0706<=?");
             pars.add(Tools.parseDate(elg0706));
         }
         if (this.checkVal(lg0707))
         {
-            hql.append("  and a.lg0707=?");
+            hql.append("  and x.lg0707=?");
             pars.add(lg0707);
         }
         // 举行活动时间
         
         if (this.checkVal(blg0708))
         {
-            hql.append("  and a.lg0708>=?");
+            hql.append("  and x.lg0708>=?");
             pars.add(Tools.parseDate(blg0708));
         }
 
         if (this.checkVal(elg0708))
         {
-            hql.append("  and a.lg0708<=?");
+            hql.append("  and x.lg0708<=?");
             pars.add(Tools.parseDate(elg0708));
         }
 
-        this.hql.append(" order by a.lg0701 desc");
+        this.hql.append(" order by x.lg0701 desc");
         return this.queryForList();
     }
 
