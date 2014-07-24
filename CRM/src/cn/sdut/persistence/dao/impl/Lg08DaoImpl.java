@@ -104,7 +104,13 @@ public class Lg08DaoImpl extends HibernatePageDaoSupport implements Lg08Dao
     @Override
     public boolean modify() throws Exception
     {
-        return true;
+        this.hql=new StringBuilder()
+        .append("update Lg08 x")
+        .append("   set x.lg0804='2'")
+        .append(" where x.lg0801=?")
+        ;
+        Object args=this.getObject("lg0801");
+        return this.update(this.hql.toString(), args);
     }
 
     @Override

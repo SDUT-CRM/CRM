@@ -30,6 +30,11 @@ public class Lg08DaoTest {
 
 	}
 	
+	public static void modifyTest() throws Exception
+	{
+	    
+	}
+	
 	public static void getActivityTest() throws Exception
 	{
 	    dto.put("lg0701", "2");
