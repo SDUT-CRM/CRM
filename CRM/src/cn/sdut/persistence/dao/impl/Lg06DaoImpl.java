@@ -40,7 +40,7 @@ public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
             this.hql.append("  and lg0604<=?");
             pars.add(elg0604);
         }
-        System.out.println(pars);
+        System.out.println("pars="+pars);
         return this.queryForList(10000);
     }
     

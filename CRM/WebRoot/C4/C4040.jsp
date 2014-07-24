@@ -22,6 +22,7 @@
 					</TD>
 					<TD>
 						<s:textfield name="begintime" />
+						
 					</TD>
 				</TR>
 				<TR>

@@ -35,7 +35,7 @@ public class Lg16DaoImpl extends HibernatePageDaoSupport implements Lg16Dao {
             this.hql.append("  and lg1605<=?");
             pars.add(elg1605);
         }
-        
+        System.out.println("pars="+pars);
         return this.queryForList(10000);
     }
     

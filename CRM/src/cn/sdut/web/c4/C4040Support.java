@@ -13,12 +13,11 @@ public abstract class C4040Support
     protected String begintime;
     protected String endtime;
     
-    
-    
     public String getBegintime()
     {
         return begintime;
     }
+    
     public void setBegintime(String begintime)
     {
         this.begintime = begintime;
