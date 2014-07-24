@@ -34,4 +34,10 @@
 	<bean id="c2033" class="cn.sdut.web.c2.impl.C2033Action" scope="prototype">
 		<property name="c2021Services" ref="c2021services" />
 	</bean>
+	<bean id="c2034" class="cn.sdut.web.c2.impl.C2034Action" scope="prototype">
+		<property name="c2021Services" ref="c2021services" />
+	</bean>
+	<bean id="c2035" class="cn.sdut.web.c2.impl.C2035Action" scope="prototype">
+		<property name="c2021Services" ref="c2021services" />
+	</bean>
 </beans>

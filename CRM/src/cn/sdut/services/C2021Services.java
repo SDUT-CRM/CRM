@@ -10,4 +10,5 @@ public interface C2021Services
     public List query()throws Exception;
     public Map getInstance() throws Exception;
     public boolean update() throws Exception;
+    public boolean add() throws Exception;
 }

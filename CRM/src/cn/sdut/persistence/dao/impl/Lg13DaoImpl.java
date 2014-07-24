@@ -6,13 +6,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import org.aspectj.weaver.patterns.ThisOrTargetAnnotationPointcut;
-
+import cn.sdut.persistence.bean.Lg13;
 import cn.sdut.persistence.dao.interfaces.Lg13Dao;
 import cn.sdut.persistence.support.HibernatePageDaoSupport;
 
 public class Lg13DaoImpl extends HibernatePageDaoSupport implements Lg13Dao
 {
+    
+    @Override
+    public boolean add() throws Exception
+    {
+        this.dto.put("lg1302", this.getObject("lg1302"));
+        this.dto.put("lg1303", this.getObject("lg1303"));
+        this.dto.put("lg1304", this.getDouble("lg1304"));
+        this.dto.put("lg1305", this.getLong("lg1305"));
+        Lg13 lg13 = new Lg13();
+        this.addObject(Lg13.class);
+        return true;
+    }
 
     @Override
     public boolean update() throws Exception
