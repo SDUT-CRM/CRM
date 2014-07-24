@@ -16,7 +16,10 @@ public class B1040ServicesImpl implements B1040Services {
 	private Lg14Dao lg14Dao = null;
 	private Map dto = null;
 
-	
+	@Override
+	public boolean get() throws Exception{
+		return lg14Dao.get();
+	}
 	
 	public Lg13Dao getLg13Dao() {
 		return lg13Dao;

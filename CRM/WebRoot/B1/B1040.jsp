@@ -7,31 +7,14 @@
 <head>
   <script type="text/javascript" src="<%=request.getContextPath()%>/js/calendar.js"></script>
 <script type="text/javascript">
- 	var count=0;
-    function onSelect(obj)
-    {
-    	with(document.forms[0])
-    	{
-    	   obj?++count:--count;
-    	   next[1].disabled=(count==0);
-    	   next[2].disabled=(count==0);
-    	}
-    }
 	function onCancel(obj)
 	{
 		with(document.forms[0])
 		{
-			action="<%=path%>/a1014Action.action?lg0601="+obj;
+			action="<%=path%>/b1042Action.action?lg1401="+obj;
 			submit();
 		}
 	}
-	function  onNext2(obj)
-    {
-    	with(document.forms[0])
-    	{
-    		action="<%=path%>/b1021Action.action?lg0602="+obj;
-    	}
-    }
 </script>
 </head>
 <body>
@@ -83,7 +66,6 @@
      <TD>
        <table border="1" width="100%">
          <tr>
-         	<td>&nbsp;</td>
            <td align="center">序号</td>
            <td align="center">配件编号</td>
            <td align="center">配件名称</td>
@@ -95,20 +77,24 @@
          </tr>
          <s:iterator value="rows" status="st">
 	         <tr>
-	         <td>&nbsp;</td>
 	           <td align="center"><s:property value="#st.count"/></td>
 	           <td align="center"><s:property value="lg1302"/></td>
 	           <td align="center"><s:property value="lg1303"/></td>
 	           <td align="center"><s:property value="lg1406"/></td>
 	           <td align="center"><s:property value="lg1402"/></td>
-	           <td align="center"><s:property value="cnlg1403"/></td>
 	           <s:if test="lg1403!=1">
 	           <td align="center"><s:property value="lg1404"/></td>
 	           </s:if>
 	           <s:else>
 	           <td align="center">-</td>
 	           </s:else>
+	            <td align="center"><s:property value="cnlg1403"/></td>
+	           <s:if test="lg1403==2">
+	           <td align="center"><a href="#" onclick="onCancel(<s:property value="lg1401"/>)">确认领取</a></td>
+	           </s:if>
+	           <s:else>
 	           <td>&nbsp;</td>
+	           </s:else>
 	         </tr>
          </s:iterator>
        </table>

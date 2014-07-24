@@ -13,7 +13,21 @@ import cn.sdut.system.Tools;
 public class Lg14DaoImpl extends HibernatePageDaoSupport implements Lg14Dao
 {
 
-    
+    @Override
+    public boolean get() throws Exception {
+    	System.out.println(dto);
+    	this.hql = new StringBuilder()
+        .append("update Lg14 x")
+        .append("   set x.lg1403 = 3")
+        .append(" where x.lg1403 = 2 and x.lg1401 = ? and x.lg02.lg2101 = ?")
+        ;
+        Object args[]={
+        	this.getLong("lg1401"),
+        	this.getLong("lg0201")
+        };
+        return this.update(hql.toString(), args);
+    }
+	
     @Override
     public boolean update() throws Exception
     {

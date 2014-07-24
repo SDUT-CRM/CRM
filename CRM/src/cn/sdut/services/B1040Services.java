@@ -10,4 +10,6 @@ public interface B1040Services {
 
 	public String getPageInfo(String url);
 	
+	public boolean get() throws Exception;
+	
 }

@@ -3,6 +3,10 @@
 <struts>
 	<package name="B1" extends="struts-default">
 
+		<action name="b1042Action" class="b1042">
+			<result name="main">/B1/B1040.jsp</result>
+		</action>
+
 		<action name="b1040Action" class="b1040">
 			<result name="main">/B1/B1040.jsp</result>
 		</action>

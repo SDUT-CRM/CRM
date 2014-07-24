@@ -29,7 +29,25 @@ public abstract class B1040Support {
 	protected List oclg1403 = null;
 	protected String lg1404 = null;
 	protected String lg1403 = null;
+	protected String lg1401 = null;
+	protected String lg0201 = null;
 	
+	public String getLg0201() {
+		return lg0201;
+	}
+
+	public void setLg0201(String lg0201) {
+		this.lg0201 = lg0201;
+	}
+
+	public String getLg1401() {
+		return lg1401;
+	}
+
+	public void setLg1401(String lg1401) {
+		this.lg1401 = lg1401;
+	}
+
 	public String getLg1404() {
 		return lg1404;
 	}
