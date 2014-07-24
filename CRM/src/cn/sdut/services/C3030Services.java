@@ -5,6 +5,9 @@ import java.util.Map;
 
 public interface C3030Services
 {
+    public String getPageInfo2(String url) throws Exception;
+    public List getActivity()throws Exception;
+    
     public void setMapDto(Map dto);
     
     /**

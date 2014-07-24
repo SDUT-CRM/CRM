@@ -33,11 +33,14 @@
 						<s:textfield name="endtime" />
 					</TD>
 				</TR>
+				
 				<TR>
 					<TD colspan="100" align="center">
 						<img alt="" src="<%=path%>/c4040Action.action">
 					</TD>
 				</TR>
+				
+				
 				<!-- °´Å¥ -->
 				<TR>
 					<TD colspan="100" align="center">
@@ -45,7 +48,7 @@
 					</TD>
 				</TR>
 			</TABLE>
-			<input type="hidden" name="parsList">
+			<input type="hidden" name="cha" value="1">
 		</s:form>
 	</body>
 </html>

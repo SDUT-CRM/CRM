@@ -5,13 +5,29 @@ import java.util.Map;
 
 import cn.sdut.persistence.bean.Lg07;
 import cn.sdut.persistence.dao.interfaces.Lg07Dao;
+import cn.sdut.persistence.dao.interfaces.Lg08Dao;
 import cn.sdut.services.C3030Services;
 
 public class C3030ServicesImpl implements C3030Services
 {
 
     private Lg07Dao lg07Dao;
+    private Lg08Dao lg08Dao;
     private Map dto;
+    
+    
+    public Lg08Dao getLg08Dao()
+    {
+        return lg08Dao;
+    }
+
+
+    public void setLg08Dao(Lg08Dao lg08Dao)
+    {
+        this.lg08Dao = lg08Dao;
+    }
+
+
     @Override
     public void setMapDto(Map dto)
     {
@@ -19,6 +35,19 @@ public class C3030ServicesImpl implements C3030Services
         this.lg07Dao.setMapDto(dto);
     }
 
+    
+    @Override
+    public List getActivity() throws Exception
+    {
+        return this.lg08Dao.getActivity();
+    }
+    
+    @Override
+    public String getPageInfo2(String url) throws Exception
+    {
+        return this.lg08Dao.getPageInfo(url);
+    }
+    
     @Override
     public String getPageInfo(String url)
     {

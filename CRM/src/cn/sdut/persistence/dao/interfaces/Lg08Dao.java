@@ -23,4 +23,10 @@ public interface Lg08Dao {
 	
 	public int getNum() throws Exception;
 	
+	public Map getInstance() throws Exception;
+	
+	public List getActivity() throws Exception;
+	
+	
+	
 }

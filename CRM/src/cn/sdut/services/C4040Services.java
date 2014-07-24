@@ -7,6 +7,7 @@ import org.jfree.chart.JFreeChart;
 public interface C4040Services
 {
     public void setMapDto(Map dto);
+    public Map getMapDto();
     /**
      * 
      * @º¯ÊýÃû  calForms

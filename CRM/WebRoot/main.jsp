@@ -60,22 +60,22 @@
 					<table>
 						<tr>
 							<td>
-								<a href="<%=path%>/C1/c1011Action.action" target="WORK">员工管理</a>
+								<a href="<%=path%>/c1011Action.action" target="WORK">员工管理</a>
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<a href="<%=path%>/C1/c2021Action.action" target="WORK">配件管理</a>
+								<a href="<%=path%>/c2021Action.action" target="WORK">配件管理</a>
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<a href="<%=path%>/C1/c3030Action.action" target="WORK">活动信息</a>
+								<a href="<%=path%>/c3030Action.action" target="WORK">活动信息</a>
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<a href="#" target="WORK">报表管理</a>
+								<a href="<%=path %>/c4041Action.action" target="WORK">经营信息</a>
 							</td>
 						</tr>
 						<tr>

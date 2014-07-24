@@ -44,6 +44,7 @@
 	</bean>
 	<bean id="c3030services" class="cn.sdut.services.impl.C3030ServicesImpl">
 		<property name="lg07Dao" ref="lg07dao" />
+		<property name="lg08Dao" ref="lg08dao"/>
 	</bean>
 	<bean id="c4040services" class="cn.sdut.services.impl.C4040ServicesImpl">
 	    <property name="lg06Dao" ref="lg06dao"/>
