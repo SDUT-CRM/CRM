@@ -5,6 +5,7 @@
 
 	<bean id="a1041services" class="cn.sdut.services.impl.A1041ServicesImpl">
 		<property name="lg20Dao" ref="lg20dao"/>
+		<property name="lg19Dao" ref="lg19dao"/>
 	</bean>
 
 	<bean id="a1031services" class="cn.sdut.services.impl.A1031ServicesImpl">

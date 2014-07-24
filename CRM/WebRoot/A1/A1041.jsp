@@ -7,11 +7,11 @@
 <head>
   <script type="text/javascript" src="<%=request.getContextPath()%>/js/calendar.js"></script>
 <script type="text/javascript">
-   	function onSelect(obj)
+   	function onSelect(obj, obj1)
 	{
 		with(document.forms[0])
 		{
-			action="<%=path%>/a1033Action.action?path=a&lg1801="+obj;
+			action="<%=path%>/a1042Action.action?lg2007="+obj1+"&lg2001="+obj;
 			submit();
 		}
 	}
@@ -87,14 +87,17 @@
 	           <td align="center"><s:property value="lg2004"/></td>
 	           <td align="center"><s:property value="cnlg2007"/></td>
 	           <td align="center">
-	           	   <a href="#" onclick="onSelect(<s:property value="lg1801"/>)">查看</a>
+	           	   <a href="#" onclick="onSelect(<s:property value="lg2001"/>, <s:property value="lg2007"/>)">查看</a>
 	           </td>
 	            <td align="center">
 	            <s:if test="lg2007==1">
-	               <a href="#" onclick="onCancel(<s:property value="lg1801"/>)">取消</a>
+	               <a href="#" onclick="onCancel(<s:property value="lg1801"/>)">删除</a>
 	            </s:if>
+	          	<s:elseif test="lg2007==3">
+	          		已删除
+	          	</s:elseif>
 				<s:else>
-					不可取消
+					不可删除
 				</s:else>	            
 	           </td>
 	         </tr>
@@ -104,6 +107,7 @@
      </TD>
    </TR>
    </s:if>
+   
     <s:hidden name="lg2101" value="2"/>
    <TR>
      <TD align="center">

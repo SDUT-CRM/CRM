@@ -13,6 +13,8 @@ public interface A1041Services {
 	
 	public boolean add() throws Exception;
 	
+	public boolean add1() throws Exception;
+	
 	public List query() throws Exception;
 
 }

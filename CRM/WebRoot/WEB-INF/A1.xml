@@ -1,107 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans
-	xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:p="http://www.springframework.org/schema/p"
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-	<bean id="a1043" class="cn.sdut.web.a1.impl.A1043Action"
-			scope="prototype">
-		<property name="a1041Services" ref="a1041services"/>
-	</bean>	
+	<bean id="a1044" class="cn.sdut.web.a1.impl.A1044Action" scope="prototype">
+		<property name="a1041Services" ref="a1041services" />
+	</bean>
 
-	<bean id="a1042" class="cn.sdut.web.a1.impl.A1042Action"
-			scope="prototype">
-		<property name="a1041Services" ref="a1041services"/>
-	</bean>	
+	<bean id="a1043" class="cn.sdut.web.a1.impl.A1043Action" scope="prototype">
+		<property name="a1041Services" ref="a1041services" />
+	</bean>
 
-	<bean id="a1040" class="cn.sdut.web.a1.impl.A1040Action"
-			scope="prototype">
-		<property name="a1041Services" ref="a1041services"/>
-	</bean>	
+	<bean id="a1042" class="cn.sdut.web.a1.impl.A1042Action" scope="prototype">
+		<property name="a1041Services" ref="a1041services" />
+	</bean>
 
-	<bean id="a1036" class="cn.sdut.web.a1.impl.A1036Action"
-			scope="prototype">
-		<property name="a1031Services" ref="a1031services"/>
-	</bean>	
+	<bean id="a1041" class="cn.sdut.web.a1.impl.A1041Action" scope="prototype">
+		<property name="a1041Services" ref="a1041services" />
+	</bean>
 
-	<bean id="a1035" class="cn.sdut.web.a1.impl.A1035Action"
-			scope="prototype">
-		<property name="a1030Services" ref="a1030services"/>
-	</bean>	
+	<bean id="a1040" class="cn.sdut.web.a1.impl.A1040Action" scope="prototype">
+		<property name="a1041Services" ref="a1041services" />
+	</bean>
 
-	<bean id="a1034" class="cn.sdut.web.a1.impl.A1034Action"
-			scope="prototype">
-		<property name="a1030Services" ref="a1030services"/>
-	</bean>	
+	<bean id="a1036" class="cn.sdut.web.a1.impl.A1036Action" scope="prototype">
+		<property name="a1031Services" ref="a1031services" />
+	</bean>
 
-	<bean id="a1033" class="cn.sdut.web.a1.impl.A1033Action"
-			scope="prototype">
-		<property name="a1030Services" ref="a1030services"/>
-	</bean>	
+	<bean id="a1035" class="cn.sdut.web.a1.impl.A1035Action" scope="prototype">
+		<property name="a1030Services" ref="a1030services" />
+	</bean>
 
-	<bean id="a1032" class="cn.sdut.web.a1.impl.A1032Action"
-			scope="prototype">
-		<property name="a1030Services" ref="a1030services"/>
-	</bean>	
+	<bean id="a1034" class="cn.sdut.web.a1.impl.A1034Action" scope="prototype">
+		<property name="a1030Services" ref="a1030services" />
+	</bean>
 
-	<bean id="a1031" class="cn.sdut.web.a1.impl.A1031Action"
-			scope="prototype">
-		<property name="a1030Services" ref="a1030services"/>
-	</bean>	
+	<bean id="a1033" class="cn.sdut.web.a1.impl.A1033Action" scope="prototype">
+		<property name="a1030Services" ref="a1030services" />
+	</bean>
 
-	<bean id="a1030" class="cn.sdut.web.a1.impl.A1030Action"
-			scope="prototype">
-		<property name="a1030Services" ref="a1030services"/>
-	</bean>	
+	<bean id="a1032" class="cn.sdut.web.a1.impl.A1032Action" scope="prototype">
+		<property name="a1030Services" ref="a1030services" />
+	</bean>
 
-	<bean id="a1024" class="cn.sdut.web.a1.impl.A1024Action"
-			scope="prototype">
-		<property name="a1021Services" ref="a1021services"/>
-	</bean>	
+	<bean id="a1031" class="cn.sdut.web.a1.impl.A1031Action" scope="prototype">
+		<property name="a1030Services" ref="a1030services" />
+	</bean>
 
-	<bean id="a1023" class="cn.sdut.web.a1.impl.A1023Action"
-			scope="prototype">
-		<property name="a1021Services" ref="a1021services"/>
-	</bean>	
+	<bean id="a1030" class="cn.sdut.web.a1.impl.A1030Action" scope="prototype">
+		<property name="a1030Services" ref="a1030services" />
+	</bean>
 
-	<bean id="a1022" class="cn.sdut.web.a1.impl.A1022Action"
-			scope="prototype">
-		<property name="a1021Services" ref="a1021services"/>
-	</bean>	
+	<bean id="a1024" class="cn.sdut.web.a1.impl.A1024Action" scope="prototype">
+		<property name="a1021Services" ref="a1021services" />
+	</bean>
 
-	<bean id="a1021" class="cn.sdut.web.a1.impl.A1021Action"
-			scope="prototype">
-		<property name="a1020Services" ref="a1020services"/>
-	</bean>	
+	<bean id="a1023" class="cn.sdut.web.a1.impl.A1023Action" scope="prototype">
+		<property name="a1021Services" ref="a1021services" />
+	</bean>
 
-	<bean id="a1020" class="cn.sdut.web.a1.impl.A1020Action"
-			scope="prototype">
-		<property name="a1020Services" ref="a1020services"/>
-	</bean>	
+	<bean id="a1022" class="cn.sdut.web.a1.impl.A1022Action" scope="prototype">
+		<property name="a1021Services" ref="a1021services" />
+	</bean>
 
-	<bean id="a1014" class="cn.sdut.web.a1.impl.A1014Action"
-			scope="prototype">
-		<property name="a1011Services" ref="a1011services"/>
-	</bean>	
+	<bean id="a1021" class="cn.sdut.web.a1.impl.A1021Action" scope="prototype">
+		<property name="a1020Services" ref="a1020services" />
+	</bean>
 
-	<bean id="a1013" class="cn.sdut.web.a1.impl.A1013Action"
-			scope="prototype">
-		<property name="a1011Services" ref="a1011services"/>
-	</bean>	
+	<bean id="a1020" class="cn.sdut.web.a1.impl.A1020Action" scope="prototype">
+		<property name="a1020Services" ref="a1020services" />
+	</bean>
 
-	<bean id="a1012" class="cn.sdut.web.a1.impl.A1012Action"
-			scope="prototype">
-		<property name="a1011Services" ref="a1011services"/>
-	</bean>	
+	<bean id="a1014" class="cn.sdut.web.a1.impl.A1014Action" scope="prototype">
+		<property name="a1011Services" ref="a1011services" />
+	</bean>
 
-	<bean id="a1011" class="cn.sdut.web.a1.impl.A1011Action"
-			scope="prototype">
-		<property name="a1010Services" ref="a1010services"/>
-	</bean>	
+	<bean id="a1013" class="cn.sdut.web.a1.impl.A1013Action" scope="prototype">
+		<property name="a1011Services" ref="a1011services" />
+	</bean>
 
-	<bean id="a1010" class="cn.sdut.web.a1.impl.A1010Action"
-			scope="prototype">
-		<property name="a1010Services" ref="a1010services"/>
-	</bean>	
+	<bean id="a1012" class="cn.sdut.web.a1.impl.A1012Action" scope="prototype">
+		<property name="a1011Services" ref="a1011services" />
+	</bean>
+
+	<bean id="a1011" class="cn.sdut.web.a1.impl.A1011Action" scope="prototype">
+		<property name="a1010Services" ref="a1010services" />
+	</bean>
+
+	<bean id="a1010" class="cn.sdut.web.a1.impl.A1010Action" scope="prototype">
+		<property name="a1010Services" ref="a1010services" />
+	</bean>
 </beans>

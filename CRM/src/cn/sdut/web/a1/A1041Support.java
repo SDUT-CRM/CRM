@@ -16,15 +16,63 @@ public abstract class A1041Support {
 	protected List rows = null;
 	protected String query = null;
 	protected String path = null;
+	protected String lg2001 = null;
 	protected String lg2002 = null;
 	protected String lg2003 = null;
 	protected String lg2004 = null;
 	protected String lg2005 = null;
 	protected String lg2006 = null;
-	protected String lg0101 = null;
+	protected String lg2101 = null;
 	protected String lg0201 = null;
 	protected String lg2007 = null;
 
+	protected String qlg2002 = null;
+	protected String qlg2003 = null;
+	protected String bqlg2004 = null;
+	protected String eqlg2004 = null;
+	protected String qlg2007 = null;
+	protected List oclg2007 = null;
+	
+	public String getQlg2002() {
+		return qlg2002;
+	}
+
+	public void setQlg2002(String qlg2002) {
+		this.qlg2002 = qlg2002;
+	}
+
+	public String getQlg2003() {
+		return qlg2003;
+	}
+
+	public void setQlg2003(String qlg2003) {
+		this.qlg2003 = qlg2003;
+	}
+
+	public String getBqlg2004() {
+		return bqlg2004;
+	}
+
+	public void setBqlg2004(String bqlg2004) {
+		this.bqlg2004 = bqlg2004;
+	}
+
+	public String getEqlg2004() {
+		return eqlg2004;
+	}
+
+	public void setEqlg2004(String eqlg2004) {
+		this.eqlg2004 = eqlg2004;
+	}
+
+	public String getQlg2007() {
+		return qlg2007;
+	}
+
+	public void setQlg2007(String qlg2007) {
+		this.qlg2007 = qlg2007;
+	}
+	
 	public String getLg2006() {
 		return lg2006;
 	}
@@ -33,12 +81,28 @@ public abstract class A1041Support {
 		this.lg2006 = lg2006;
 	}
 
-	public String getLg0101() {
-		return lg0101;
+	public String getLg2101() {
+		return lg2101;
 	}
 
-	public void setLg0101(String lg0101) {
-		this.lg0101 = lg0101;
+	public void setLg2101(String lg2101) {
+		this.lg2101 = lg2101;
+	}
+
+	public String getLg2001() {
+		return lg2001;
+	}
+
+	public void setLg2001(String lg2001) {
+		this.lg2001 = lg2001;
+	}
+
+	public List getOclg2007() {
+		return oclg2007;
+	}
+
+	public void setOclg2007(List oclg2007) {
+		this.oclg2007 = oclg2007;
 	}
 
 	public String getLg0201() {

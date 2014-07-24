@@ -9,10 +9,7 @@ public interface Lg20Dao {
 	
 	//添加问题
 	public boolean add() throws Exception;
-	
-	//追加问题
-	public boolean append() throws Exception;
-	
+
 	//修改问题
 	public boolean modify() throws Exception;
 	
@@ -21,6 +18,7 @@ public interface Lg20Dao {
 	
 	public List queryById() throws Exception;
 	
+	public boolean update() throws Exception;
 	
 	//删除问题
 	public boolean delete() throws Exception;

@@ -17,12 +17,13 @@ public abstract class A1040Support {
 	protected String query = null;
 	protected String path = null;
 	
+	protected String lg2001 = null;
 	protected String lg2002 = null;
 	protected String lg2003 = null;
 	protected String lg2004 = null;
 	protected String lg2005 = null;
 	protected String lg2006 = null;
-	protected String lg0101 = null;
+	protected String lg2101 = null;
 
 	protected String qlg2002 = null;
 	protected String qlg2003 = null;
@@ -87,12 +88,20 @@ public abstract class A1040Support {
 		this.lg2006 = lg2006;
 	}
 
-	public String getLg0101() {
-		return lg0101;
+	public String getLg2101() {
+		return lg2101;
 	}
 
-	public void setLg0101(String lg0101) {
-		this.lg0101 = lg0101;
+	public void setLg2101(String lg2101) {
+		this.lg2101 = lg2101;
+	}
+	
+	public String getLg2001() {
+		return lg2001;
+	}
+
+	public void setLg2001(String lg2001) {
+		this.lg2001 = lg2001;
 	}
 
 	public String getLg2002() {

@@ -6,9 +6,9 @@ import java.util.Map;
 
 import cn.sdut.persistence.bean.Lg01;
 import cn.sdut.persistence.bean.Lg02;
-import cn.sdut.persistence.bean.Lg18;
 import cn.sdut.persistence.dao.interfaces.Lg18Dao;
 import cn.sdut.persistence.dao.interfaces.Lg19Dao;
+import cn.sdut.persistence.dao.interfaces.Lg20Dao;
 import cn.sdut.services.A1031Services;
 
 public class A1031ServicesImpl implements A1031Services {
@@ -54,11 +54,9 @@ public class A1031ServicesImpl implements A1031Services {
 	public boolean add() throws Exception {
 		Lg01 lg01 = new Lg01();
 		Lg02 lg02 = new Lg02();
-		Lg18 lg18 = new Lg18();
 
 		lg01.setLg21011(Long.parseLong(this.dto.get("lg2101").toString()));
 		lg02.setLg21011(22L);
-		lg18.setLg1801(Long.parseLong(this.dto.get("lg1801").toString()));
 
 		Date date = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
@@ -67,9 +65,7 @@ public class A1031ServicesImpl implements A1031Services {
 		this.dto.put("lg1903", da);
 		this.dto.put("lg01", lg01);
 		this.dto.put("lg02", lg02);
-		this.dto.put("lg18", lg18);
 		this.dto.put("lg1804", "4");
-
 		return lg18Dao.modify() && lg19Dao.add();
 	}
 
