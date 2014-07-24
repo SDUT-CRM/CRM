@@ -70,6 +70,7 @@ public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
 		.append("   and y.lg0501 = x.lg05.lg0501")
 		.append("   and x.lg01.lg2101 = z.lg2101");
 
+			System.out.println(dto);
         if (this.checkVal(qlg0503)){
             this.hql.append(" and y.lg0503 like ?");
             this.pars.add("%"+qlg0503+"%");
@@ -143,21 +144,53 @@ public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
 	}
 
 	@Override
-	public boolean modify() throws Exception {
-		StringBuilder hql=new StringBuilder()
+	public boolean setOk() throws Exception {
+		StringBuilder hql = new StringBuilder()
 		.append("update Lg06 x")
-		.append("   set x.lg05.lg0501=?, x.lg02.lg2101=?, x.lg0602=?,x.lg0604=?")
-		.append(" where x.lg0601=?")
+		.append("   set x.lg0602 = ?")
+		.append(" where x.lg0601 in (:lg0601)")
 		;
-		System.out.println("dto=="+dto);
-		Object args[]={
-			this.getLong("lg0501"),
-			this.getLong("lg0201"),
-			this.dto.get("lg0602"),
-			this.getUDate("lg0604"),
-			this.getLong("lg0601")
-		};
-		return this.update(hql.toString(), args);
+		Object parsList[] = this.getIdArray("parsList");
+		System.out.println(parsList);
+		return this.batchUpdate(hql.toString(), parsList, "lg0601", "2");
+	}
+	
+	@Override
+	public boolean modify() throws Exception {
+		Object lg0501 = this.getObject("lg0501");
+		Object lg0201 = this.getObject("lg0201");
+		Object lg0602 = this.getObject("lg0602");
+		Object lg0604 = this.getObject("lg0604");
+		
+		List args = new ArrayList();
+		StringBuilder hql = new StringBuilder()
+		.append("update Lg06 x")
+		.append("   set x.lg0601 = x,lg0601 ");
+		
+		if(checkVal(lg0501)){
+			hql.append(", x.lg05.lg0501 = ?");
+			args.add(this.getLong("lg0501"));
+		}
+		
+		if(checkVal(lg0201)){
+			hql.append(", x.lg02.lg2101 = ?");
+			args.add(this.getLong("lg0201"));
+		}
+		
+		if(checkVal(lg0602)){
+			hql.append(", x.lg0602 = ?");
+			args.add(this.dto.get("lg0602"));
+		}
+		
+		if(checkVal(lg0604)){
+			hql.append(", x.lg0604 = ?");
+			args.add(this.getUDate("lg0604"));
+		}
+		//.append("   set x.lg05.lg0501=?, , ,x.lg0604=?")
+		hql.append(" where x.lg0601 = ?");
+		//;
+		args.add(this.getLong("lg0601"));
+		return this.update(hql.toString(), args.toArray());
 	}
 
 	@Override

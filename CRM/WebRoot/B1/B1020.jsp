@@ -7,14 +7,15 @@
 <head>
   <script type="text/javascript" src="<%=request.getContextPath()%>/js/calendar.js"></script>
 <script type="text/javascript">
-	function onSelect(obj)
-	{
-		with(document.forms[0])
-		{
-			action="<%=path%>/a1011Action.action?path=a&lg0501="+obj;
-			submit();
-		}
-	}
+ 	var count=0;
+    function onSelect(obj)
+    {
+    	with(document.forms[0])
+    	{
+    	   obj?++count:--count;
+    	   next[1].disabled=(count==0);
+    	}
+    }
 	function onCancel(obj)
 	{
 		with(document.forms[0])
@@ -23,13 +24,20 @@
 			submit();
 		}
 	}
+	function  onNext2()
+    {
+    	with(document.forms[0])
+    	{
+    		action="<%=path%>/b1021Action.action";
+    	}
+    }
 </script>
 </head>
 <body>
 <s:property value="msg"/>
 <br>
 <br>
-<s:form action="a1013Action">
+<s:form action="b1020Action">
 <TABLE border="1" width="80%" align="center">
    <caption>
         业务申请审核
@@ -68,7 +76,10 @@
          </tr>
          <s:iterator value="rows" status="st">
 	         <tr>
-	           <td>&nbsp;</td>
+	          <td>
+	         <input type="checkbox" name="parsList"
+	                onclick="onSelect(this.checked)"  value="<s:property value="lg0601"/>">
+	       </td>
 	           <td align="center"><s:property value="#st.count"/></td>
 	           <td align="center"><s:property value="lg0502"/></td>
 	           <td align="center"><s:property value="lg0503"/></td>
@@ -90,10 +101,11 @@
      </TD>
    </TR>
    </s:if>
-    <s:hidden name="lg2101" value="2"/>
+    <s:hidden name="lg0201" value="22"/>
        <TR>
      <TD align="center">
        <s:submit  name="next" value="查询"/>
+        <s:submit name="next" value="审核通过" onclick="return onNext2()" disabled="true"/>
      </TD>
    </TR>
  </TABLE>

@@ -10,4 +10,6 @@ public interface B1020Services {
 
 	public String getPageInfo(String url);
 	
+	public boolean setOk() throws Exception;
+	
 }

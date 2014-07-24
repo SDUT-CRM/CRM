@@ -1,5 +1,7 @@
 package cn.sdut.services.impl;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -47,6 +49,16 @@ public class B1020ServicesImpl implements B1020Services {
 	public List query() throws Exception {
 		this.dto.put("qlg0602", "1");
 		return this.lg06Dao.queryForPage();
+	}
+
+	@Override
+	public boolean setOk() throws Exception {
+		Date date = new Date();
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+		String da = formatter.format(date);
+		this.dto.put("lg0602", "2");
+		this.dto.put("lg0604", da);
+		return lg06Dao.setOk();
 	}
 
 	@Override

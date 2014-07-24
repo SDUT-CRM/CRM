@@ -13,6 +13,8 @@ public interface Lg06Dao {
 	
 	public boolean modify()throws Exception;
 	
+	public boolean setOk()throws Exception;
+	
 	public boolean delete()throws Exception;
 	
 	public boolean check() throws Exception;
