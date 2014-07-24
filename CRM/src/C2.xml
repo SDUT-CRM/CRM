@@ -20,5 +20,14 @@
 		<action name="c2030Action" class="c2030">
 			<result name="main">/C2/C2030.jsp</result>
 		</action>
+		<action name="c2031Action" class="c2031">
+			<result name="main">/C2/C2030.jsp</result>
+		</action>
+		<action name="c2032Action" class="c2032">
+		    <result name="main">/C2/C2031.jsp</result>
+		</action>
+		<action name="c2033Action" class="c2033">
+			<result name="main">/C2/C2031.jsp</result>
+		</action>
 	</package>
 </struts>    

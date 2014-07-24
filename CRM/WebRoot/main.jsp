@@ -70,7 +70,12 @@
 						</tr>
 						<tr>
 							<td>
-								<a href="<%=path%>/c2021Action.action" target="WORK">配件管理</a>
+								<a href="<%=path%>/c2021Action.action" target="WORK">配件申请管理</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="<%=path%>/c2030Action.action" target="WORK">配件信息管理</a>
 							</td>
 						</tr>
 						<tr>

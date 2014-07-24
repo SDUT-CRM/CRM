@@ -9,4 +9,3 @@
 	<include file="B1.xml" />
 	<include file="A1.xml" />
 </struts>
-

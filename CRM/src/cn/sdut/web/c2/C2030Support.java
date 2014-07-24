@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import cn.sdut.services.C2021Services;
+import cn.sdut.system.Tools;
 
 public abstract class C2030Support
 {
@@ -55,6 +56,7 @@ public abstract class C2030Support
     public void setC2021Services(C2021Services c2021Services)
     {
         this.c2021Services = c2021Services;
+        this.c2021Services.setMapDto(Tools.describe());
     }
     public String getLg1301()
     {

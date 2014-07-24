@@ -14,7 +14,7 @@ public class C2021ServicesImpl implements C2021Services
     public void setMapDto(Map dto)
     {
         this.dto=dto;
-        
+        this.lg13Dao.setMapDto(dto);
     }
     
     
@@ -50,29 +50,25 @@ public class C2021ServicesImpl implements C2021Services
     @Override
     public String getPageInfo(String url)
     {
-        // TODO Auto-generated method stub
-        return this.lg13Dao.getPageInfoForpz(url);
+        return this.lg13Dao.getPageInfo(url);
     }
 
     @Override
     public List query() throws Exception
     {
-        // TODO Auto-generated method stub
         return this.lg13Dao.queryForPageForpz();
     }
 
     @Override
     public Map getInstance() throws Exception
     {
-        // TODO Auto-generated method stub
-        return null;
+        return this.lg13Dao.getInstance();
     }
 
     @Override
     public boolean update() throws Exception
     {
-        // TODO Auto-generated method stub
-        return false;
+        return this.lg13Dao.update();
     }
 
 }

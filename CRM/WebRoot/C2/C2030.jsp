@@ -6,13 +6,20 @@
 <html>
 	<head>
 		<script type="text/javascript">
-	
+	function onEdit(obj)
+	{
+		with(document.forms[0])
+		{
+			action="<%=path%>/c2032Action.action?lg1301="+obj;
+			submit();
+		}
+	}
 </script>
 	</head>
 	<body>
 		<s:property value="msg" />
 		<s:debug />
-		<s:form action="c2024Action">
+		<s:form action="c2031Action">
 
 			<TABLE border="1" align="center" width="1000px">
 				<caption>
@@ -24,15 +31,15 @@
 						配件编号
 					</TD>
 					<TD>
-						<s:textfield name="qlg1302" readonly="true" />
+						<s:textfield name="qlg1302"/>
 					</TD>
 				</TR>
 				<TR>
 					<TD>
-						申请数量
+						配件名称
 					</TD>
 					<TD>
-						<s:textfield name="qlg1303" disabled="true" />
+						<s:textfield name="qlg1303"/>
 					</TD>
 				</TR>
 				<s:if test="rows!=null">
@@ -55,27 +62,25 @@
 									<td><s:property value="lg1303" /></td>
 									<td><s:property value="lg1304" /></td>
 									<td><s:property value="lg1305" /></td>
-									<td><s:property value="lg1306" /></td>
-									<td><a href="#">修改</a></td>
+									<td><a href="#" onclick="onEdit(<s:property value="lg1301" />)">修改</a></td>
 								</tr>
 								</s:iterator>
 							</table>
+							${requestScope.pageinfo }
 						</TD>
 					</TR>
 				</s:if>
+				<s:else>
+				<TR>
+				<TD colspan="100" align="center"><s:property value="msg" /></TD>
+				</TR>
+				</s:else>
+				<TR>
+					<TD colspan="100" align="center">
+					<s:submit name="next" value="查询"/>
+					</TD>
+				</TR>
 			</TABLE>
-			<s:hidden name="qlg1302" />
-			<s:hidden name="qlg1303" />
-			<s:hidden name="qlg0402" />
-			<s:hidden name="qlg0202" />
-			<s:hidden name="qlg1403" />
-			<s:hidden name="qlg0302" />
-			<s:hidden name="blg1402" />
-			<s:hidden name="elg1402" />
-			<s:hidden name="blg1404" />
-			<s:hidden name="elg1404" />
-			<s:hidden name="blg1405" />
-			<s:hidden name="elg1405" />
 		</s:form>
 	</body>
 </html>
