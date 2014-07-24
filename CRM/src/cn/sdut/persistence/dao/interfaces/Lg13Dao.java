@@ -12,5 +12,6 @@ public interface Lg13Dao {
 	public String getPageInfo(String url);
 	
 	public List queryForPageForpz() throws Exception;
-    public String getPageInfoForpz(String url);
+	
+	public Map getInstance() throws Exception;
 }
