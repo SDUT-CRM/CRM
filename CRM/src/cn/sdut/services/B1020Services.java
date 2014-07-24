@@ -10,8 +10,4 @@ public interface B1020Services {
 
 	public String getPageInfo(String url);
 	
-	public Map getInstance() throws Exception;
-	
-	public boolean check() throws Exception;
-
 }

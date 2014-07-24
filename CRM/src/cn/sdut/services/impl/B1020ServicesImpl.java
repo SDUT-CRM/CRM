@@ -5,21 +5,16 @@ import java.util.Map;
 
 import cn.sdut.persistence.dao.interfaces.Lg05Dao;
 import cn.sdut.persistence.dao.interfaces.Lg06Dao;
-import cn.sdut.services.A1010Services;
+import cn.sdut.services.B1020Services;
 
-public class B1020ServicesImpl implements A1010Services {
+public class B1020ServicesImpl implements B1020Services {
 	private Lg05Dao lg05Dao = null;
 	private Lg06Dao lg06Dao = null;
 	private Map dto = null;
 	
 	@Override
-	public Map getInstance() throws Exception{
-		return this.lg05Dao.getInstance();
-	}
-	
-	@Override
 	public String getPageInfo(String url) {
-		return this.lg05Dao.getPageInfo(url);
+		return this.lg06Dao.getPageInfo(url);
 	}
 
 	public Lg05Dao getLg05Dao() {
@@ -50,7 +45,8 @@ public class B1020ServicesImpl implements A1010Services {
 
 	@Override
 	public List query() throws Exception {
-		return this.lg05Dao.queryForPage();
+		
+		return this.lg06Dao.queryForPage();
 	}
 
 	@Override
@@ -60,8 +56,4 @@ public class B1020ServicesImpl implements A1010Services {
 		this.lg06Dao.setMapDto(dto);
 	}
 
-	@Override
-	public boolean check() throws Exception {
-		return this.lg06Dao.check();
-	}
 }

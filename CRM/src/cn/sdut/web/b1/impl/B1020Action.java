@@ -3,21 +3,20 @@ package cn.sdut.web.b1.impl;
 import java.util.List;
 import java.util.Map;
 
-import cn.sdut.system.Tools;
-import cn.sdut.web.a1.A1010Support;
+import cn.sdut.web.b1.B1020Support;
 
 import com.opensymphony.xwork2.ActionContext;
 
-public class B1020Action extends A1010Support {
+public class B1020Action extends B1020Support {
 
 	@Override
 	public String execute() throws Exception {
 		try {
-			this.oclg0509 = Tools.getOptions("LG0509");
-			List rows = this.getA1010Services().query();
+			List rows = this.getB1020Services().query();
 			if (rows.size() > 0) {
 				this.rows = rows;
-				String pageinfo = this.getA1010Services().getPageInfo("a1010Action");
+				String pageinfo = this.getB1020Services().getPageInfo(
+						"b1020Action");
 				Map request = (Map) ActionContext.getContext().get("request");
 				request.put("pageinfo", pageinfo);
 			} else {
