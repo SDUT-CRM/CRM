@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="C4" extends="struts-default">
+		<action name="c4041Action" class="c4041">
+		   <result name="main">/C4/C4040.jsp</result>
+		</action>
+	</package>
+	<package name="jfreechart" extends="jfreechart-default">
+		<action name="c4040Action" class="c4040">
+			<result type="chart" name="main">
+				<param name="width">500</param>
+				<param name="height">370</param>
+			</result>
+		</action>
+	</package>
+</struts>    

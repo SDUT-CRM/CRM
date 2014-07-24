@@ -19,7 +19,11 @@ public interface Lg20Dao {
 	//查询问题
 	public List query() throws Exception;
 	
+	public List queryById() throws Exception;
+	
 	//删除问题
 	public boolean delete() throws Exception;
+	
+	public String getPageInfo(String url);
 	
 }

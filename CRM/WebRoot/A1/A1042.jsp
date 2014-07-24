@@ -34,49 +34,54 @@ String path = request.getContextPath();
 <s:property value="msg"/>
 <br>
 <br>
-<s:form action="a1034Action">
+<s:form action="a1043Action">
  <TABLE border="1" width="80%" align="center">
    <caption>
-        查看报修
+        查看问题详情
     <hr width="160">  
    </caption>
    <TR>
      <TD>
+     <s:if test="rows!=null"> 
        <table border="1" width="100%">
-         <tr>
-           <td width="25%">故障类别</td>
-           <td width="25%">
-             <s:select name="lg1701" list="oclg1701"
-                listKey="key" listValue="value" cssStyle="width:153px"
-                />
-             </td>
-         </tr>
-         <tr>
-           <td>故障描述</td>
-           <td>
-            <s:textarea name="lg1805" rows="20" cssStyle="width:300px"/>
-           </td>
-         </tr>
+   			  
+         <s:iterator value="rows" status="st">
+	         <tr>
+	           <td nowrap="nowrap">问题:</td>
+	           <td nowrap="nowrap"><s:property value="lg2002"/></td>
+	           <td nowrap="nowrap"><s:property value="lg2004"/></td>
+	         </tr>
+	         <tr>
+	           <td>回答:</td>
+	           <td><s:property value="lg2003"/></td>
+	           <td><s:property value="lg2005"/></td>
+	         </tr>
+	          <s:if test="#st.count == rows.size() && lg2003!=null && lg2003 != ''">
+	           <tr>
+           		<td>追加问题</td>
+           		<td>
+           		 <s:textarea name="lg2002" value="" rows="3" cssStyle="width:820px"/>
+          		 </td>
+           		<td>
+           		<s:hidden name="lg0101"/>
+ 				<s:hidden name="lg0201"/>
+ 				<s:hidden name="lg2006"/>
+           		 <s:submit  name="next" value="追加"/>
+           		</td>
+         		</tr>
+
+	          </s:if>
+         </s:iterator>
+       ${requestScope.pageinfo }
        </table>
-     </TD>
-   </TR>
-   <TR>
-     <TD align="center">
-     <s:if test="lg1804==1">
-       <s:submit name="next" value="修改" />
-     </s:if>
-       <s:submit name="next" value="返回" onclick="return onNext1()"/>
-     </TD>
-   </TR>
+   </s:if>
  </TABLE>
- <s:hidden name="lg2101" value="2"/>
- <s:hidden name="lg1801"/>
+
 </s:form>
-<s:if test="lg1804==3">
 <s:form action="a1036Action">
 <TABLE border="1" width="80%" align="center">
    <caption>
-        请对我们的服务进行评价
+        如果回答已经解决了您的问题，请对我们的服务进行评价
     <hr width="160"> 
     </caption>
     <tr>
@@ -89,11 +94,7 @@ String path = request.getContextPath();
    <center>
    <s:submit name="next" value="确认评价" disabled="true"/>
    </center>
-   <s:hidden name="lg0201"/>
-   <s:hidden name="lg2101"/>
-   <s:hidden name="lg1801"/>
 </s:form>
-</s:if>
 
 </body>
 </html>

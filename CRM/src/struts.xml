@@ -5,5 +5,7 @@
 <include file="C1.xml"/>
 <include file="C2.xml"/>
 <include file="C3.xml"/>
+<include file="C4.xml"/>
 <include file="A1.xml"/>
 </struts>
+

@@ -93,7 +93,12 @@
 	           	   <a href="#" onclick="onSelect(<s:property value="lg0501"/>)">查看详情</a>
 	           </td>
 	           <td align="center">
-	               <a href="#" onclick="onCancel(<s:property value="lg0601"/>)">取消办理</a>
+	           	<s:if test="lg0602==1">
+	           		<a href="#" onclick="onCancel(<s:property value="lg0601"/>)">取消办理</a>
+	           	</s:if>
+	     		<s:else>
+	     			不能取消
+	     		</s:else>      
 	           </td>
 	         </tr>
          </s:iterator>

@@ -2,6 +2,8 @@ package cn.sdut.services;
 
 import java.util.Map;
 
+import org.jfree.chart.JFreeChart;
+
 public interface C4040Services
 {
     public void setMapDto(Map dto);
@@ -16,5 +18,6 @@ public interface C4040Services
      * @更新日期 
      * @更新内容
      */
-    public Map calForms() throws Exception;
+    public void calForms() throws Exception;
+    public JFreeChart getChart() throws Exception;
 }

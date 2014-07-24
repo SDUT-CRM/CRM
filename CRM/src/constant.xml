@@ -3,4 +3,5 @@
 <struts>
    <constant name="struts.i18n.encoding" value="GBK" />
    <constant name="struts.ui.theme" value="simple" />
+   <constant name="struts.objectFactory" value="spring" />
 </struts>    

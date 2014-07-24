@@ -14,6 +14,7 @@ public class Lg20 implements java.io.Serializable {
 	private Date lg2004;
 	private Date lg2005;
 	private long lg2006;
+	private String lg2007;
 
 	// Property accessors
 
@@ -79,6 +80,14 @@ public class Lg20 implements java.io.Serializable {
 
 	public void setLg2006(long lg2006) {
 		this.lg2006 = lg2006;
+	}
+
+	public String getLg2007() {
+		return lg2007;
+	}
+
+	public void setLg2007(String lg2007) {
+		this.lg2007 = lg2007;
 	}
 
 }

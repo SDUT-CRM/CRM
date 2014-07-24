@@ -86,6 +86,13 @@ public class Lg08DaoImpl extends HibernatePageDaoSupport implements Lg08Dao{
 	public List queryForPage() throws Exception {
 		Object lg2101 = this.dto.get("lg2101");
 		Object lg0801 = this.dto.get("lg0801");
+		Object qlg0702 = this.getObject("qlg0702");
+		Object qlg0804 = this.getObject("qlg0804");
+		Object bqlg0708 = this.getObject("bqlg0708");
+		Object eqlg0708 = this.getObject("eqlg0708");
+		Object bqlg0802 = this.getObject("bqlg0802");
+		Object eqlg0802 = this.getObject("eqlg0802");
+
 		this.pars = new ArrayList();
 		this.hql = new StringBuilder()
 		.append("select new map(x.lg0801 as lg0801,x.lg01.lg2101 as lg0101,")
@@ -107,7 +114,37 @@ public class Lg08DaoImpl extends HibernatePageDaoSupport implements Lg08Dao{
             this.hql.append(" and x.lg01.lg2101=?");
             this.pars.add(this.getLong("lg2101"));
         }
-		this.hql.append(" order by x.lg0801");
+        
+        if (this.checkVal(qlg0702)){
+            this.hql.append(" and y.lg0702=?");
+            this.pars.add(this.getObject("qlg0702"));
+        }
+        
+        if (this.checkVal(qlg0804)){
+            this.hql.append(" and x.lg0804=?");
+            this.pars.add(this.getObject("qlg0804"));
+        }
+        
+        if (this.checkVal(bqlg0708)){
+            this.hql.append(" and y.lg0708>=?");
+            this.pars.add(this.getUDate("bqlg0708"));
+        }
+ 
+        if (this.checkVal(eqlg0708)){
+            this.hql.append(" and y.lg0708<=?");
+            this.pars.add(this.getUDate("eqlg0708"));
+        }
+        
+        if (this.checkVal(bqlg0802)){
+            this.hql.append(" and x.lg0802>=?");
+            this.pars.add(this.getUDate("bqlg0802"));
+        }
+ 
+        if (this.checkVal(eqlg0802)){
+            this.hql.append(" and x.lg0802<=?");
+            this.pars.add(this.getUDate("eqlg0802"));
+        }
+		this.hql.append(" order by x.lg0801 desc");
 		return this.queryForList();
 	}
 }

@@ -3,6 +3,7 @@ package cn.sdut.web.a1.impl;
 import java.util.List;
 import java.util.Map;
 
+import cn.sdut.system.Tools;
 import cn.sdut.web.a1.A1030Support;
 
 import com.opensymphony.xwork2.ActionContext;
@@ -12,6 +13,8 @@ public class A1035Action extends A1030Support {
 	@Override
 	public String execute() throws Exception {
 		try {
+			this.oclg1804 = Tools.getOptions("LG1804");
+			this.oclg1701 = Tools.getOptions("LG1701");
 			boolean res = this.getA1030Services().cancel();
 			if (res == true) {
 				this.msg = "取消成功";

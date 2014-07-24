@@ -5,6 +5,7 @@
 %>
 <html>
 <head>
+  <script type="text/javascript" src="<%=request.getContextPath()%>/js/calendar.js"></script>
 <script type="text/javascript">
    	function onSelect(obj)
 	{
@@ -29,8 +30,42 @@
 <br>
 <br>
 <s:form action="a1032Action">
-       <center>我的报修单</center>
+<TABLE border="1" width="80%" align="center">
+   <caption>
+        我的报修单
     <hr width="160">  
+   </caption>
+   <TR>
+     <TD>
+       <table border="1" width="100%">
+         <tr>
+			<td width="25%">故障类别</td>
+           <td width="25%">
+             <s:select name="qlg1701" list="oclg1701"
+                listKey="key" listValue="value"
+                headerKey="" headerValue="==不限=="
+                cssStyle="width:153px"
+                />
+             </td>
+           <td width="25%">报修状态</td>
+           <td width="25%">
+             <s:select name="qlg1804" list="oclg1804"
+                listKey="key" listValue="value"
+                headerKey="" headerValue="==不限=="
+                cssStyle="width:153px"
+                />
+             </td>
+         </tr>
+         <tr>
+           <td>报修时间</td>
+           <td colspan="200">
+            <s:textfield name="bqlg1802" onclick="calendar.show(this);" readonly="true"/>
+           	- <s:textfield name="eqlg1802" onclick="calendar.show(this);" readonly="true"/>
+           </td>
+         </tr>
+       </table>
+     </TD>
+   </TR>
 <s:if test="rows!=null">   
    <TR>
      <TD>
@@ -68,6 +103,12 @@
    </TR>
    </s:if>
     <s:hidden name="lg2101" value="2"/>
+   <TR>
+     <TD align="center">
+       <s:submit  name="next" value="查询"/>
+     </TD>
+   </TR>
+ </TABLE>
    </s:form>
 	</body>
 </html>

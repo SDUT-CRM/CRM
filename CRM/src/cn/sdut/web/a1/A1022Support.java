@@ -26,6 +26,69 @@ public abstract class A1022Support {
 	protected String lg0708 = null;	
 	protected String cnlg0707 = null;
 	protected String cnlg0804 = null;
+	protected List oclg0804 = null;
+	protected String qlg0702 = null;
+	protected String qlg0804 = null;
+	protected String bqlg0708 = null;
+	protected String eqlg0708 = null;
+	protected String bqlg0802 = null;
+	protected String eqlg0802 = null;
+	
+	public List getOclg0804() {
+		return oclg0804;
+	}
+
+	public void setOclg0804(List oclg0804) {
+		this.oclg0804 = oclg0804;
+	}
+
+	public String getQlg0702() {
+		return qlg0702;
+	}
+
+	public void setQlg0702(String qlg0702) {
+		this.qlg0702 = qlg0702;
+	}
+
+	public String getQlg0804() {
+		return qlg0804;
+	}
+
+	public void setQlg0804(String qlg0804) {
+		this.qlg0804 = qlg0804;
+	}
+
+	public String getBqlg0708() {
+		return bqlg0708;
+	}
+
+	public void setBqlg0708(String bqlg0708) {
+		this.bqlg0708 = bqlg0708;
+	}
+
+	public String getEqlg0708() {
+		return eqlg0708;
+	}
+
+	public void setEqlg0708(String eqlg0708) {
+		this.eqlg0708 = eqlg0708;
+	}
+
+	public String getBqlg0802() {
+		return bqlg0802;
+	}
+
+	public void setBqlg0802(String bqlg0802) {
+		this.bqlg0802 = bqlg0802;
+	}
+
+	public String getEqlg0802() {
+		return eqlg0802;
+	}
+
+	public void setEqlg0802(String eqlg0802) {
+		this.eqlg0802 = eqlg0802;
+	}
 
 	public String getLg0801() {
 		return lg0801;

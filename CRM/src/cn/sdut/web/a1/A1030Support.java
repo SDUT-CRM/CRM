@@ -26,6 +26,68 @@ public abstract class A1030Support {
 	protected String lg2101 = null;
 	protected String lg0201 = null;
 	protected String cnlg1804 = null;
+	protected List oclg1804 = null;
+	protected String bqlg1802 = null;
+	protected String eqlg1802 = null;
+	protected String qlg1701 = null;
+	protected String qlg1802 = null;
+	protected String qlg1804 = null;
+	
+	public String getQlg1804() {
+		return qlg1804;
+	}
+
+	public void setQlg1804(String qlg1804) {
+		this.qlg1804 = qlg1804;
+	}
+
+	public String getQlg1701() {
+		return qlg1701;
+	}
+
+	public void setQlg1701(String qlg1701) {
+		this.qlg1701 = qlg1701;
+	}
+
+	public String getQlg1802() {
+		return qlg1802;
+	}
+
+	public void setQlg1802(String qlg1802) {
+		this.qlg1802 = qlg1802;
+	}
+
+	public void setOclg1804(List oclg1804) {
+		this.oclg1804 = oclg1804;
+	}
+
+	public void setEqlg1802(String eqlg1802) {
+		this.eqlg1802 = eqlg1802;
+	}
+
+	public List getOclg1804() {
+		return oclg1804;
+	}
+
+	public void setOclg0804(List oclg1804) {
+		this.oclg1804 = oclg1804;
+	}
+
+	public String getBqlg1802() {
+		return bqlg1802;
+	}
+
+	public void setBqlg1802(String bqlg0802) {
+		this.bqlg1802 = bqlg1802;
+	}
+
+	public String getEqlg1802() {
+		return eqlg1802;
+	}
+
+	public void setEqlg0802(String eqlg0802) {
+		this.eqlg1802 = eqlg0802;
+	}
 
 	public String getPath() {
 		return path;

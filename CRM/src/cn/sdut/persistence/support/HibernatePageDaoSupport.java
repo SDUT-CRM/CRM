@@ -145,6 +145,7 @@ public abstract class HibernatePageDaoSupport extends HibernateDaoSupport
      */
     private final void getPageCount(int pagesize) throws Exception
     {
+    	System.out.println();
         int fromIndex = this.hql.toString().toUpperCase().indexOf("FROM");
         final StringBuilder count_hql = new StringBuilder().append(
                 "select count(*)  ").append(this.hql.substring(fromIndex));;
@@ -466,6 +467,11 @@ public abstract class HibernatePageDaoSupport extends HibernateDaoSupport
         return Tools.parseDate(this.dto.get(key));
     }
 
+    protected java.util.Date getUDate1(String key) throws ParseException
+    {
+        return Tools.parseDate1(this.dto.get(key));
+    }
+    
     protected Object[] getIdArray(String key)
     {
         return Tools.StringtoLongArray(this.dto.get(key));

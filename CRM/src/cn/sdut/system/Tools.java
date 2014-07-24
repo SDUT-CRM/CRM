@@ -87,6 +87,11 @@ public class Tools {
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
 		return df.parse(date.toString());
 	}
+	
+	public static java.util.Date parseDate1(Object date) throws ParseException {
+		DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		return df.parse(date.toString());
+	}
 
 	public static Object[] StringtoLongArray(Object array) {
 		String sarray[] = (String[]) array;

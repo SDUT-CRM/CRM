@@ -3,26 +3,27 @@ package cn.sdut.web.a1.impl;
 import java.util.List;
 import java.util.Map;
 
-import cn.sdut.system.Tools;
-import cn.sdut.web.a1.A1022Support;
-
 import com.opensymphony.xwork2.ActionContext;
 
-public class A1023Action extends A1022Support {
+import cn.sdut.system.Tools;
+import cn.sdut.web.a1.A1041Support;
+
+public class A1043Action extends A1041Support {
 
 	@Override
 	public String execute() throws Exception {
 		try {
-			this.oclg0804 = Tools.getOptions("LG0804");
-			List rows = this.getA1021Services().query();
-			if (rows.size() > 0) {
+			boolean res = this.getA1041Services().add();
+			if(res==true){
+				List rows = this.getA1041Services().queryById();
 				this.rows = rows;
-				String pageinfo = this.getA1021Services().getPageInfo(
-						"a1023Action");
+				String pageinfo = this.getA1041Services().getPageInfo("a1042Action");
 				Map request = (Map) ActionContext.getContext().get("request");
 				request.put("pageinfo", pageinfo);
-			} else {
-				this.msg = "没有符合条件的数据";
+				this.msg = "追加成功!";
+			}
+			else{
+				this.msg = "追加失败!";
 			}
 		} catch (Exception e) {
 			this.msg = "网络故障";

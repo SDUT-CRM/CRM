@@ -111,6 +111,12 @@ public class Lg18DaoImpl extends HibernatePageDaoSupport implements Lg18Dao {
 
 	@Override
 	public List queryForPage() throws Exception {
+		Object lg1804 = this.getObject("qlg1804");
+		Object lg1701 = this.getObject("qlg1701");
+		Object bqlg1802 = this.getObject("bqlg1802");
+		Object eqlg1802 = this.getObject("eqlg1802");
+
+		this.pars = new ArrayList();
 		this.hql = new StringBuilder()
 		.append("select new map(x.lg1801 as lg1801,x.lg01.lg2101 as lg2101,")
 		.append("       x.lg02.lg2101 as lg0201, x.lg17.lg1701 as lg1701,")
@@ -125,6 +131,28 @@ public class Lg18DaoImpl extends HibernatePageDaoSupport implements Lg18Dao {
         .append("   and b.fname='LG1701'")
         .append("   and x.lg1804=c.fcode")
         .append("   and c.fname='LG1804'");
+		
+		if(this.checkVal(lg1701)){
+			hql.append(" and x.lg17.lg1701 = ?");
+			this.pars.add(this.getLong("qlg1701"));
+		}
+		
+		if(this.checkVal(lg1804)){
+			hql.append(" and x.lg1804 = ?");
+			this.pars.add(lg1804);
+		}
+		
+		if(this.checkVal(bqlg1802)){
+			hql.append(" and x.lg1802 >= ?");
+			this.pars.add(this.getUDate("bqlg1802"));
+		}
+		
+		if(this.checkVal(eqlg1802)){
+			hql.append(" and x.lg1802 <= ?");
+			this.pars.add(this.getUDate("eqlg1802"));
+		}
+		
+		hql.append(" order by x.lg1801 desc");
 		return this.queryForList();
 	}
 
