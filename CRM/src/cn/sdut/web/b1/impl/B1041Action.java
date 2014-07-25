@@ -16,7 +16,7 @@ public class B1041Action extends B1040Support {
 			List rows = this.getB1040Services().queryForPage();
 			if (rows.size() > 0) {
 				this.rows = rows;
-				String pageinfo = this.getB1040Services().getPageInfo(
+				String pageinfo = this.getB1040Services().getPageInfo1(
 						"b1041Action");
 				Map request = (Map) ActionContext.getContext().get("request");
 				request.put("pageinfo", pageinfo);

@@ -3,6 +3,7 @@ package cn.sdut.persistence.dao.impl;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -16,7 +17,8 @@ public class Lg14DaoImpl extends HibernatePageDaoSupport implements Lg14Dao
 	
 	@Override
 	public boolean add() throws Exception {
-		System.out.println("sd"+dto);
+		Date lg1402 = this.getUDate("lg1402");
+		this.dto.put("lg1402",lg1402);
         Lg14 lg14 = this.addObject(Lg14.class);
         this.dto.put("lg14", lg14);
         return lg14.getLg1401() > 0;
