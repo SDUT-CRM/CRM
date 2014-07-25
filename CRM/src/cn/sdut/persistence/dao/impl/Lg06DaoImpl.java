@@ -82,7 +82,7 @@ public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
         if (this.checkVal(qlg0602)){
         	if(qlg0602.toString().equals("0")){
         		this.hql.append(" and x.lg0602 between ? and ? ");
-        		this.pars.add("1");
+        		this.pars.add("2");
         		this.pars.add("3");
         	}else{
                 this.hql.append(" and x.lg0602 = ?");
@@ -165,12 +165,15 @@ public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
 		System.out.println("dao::"+dto);
 		StringBuilder hql = new StringBuilder()
 		.append("update Lg06 x")
-		.append("   set x.lg0602 = ?")
+		.append("   set x.lg02.lg2101 = ?, x.lg0602 = ?")
 		.append(" where x.lg0601 in (:lg0601)")
 		;
 		Object parsList[] = this.getIdArray("parsList");
-		Object lg0602 = this.dto.get("lg0602");
-		return this.batchUpdate(hql.toString(), parsList, "lg0601", lg0602);
+		Object args[] = {
+			this.getLong("lg0201"),
+			this.dto.get("lg0602")
+		};
+		return this.batchUpdate(hql.toString(), parsList, "lg0601", args);
 	}
 	
 	public boolean updateDate() throws Exception{

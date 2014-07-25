@@ -58,22 +58,24 @@ public class A1041ServicesImpl implements A1041Services {
 	@Override
 	public boolean add() throws Exception {
 		Lg01 lg01 = new Lg01();
-		//Lg02 lg02 = new Lg02();
-		if(this.dto.get("lg0101")==null){
-			this.dto.put("lg0101", this.dto.get("lg2101"));
-		}
+		Lg02 lg02 = new Lg02();
+		Map session = ActionContext.getContext().getSession();
+		Map ins = (Map)session.get("USERINFO");
+		this.dto.put("lg0101", ins.get("lg2101"));
 		lg01.setLg21011(Long.parseLong(this.dto.get("lg0101").toString()));
-		//lg02.setLg21011(22L);
+		lg02.setLg21011(4L);
+		System.out.println("DTO=="+dto);
 
 		Date date = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String da = formatter.format(date);
 
 		this.dto.put("lg01", lg01);
-		//this.dto.put("lg02", lg02);
+		this.dto.put("lg02", lg02);
 		this.dto.put("lg2004", da);
 		this.dto.put("lg2007", "1");
-		if (this.dto.get("lg2006")==null || this.dto.get("lg2006").equals("0")){
+		if (this.dto.get("lg2006")==null || this.dto.get("lg2006").equals("0")
+				||this.dto.get("lg2006").equals("")){
 			this.dto.put("lg2006", this.dto.get("lg2001"));
 		}
 		//this.dto.put("lg2006", lg02);

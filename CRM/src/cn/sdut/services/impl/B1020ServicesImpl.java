@@ -56,6 +56,10 @@ public class B1020ServicesImpl implements B1020Services {
 	
 	@Override
 	public List query1() throws Exception {
+		//this.dto.put("lg0201", null);
+		Map session = ActionContext.getContext().getSession();
+		Map ins = (Map)session.get("USERINFO");
+		this.dto.put("lg0201", ins.get("lg2101"));
 		this.dto.put("qlg0602", "0");
 		return this.lg06Dao.queryForPage();
 	}
