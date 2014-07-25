@@ -63,7 +63,6 @@ public class Lg02DaoImpl extends HibernatePageDaoSupport implements Lg02Dao
         this.dto.put("lg0207", this.getObject("lg0207"));
         this.dto.put("lg0208", this.getUDate("lg0208"));
         this.dto.put("lg0209", this.getUDate("lg0209"));
-        this.dto.put("lg020", this.getObject("lg020"));
         Lg02 lg02 = this.addObject(Lg02.class);
         return true;
     }

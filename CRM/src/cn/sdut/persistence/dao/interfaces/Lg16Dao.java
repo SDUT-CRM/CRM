@@ -97,4 +97,6 @@ public interface Lg16Dao {
 	 */
 	public boolean delete() throws Exception;
 	
+	public String getPageInfo(String url);
+	
 }

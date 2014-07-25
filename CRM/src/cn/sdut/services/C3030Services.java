@@ -92,5 +92,7 @@ public interface C3030Services
      * @¸üĞÂÄÚÈİ
      */
     public boolean update() throws Exception;
+    
+    public boolean add() throws Exception;
 
 }

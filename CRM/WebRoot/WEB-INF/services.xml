@@ -64,4 +64,7 @@
 	    <property name="lg06Dao" ref="lg06dao"/>
 	    <property name="lg16Dao" ref="lg16dao"/>
 	</bean>
+	<bean id="c5050services" class="cn.sdut.services.impl.C5050ServicesImpl">
+		<property name="lg16Dao" ref="lg16dao"/>
+	</bean>
 </beans>

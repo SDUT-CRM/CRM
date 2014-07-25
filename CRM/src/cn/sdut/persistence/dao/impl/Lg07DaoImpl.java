@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import cn.sdut.persistence.bean.Lg03;
+import cn.sdut.persistence.bean.Lg21;
 import cn.sdut.persistence.dao.interfaces.Lg07Dao;
 import cn.sdut.persistence.support.HibernatePageDaoSupport;
 import cn.sdut.system.Tools;
@@ -169,8 +171,20 @@ public class Lg07DaoImpl extends HibernatePageDaoSupport implements Lg07Dao {
 
 	@Override
 	public boolean add() throws Exception {
-
-		return false;
+	    Lg03 lg03=new Lg03();
+	    lg03.setLg2101(this.getLong("SYSUID"));
+	    dto.put("lg03", lg03);
+	    dto.put("lg0702", this.getObject("lg0702"));
+	    dto.put("lg0703", this.getObject("lg0703"));
+	    dto.put("lg0704", this.getDouble("lg0704"));
+	    dto.put("lg0705", this.getLong("lg0705"));
+	    dto.put("lg0706", this.getUDate("lg0706"));
+	    dto.put("lg0707", this.getObject("lg0707"));
+	    dto.put("lg0708", this.getUDate("lg0708"));
+	    dto.put("lg0709", this.getUDate("lg0709"));
+	    dto.put("lg0710", this.getUDate("lg0710"));
+	    this.addObject(Lg03.class);
+		return true;
 	}
 
 	@Override

@@ -16,4 +16,5 @@
     <import resource="C4.xml"/>
     <import resource="A1.xml"/>
     <import resource="B1.xml"/>
+    <import resource="C5.xml"/>
 </beans>

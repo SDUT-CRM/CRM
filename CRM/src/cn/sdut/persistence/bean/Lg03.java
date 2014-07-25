@@ -27,11 +27,16 @@ public class Lg03 implements java.io.Serializable {
 	// Property accessors
 
 	public long getLg2101() {
+	    if(this.lg21==null) return this.lg2101;
 		return this.lg21.getLg2101();
 	}
 
 	public void setLg2101(long lg2101) {
+	    if(lg21==null)
+	    {
+	        this.lg21=new Lg21();
 		this.lg21.setLg2101(lg2101);
+	    }
 	}
 
 	public Lg21 getLg21() {
