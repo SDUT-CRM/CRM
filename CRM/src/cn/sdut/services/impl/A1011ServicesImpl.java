@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import com.opensymphony.xwork2.ActionContext;
+
 import cn.sdut.persistence.bean.Lg01;
 import cn.sdut.persistence.bean.Lg02;
 import cn.sdut.persistence.bean.Lg05;
@@ -24,12 +26,12 @@ public class A1011ServicesImpl implements A1011Services {
 	@Override
 	public boolean add() throws Exception {
 
+		System.out.println("services dto:::"+dto);
+		
 		Lg01 lg01 = new Lg01();
-		Lg02 lg02 = new Lg02();
 		Lg05 lg05 = new Lg05();
 
 		lg01.setLg21011(Long.parseLong(this.dto.get("lg2101").toString()));
-		lg02.setLg21011(22L);
 		lg05.setLg0501(Long.parseLong(this.dto.get("lg0501").toString()));
 
 		Date date = new Date();
@@ -40,7 +42,6 @@ public class A1011ServicesImpl implements A1011Services {
 		this.dto.put("lg0603", da);
 		this.dto.put("lg0604", da);
 		this.dto.put("lg01", lg01);
-		this.dto.put("lg02", lg02);
 		this.dto.put("lg05", lg05);
 
 		return lg06Dao.add();
@@ -71,6 +72,9 @@ public class A1011ServicesImpl implements A1011Services {
 
 	@Override
 	public List query() throws Exception {
+		Map session = ActionContext.getContext().getSession();
+		Map ins = (Map)session.get("USERINFO");
+		this.dto.put("lg2101", ins.get("lg2101"));
 		return this.lg06Dao.queryForPage();
 	}
 	

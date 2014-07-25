@@ -70,7 +70,10 @@ public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
 		.append("   and y.lg0501 = x.lg05.lg0501")
 		.append("   and x.lg01.lg2101 = z.lg2101");
 
-			System.out.println(dto);
+        if (this.checkVal(lg2101)){
+            this.hql.append(" and x.lg01.lg2101=?");
+            this.pars.add(this.getLong("lg2101"));
+        }
         if (this.checkVal(qlg0503)){
             this.hql.append(" and y.lg0503 like ?");
             this.pars.add("%"+qlg0503+"%");
@@ -123,9 +126,9 @@ public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
 		
 		Lg05 lg05 = (Lg05)dto.get("lg05");
 		Lg01 lg01 = (Lg01)dto.get("lg01");
-		Lg02 lg02 = (Lg02)dto.get("lg02");
 		
 		System.out.println(":::::::::"+dto);
+		System.out.println(lg01.getLg2101());
 		Lg06 lg06 = this.addObject(Lg06.class);
 		
 		this.dto.put("lg06", lg06);

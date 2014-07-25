@@ -90,7 +90,7 @@
  <s:hidden name="eqlg0802"/>
  <s:hidden name="lg0701"/>
   <s:hidden name="lg0707"/>
- <s:hidden name="lg2101" value="2"/>
+ <s:hidden name="lg2101" value="%{#session.USERINFO.lg2101}"/>
 </s:form>
 	</body>
 </html>

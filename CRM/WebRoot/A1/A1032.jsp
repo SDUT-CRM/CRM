@@ -69,7 +69,7 @@ String path = request.getContextPath();
      </TD>
    </TR>
  </TABLE>
- <s:hidden name="lg2101" value="2"/>
+ <s:hidden name="lg2101" value="%{#session.USERINFO.lg2101}"/>
  <s:hidden name="lg1801"/>
  <s:hidden name="qlg1804"/>
  <s:hidden name="qlg1701"/>

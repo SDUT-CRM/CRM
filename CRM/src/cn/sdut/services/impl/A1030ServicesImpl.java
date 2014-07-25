@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import com.opensymphony.xwork2.ActionContext;
+
 import cn.sdut.persistence.bean.Lg01;
 import cn.sdut.persistence.bean.Lg02;
 import cn.sdut.persistence.bean.Lg17;
@@ -41,6 +43,9 @@ public class A1030ServicesImpl implements A1030Services {
 
 	@Override
 	public List query() throws Exception {
+		Map session = ActionContext.getContext().getSession();
+		Map ins = (Map)session.get("USERINFO");
+		this.dto.put("lg2101", ins.get("lg2101"));
 		return lg18Dao.queryForPage();
 	}
 
