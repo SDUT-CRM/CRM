@@ -7,6 +7,23 @@ import cn.sdut.persistence.dao.interfaces.Lg01Dao;
 import cn.sdut.persistence.support.HibernatePageDaoSupport;
 
 public class Lg01DaoImpl extends HibernatePageDaoSupport implements Lg01Dao{
+    
+    
+    @Override
+    public boolean resetPwd() throws Exception
+    {
+        this.hql=new StringBuilder()
+        .append("update Lg21 a")
+        .append("   set a.lg2103=?")
+        .append(" where a.lg2101=?")
+        ;
+        Object args[]=
+        {
+          this.getObject("lg2103"),
+          this.getLong("lg2101")
+        };
+        return this.update(hql.toString(), args);
+    }
 
     @Override
     public List queryForPage() throws Exception
@@ -60,7 +77,6 @@ public class Lg01DaoImpl extends HibernatePageDaoSupport implements Lg01Dao{
     @Override
     public boolean updateCustomer() throws Exception
     {
-        // TODO Auto-generated method stub
         return false;
     }
 

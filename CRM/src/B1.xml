@@ -9,6 +9,10 @@
 		<action name="b1011Action" class="b1011">
 			<result name="main">/B1/B1010.jsp</result>
 		</action>
+		
+		<action name="b1013Action" class="b1013">
+			<result name="main">/B1/B1010.jsp</result>
+		</action>
 
 		<action name="b1043Action" class="b1043">
 			<result name="main">/B1/B1041.jsp</result>

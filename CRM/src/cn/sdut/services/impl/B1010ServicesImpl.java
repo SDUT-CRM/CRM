@@ -5,6 +5,7 @@ import java.util.Map;
 
 import cn.sdut.persistence.dao.interfaces.Lg01Dao;
 import cn.sdut.services.B1010Services;
+import cn.sdut.system.Tools;
 
 public class B1010ServicesImpl implements B1010Services
 {
@@ -15,6 +16,13 @@ public class B1010ServicesImpl implements B1010Services
     {
        this.dto=dto;
        this.lg01Dao.setMapDto(dto);
+    }
+    
+    @Override
+    public boolean resetPwd() throws Exception
+    {
+        this.dto.put("lg2103", Tools.getMd5("0000"));
+        return this.lg01Dao.resetPwd();
     }
 
     @Override

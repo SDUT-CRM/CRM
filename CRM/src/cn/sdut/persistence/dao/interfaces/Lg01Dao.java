@@ -10,4 +10,5 @@ public interface Lg01Dao {
     public String getPageInfo(String url);
     public boolean addCustomer() throws Exception;
     public boolean updateCustomer() throws Exception;
+    public boolean resetPwd() throws Exception;
 }
