@@ -16,5 +16,17 @@ public interface Lg05Dao {
 	public String getPageInfo(String url);
 	
 	public Map getInstance() throws Exception;
+	
+	
+	
+	
+	/**
+	 * 管理员修改业务、删除业务
+	 * @return
+	 * @throws Exception
+	 */
+	public boolean update() throws Exception;
+	public boolean delete() throws Exception;
+	public boolean add() throws Exception;
 
 }

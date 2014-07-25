@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="d1010" class="cn.sdut.web.d1.impl.D1010Action"
+			scope="prototype">
+		<property name="d1010Services" ref="d1010services"/>
+	</bean>	
+	<bean id="d1012" class="cn.sdut.web.d1.impl.D1012Action"
+	        scope="prototype">
+	    <property name="d1012Services" ref="d1012services"/>
+	</bean>
+	<bean id="d1012services" class="cn.sdut.services.impl.D1012ServicesImpl">
+      <property name="lg21dao" ref="lg21dao" />
+    </bean>
+	<bean id="d1013" class="cn.sdut.web.d1.impl.D1013Action"
+	      scope="prototype">
+		<property name="d1013Services" ref="d1013services"/>
+	</bean>
+	<bean id="d1014" class="cn.sdut.web.d1.impl.D1014Action"
+	      scope="prototype">
+		<property name="d1014Services" ref="d1014services"/>
+	</bean>
+	<bean id="d1015" class="cn.sdut.web.d1.impl.D1015Action"
+	      scope="prototype">
+		<property name="d1012Services" ref="d1012services"/>
+	</bean>
+	<bean id="d1011" class="cn.sdut.web.d1.impl.D1011Action"
+	      scope="prototype">
+		<property name="d1010Services" ref="d1010services"/>
+	</bean>
+	<bean id="d2020" class="cn.sdut.web.d1.impl.D2020Action"
+	      scope="prototype">
+		<property name="d2020Services" ref="d2020services"/>
+	</bean>
+	<bean id="d2024" class="cn.sdut.web.d1.impl.D2024Action"
+	      scope="prototype">
+	    <property name="d2020Services" ref="d2020services"/>	
+	</bean>
+	<bean id="d2023" class="cn.sdut.web.d1.impl.D2023Action"
+	      scope="prototype">
+		<property name="d2020Services" ref="d2020services"/>
+	</bean>
+	<bean id="d20232" class="cn.sdut.web.d1.impl.D20232Action"
+	      scope="prototype">
+		<property name="d2020Services" ref="d2020services"/>
+	</bean>
+	<bean id="d2022" class="cn.sdut.web.d1.impl.D2022Action"
+	      scope="prototype">
+		<property name="d2020Services" ref="d2020services"/>
+	</bean>
+	<bean id="d2021" class="cn.sdut.web.d1.impl.D2021Action"
+	      scope="prototype">
+		<property name="d2020Services" ref="d2020services"/>
+	</bean>
+	<bean id="d3030" class="cn.sdut.web.d1.impl.D3030Action"
+	      scope="prototype">
+		<property name="d3030Services" ref="d3030services"/>
+	</bean>
+	<bean id="d3033" class="cn.sdut.web.d1.impl.D3033Action"
+	      scope="prototype">
+		<property name="d3030Services" ref="d3030services"/>
+	</bean>
+	<bean id="d3034" class="cn.sdut.web.d1.impl.D3034Action"
+	      scope="prototype">
+		<property name="d3030Services" ref="d3030services"/>
+	</bean>
+	<bean id="d3032" class="cn.sdut.web.d1.impl.D3032Action"
+	      scope="prototype">
+		<property name="d3030Services" ref="d3030services"/>
+	</bean>
+	<bean id="d3031" class="cn.sdut.web.d1.impl.D3031Action"
+	      scope="prototype">
+		<property name="d3030Services" ref="d3030services"/>
+	</bean>
+</beans>

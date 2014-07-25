@@ -9,4 +9,6 @@
 	<include file="C5.xml" />
 	<include file="B1.xml" />
 	<include file="A1.xml" />
+	<include file="D1.xml"/>
+	
 </struts>

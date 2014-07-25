@@ -5,6 +5,7 @@
 %>
 <html>
 <head>
+<link href="<%=path%>/css/style.css" type="text/css" rel="stylesheet"/>
   <script type="text/javascript" src="<%=request.getContextPath()%>/js/calendar.js"></script>
 <script type="text/javascript">
 	function onCancel(obj1)

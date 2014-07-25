@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="D1" extends="struts-default">
+		<action name="d1010Action" class="d1010">
+			<result name="main">/D1/D1010.jsp</result>
+		</action>
+		<action name="d1012Action" class="d1012">
+		    <result name="main" type="redirectAction">d1010Action</result>
+		</action>
+		<action name="d1014Action" class="d1014">
+			<result name="main">/D1/D1013.jsp</result>
+		</action>
+		<action name="d1013Action" class="d1013">
+			<result name="main">/D1/D1012.jsp</result>
+		</action>
+		<action name="d1015Action" class="d1015">
+			<result name="main">/D1/D1012.jsp</result>
+		</action>
+		<action name="d1011Action" class="d1011">
+			<result name="main">/D1/D1011.jsp</result>
+		</action>
+		<action name="d2020Action" class="d2020">
+			<result name="main">/D1/D2020.jsp</result>
+		</action>
+		<action name="d2024Action" class="d2024">
+			<result name="main">/D1/D2023.jsp</result>
+		</action>
+		<action name="d2023Action" class="d2023">
+			<result name="main">/D1/D2022.jsp</result>
+		</action>
+		<action name="d20232Action" class="d20232">
+			<result name="main">/D1/D2022.jsp</result>
+		</action>
+		<action name="d2022Action" class="d2022">
+			<result name="main" type="redirectAction">d2020Action</result>
+		</action>
+		<action name="d2021Action" class="d2021">
+			<result name="main">/D1/D2021.jsp</result>
+		</action>
+		<action name="d3030Action" class="d3030">
+			<result name="main">/D1/D3030.jsp</result>
+		</action>
+		<action name="d3033Action" class="d3033">
+			<result name="main">/D1/D3032.jsp</result>
+		</action>
+		<action name="d3034Action" class="d3034">
+			<result name="main">/D1/D3032.jsp</result>
+		</action>
+		<action name="d3032Action" class="d3032">
+			<result name="main" type="redirectAction">d3030Action</result>
+		</action>
+		<action name="d3031Action" class="d3031">
+			<result name="main">/D1/D3031.jsp</result>
+		</action>
+	</package>
+</struts>    

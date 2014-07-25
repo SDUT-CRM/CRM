@@ -5,6 +5,7 @@ String path = request.getContextPath();
 %>
 <html>
 <head>
+ <link href="<%=path%>/css/style.css" type="text/css" rel="stylesheet"/>
 	<title>My JSP 'A1032.jsp' starting page</title>
 	<script type="text/javascript">
 	function onNext()
