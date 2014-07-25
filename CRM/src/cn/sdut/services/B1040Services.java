@@ -15,4 +15,6 @@ public interface B1040Services {
 	public List queryForPage() throws Exception;
 	
 	public boolean add() throws Exception;
+	
+	public String getPageInfo1(String url);
 }

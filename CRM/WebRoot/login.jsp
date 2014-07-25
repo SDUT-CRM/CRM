@@ -27,17 +27,17 @@ String path = request.getContextPath();
 	</div>
 	<div id="login_content">
 		<div class="loginForm">
-			<form action="index.html">
+			<form action="loginAction.action" method="post">
 				<p>
 					<label>”√ªß√˚£∫</label>
 					<input type="text" name="username" size="20" class="login_input" />
 				</p>
 				<p>
 					<label>√‹¬Î£∫</label>
-					<input type="password" name="password" size="20" class="login_input" />
+					<input type="password" name="pwd" size="20" class="login_input" />
 				</p>
 				<div class="login_bar">
-					<input class="sub" type="submit" value=" " />
+					<input class="sub" name = "next" type="submit" value=" " />
 				</div>
 			</form>
 		</div>

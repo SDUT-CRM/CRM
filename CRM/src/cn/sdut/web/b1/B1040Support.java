@@ -24,7 +24,7 @@ public abstract class B1040Support {
 	protected String elg1404 = null;
 	protected String lg1302 = null;
 	protected String lg1303 = null;
-	protected String lg1406 = null;
+	//protected String lg1406 = null;
 	protected String cnlg1403 = null;
 	protected List oclg1403 = null;
 	protected String lg1404 = null;
@@ -163,13 +163,13 @@ public abstract class B1040Support {
 		this.lg1303 = lg1303;
 	}
 
-	public String getLg1406() {
+/*	public String getLg1406() {
 		return lg1406;
 	}
 
 	public void setLg1406(String lg1406) {
 		this.lg1406 = lg1406;
-	}
+	}*/
 
 	public String getCnlg1403() {
 		return cnlg1403;

@@ -23,13 +23,14 @@ public class B1043Action extends B1040Support {
 			List rows = this.getB1040Services().queryForPage();
 			if (rows.size() > 0) {
 				this.rows = rows;
-				String pageinfo = this.getB1040Services().getPageInfo(
+				String pageinfo = this.getB1040Services().getPageInfo1(
 						"b1041Action");
 				Map request = (Map) ActionContext.getContext().get("request");
 				request.put("pageinfo", pageinfo);
 			} else {
 				this.msg = "没有符合条件的数据";
 			}
+
 		} catch (Exception e) {
 			this.msg = "网络故障";
 			e.printStackTrace();

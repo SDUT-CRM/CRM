@@ -43,6 +43,11 @@ public class B1040ServicesImpl implements B1040Services {
 		return this.lg14Dao.getPageInfo(url);
 	}
 
+	@Override
+	public String getPageInfo1(String url) {
+		return this.lg13Dao.getPageInfo(url);
+	}
+	
 	public Map getDto() {
 		return dto;
 	}
@@ -72,6 +77,8 @@ public class B1040ServicesImpl implements B1040Services {
 	
 	@Override
 	public boolean add() throws Exception {
+		System.out.println(dto);
+		
 		Date date = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 		String da = formatter.format(date);
@@ -83,7 +90,13 @@ public class B1040ServicesImpl implements B1040Services {
 		this.dto.put("lg13",lg13);
 		this.dto.put("lg1403", "1");
 		this.dto.put("lg1402", da);
-		this.dto.put("lg1406",Long.parseLong(this.dto.get("lg1406").toString()));
+		String[]strArr = (String [])this.dto.get("lg1406");
+		for(int i = 0; i < strArr.length; i++){
+			if(!strArr[i].equals("")){
+				this.dto.put("lg1406",Long.parseLong(strArr[i]));
+				break;
+			}
+		}
 		return lg14Dao.add();
 	}
 }
