@@ -99,4 +99,6 @@ public interface Lg16Dao {
 	
 	public String getPageInfo(String url);
 	
+	public boolean batchUpdate() throws Exception;
+	
 }

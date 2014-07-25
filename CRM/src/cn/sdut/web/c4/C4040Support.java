@@ -13,8 +13,21 @@ public abstract class C4040Support
     protected String begintime;
     protected String endtime;
     protected String cha;
+    protected String msg;
     
     
+    
+    
+    public String getMsg()
+    {
+        return msg;
+    }
+
+    public void setMsg(String msg)
+    {
+        this.msg = msg;
+    }
+
     public String getCha()
     {
         return cha;

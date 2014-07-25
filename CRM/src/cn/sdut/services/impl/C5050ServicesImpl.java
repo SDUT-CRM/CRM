@@ -1,5 +1,8 @@
 package cn.sdut.services.impl;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -11,6 +14,15 @@ public class C5050ServicesImpl implements C5050Services
     private Map dto;
     private Lg16Dao lg16Dao;
 
+    
+    @Override
+    public boolean batchUpdate() throws Exception
+    {
+        DateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
+        dto.put("lg1604", dt.format(new Date()));
+        return this.lg16Dao.batchUpdate();
+    }
+    
     @Override
     public void setMapDto(Map dto)
     {
@@ -34,7 +46,7 @@ public class C5050ServicesImpl implements C5050Services
     @Override
     public List query() throws Exception
     {
-        return this.lg16Dao.query();
+        return this.lg16Dao.queryForForms();
     }
 
     @Override

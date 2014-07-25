@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="C5" extends="struts-default">
+		<action name="c5050Action" class="c5050">
+		   <result name="main">/C5/C5050.jsp</result>
+		</action>
+		<action name="c5051Action" class="c5051">
+			<result name="main">/C5/C5050.jsp</result>
+		</action>
+		<action name="c5052Action" class="c5052">
+			<result name="main">/C5/C5050.jsp</result>
+		</action>
+	</package>
+</struts>    
