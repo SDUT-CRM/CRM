@@ -119,7 +119,8 @@ public class Lg18DaoImpl extends HibernatePageDaoSupport implements Lg18Dao {
 		Object bqlg1802 = this.getObject("bqlg1802");
 		Object eqlg1802 = this.getObject("eqlg1802");
 		Object lg2101 = this.dto.get("lg2101");
-
+		Object lg0201 = this.dto.get("lg0201"); 
+		
 		this.pars = new ArrayList();
 		this.hql = new StringBuilder()
 		.append("select new map(x.lg1801 as lg1801,x.lg01.lg2101 as lg2101,")
@@ -142,6 +143,11 @@ public class Lg18DaoImpl extends HibernatePageDaoSupport implements Lg18Dao {
             this.hql.append(" and x.lg01.lg2101=?");
             this.pars.add(this.getLong("lg2101"));
         }
+		
+		if(this.checkVal(lg0201)){
+			this.hql.append(" and x.lg02.lg2101=?");
+			this.pars.add(this.getLong("lg0201"));
+		}
 		
 		if(this.checkVal(lg1701)){
 			hql.append(" and x.lg17.lg1701 = ?");

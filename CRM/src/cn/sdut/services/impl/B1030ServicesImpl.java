@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import com.opensymphony.xwork2.ActionContext;
+
 import cn.sdut.persistence.dao.interfaces.Lg18Dao;
 import cn.sdut.services.B1030Services;
 
@@ -30,6 +32,17 @@ public class B1030ServicesImpl implements B1030Services {
 		return lg18Dao.modify();
 	}
 	
+	
+	@Override
+	public boolean update() throws Exception {
+		this.dto.put("lg1804", "3");
+		Date date = new Date();
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+		String da = formatter.format(date);
+		this.dto.put("lg1803", da);
+		return lg18Dao.modify();
+	}
+	
 	@Override
 	public String getPageInfo(String url) {
 		return this.lg18Dao.getPageInfo(url);
@@ -48,6 +61,14 @@ public class B1030ServicesImpl implements B1030Services {
 	@Override
 	public List query() throws Exception {
 		this.dto.put("qlg1804", "1");
+		return this.lg18Dao.queryForPage();
+	}
+	
+	@Override
+	public List query2() throws Exception {
+		Map session = ActionContext.getContext().getSession();
+		Map ins = (Map)session.get("USERINFO");
+		this.dto.put("lg0201", ins.get("lg2101"));
 		return this.lg18Dao.queryForPage();
 	}
 	

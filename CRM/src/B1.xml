@@ -42,6 +42,14 @@
 		<action name="b1040Action" class="b1040">
 			<result name="main">/B1/B1040.jsp</result>
 		</action>
+		
+		<action name="b1034Action" class="b1034">
+			<result name="main">/B1/B1032.jsp</result>
+		</action>
+
+		<action name="b1033Action" class="b1033">
+			<result name="main">/B1/B1032.jsp</result>
+		</action>
 
 		<action name="b1032Action" class="b1032">
 			<result name="main">/B1/B1031.jsp</result>
@@ -53,6 +61,10 @@
 				
 		<action name="b1030Action" class="b1030">
 			<result name="main">/B1/B1030.jsp</result>
+		</action>
+
+		<action name="b1024Action" class="b1024">
+			<result name="main">/B1/B1022.jsp</result>
 		</action>
 			
 		<action name="b1023Action" class="b1023">

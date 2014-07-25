@@ -29,7 +29,16 @@ public abstract class B1030Support {
 	protected String lg0105 = null;
 	protected String lg0104 = null;
 	protected List oclg1701 = null;
+	protected List ocllg18 = null;
 	protected String cnlg1701 = null;
+
+	public List getOcllg18() {
+		return ocllg18;
+	}
+
+	public void setOclg18(List ocllg18) {
+		this.ocllg18 = ocllg18;
+	}
 
 	public String getLg1801() {
 		return lg1801;

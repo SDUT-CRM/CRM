@@ -3,6 +3,8 @@ package cn.sdut.persistence.dao.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.aspectj.weaver.patterns.ThisOrTargetAnnotationPointcut;
+
 import cn.sdut.persistence.bean.Lg20;
 import cn.sdut.persistence.dao.interfaces.Lg20Dao;
 import cn.sdut.persistence.support.HibernatePageDaoSupport;
@@ -63,6 +65,7 @@ public class Lg20DaoImpl extends HibernatePageDaoSupport implements Lg20Dao {
 		Object eqlg2004 = this.getObject("eqlg2004");
 		Object lg2007 = this.getObject("qlg2007");
 		Object lg2101 = this.getObject("lg2101");
+		Object lg0201 = this.getObject("lg0201");
 		
 		this.pars = new ArrayList();
 		this.hql = new StringBuilder()
@@ -82,6 +85,11 @@ public class Lg20DaoImpl extends HibernatePageDaoSupport implements Lg20Dao {
             this.hql.append(" and x.lg01.lg2101=?");
             this.pars.add(this.getLong("lg2101"));
         }
+		
+		if(this.checkVal(lg0201)){
+			this.hql.append(" and x.lg02.lg2101 = ?");
+			this.pars.add(this.getLong("lg0201"));
+		}
 		
 		if(this.checkVal(lg2002)){
 			hql.append("   and( x.lg2001 in (select y.lg2006 as lg2006" +
