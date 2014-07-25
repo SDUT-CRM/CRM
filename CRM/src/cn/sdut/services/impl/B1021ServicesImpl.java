@@ -36,7 +36,7 @@ public class B1021ServicesImpl implements B1021Services {
 		this.dto.put("lg01", lg01);
 		this.dto.put("lg02", lg02);
 		this.dto.put("lg1804", "4");
-		return lg20Dao.update()&& lg19Dao.add();
+		return lg20Dao.update() && lg19Dao.add();
 	}
 
 	public Lg19Dao getLg19Dao() {
@@ -50,7 +50,7 @@ public class B1021ServicesImpl implements B1021Services {
 	@Override
 	public List query() throws Exception {
 		Map session = ActionContext.getContext().getSession();
-		Map ins = (Map)session.get("USERINFO");
+		Map ins = (Map) session.get("USERINFO");
 		this.dto.put("lg0201", ins.get("lg2101"));
 		this.dto.put("qlg2007", "1");
 		return lg20Dao.queryForPage();
@@ -58,27 +58,26 @@ public class B1021ServicesImpl implements B1021Services {
 
 	@Override
 	public boolean add() throws Exception {
-		Lg01 lg01 = new Lg01();
-		//Lg02 lg02 = new Lg02();
-		if(this.dto.get("lg0101")==null){
-			this.dto.put("lg0101", this.dto.get("lg2101"));
-		}
-		lg01.setLg21011(Long.parseLong(this.dto.get("lg0101").toString()));
-		//lg02.setLg21011(22L);
-
+		Map session = ActionContext.getContext().getSession();
+		Map ins = (Map) session.get("USERINFO");
+		this.dto.put("lg0201", ins.get("lg2101"));
 		Date date = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String da = formatter.format(date);
 
-		this.dto.put("lg01", lg01);
-		//this.dto.put("lg02", lg02);
-		this.dto.put("lg2004", da);
-		this.dto.put("lg2007", "1");
-		if (this.dto.get("lg2006")==null || this.dto.get("lg2006").equals("0")){
-			this.dto.put("lg2006", this.dto.get("lg2001"));
+		this.dto.put("lg2005", da);
+		
+		if(this.dto.get("lg2001") instanceof String[] ){
+			String[]args = (String[])this.dto.get("lg2001");
+			for(int i = 0; i < args.length; i++){
+				if(!args[i].equals("")){
+					this.dto.put("lg2001", args[i]);
+					break;
+				}
+			}
 		}
-		//this.dto.put("lg2006", lg02);
-		return lg20Dao.add();
+		
+		return lg20Dao.modify();
 	}
 
 	@Override
@@ -114,14 +113,38 @@ public class B1021ServicesImpl implements B1021Services {
 
 	@Override
 	public List queryById() throws Exception {
-		this.dto.put("lg2101", "2");
-		if(this.dto.get("lg2006")!=null && !this.dto.get("lg2006").equals("")){
-			if(!this.dto.get("lg2006").equals("0")){
+		Map session = ActionContext.getContext().getSession();
+		Map ins = (Map) session.get("USERINFO");
+		this.dto.put("lg2101", ins.get("lg2101"));
+		if (this.dto.get("lg2006") != null
+				&& !this.dto.get("lg2006").equals("")) {
+			if (!this.dto.get("lg2006").equals("0")) {
 				this.dto.put("lg2001", this.dto.get("lg2006"));
 			}
 		}
-		// this.dto.put("lg2001", "1");
 		return lg20Dao.queryById();
 	}
 
+	@Override
+	public List queryById1() throws Exception {
+		Map session = ActionContext.getContext().getSession();
+		Map ins = (Map) session.get("USERINFO");
+		this.dto.put("lg0201", ins.get("lg2101"));
+		if (this.dto.get("lg2006") != null
+				&& !this.dto.get("lg2006").equals("")) {
+			if (!this.dto.get("lg2006").equals("0")) {
+				this.dto.put("lg2001", this.dto.get("lg2006"));
+			}
+		}
+		if(this.dto.get("lg2001") instanceof String[] ){
+			String[]args = (String[])this.dto.get("lg2001");
+			for(int i = 0; i < args.length; i++){
+				if(!args[i].equals("")){
+					this.dto.put("lg2001", args[i]);
+					break;
+				}
+			}
+		}
+		return lg20Dao.queryById();
+	}
 }

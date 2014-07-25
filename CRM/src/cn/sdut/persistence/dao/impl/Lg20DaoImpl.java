@@ -24,6 +24,11 @@ public class Lg20DaoImpl extends HibernatePageDaoSupport implements Lg20Dao {
 	@Override
 	public List queryById() throws Exception {
 		System.out.println(dto);
+		this.pars = new ArrayList();
+		pars.add(this.getLong("lg2001"));
+		pars.add(this.getLong("lg2001"));
+		Object lg2101 = this.getObject("lg2101");
+		Object lg0201 = this.getObject("lg0201");
 		this.hql = new StringBuilder()
 		.append("select new map(x.lg2001 as lg2001, x.lg01.lg2101 as lg0101, ")
 		.append("               x.lg02.lg2101 as lg0201, x.lg2002 as lg2002, ")
@@ -31,15 +36,16 @@ public class Lg20DaoImpl extends HibernatePageDaoSupport implements Lg20Dao {
 		.append("               x.lg2006 as lg2006, to_char(x.lg2005,'YYYY-MM-DD HH24:mi:ss') as lg2005")
 		.append("       )")
 		.append("  from Lg20 x")
-		.append(" where x.lg2001=? or x.lg2006=?")
-		.append("       and x.lg01.lg2101=? ")
-		.append(" order by lg2001");
-		;
-		this.pars = new ArrayList();
-		pars.add(this.getLong("lg2001"));
-		pars.add(this.getLong("lg2001"));
-		pars.add(this.getLong("lg2101"));
-		
+		.append(" where x.lg2001=? or x.lg2006=?");
+		if(checkVal(lg2101)){
+			hql.append("       and x.lg01.lg2101=? ");
+			pars.add(this.getLong("lg2101"));
+		}
+		if(checkVal(lg0201)){
+			hql.append("       and x.lg02.lg2101=? ");
+			pars.add(this.getLong("lg0201"));
+		}
+		hql.append(" order by lg2001");
 		System.out.println(pars);
 		return this.queryForList();
 	}
@@ -53,8 +59,30 @@ public class Lg20DaoImpl extends HibernatePageDaoSupport implements Lg20Dao {
 
 	@Override
 	public boolean modify() throws Exception {
-		// TODO Auto-generated method stub
-		return false;
+		Object lg0201 = this.getObject("lg0201");
+		Object lg2003 = this.getObject("lg2003");
+		Object lg2005 = this.getObject("lg2005");
+		System.out.println(dto);
+		List args = new ArrayList();
+		StringBuilder hql = new StringBuilder()
+		.append(" update Lg20 x")
+		.append("    set x.lg2001 = x.lg2001")
+		;
+		if(checkVal(lg0201)){
+			hql.append(" , x.lg02.lg2101 = ?");
+			args.add(this.getLong("lg0201"));
+		}
+		if(checkVal(lg2003)){
+			hql.append(" , x.lg2003 = ?");
+			args.add(this.getObject("lg2003"));
+		}
+		if(checkVal(lg2005)){
+			hql.append(" , x.lg2005 = ?");
+			args.add(this.getUDate("lg2005"));
+		}
+		hql.append("  where x.lg2001 = ?");
+		args.add(this.getLong("lg2001"));
+		return this.update(hql.toString(), args.toArray());
 	}
 
 	@Override
