@@ -6,53 +6,58 @@ String path = request.getContextPath();
 <html>
 	<head>
 	<link href="<%=path%>/css/style.css" type="text/css" rel="stylesheet"/>
-		<title>My JSP 'D1010.jsp' starting page</title>
-		<script type="text/javascript">
-  function onSelect()
-  {
-   with(document.forms[0]) 
-   {
-     next[3].disabled=false;
-   }
-  }
-  
-  function onInfo(obj1,obj2)
-   {
-  with(document.forms[0])
-  {
-  	action="<%=path%>/d1014Action.action?lg2101="+obj1+"&lg2105="+obj2;
-  	submit();
-  	}
-  }
-  
-  function onUpdate(obj1,obj2) 
-  {
-  	with(document.forms[0]) 
+	<script type="text/javascript">
+  	function onSelect()
   	{
-  		action="<%=path%>/d1013Action.action?lg2101="+obj1+"&lg2105="+obj2;
-  		submit();
+		with(document.forms[0])
+   		{
+    		 next[3].disabled=false;
+   		}
   	}
-  }
   
-  function onNext3() {
-  	with(document.forms[0]) {
-  		action="/adminMenu.jsp";
+  	function onInfo(obj1,obj2)
+	{
+  		with(document.forms[0])
+  		{
+  			action="<%=path%>/d1014Action.action?lg2101="+obj1+"&lg2105="+obj2;
+  			submit();
+  		}
   	}
-  }
   
-  function onNext4() {
-  	with(document.forms[0]) {
+ 	function onUpdate(obj1,obj2)
+  	{
+  		with(document.forms[0]) 
+  		{
+  			action="<%=path%>/d1013Action.action?lg2101="+obj1+"&lg2105="+obj2;
+  			submit();
+  		}
+  	}
+  
+  	function onNext3()
+  	{
+  		with(document.forms[0]) 
+  		{
+  			action="/adminMenu.jsp";
+  		}
+  	}
+  
+  	function onNext4()
+  	{
+  		with(document.forms[0]) 
+  		{
   		action="<%=path%>/d1012Action.action";
   		submit();
+  		}
   	}
-  }
   
-  function onAdd() {
-  	with(document.forms[0]) {
-  		action="<%=path%>/D1/D1011.jsp";
+  	function onAdd()
+  	{
+  		with(document.forms[0]) 
+  		{
+  			action="<%=path%>/D1/D1011.jsp";
+  		}
   	}
-  }
-  </script>
+  	</script>
 	</head>
 	<body>
 		<s:property value="msg" />
@@ -62,9 +67,8 @@ String path = request.getContextPath();
 			<TABLE border="1" width="80%" align="center">
 				<caption>
 					人员管理
-					<hr width="160">
+				<hr width="160">
 				</caption>
-
 				<!-- 数据迭代 -->
 				<s:if test="rows!=null">
 					<TR>
@@ -97,7 +101,7 @@ String path = request.getContextPath();
 									<tr>
 										<td>
 											<input type="radio" name="parsList" onclick="onSelect()"
-												value="<s:property value="lg2101"/>">
+												   value="<s:property value="lg2101"/>">
 										</td>
 										<td>
 											<s:property value="#st.count" />
@@ -132,8 +136,8 @@ String path = request.getContextPath();
 						<s:submit name="next" value = "查询人员" />
 						<s:submit name="next" value = "添加" onclick ="return onAdd()" />
 						<s:submit name="next" value = "返回 " onclick ="return onNext3()" />
-						<s:submit name="next" value = "删除" onclick ="return onNext4()"
-							disabled="true" />
+						<s:submit name="next" value = "删除" onclick ="return onNext4()" disabled="true" />
+						
 					</TD>
 				</TR>
 			</TABLE>
