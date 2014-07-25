@@ -6,9 +6,11 @@
 -->
 <hibernate-mapping>
     <class name="cn.sdut.persistence.bean.Lg17" table="LG17" schema="USER001">
-        <id name="lg1701" type="java.math.BigDecimal">
+        <id name="lg1701" type="long">
             <column name="LG1701" precision="22" scale="0" />
-            <generator class="sequence" />
+            <generator class="sequence">
+            	<param name="sequence">S_LG17</param>
+            </generator>
         </id>
         <property name="lg1702" type="java.lang.String">
             <column name="LG1702" not-null="true" />
