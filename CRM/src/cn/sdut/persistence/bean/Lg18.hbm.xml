@@ -11,10 +11,10 @@
             </generator>
         </id>
         <many-to-one name="lg17" class="cn.sdut.persistence.bean.Lg17" fetch="select">
-            <column name="LG1701" precision="22" scale="0" />
+            <column name="LG1701" precision="22" scale="0" not-null="false"/>
         </many-to-one>
         <many-to-one name="lg02" class="cn.sdut.persistence.bean.Lg02" fetch="select">
-            <column name="LG0201" precision="22" scale="0" not-null="true" />
+            <column name="LG0201" precision="22" scale="0" not-null="false" />
         </many-to-one>
         <many-to-one name="lg01" class="cn.sdut.persistence.bean.Lg01" fetch="select">
             <column name="LG0101" precision="22" scale="0" not-null="true" />

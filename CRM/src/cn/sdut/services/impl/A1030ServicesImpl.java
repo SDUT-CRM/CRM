@@ -62,12 +62,10 @@ public class A1030ServicesImpl implements A1030Services {
 	@Override
 	public boolean add() throws Exception {
 		Lg01 lg01 = new Lg01();
-		Lg02 lg02 = new Lg02();
 		Lg17 lg17 = new Lg17();
 
 		lg01.setLg21011(Long.parseLong(this.dto.get("lg2101").toString()));
-		lg02.setLg21011(22L);
-		//lg17.setLg1701(Long.parseLong(this.dto.get("lg1701").toString()));
+		lg17.setLg1701(Long.parseLong(this.dto.get("lg1701").toString()));
 
 		Date date = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
@@ -78,7 +76,6 @@ public class A1030ServicesImpl implements A1030Services {
 		this.dto.put("lg1803", da);
 		this.dto.put("lg1805", this.dto.get("lg1805").toString());
 		this.dto.put("lg01", lg01);
-		this.dto.put("lg02", lg02);
 		this.dto.put("lg17", lg17);
 		
 		return lg18Dao.add();

@@ -21,6 +21,16 @@ public class B1030ServicesImpl implements B1030Services {
 	}
 
 	@Override
+	public boolean modify() throws Exception {
+		this.dto.put("lg1804", "2");
+		Date date = new Date();
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+		String da = formatter.format(date);
+		this.dto.put("lg1803", da);
+		return lg18Dao.modify();
+	}
+	
+	@Override
 	public String getPageInfo(String url) {
 		return this.lg18Dao.getPageInfo(url);
 	}
@@ -62,4 +72,9 @@ public class B1030ServicesImpl implements B1030Services {
 		this.lg18Dao.setMapDto(dto);
 	}
 
+	
+	@Override
+	public Map queryById() throws Exception {
+		return lg18Dao.getInstance();
+	}
 }

@@ -21,13 +21,31 @@ public abstract class B1030Support {
 	protected String lg2101 = null;
 	protected String lg1701 = null;
 	protected String lg1804 = null;
+	protected String lg1805 = null;
 	protected String lg1802 = null;
+	protected String lg1801 = null;
 	protected String lg1803 = null;
 	protected String lg0102 = null;
 	protected String lg0105 = null;
 	protected String lg0104 = null;
 	protected List oclg1701 = null;
 	protected String cnlg1701 = null;
+
+	public String getLg1801() {
+		return lg1801;
+	}
+
+	public void setLg1801(String lg1801) {
+		this.lg1801 = lg1801;
+	}
+
+	public String getLg1805() {
+		return lg1805;
+	}
+
+	public void setLg1805(String lg1805) {
+		this.lg1805 = lg1805;
+	}
 
 	public String getBqlg1802() {
 		return bqlg1802;
