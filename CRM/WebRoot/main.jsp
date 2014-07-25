@@ -9,7 +9,10 @@
 	<style type="text/css">
 	a
 	{
-		font
+		font-weight:bold;
+		font-size:150%;
+		text-decoration:none;
+		color:#0000FF;
 	}
 	body
 	{
@@ -80,35 +83,35 @@
 					</s:if>
 					<!-- 员工的目录 -->
 					<!-- 经理的目录 -->
-					<s:if test="#session.USERINFO.lg2105==3">
+					<s:if test="#session.USERINFO.lg2105==3" border="1px">
 					<table>
 						<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path%>/c1011Action.action" target="WORK">员工管理</a>
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path%>/c2021Action.action" target="WORK">配件申请管理</a>
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path%>/c2030Action.action" target="WORK">配件信息管理</a>
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path%>/c3030Action.action" target="WORK">活动信息</a>
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path %>/c4041Action.action" target="WORK">经营信息</a>
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path %>/c5050Action.action" target="WORK">费用管理</a>
 							</td>
 						</tr>
