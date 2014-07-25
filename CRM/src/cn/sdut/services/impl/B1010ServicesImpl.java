@@ -21,6 +21,7 @@ public class B1010ServicesImpl implements B1010Services
     {
        this.dto=dto;
        this.lg01Dao.setMapDto(dto);
+       this.lg21Dao.setMapDto(dto);
     }
     
     
@@ -29,6 +30,9 @@ public class B1010ServicesImpl implements B1010Services
     {
         DateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
         dto.put("lg0108", dt.format(new Date()));
+        dto.put("lg2103", Tools.getMd5("0000"));
+        dto.put("lg2104", this.dto.get("lg0102"));
+        dto.put("lg2105", "1");
         lg21Dao.addUser();
         lg01Dao.addCustomer();
         return true;

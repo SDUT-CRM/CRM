@@ -5,6 +5,15 @@
 %>
 <html>
 	<head>
+	<script type="text/javascript">
+	function onNext2()
+	{
+		with(document.forms[0])
+		{
+			action="<%=path%>/b1011Action.action";
+		}
+	}
+	</script>
 	</head>
 	<body>
 	<s:property value="msg" />
@@ -56,7 +65,7 @@
 				</TR>
 				<TR>
 					<TD>
-						客户手机号码
+						E-mail
 					</TD>
 					<TD>
 						<s:textfield name="lg0106" />

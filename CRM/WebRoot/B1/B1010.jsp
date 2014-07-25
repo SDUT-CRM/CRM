@@ -79,6 +79,13 @@ table.altrowstable td {
 			submit();
 		}
 	}
+	function onNext2()
+	{
+		with(document.forms[0])
+		{
+			action="<%=path%>/b1014Action.action";
+		}
+	}
 	</script>
 	</head>
 	<body>
