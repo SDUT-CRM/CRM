@@ -78,6 +78,7 @@ String path = request.getContextPath();
            		<s:hidden name="lg0101"/>
  				<s:hidden name="lg0201"/>
  				<s:hidden name="lg2006"/>
+ 				<s:hidden name="lg2007"/>
  				<s:hidden name="lg2001"/>
 </s:form>
 
