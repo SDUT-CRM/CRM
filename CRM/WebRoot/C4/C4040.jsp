@@ -37,7 +37,7 @@
 				
 				<TR>
 					<TD colspan="100" align="center">
-						<img alt="" src="<%=path%>/c4040Action.action">
+						<img alt="ÇëÄú²éÑ¯"  src="<%=path%>/c4040Action.action">
 					</TD>
 				</TR>
 				
