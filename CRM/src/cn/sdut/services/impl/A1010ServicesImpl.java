@@ -17,6 +17,7 @@ public class A1010ServicesImpl implements A1010Services {
 		return this.lg05Dao.getInstance();
 	}
 	
+	
 	@Override
 	public String getPageInfo(String url) {
 		return this.lg05Dao.getPageInfo(url);
