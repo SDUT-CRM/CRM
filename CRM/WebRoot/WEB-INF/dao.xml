@@ -1,54 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans
-	xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:p="http://www.springframework.org/schema/p"
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
- 
- 	
- 	
- 	<bean id="lg13dao" class="cn.sdut.persistence.dao.impl.Lg13DaoImpl">
- 	  <property name="sessionFactory" ref="sessionFactory"/>
- 	</bean>
- 	
-  	<bean id="lg20dao" class="cn.sdut.persistence.dao.impl.Lg20DaoImpl">
-      <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
-    
-    <bean id="lg16dao" class="cn.sdut.persistence.dao.impl.Lg16DaoImpl">
- 		<property name="sessionFactory" ref="sessionFactory"/>
- 	</bean>
 
- 
- 	<bean id="lg19dao" class="cn.sdut.persistence.dao.impl.Lg19DaoImpl">
-      <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
- 
-    <bean id="lg18dao" class="cn.sdut.persistence.dao.impl.Lg18DaoImpl">
-      <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
-    <bean id="lg14dao" class="cn.sdut.persistence.dao.impl.Lg14DaoImpl">
-      <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
-    <bean id="lg08dao" class="cn.sdut.persistence.dao.impl.Lg08DaoImpl">
-      <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
-    <bean id="lg07dao" class="cn.sdut.persistence.dao.impl.Lg07DaoImpl">
-      <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
-    <bean id="lg06dao" class="cn.sdut.persistence.dao.impl.Lg06DaoImpl">
-      <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
-    <bean id="lg05dao" class="cn.sdut.persistence.dao.impl.Lg05DaoImpl">
-      <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
-    <bean id="lg04dao" class="cn.sdut.persistence.dao.impl.Lg04DaoImpl">
-      <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
-    <bean id="lg02dao" class="cn.sdut.persistence.dao.impl.Lg02DaoImpl">
-      <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
-    <bean id="lg21dao" class="cn.sdut.persistence.dao.impl.Lg21DaoImpl">
-      <property name="sessionFactory" ref="sessionFactory"/>
-    </bean>
+
+
+	<bean id="lg13dao" class="cn.sdut.persistence.dao.impl.Lg13DaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="lg20dao" class="cn.sdut.persistence.dao.impl.Lg20DaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="lg16dao" class="cn.sdut.persistence.dao.impl.Lg16DaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+
+	<bean id="lg19dao" class="cn.sdut.persistence.dao.impl.Lg19DaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="lg18dao" class="cn.sdut.persistence.dao.impl.Lg18DaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="lg14dao" class="cn.sdut.persistence.dao.impl.Lg14DaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="lg08dao" class="cn.sdut.persistence.dao.impl.Lg08DaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="lg07dao" class="cn.sdut.persistence.dao.impl.Lg07DaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="lg06dao" class="cn.sdut.persistence.dao.impl.Lg06DaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="lg05dao" class="cn.sdut.persistence.dao.impl.Lg05DaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="lg04dao" class="cn.sdut.persistence.dao.impl.Lg04DaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="lg02dao" class="cn.sdut.persistence.dao.impl.Lg02DaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="lg21dao" class="cn.sdut.persistence.dao.impl.Lg21DaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="lg01dao" class="cn.sdut.persistence.dao.impl.Lg01DaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
 </beans>

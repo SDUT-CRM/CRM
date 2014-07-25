@@ -22,7 +22,7 @@
 						开始时间
 					</TD>
 					<TD>
-						<s:textfield name="begintime"onclick="calendar.show(this);" />
+						<s:textfield name="begintime" onclick="calendar.show(this);" />
 						
 					</TD>
 				</TR>

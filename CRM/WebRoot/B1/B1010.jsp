@@ -60,31 +60,40 @@ table.altrowstable td {
 .evenrowcolor {
 	background-color: #c3dde0;
 }
-</style>
+	</style>
 	<script type="text/javascript" src="<%=path%>/js/calendar.js"></script>
 	<script type="text/javascript">
+	function onResetpwd(obj)
+	{
+		with(document.forms[0])
+		{
+			action="<%=path%>/b1013Action.action?lg2101="+obj;
+			submit();
+		}
+	}
+	function onLock(obj)
+	{
+		with(document.forms[0])
+		{
+			action="<%=path%>/b1012Action.action?lg2101="+obj;
+			submit();
+		}
+	}
 	function onNext2()
 	{
-	 	with(document.forms[0])
-		 {
-	 		action="<%=path%>/c1012Action.action";
-		 }
-	}
-	function onEdit(obj)
-	{
-	with(document.forms[0])
-	{
-		action="<%=path%>/c1013Action.action?lg2101="+obj;
-		submit();
-	}
+		with(document.forms[0])
+		{
+			action="<%=path%>/b1014Action.action";
+		}
 	}
 	</script>
 	</head>
 	<body>
-		<s:form action="c1010Action">
+	<s:property value="msg" />
+		<s:form action="b1011Action">
 			<TABLE border="1" align="center" width="850px">
 				<caption>
-					客户信息管理界面
+					客户信息理管界面
 					<hr width="320">
 				</caption>
 				<TR>
@@ -163,10 +172,10 @@ table.altrowstable td {
 											<s:property value="lg0104" />
 										</td>
 										<td>
-											<a href="#" onclick="onEdit(<s:property value="lg2101"/>)">编辑</a>
+											<a href="#" onclick="onLock(<s:property value="lg2101"/>)">锁定</a>
 										</td>
 										<td>
-											<a href="#" onclick="onEdit(<s:property value="lg2101"/>)">编辑</a>
+											<a href="#" onclick="onResetpwd(<s:property value="lg2101"/>)">重置密码</a>
 										</td>
 									</tr>
 								</s:iterator>

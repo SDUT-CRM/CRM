@@ -5,12 +5,21 @@
 
 <html>
 	<head>
+	<style type="text/css">
+	body
+	{
+	    
+		background-color:#6795AB;
+		background-image:url("<%=path%>/imgs/body_repeat.jpg");
+		background-repeat:repeat-x;
+		background-position:center 0;
+	}
+	</style>
 	</head>
 	<body>
-		<TABLE width="100%" border="1">
+		<TABLE width="100%" border="0">
 			<TR>
-				<TD height="80px" colspan="100">
-					<!-- Ò³Ã¼ -->
+				<TD height="80px" colspan="100" align="center">
 				</TD>
 			</TR>
 			<TR>
@@ -102,9 +111,9 @@
 				</TD>
 			</TR>
 			<TR>
-				<TD height="80px" colspan="100">
+				<TD height="80px" colspan="100" align="center">
 				<!-- Ò³½Å -->
-				aa
+				Power by SDUT-CRM group
 				</TD>
 			</TR>
 		</TABLE>
