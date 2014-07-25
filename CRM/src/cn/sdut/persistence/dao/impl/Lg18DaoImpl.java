@@ -59,7 +59,7 @@ public class Lg18DaoImpl extends HibernatePageDaoSupport implements Lg18Dao {
 		}
 		return this.queryForList();
 	}
-
+	
 	@Override
 	public boolean modify() throws Exception {
 		List args = new ArrayList();
@@ -124,7 +124,9 @@ public class Lg18DaoImpl extends HibernatePageDaoSupport implements Lg18Dao {
 		.append("       b.fvalue as cnlg1701, x.lg1805 as lg1805,")
 		.append("       c.fvalue as cnlg1804, x.lg1804 as lg1804, ")
 		.append("       to_char(x.lg1802,'YYYY-MM-DD') as lg1802,")
-		.append("       to_char(x.lg1803,'YYYY-MM-DD') as lg1803")
+		.append("       to_char(x.lg1803,'YYYY-MM-DD') as lg1803,")
+		.append("       x.lg01.lg0102 as lg0102, x.lg01.lg0105 as lg0105,")
+		.append("       x.lg01.lg0104 as lg0104")
 		.append("       )")
 		.append("  from Lg18 x, Syscode b, Syscode c")
 		.append(" where 1=1")

@@ -7,31 +7,14 @@
 <head>
   <script type="text/javascript" src="<%=request.getContextPath()%>/js/calendar.js"></script>
 <script type="text/javascript">
- 	var count=0;
-    function onSelect(obj)
-    {
-    	with(document.forms[0])
-    	{
-    	   obj?++count:--count;
-    	   next[1].disabled=(count==0);
-    	   next[2].disabled=(count==0);
-    	}
-    }
-	function onCancel(obj)
+	function onSelect(obj)
 	{
 		with(document.forms[0])
 		{
-			action="<%=path%>/a1014Action.action?lg0601="+obj;
+			action="<%=path%>/b1030Action.action?lg1801="+obj;
 			submit();
 		}
 	}
-	function  onNext2(obj)
-    {
-    	with(document.forms[0])
-    	{
-    		action="<%=path%>/b1021Action.action?lg0602="+obj;
-    	}
-    }
 </script>
 </head>
 <body>
@@ -50,7 +33,7 @@
          <tr>
            <td width="25%">故障类别</td>
  			<td width="25%">
-             <s:select name="qlg1703" list="oclg1703"
+             <s:select name="qlg1701" list="oclg1701"
                 listKey="key" listValue="value"
                 headerKey="" headerValue="==不限=="
                 cssStyle="width:153px"
@@ -70,18 +53,17 @@
      <TD>
        <table border="1" width="100%">
          <tr>
-         	<td>&nbsp;</td>
            <td align="center">序号</td>
            <td align="center">故障类型</td>
            <td align="center">客户姓名</td>
            <td align="center">联系方式</td>
-           <td align="center">申请日期</td>
+           <td align="center">报修日期</td>
            <td>&nbsp;</td>
          </tr>
          <s:iterator value="rows" status="st">
 	         <tr>
 	           <td align="center"><s:property value="#st.count"/></td>
-	           <td align="center"><s:property value="cnlg1703"/></td>
+	           <td align="center"><s:property value="cnlg1701"/></td>
 	           <td align="center"><s:property value="lg0102"/></td>
 	           <td align="center"><s:property value="lg0105"/></td>
 	           <td align="center"><s:property value="lg1802"/></td>

@@ -5,23 +5,24 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-import cn.sdut.persistence.dao.interfaces.Lg01Dao;
-import cn.sdut.persistence.dao.interfaces.Lg05Dao;
-import cn.sdut.persistence.dao.interfaces.Lg06Dao;
-import cn.sdut.persistence.dao.interfaces.Lg17Dao;
 import cn.sdut.persistence.dao.interfaces.Lg18Dao;
-import cn.sdut.services.B1020Services;
+import cn.sdut.services.B1030Services;
 
-public class B1030ServicesImpl implements B1020Services {
-	private Lg01Dao lg01Dao = null;
-	private Lg17Dao lg17Dao = null;
+public class B1030ServicesImpl implements B1030Services {
 	private Lg18Dao lg18Dao = null;
 	private Map dto = null;
 	
+	public Lg18Dao getLg18Dao() {
+		return lg18Dao;
+	}
+
+	public void setLg18Dao(Lg18Dao lg18Dao) {
+		this.lg18Dao = lg18Dao;
+	}
+
 	@Override
 	public String getPageInfo(String url) {
-		//return this.lg06Dao.getPageInfo(url);
-		return null;
+		return this.lg18Dao.getPageInfo(url);
 	}
 
 
@@ -31,16 +32,13 @@ public class B1030ServicesImpl implements B1020Services {
 
 	public void setDto(Map dto) {
 		this.dto = dto;
-		this.lg01Dao.setMapDto(dto);
-		this.lg17Dao.setMapDto(dto);
 		this.lg18Dao.setMapDto(dto);
 	}
 
 	@Override
 	public List query() throws Exception {
-		this.dto.put("qlg0602", "1");
-		//return this.lg06Dao.queryForPage();
-		return null;
+		this.dto.put("qlg1804", "1");
+		return this.lg18Dao.queryForPage();
 	}
 	
 	@Override
@@ -61,8 +59,6 @@ public class B1030ServicesImpl implements B1020Services {
 	@Override
 	public void setMapDto(Map dto) {
 		this.dto = dto;
-		this.lg01Dao.setMapDto(dto);
-		this.lg17Dao.setMapDto(dto);
 		this.lg18Dao.setMapDto(dto);
 	}
 
