@@ -32,6 +32,17 @@ public class B1030ServicesImpl implements B1030Services {
 		return lg18Dao.modify();
 	}
 	
+	
+	@Override
+	public boolean update() throws Exception {
+		this.dto.put("lg1804", "3");
+		Date date = new Date();
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+		String da = formatter.format(date);
+		this.dto.put("lg1803", da);
+		return lg18Dao.modify();
+	}
+	
 	@Override
 	public String getPageInfo(String url) {
 		return this.lg18Dao.getPageInfo(url);

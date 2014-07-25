@@ -11,7 +11,7 @@
 	{
 		with(document.forms[0])
 		{
-			action="<%=path%>/b1031Action.action?lg1801="+obj;
+			action="<%=path%>/b1034Action.action?lg1801="+obj;
 			submit();
 		}
 	}
