@@ -5,7 +5,7 @@
 %>
 <html>
 <head>
-  <script type="text/javascript" src="<%=request.getContextPath()%>/js/calendar.js"></script>
+  <script type="text/javascript" src="<%=path%>/js/calendar.js"></script>
 <script type="text/javascript">
 	function onSelect(obj)
 	{
