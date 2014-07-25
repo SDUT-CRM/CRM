@@ -7,6 +7,10 @@
 <html>
 	<head>
 	<style type="text/css">
+	a
+	{
+		font
+	}
 	body
 	{
 	    
