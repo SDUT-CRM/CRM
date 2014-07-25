@@ -101,7 +101,7 @@ table.altrowstable td {
    </caption>
    <TR>
      <TD>
-       <table border="1" width="100%" class="altrowstable" id="alternatecolor">
+       <table border="1" width="100%" >
          <tr>
            <td width="25%">ÒµÎñÃû³Æ</td>
            <td width="25%">
@@ -126,7 +126,7 @@ table.altrowstable td {
 <s:if test="rows!=null">   
    <TR>
      <TD>
-       <table border="1" width="100%">
+       <table border="1" width="100%" class="altrowstable" id="alternatecolor">
          <tr>
          	<td>&nbsp;</td>
            <td align="center">ÐòºÅ</td>

@@ -37,42 +37,42 @@
 					<s:if test="#session.USERINFO.lg2105==1">
 					<table>
 						<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path%>/A1/a1010Action.action" target="WORK">业务办理</a>
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path%>/A1/a1013Action.action" target="WORK">办理详情</a>
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path%>/A1/a1020Action.action" target="WORK">查看活动</a>
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path%>/A1/a1023Action.action" target="WORK">参加详情</a>
 							</td>
 						</tr>
 												<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path%>/A1/a1030Action.action" target="WORK">在线报修</a>
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path%>/A1/a1032Action.action" target="WORK">我的报单</a>
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path%>/A1/A1040.jsp" target="WORK">在线提问</a>
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path%>/A1/a1041Action.action" target="WORK">提问历史</a>
 							</td>
 						</tr>
@@ -82,42 +82,42 @@
 					<s:if test="#session.USERINFO.lg2105==2">
 					<table>
 						<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path%>/b1010Action.action" target="WORK">客户管理</a>
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path%>/b1020Action.action" target="WORK">客户申请审核</a>
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path%>/b1022Action.action" target="WORK">审核记录</a>
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path%>/b1024Action.action" target="WORK">客户提问答复</a>
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path %>/b1030Action.action" target="WORK">查看新报修</a>
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path %>/b1033Action.action" target="WORK">受理记录</a>
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path %>/b1041Action.action" target="WORK">配件申请</a>
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<td nowrap="nowrap">
 								<a href="<%=path %>/b1040Action.action" target="WORK">配件申请记录</a>
 							</td>
 						</tr>
@@ -125,7 +125,7 @@
 					</s:if>
 					<!-- 员工的目录 -->
 					<!-- 经理的目录 -->
-					<s:if test="#session.USERINFO.lg2105==3" border="1px">
+					<s:if test="#session.USERINFO.lg2105==3" >
 					<table>
 						<tr>
 							<td nowrap="nowrap">
