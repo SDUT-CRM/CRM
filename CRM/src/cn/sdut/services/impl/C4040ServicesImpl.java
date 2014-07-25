@@ -109,6 +109,10 @@ public class C4040ServicesImpl implements C4040Services
     @Override
     public void calForms() throws Exception
     {
+        cb=0d;
+        price=0d;
+        bx=0d;
+        lr=0d;
         //成本blg0604
         //报销blg1605
         Object begintime=this.dto.get("begintime");
