@@ -90,12 +90,7 @@
 						</tr>
 						<tr>
 							<td>
-								<a href="#" target="WORK">费用管理</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a href="#" target="WORK">调查问卷</a>
+								<a href="<%=path %>/c5050Action.action" target="WORK">费用管理</a>
 							</td>
 						</tr>
 					</table>

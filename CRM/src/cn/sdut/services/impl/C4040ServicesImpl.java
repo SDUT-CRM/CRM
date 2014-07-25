@@ -126,7 +126,7 @@ public class C4040ServicesImpl implements C4040Services
             
         }
         
-        
+        System.out.println(dto);
         
         List list1=this.lg06Dao.queryForForms();
         List list2=this.lg16Dao.queryForForms();
