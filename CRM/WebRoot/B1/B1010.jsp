@@ -81,7 +81,7 @@ table.altrowstable td {
 	</script>
 	</head>
 	<body>
-		<s:form action="c1010Action">
+		<s:form action="b1011Action">
 			<TABLE border="1" align="center" width="850px">
 				<caption>
 					客户信息管理界面
@@ -163,10 +163,10 @@ table.altrowstable td {
 											<s:property value="lg0104" />
 										</td>
 										<td>
-											<a href="#" onclick="onEdit(<s:property value="lg2101"/>)">编辑</a>
+											<a href="#" onclick="onEdit(<s:property value="lg2101"/>)">锁定</a>
 										</td>
 										<td>
-											<a href="#" onclick="onEdit(<s:property value="lg2101"/>)">编辑</a>
+											<a href="#" onclick="onEdit(<s:property value="lg2101"/>)">重置密码</a>
 										</td>
 									</tr>
 								</s:iterator>

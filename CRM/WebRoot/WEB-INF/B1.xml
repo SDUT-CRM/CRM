@@ -6,7 +6,7 @@
 	<bean id="b1043" class="cn.sdut.web.b1.impl.B1043Action" scope="prototype">
 		<property name="b1040Services" ref="b1040services" />
 	</bean>
-	
+
 	<bean id="b1042" class="cn.sdut.web.b1.impl.B1042Action" scope="prototype">
 		<property name="b1040Services" ref="b1040services" />
 	</bean>
@@ -26,7 +26,7 @@
 	<bean id="b1031" class="cn.sdut.web.b1.impl.B1031Action" scope="prototype">
 		<property name="b1030Services" ref="b1030services" />
 	</bean>
-	
+
 	<bean id="b1030" class="cn.sdut.web.b1.impl.B1030Action" scope="prototype">
 		<property name="b1030Services" ref="b1030services" />
 	</bean>
@@ -46,8 +46,12 @@
 	<bean id="b1020" class="cn.sdut.web.b1.impl.B1020Action" scope="prototype">
 		<property name="b1020Services" ref="b1020services" />
 	</bean>
-	
+
 	<bean id="b1010" class="cn.sdut.web.b1.impl.B1010Action" scope="prototype">
-		
+		<property name="b1010Services" ref="b1010services" />
+	</bean>
+
+	<bean id="b1011" class="cn.sdut.web.b1.impl.B1011Action" scope="prototype">
+		<property name="b1010Services" ref="b1010services" />
 	</bean>
 </beans>

@@ -17,6 +17,11 @@
 		<property name="lg05Dao" ref="lg05dao"/>
 		<property name="lg06Dao" ref="lg06dao"/>
 	</bean>
+	
+	<bean id="b1010services" class="cn.sdut.services.impl.B1010ServicesImpl">
+		<property name="lg01Dao" ref="lg01dao"/>
+	</bean>
+	
 
     <bean id="loginServices" class="cn.sdut.services.impl.LoginServicesImpl">
       <property name="lg21dao" ref="lg21dao"/>
