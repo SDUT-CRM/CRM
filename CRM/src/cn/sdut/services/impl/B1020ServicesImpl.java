@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import com.opensymphony.xwork2.ActionContext;
+
 import cn.sdut.persistence.dao.interfaces.Lg05Dao;
 import cn.sdut.persistence.dao.interfaces.Lg06Dao;
 import cn.sdut.services.B1020Services;
@@ -47,6 +49,7 @@ public class B1020ServicesImpl implements B1020Services {
 
 	@Override
 	public List query() throws Exception {
+		this.dto.put("lg0201", null);
 		this.dto.put("qlg0602", "1");
 		return this.lg06Dao.queryForPage();
 	}

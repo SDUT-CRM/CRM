@@ -60,6 +60,7 @@ public class B1030ServicesImpl implements B1030Services {
 
 	@Override
 	public List query() throws Exception {
+		this.dto.put("lg0201", null);
 		this.dto.put("qlg1804", "1");
 		return this.lg18Dao.queryForPage();
 	}

@@ -114,6 +114,9 @@ public class Lg06DaoImpl extends HibernatePageDaoSupport implements Lg06Dao {
             this.pars.add(this.getLong("lg0201"));
         }
 		this.hql.append(" order by x.lg0601 desc");
+		
+		System.out.println("06dto=="+dto);
+		System.out.println(hql);
 		return this.queryForList();
 	}
 	
