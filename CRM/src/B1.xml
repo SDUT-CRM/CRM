@@ -21,6 +21,10 @@
 		<action name="b1040Action" class="b1040">
 			<result name="main">/B1/B1040.jsp</result>
 		</action>
+		
+		<action name="b1034Action" class="b1034">
+			<result name="main">/B1/B1032.jsp</result>
+		</action>
 
 		<action name="b1033Action" class="b1033">
 			<result name="main">/B1/B1032.jsp</result>
