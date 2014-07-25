@@ -5,6 +5,7 @@
 %>
 <html>
 	<head>
+	<script type="text/javascript" src="<%=path%>/js/calendar.js"></script>
 		<script type="text/javascript">
 	
 </script>
@@ -21,7 +22,7 @@
 						开始时间
 					</TD>
 					<TD>
-						<s:textfield name="begintime" />
+						<s:textfield name="begintime"onclick="calendar.show(this);" />
 						
 					</TD>
 				</TR>
@@ -30,7 +31,7 @@
 						结束时间
 					</TD>
 					<TD>
-						<s:textfield name="endtime" />
+						<s:textfield name="endtime" onclick="calendar.show(this);" />
 					</TD>
 				</TR>
 				

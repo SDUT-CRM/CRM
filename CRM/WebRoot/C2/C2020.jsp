@@ -5,6 +5,7 @@
 %>
 <html>
 	<head>
+	<script type="text/javascript" src="<%=path%>/js/calendar.js"></script>
 		<script type="text/javascript">
 	var count = 0;
 	function onSelect(obj) {
@@ -102,13 +103,13 @@
 						申请开始时间
 					</TD>
 					<TD>
-						<s:textfield name="blg1402" />
+						<s:textfield name="blg1402" onclick="calendar.show(this);" />
 					</TD>
 					<TD>
 						申请结束时间
 					</TD>
 					<TD>
-						<s:textfield name="elg1402" />
+						<s:textfield name="elg1402" onclick="calendar.show(this);" />
 					</TD>
 				</TR>
 				<TR>
@@ -116,13 +117,13 @@
 						审核开始时间
 					</TD>
 					<TD>
-						<s:textfield name="blg1404" />
+						<s:textfield name="blg1404" onclick="calendar.show(this);" />
 					</TD>
 					<TD>
 						审核结束时间
 					</TD>
 					<TD>
-						<s:textfield name="elg1404" />
+						<s:textfield name="elg1404" onclick="calendar.show(this);" />
 					</TD>
 				</TR>
 				<TR>
@@ -130,13 +131,13 @@
 						领取开始时间
 					</TD>
 					<TD>
-						<s:textfield name="blg1405" />
+						<s:textfield name="blg1405" onclick="calendar.show(this);" />
 					</TD>
 					<TD>
 						领取结束时间
 					</TD>
 					<TD>
-						<s:textfield name="elg1405" />
+						<s:textfield name="elg1405" onclick="calendar.show(this);" />
 					</TD>
 				</TR>
 				<!-- 迭代数据 -->
