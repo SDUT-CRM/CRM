@@ -16,6 +16,7 @@
 		}
 	}
 </script>
+ <link href="<%=path%>/css/style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 <s:property value="msg"/>

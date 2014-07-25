@@ -1,11 +1,9 @@
 package cn.sdut.persistence.dao.impl;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
-import org.aspectj.weaver.patterns.ThisOrTargetAnnotationPointcut;
-
-import cn.sdut.persistence.bean.Lg02;
-import cn.sdut.persistence.bean.Lg04;
 import cn.sdut.persistence.bean.Lg21;
 import cn.sdut.persistence.dao.interfaces.Lg21Dao;
 import cn.sdut.persistence.support.HibernatePageDaoSupport;
@@ -87,4 +85,77 @@ public class Lg21DaoImpl extends HibernatePageDaoSupport implements Lg21Dao {
 		};
 		return this.queryForMap(hql.toString(), args);
 	}
+	
+	
+	
+	
+	/**
+	 * 管理员查询人员信息
+	 */
+	@Override
+	public List adminQuery() throws Exception {
+		System.out.println(this.dto);
+		hql=new StringBuilder()
+		.append("select new map(x.lg2101 as lg2101,x.lg2102 as lg2102,")
+		.append("       x.lg2104 as lg2104,x.lg2105 as lg2105,y.fvalue as cnlg2105)")
+		.append("  from Lg21 x, Syscode y")
+		.append(" where x.lg2105=y.fcode")
+		.append(" and y.fname='LLG03'")
+		.append("  and x.lg2105!='5'")
+		;
+	
+		
+		System.out.println(hql.toString());
+		return this.queryForList();
+	}
+
+	@Override
+	public List queryForPage() throws Exception {
+		Object lg2104=this.dto.get("lg2104");
+		this.pars=new ArrayList();
+		hql=new StringBuilder()
+		.append("select new map(x.lg2101 as lg2101,x.lg2102 as lg2102,")
+		.append("       x.lg2104 as lg2104,x.lg2105 as lg2105,y.fvalue as cnlg2105)")
+		.append("  from Lg21 x, Syscode y")
+		.append(" where x.lg2105=y.fcode")
+		.append(" and y.fname='LLG03'")
+		.append("  and x.lg2105!='5'")
+		;
+		return this.queryForList();
+	}
+	/**
+	 * 删除：即将21表中的状态改为5
+	 * @return
+	 * @throws Exception
+	 */
+	@Override
+	public boolean deleteUser() throws Exception 
+	{
+		this.hql=new StringBuilder()
+		.append("update Lg21")
+		.append("   set lg2105=?")
+		.append(" where lg2101=(:lg2101)")
+		;
+		
+		System.out.println("=====Lg21DaoImpl.deleteUser()=====");
+		System.out.println("parsList++++"+this.dto);
+		Object ids[] = this.getIdArray("parsList");
+		System.out.println(":::::"+ids.length);
+		for(int i = 0; i < ids.length; i++){
+			System.out.println("zxh"+ids[i]);
+		}
+		return this.batchUpdate(hql.toString(), ids, "lg2101", "5");
+		
+	}
+
+	@Override
+	public boolean add() throws Exception {
+		this.dto.put("lg2102", "test");
+        this.dto.put("lg2103", "0000");
+        this.dto.put("lg2104", this.getObject("name"));
+        this.dto.put("lg2105", "3");
+        Lg21 lg21 =  this.addObject(Lg21.class);
+        this.dto.put("lg21", lg21);
+        return lg21.getLg2101()>0;
+        }
 }

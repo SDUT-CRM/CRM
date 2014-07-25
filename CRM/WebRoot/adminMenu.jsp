@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="GBK"%>
+<%@ taglib uri="/struts-tags" prefix="s"  %>
 <%
 String path = request.getContextPath();
 %>
@@ -7,6 +8,7 @@ String path = request.getContextPath();
   <title>My JSP 'adminMenu.jsp' starting page</title>
 </head>
 <body>
+<s:form>
 <TABLE width="100%" align="center" border="1">
 	<TR>
 		<TD height="80px" colspan="100">
@@ -24,17 +26,17 @@ String path = request.getContextPath();
 			<table>
 			    <tr>
 				    <td>
-				    <a href="www.baidu.com" target="WORK">人员管理</a>
+				    <a href="<%=path%>/d1010Action.action" target="WORK">人员管理</a>
 				    </td>
 			    </tr>
 			    <tr>
 				    <td>
-				    <a href="#" target="WORK">业务管理</a>
+				    <a href="<%=path%>/d2020Action.action" target="WORK">业务管理</a>
 				    </td>
 			    </tr>
 			    <tr>
 				    <td>
-				    <a href="#" target="WORK">配件管理</a>
+				    <a href="<%=path%>/d3030Action.action" target="WORK">配件管理</a>
 				    </td>
 			    </tr>
 			</table>
@@ -51,5 +53,6 @@ String path = request.getContextPath();
 		</TD>
 	</TR>
 </TABLE>
+</s:form>
 </body>
 </html>

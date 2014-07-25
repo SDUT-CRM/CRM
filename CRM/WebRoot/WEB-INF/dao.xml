@@ -43,6 +43,9 @@
 	<bean id="lg04dao" class="cn.sdut.persistence.dao.impl.Lg04DaoImpl">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
+	<bean id="lg03dao" class="cn.sdut.persistence.dao.impl.Lg03DaoImpl">
+   		<property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
 	<bean id="lg02dao" class="cn.sdut.persistence.dao.impl.Lg02DaoImpl">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
@@ -52,4 +55,7 @@
 	<bean id="lg01dao" class="cn.sdut.persistence.dao.impl.Lg01DaoImpl">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
+	<bean id="admindao" class="cn.sdut.persistence.dao.impl.adminDaoImpl">
+    	<property name="sessionFactory" ref="sessionFactory" /> 
+    </bean>
 </beans>

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import cn.sdut.persistence.bean.Lg05;
 import cn.sdut.persistence.dao.interfaces.Lg05Dao;
 import cn.sdut.persistence.support.HibernatePageDaoSupport;
 
@@ -97,4 +98,65 @@ public class Lg05DaoImpl extends HibernatePageDaoSupport implements Lg05Dao {
 	}
 	
 	
+	
+	
+	/**
+	 * 管理员修改业务
+	 * @return
+	 * @throws Exception
+	 */
+	@Override
+	public boolean update() throws Exception{
+		
+		this.hql=new StringBuilder();
+		hql.append("update Lg05")
+		.append("      set lg0503=?,lg0504=?,lg0505=?,lg0506=?,")
+		.append("      lg0508=?")
+		.append("    where lg0501=?")
+		;
+		Object args[]={
+			this.dto.get("lg0503"),	
+			this.dto.get("lg0504"),	
+			Double.parseDouble(this.dto.get("lg0505").toString()),
+			Double.parseDouble(this.dto.get("lg0506").toString()),	
+			new java.util.Date(),		
+			this.getLong("lg0501")	
+		};
+		return this.update(hql.toString(), args);
+	}
+	/**
+	 * 停办业务
+	 * @return
+	 * @throws Exception
+	 */
+	@Override
+	public boolean delete() throws Exception {
+		System.out.println("我的dto里面有什么呢？"+dto);
+		this.hql=new StringBuilder()
+		.append("update Lg05")
+		.append("   set lg0509=?")
+		.append(" where lg0501=(:lg0501)")
+		;
+		Object ids[] = this.getIdArray("parsList");
+		return this.batchUpdate(hql.toString(), ids, "lg0501", "2");
+	}
+
+
+	@Override
+	public boolean add() throws Exception {
+
+		this.dto.put("lg0502", this.getObject("lg0502"));
+		this.dto.put("lg0503", this.getObject("lg0503"));
+		this.dto.put("lg0504", this.getObject("lg0504"));
+		this.dto.put("lg0505", this.getObject("lg0505"));
+		this.dto.put("lg0506", this.getObject("lg0506"));
+		this.dto.put("lg0507", new java.util.Date());
+		this.dto.put("lg0508", new java.util.Date());
+		this.dto.put("lg0509", "1");
+		this.dto.put("lg0510", "admin");
+		System.out.println("my dto is ?="+dto);
+		Lg05 lg05=this.addObject(Lg05.class);
+		
+		return lg05.getLg0501()>0;
+	}
 }

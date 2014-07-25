@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import cn.sdut.persistence.bean.Lg13;
 import cn.sdut.persistence.dao.interfaces.Lg13Dao;
 import cn.sdut.persistence.support.HibernatePageDaoSupport;
@@ -13,6 +15,22 @@ import cn.sdut.persistence.support.HibernatePageDaoSupport;
 public class Lg13DaoImpl extends HibernatePageDaoSupport implements Lg13Dao
 {
     
+
+	@Transactional
+	@Override
+	public boolean delete() throws Exception {
+		this.hql=new StringBuilder()
+		.append("update Lg13")
+		.append("   set lg1305=?")
+		.append(" where lg1301=(:lg1301)")
+		;
+		Object ids[] = this.getIdArray("parsList");
+		
+		return this.batchUpdate(hql.toString(), ids, "lg1301", Long.parseLong("0"));
+
+	}
+	
+	
     @Override
     public boolean add() throws Exception
     {
@@ -25,6 +43,22 @@ public class Lg13DaoImpl extends HibernatePageDaoSupport implements Lg13Dao
         return true;
     }
 
+    @Override
+	public boolean update1() throws Exception {
+
+		this.hql=new StringBuilder()
+		.append("update Lg13")
+		.append("   set lg1304=?,lg1305=?")
+		.append(" where lg1301=?")
+		;
+		Object args[]={
+				Double.parseDouble(this.getObject("lg1304").toString()),
+				Long.parseLong(this.getObject("lg1305").toString()),
+				this.getLong("lg1301")
+		};
+		return this.update(hql.toString(), args);
+	}
+    
     @Override
     public boolean update() throws Exception
     {
@@ -229,5 +263,31 @@ public class Lg13DaoImpl extends HibernatePageDaoSupport implements Lg13Dao
         this.hql.append(" order by a.lg1401");
         return this.queryForList();
     }
+    
+    
+    
+    
+    /**
+     * 查询所有配件
+     */
+
+	@Override
+	public List query() throws Exception {
+
+         this.pars = new ArrayList();
+         this.hql=new StringBuilder()
+         .append("select new map(x.lg1301 as lg1301,x.lg1302 as lg1302,")
+         .append("       x.lg1303 as lg1303,x.lg1304 as lg1304,x.lg1305 as lg1305")
+         .append(")")
+         .append("  from Lg13 x")
+         .append(" where lg1305!=0")
+         ;
+		 return this.queryForList();
+	}
+
+
+
+	
+
 
 }

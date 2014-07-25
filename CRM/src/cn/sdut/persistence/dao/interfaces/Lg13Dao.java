@@ -47,4 +47,11 @@ public interface Lg13Dao {
 	 * @更新内容
 	 */
 	public boolean update() throws Exception;
+	
+	/**
+	 * 查询所有配件
+	 */
+	public List query() throws Exception;
+	public boolean update1() throws Exception;
+	public boolean delete() throws Exception;
 }
