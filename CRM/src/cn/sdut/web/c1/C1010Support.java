@@ -44,6 +44,7 @@ public abstract class C1010Support
     protected String cnlg0207;
     
     
+    
     public String getLg2101()
     {
         return lg2101;

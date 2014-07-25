@@ -46,4 +46,8 @@
 	<bean id="b1020" class="cn.sdut.web.b1.impl.B1020Action" scope="prototype">
 		<property name="b1020Services" ref="b1020services" />
 	</bean>
+	
+	<bean id="b1010" class="cn.sdut.web.b1.impl.B1010Action" scope="prototype">
+		
+	</bean>
 </beans>
