@@ -67,7 +67,7 @@ public class A1030ServicesImpl implements A1030Services {
 
 		lg01.setLg21011(Long.parseLong(this.dto.get("lg2101").toString()));
 		lg02.setLg21011(22L);
-		lg17.setLg1701(Long.parseLong(this.dto.get("lg1701").toString()));
+		//lg17.setLg1701(Long.parseLong(this.dto.get("lg1701").toString()));
 
 		Date date = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
