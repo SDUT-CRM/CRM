@@ -3,11 +3,28 @@ package cn.sdut.persistence.dao.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.sdut.persistence.bean.Lg01;
 import cn.sdut.persistence.dao.interfaces.Lg01Dao;
 import cn.sdut.persistence.support.HibernatePageDaoSupport;
 
 public class Lg01DaoImpl extends HibernatePageDaoSupport implements Lg01Dao{
     
+    
+    @Override
+    public boolean updateStatus() throws Exception
+    {
+        this.hql=new StringBuilder()
+        .append("update Lg21 a")
+        .append("   set a.lg2105=?")
+        .append(" where a.lg2101=?")
+        ;
+        Object args[]=
+        {
+                this.getObject("lg2105"),
+                this.getLong("lg2101")
+        };
+        return this.update(hql.toString(), args);
+    }
     
     @Override
     public boolean resetPwd() throws Exception
@@ -70,8 +87,10 @@ public class Lg01DaoImpl extends HibernatePageDaoSupport implements Lg01Dao{
     @Override
     public boolean addCustomer() throws Exception
     {
-        // TODO Auto-generated method stub
-        return false;
+        this.dto.put("lg0108", this.getUDate("lg0108"));
+        this.dto.put("lg0107", this.getObject("SYSUID"));
+        Lg01 lg01=this.addObject(Lg01.class);
+        return true;
     }
 
     @Override

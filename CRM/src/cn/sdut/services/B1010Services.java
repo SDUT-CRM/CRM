@@ -3,8 +3,25 @@ package cn.sdut.services;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.transaction.annotation.Transactional;
+
 public interface B1010Services
 {
+    @Transactional
+    public boolean addCustomer() throws Exception;
+    /**
+     * 
+     * @函数名  lock
+     * @参数说明 
+     * @返回值  
+     * @功能说明 
+     * @作者    
+     * @创建日期 2014-7-25
+     * @更新日期 
+     * @更新内容
+     */
+    public boolean lock() throws Exception;
+    
     /**
      * 
      * @函数名  resetPwd

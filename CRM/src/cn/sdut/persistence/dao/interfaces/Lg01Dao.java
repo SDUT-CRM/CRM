@@ -11,4 +11,5 @@ public interface Lg01Dao {
     public boolean addCustomer() throws Exception;
     public boolean updateCustomer() throws Exception;
     public boolean resetPwd() throws Exception;
+    public boolean updateStatus() throws Exception;
 }

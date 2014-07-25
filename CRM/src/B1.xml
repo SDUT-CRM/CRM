@@ -10,6 +10,10 @@
 			<result name="main">/B1/B1010.jsp</result>
 		</action>
 		
+		<action name="b1012Action" class="b1012">
+			<result name="main">/B1/B1010.jsp</result>
+		</action>
+		
 		<action name="b1013Action" class="b1013">
 			<result name="main">/B1/B1010.jsp</result>
 		</action>

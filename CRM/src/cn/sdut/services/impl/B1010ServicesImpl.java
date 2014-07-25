@@ -1,9 +1,13 @@
 package cn.sdut.services.impl;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
 import cn.sdut.persistence.dao.interfaces.Lg01Dao;
+import cn.sdut.persistence.dao.interfaces.Lg21Dao;
 import cn.sdut.services.B1010Services;
 import cn.sdut.system.Tools;
 
@@ -11,11 +15,42 @@ public class B1010ServicesImpl implements B1010Services
 {
     private Map dto = null;
     private Lg01Dao lg01Dao;
+    private Lg21Dao lg21Dao;
     @Override
     public void setMapDto(Map dto)
     {
        this.dto=dto;
        this.lg01Dao.setMapDto(dto);
+    }
+    
+    
+    @Override
+    public boolean addCustomer() throws Exception
+    {
+        DateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
+        dto.put("lg0108", dt.format(new Date()));
+        lg21Dao.addUser();
+        lg01Dao.addCustomer();
+        return true;
+    }
+    
+    public Lg21Dao getLg21Dao()
+    {
+        return lg21Dao;
+    }
+
+
+    public void setLg21Dao(Lg21Dao lg21Dao)
+    {
+        this.lg21Dao = lg21Dao;
+    }
+
+
+    @Override
+    public boolean lock() throws Exception
+    {
+        this.dto.put("lg2105", "5");
+        return this.lg01Dao.updateStatus();
     }
     
     @Override
