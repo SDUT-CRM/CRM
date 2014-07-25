@@ -91,12 +91,7 @@ border-width: 0px 0px 0px 0px;
 .IFrameBox {
 	border: 1px solid #000000;
 }
-BODY {
-	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px;  PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #000000; PADDING-TOP: 0px; FONT-FAMILY: "ËÎÌו"; BACKGROUND-COLOR: #FFFFFF
-}
-TD {
-	FONT-SIZE: 9pt; line-height:1.2;
-}
+
 
 A:link {
 	COLOR: #003399; TEXT-DECORATION: none
