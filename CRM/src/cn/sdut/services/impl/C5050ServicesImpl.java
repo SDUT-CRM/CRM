@@ -46,7 +46,7 @@ public class C5050ServicesImpl implements C5050Services
     @Override
     public List query() throws Exception
     {
-        return this.lg16Dao.queryForForms();
+        return this.lg16Dao.queryForForms(10);
     }
 
     @Override

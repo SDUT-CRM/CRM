@@ -133,7 +133,7 @@ public class C4040ServicesImpl implements C4040Services
         System.out.println(dto);
         
         List list1=this.lg06Dao.queryForForms();
-        List list2=this.lg16Dao.queryForForms();
+        List list2=this.lg16Dao.queryForForms(10000);
         System.out.println("list1="+list1);
         System.out.println("list2="+list2);
         System.out.println("begin="+begintime+",end="+endtime);
@@ -147,7 +147,7 @@ public class C4040ServicesImpl implements C4040Services
         {
             bx+=Double.parseDouble(((Map)list2.get(i)).get("lg1606").toString());
         }
-        this.lg16Dao.queryForForms();
+       // this.lg16Dao.queryForForms(10000);
         lr=price-cb-bx;
         System.out.println("cb="+cb+",price="+price+",bx="+bx+",lr="+lr);
        

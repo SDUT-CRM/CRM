@@ -17,7 +17,7 @@ public class C2020Action extends C2020Support
         if (rows.size() > 0)
         {
             this.rows = rows;
-            String pageinfo=this.getC2020Services().getPageInfo("c2021Action");
+            String pageinfo=this.getC2020Services().getPageInfo("c2020Action");
             Map request=(Map)ActionContext.getContext().get("request");
             request.put("pageinfo", pageinfo);
         }

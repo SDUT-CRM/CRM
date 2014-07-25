@@ -38,7 +38,7 @@ public class Lg16DaoTest {
 	 */
 	public static void queryForFormsTest() throws Exception
 	{
-	    List lists = dao.queryForForms();
+	    List lists = dao.queryForForms(10);
 	    System.out.println(lists);
 	}
 }

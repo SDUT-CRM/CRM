@@ -25,9 +25,9 @@
 				</caption>
 				<TR>
 				<TD>账号</TD>
-				<TD><s:textfield name="lg2102" disabled="true"/></TD>
+				<TD><s:textfield name="lg2102" readonly="true"/></TD>
 				 <TD>入职日期</TD>
-				<TD><s:textfield name="lg0208" disabled="true"/></TD>
+				<TD><s:textfield name="lg0208" readonly="true"/></TD>
 				<TR>
 				</TR>
 				<TR>
@@ -80,8 +80,6 @@
 			</TABLE>
 
 			<input type="hidden" name="lg2105" value="1" />
-			<s:hidden name="lg2102"/>
-			<s:hidden name="lg"/>
 			<s:hidden name="lg2101"/>
 			<s:hidden name="qlg0401"/>
 			<s:hidden name="qlg0207"/>
@@ -89,7 +87,6 @@
 			<s:hidden name="qlg0202"/>
 			<s:hidden name="blg0208"/>
 			<s:hidden name="elg0208"/>
-			<s:debug/>
 		</s:form>
 
 	</body>

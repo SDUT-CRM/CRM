@@ -17,8 +17,6 @@
 </script>
 	</head>
 	<body>
-		
-		<s:debug />
 		<s:form action="c2033Action">
 			<s:property value="msg"/>
 			<TABLE border="1" align="center" width="1000px">
