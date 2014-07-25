@@ -17,6 +17,15 @@
 		<action name="b1013Action" class="b1013">
 			<result name="main">/B1/B1010.jsp</result>
 		</action>
+		
+		
+		<action name="b1014Action" class="b1014">
+			<result name="main">/B1/B1011.jsp</result>
+		</action>
+		
+		<action name="b1015Action" class="b1015">
+			<result name="main">/B1/B1011.jsp</result>
+		</action>
 
 		<action name="b1043Action" class="b1043">
 			<result name="main">/B1/B1041.jsp</result>
