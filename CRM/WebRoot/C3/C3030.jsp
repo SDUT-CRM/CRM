@@ -5,6 +5,7 @@
 %>
 <html>
 	<head>
+	<script type="text/javascript" src="<%=path%>/js/calendar.js"></script>
 		<script type="text/javascript">
 	function onEdit(obj)
 	{
@@ -58,13 +59,13 @@
 						报名开始时间
 					</TD>
 					<TD>
-						<s:textfield name="blg0706" />
+						<s:textfield name="blg0706" onclick="calendar.show(this);" />
 					</TD>
 					<TD>
 						报名截止时间
 					</TD>
 					<TD>
-						<s:textfield name="elg0706" />
+						<s:textfield name="elg0706" onclick="calendar.show(this);" />
 					</TD>
 				</TR>
 				<TR>
@@ -72,13 +73,13 @@
 						活动开始时间
 					</TD>
 					<TD>
-						<s:textfield name="blg0708" />
+						<s:textfield name="blg0708" onclick="calendar.show(this);" />
 					</TD>
 					<TD>
 						活动截止时间
 					</TD>
 					<TD>
-						<s:textfield name="elg0708" />
+						<s:textfield name="elg0708" onclick="calendar.show(this);" />
 					</TD>
 				</TR>
 				<!-- 迭代数据 -->

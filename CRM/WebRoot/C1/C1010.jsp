@@ -5,13 +5,14 @@
 %>
 <html>
 	<head>
+	<script type="text/javascript" src="<%=path%>/js/calendar.js"></script>
 	<script type="text/javascript">
 	function onNext2()
 	{
-	 with(document.forms[0])
-	 {
-	 	action="<%=path%>/c1012Action.action";
-	 }
+	 	with(document.forms[0])
+		 {
+	 		action="<%=path%>/c1012Action.action";
+		 }
 	}
 	function onEdit(obj)
 	{
@@ -67,13 +68,13 @@
 						入职时间(起始)
 					</TD>
 					<TD>
-						<s:textfield name="blg0208" />
+						<s:textfield name="blg0208" onclick="calendar.show(this);" />
 					</TD>
 					<TD>
 						入职时间(结束)
 					</TD>
 					<TD>
-						<s:textfield name="elg0208" />
+						<s:textfield name="elg0208" onclick="calendar.show(this);" />
 					</TD>
 				</TR>
 				<!-- 迭代数据 -->

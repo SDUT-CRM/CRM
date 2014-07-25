@@ -5,6 +5,7 @@
 %>
 <html>
 	<head>
+	<script type="text/javascript" src="<%=path%>/js/calendar.js"></script>
 		<script type="text/javascript">
 	var count = 0;
 	function onSelect(obj) {
@@ -55,11 +56,11 @@
 				</TR>
 				<TR>
 					<TD>报名截止时间</TD>
-					<TD><s:textfield name="lg0706"/></TD>
+					<TD><s:textfield name="lg0706" onclick="calendar.show(this);"/></TD>
 				</TR>
 				<TR>
 					<TD>活动日期</TD>
-					<TD><s:textfield name="lg0708"/></TD>
+					<TD><s:textfield name="lg0708" onclick="calendar.show(this);"/></TD>
 				</TR>
 				<!-- 按钮 -->
 				<TR>
