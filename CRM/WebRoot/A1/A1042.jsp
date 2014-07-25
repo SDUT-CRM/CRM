@@ -63,10 +63,7 @@ String path = request.getContextPath();
            		 <s:textarea name="lg2002" value="" rows="3" cssStyle="width:820px"/>
           		 </td>
            		<td>
-           		<s:hidden name="lg0101"/>
- 				<s:hidden name="lg0201"/>
- 				<s:hidden name="lg2006"/>
- 				<s:hidden name="lg2001"/>
+
            		 <s:submit  name="next" value="×·¼Ó"/>
            		</td>
          		</tr>
@@ -77,7 +74,10 @@ String path = request.getContextPath();
        </table>
    </s:if>
  </TABLE>
-
+           		<s:hidden name="lg0101"/>
+ 				<s:hidden name="lg0201"/>
+ 				<s:hidden name="lg2006"/>
+ 				<s:hidden name="lg2001"/>
 </s:form>
 
 <s:form action="a1044Action">
