@@ -14,6 +14,8 @@ public interface B1030Services {
 	
 	public List query1() throws Exception;
 	
+	public List query2() throws Exception;
+	
 	public Map queryById() throws Exception;
 	
 	public boolean modify() throws Exception;

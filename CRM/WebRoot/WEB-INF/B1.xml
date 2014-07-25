@@ -19,6 +19,10 @@
 		<property name="b1040Services" ref="b1040services" />
 	</bean>
 
+	<bean id="b1033" class="cn.sdut.web.b1.impl.B1033Action" scope="prototype">
+		<property name="b1030Services" ref="b1030services" />
+	</bean>
+
 	<bean id="b1032" class="cn.sdut.web.b1.impl.B1032Action" scope="prototype">
 		<property name="b1030Services" ref="b1030services" />
 	</bean>

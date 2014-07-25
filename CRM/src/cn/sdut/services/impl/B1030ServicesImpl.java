@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import com.opensymphony.xwork2.ActionContext;
+
 import cn.sdut.persistence.dao.interfaces.Lg18Dao;
 import cn.sdut.services.B1030Services;
 
@@ -48,6 +50,14 @@ public class B1030ServicesImpl implements B1030Services {
 	@Override
 	public List query() throws Exception {
 		this.dto.put("qlg1804", "1");
+		return this.lg18Dao.queryForPage();
+	}
+	
+	@Override
+	public List query2() throws Exception {
+		Map session = ActionContext.getContext().getSession();
+		Map ins = (Map)session.get("USERINFO");
+		this.dto.put("lg0201", ins.get("lg2101"));
 		return this.lg18Dao.queryForPage();
 	}
 	
