@@ -90,12 +90,12 @@
 						</tr>
 						<tr>
 							<td>
-								<a href="<%=path%>/b1024Action.action" target="WORK">审核记录</a>
+								<a href="<%=path%>/b1022Action.action" target="WORK">审核记录</a>
 							</td>
 						</tr>
 						<tr>
 							<td>
-								<a href="<%=path%>/c3030Action.action" target="WORK">客户提问答复</a>
+								<a href="<%=path%>/b1024Action.action" target="WORK">客户提问答复</a>
 							</td>
 						</tr>
 						<tr>
