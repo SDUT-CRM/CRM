@@ -77,6 +77,48 @@
 					</s:if>
 					
 					<s:if test="#session.USERINFO.lg2105==2">
+					<table>
+						<tr>
+							<td>
+								<a href="<%=path%>/b1010Action.action" target="WORK">客户管理</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="<%=path%>/b1020Action.action" target="WORK">客户申请审核</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="<%=path%>/b1024Action.action" target="WORK">审核记录</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="<%=path%>/c3030Action.action" target="WORK">客户提问答复</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="<%=path %>/b1030Action.action" target="WORK">查看新报修</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="<%=path %>/b1033Action.action" target="WORK">受理记录</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="<%=path %>/b1041Action.action" target="WORK">配件申请</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="<%=path %>/b1040Action.action" target="WORK">配件申请记录</a>
+							</td>
+						</tr>
+					</table>					
 					</s:if>
 					<!-- 员工的目录 -->
 					<!-- 经理的目录 -->
