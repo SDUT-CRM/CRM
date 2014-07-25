@@ -62,7 +62,8 @@ public class Lg20DaoImpl extends HibernatePageDaoSupport implements Lg20Dao {
 		Object bqlg2004 = this.getObject("bqlg2004");
 		Object eqlg2004 = this.getObject("eqlg2004");
 		Object lg2007 = this.getObject("qlg2007");
-
+		Object lg2101 = this.getObject("lg2101");
+		
 		this.pars = new ArrayList();
 		this.hql = new StringBuilder()
 		.append("select new map(x.lg2001 as lg2001,x.lg01.lg2101 as lg2101,")
@@ -76,6 +77,11 @@ public class Lg20DaoImpl extends HibernatePageDaoSupport implements Lg20Dao {
 		.append(" where x.lg2006 = 0 ")
 		.append("   and x.lg2007=b.fcode")
         .append("   and b.fname='LG2007'");
+		
+		if (this.checkVal(lg2101)){
+            this.hql.append(" and x.lg01.lg2101=?");
+            this.pars.add(this.getLong("lg2101"));
+        }
 		
 		if(this.checkVal(lg2002)){
 			hql.append("   and( x.lg2001 in (select y.lg2006 as lg2006" +

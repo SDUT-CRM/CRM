@@ -93,7 +93,7 @@
      </TD>
    </TR>
    </s:if>
-    <s:hidden name="lg0201" value="22"/>
+    <s:hidden name="lg0201" value="%{#session.USERINFO.lg2101}"/>
     <s:hidden name="parsList" value=""/>
        <TR>
      <TD align="center">

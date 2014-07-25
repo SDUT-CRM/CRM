@@ -77,7 +77,7 @@
      </TD>
    </TR>
 </s:if>
-    <s:hidden name="lg0201" value="4"/>
+    <s:hidden name="lg0201" value="%{#session.USERINFO.lg2101}"/>
        <TR>
      <TD align="center">
        <s:submit  name="next" value="²éÑ¯"/>
