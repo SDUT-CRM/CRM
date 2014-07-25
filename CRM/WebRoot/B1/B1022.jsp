@@ -7,19 +7,11 @@
 <head>
   <script type="text/javascript" src="<%=request.getContextPath()%>/js/calendar.js"></script>
 <script type="text/javascript">
-   	function onSelect(obj, obj1)
+   	function onSelect(obj)
 	{
 		with(document.forms[0])
 		{
-			action="<%=path%>/a1042Action.action?lg2007="+obj1+"&lg2001="+obj;
-			submit();
-		}
-	}
-	function onCancel(obj)
-	{
-		with(document.forms[0])
-		{
-			action="<%=path%>/a1035Action.action?lg1801="+obj;
+			action="<%=path%>/b1025Action.action?lg2001="+obj;
 			submit();
 		}
 	}
@@ -60,13 +52,7 @@
      </TD>
    </TR>
    </s:if>
-   
     <s:hidden name="lg0201" value="%{#session.USERINFO.lg2101}"/>
-   <TR>
-     <TD align="center">
-       <s:submit  name="next" value="²éÑ¯"/>
-     </TD>
-   </TR>
  </TABLE>
    </s:form>
 	</body>

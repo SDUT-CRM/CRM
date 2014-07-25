@@ -87,7 +87,7 @@ public class Lg20DaoImpl extends HibernatePageDaoSupport implements Lg20Dao {
         }
 		
 		if(this.checkVal(lg0201)){
-			this.hql.append(" and x.lg02.lg2101 is null or and x.lg02.lg2101 = ?");
+			this.hql.append(" and x.lg02.lg2101 = ?");
 			this.pars.add(this.getLong("lg0201"));
 		}
 		
