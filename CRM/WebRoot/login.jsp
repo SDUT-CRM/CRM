@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="GBK"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
 <%
 String path = request.getContextPath();
 %>
@@ -28,6 +29,7 @@ String path = request.getContextPath();
 	<div id="login_content">
 		<div class="loginForm">
 			<form action="loginAction.action" method="post">
+			<s:property value="msg"/>
 				<p>
 					<label>ÓÃ»§Ãû£º</label>
 					<input type="text" name="username" size="20" class="login_input" />

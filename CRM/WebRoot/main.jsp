@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="GBK"%>
+<%@ taglib uri="/struts-tags" prefix="s" %>
 <%
     String path = request.getContextPath();
 %>
@@ -25,7 +26,8 @@
 			<TR>
 				<TD height="750px" width="120px" valign="top">
 				<!-- 目录 -->
-					<!-- 客户的目录 -->
+				
+					<s:if test="#session.USERINFO.lg2105==1">
 					<table>
 						<tr>
 							<td>
@@ -68,9 +70,13 @@
 							</td>
 						</tr>
 					</table>
+					</s:if>
+					
+					<s:if test="#session.USERINFO.lg2105==2">
+					</s:if>
 					<!-- 员工的目录 -->
 					<!-- 经理的目录 -->
-					<hr width="60">
+					<s:if test="#session.USERINFO.lg2105==3">
 					<table>
 						<tr>
 							<td>
@@ -103,6 +109,7 @@
 							</td>
 						</tr>
 					</table>
+					</s:if>
 					<!-- 管理员的目录 -->
 				</TD>
 				<TD>

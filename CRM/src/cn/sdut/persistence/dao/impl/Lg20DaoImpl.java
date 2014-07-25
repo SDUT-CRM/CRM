@@ -3,8 +3,7 @@ package cn.sdut.persistence.dao.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.aspectj.weaver.patterns.ThisOrTargetAnnotationPointcut;
-
+import cn.sdut.persistence.bean.Lg02;
 import cn.sdut.persistence.bean.Lg20;
 import cn.sdut.persistence.dao.interfaces.Lg20Dao;
 import cn.sdut.persistence.support.HibernatePageDaoSupport;
@@ -53,6 +52,13 @@ public class Lg20DaoImpl extends HibernatePageDaoSupport implements Lg20Dao {
 	@Override
 	public boolean add() throws Exception {
 		this.dto.put("lg2004", this.getUDate1("lg2004"));
+		Object lg0201 = this.getObject("lg0201");
+		if(checkVal(lg0201)){
+			Lg02 lg02 = new Lg02();
+			lg02.setLg21011(this.getLong("lg0201"));
+			this.dto.put("lg02", lg02);
+		}
+		System.out.println(dto);
 		Lg20 lg20 = this.addObject(Lg20.class);
 		return lg20.getLg2001()>0;
 	}

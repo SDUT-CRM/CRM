@@ -77,6 +77,15 @@ public class A1041ServicesImpl implements A1041Services {
 			this.dto.put("lg2006", this.dto.get("lg2001"));
 		}
 		//this.dto.put("lg2006", lg02);
+		if(this.dto.get("lg2001") instanceof String[] ){
+			String[]args = (String[])this.dto.get("lg2001");
+			for(int i = 0; i < args.length; i++){
+				if(!args[i].equals("")){
+					this.dto.put("lg2001", args[i]);
+					break;
+				}
+			}
+		}
 		return lg20Dao.add();
 	}
 
