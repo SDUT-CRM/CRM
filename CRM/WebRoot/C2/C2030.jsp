@@ -25,7 +25,6 @@
 	</head>
 	<body>
 		<s:property value="msg" />
-		<s:debug />
 		<s:form action="c2031Action">
 
 			<TABLE border="1" align="center" width="1000px">

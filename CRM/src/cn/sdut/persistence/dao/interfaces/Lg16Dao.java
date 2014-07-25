@@ -18,7 +18,7 @@ public interface Lg16Dao {
      * @更新日期 
      * @更新内容
      */
-    public List queryForForms() throws Exception;
+    public List queryForForms(int x) throws Exception;
     /**
      * 
      * @函数名  setMapDto

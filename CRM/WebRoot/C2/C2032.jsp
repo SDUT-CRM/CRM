@@ -18,7 +18,6 @@
 	</head>
 	<body>
 		
-		<s:debug />
 		<s:form action="c2035Action">
 			<s:property value="msg"/>
 			<TABLE border="1" align="center" width="1000px">

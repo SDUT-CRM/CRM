@@ -25,7 +25,11 @@ public class C4040Action extends C4040Support
             this.c4040Services.getMapDto().put("endtime", endtime);
         }
         if(map.get("cha")!=null)
-        chart = this.c4040Services.getChart();
+        {
+            chart = this.c4040Services.getChart();
+            System.out.println("chch");
+            System.out.println("chch="+chart);
+        }
         map.put("cha", "1");
         return "main";
     }

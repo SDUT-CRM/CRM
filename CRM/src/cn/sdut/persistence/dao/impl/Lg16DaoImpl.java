@@ -28,7 +28,7 @@ public class Lg16DaoImpl extends HibernatePageDaoSupport implements Lg16Dao {
     }
     
     @Override
-    public List queryForForms() throws Exception
+    public List queryForForms(int x) throws Exception
     {
         Object lg0202=this.getObject("qlg0202");
         Object blg1605=this.getObject("blg1605");
@@ -68,7 +68,7 @@ public class Lg16DaoImpl extends HibernatePageDaoSupport implements Lg16Dao {
         }
         System.out.println("pars_lg16="+pars);
         System.out.println("dto_lg16="+dto);
-        return this.queryForList(10000);
+        return this.queryForList(x);
     }
     
 	@Override

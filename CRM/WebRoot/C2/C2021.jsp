@@ -24,7 +24,6 @@
 	</head>
 	<body>
 	<s:property value="msg"/>
-	<s:debug/>
 		<s:form action="c2024Action">
 		
 			<TABLE border="1" align="center" width="1000px">
@@ -38,7 +37,7 @@
 				</TR>
 				<TR>
 					<TD>申请数量</TD>
-					<TD><s:textfield name="lg1406" disabled="true"/></TD>
+					<TD><s:textfield name="lg1406" readonly="true"/></TD>
 				</TR>
 				<TR>
 					<TD>修改后的状态</TD>
