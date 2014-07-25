@@ -1,5 +1,8 @@
 package cn.sdut.services.impl;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -15,6 +18,15 @@ public class C3030ServicesImpl implements C3030Services
     private Lg08Dao lg08Dao;
     private Map dto;
     
+    
+    @Override
+    public boolean add() throws Exception
+    {
+        DateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
+        dto.put("lg0709", dt.format(new Date()));
+        dto.put("lg0710", dt.format(new Date()));
+        return this.lg07Dao.add();
+    }
     
     @Override
     public boolean updateStatus() throws Exception

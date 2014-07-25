@@ -19,11 +19,30 @@ public class Lg07DaoTest {
 		dao.setMapDto(dto);
 		try {
 		//	decreaseTest();
-		    Lg07DaoTest.queryForPage();
+		    Lg07DaoTest
+		    //.queryForPage();
+		    .addTest();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
+	
+	public static void addTest()throws Exception
+	{
+	    dto.put("lg0702", "aaaa");
+	    dto.put("lg0703", "bbbb");
+	    dto.put("lg0704", "100");
+	    dto.put("lg0705", "10");
+	    dto.put("lg0706", "2014-08-01");
+	    dto.put("lg0707", "1");
+	    dto.put("lg0708", "2014-08-01");
+	    dto.put("lg0709", "2014-07-25");
+	    dto.put("lg0710", "2014-07-25");
+	    dto.put("SYSUID", "6");
+	    boolean tag=dao.add();
+	    System.out.println(tag);
+	}
+	
 	
 	public static void queryForPage() throws Exception
 	{

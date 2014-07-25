@@ -17,10 +17,16 @@ public class Lg16DaoImpl extends HibernatePageDaoSupport implements Lg16Dao {
         Object elg1605=this.getObject("elg1605");
         this.hql=new StringBuilder()
         .append("select new map(a.lg02.lg0202 as lg0202,a.lg03.lg0302 as lg0302,")
-        .append("               a.lg15.lg1503 as lg1503,a.lg1606 as lg1606")
+        .append("               a.lg15.lg1503 as lg1503,a.lg1606 as lg1606,")
+        .append("               a.lg1601 as lg1601,a.lg1602 as lg1602,")
+        .append("               a.lg1603 as lg1603,b.fvalue as cnlg1603,")
+        .append("               c.fvalue as cnlg1503")
         .append(")")
-        .append("  from Lg16 a")
-        .append(" where 1=1")
+        .append("  from Lg16 a,Syscode b,Syscode c")
+        .append(" where b.fcode=a.lg1603")
+        .append("   and a.lg15.lg1503=c.fcode")
+        .append("   and b.fname='LG1603'")
+        .append("   and c.fname='LG1503'")
         ;
         this.pars=new ArrayList();
         if(this.checkVal(blg1605))

@@ -14,7 +14,14 @@
 	      scope="prototype" init-method="initMain">
 		  <property name="c3030Services" ref="c3030services"/>
 	</bean>
-	
+	<bean id="c3032" class="cn.sdut.web.c3.impl.C3032Action"
+	      scope="prototype">
+			<property name="c3030Services" ref="c3030services"/>
+	</bean>
+	<bean id="c3033" class="cn.sdut.web.c3.impl.C3033Action"
+		  scope="prototype">
+		  <property name="c3030Services" ref="c3030services"/>
+	</bean>	
 	<bean id="c3040" class="cn.sdut.web.c3.impl.C3040Action"
 	      scope="prototype" init-method="initMain">
 	      <property name="c3030Services" ref="c3030services"/>
