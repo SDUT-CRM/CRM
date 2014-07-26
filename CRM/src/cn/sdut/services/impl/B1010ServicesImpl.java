@@ -6,10 +6,13 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import cn.sdut.persistence.bean.Lg01;
 import cn.sdut.persistence.dao.interfaces.Lg01Dao;
 import cn.sdut.persistence.dao.interfaces.Lg21Dao;
 import cn.sdut.services.B1010Services;
 import cn.sdut.system.Tools;
+
+import com.opensymphony.xwork2.ActionContext;
 
 public class B1010ServicesImpl implements B1010Services
 {
@@ -28,11 +31,16 @@ public class B1010ServicesImpl implements B1010Services
     @Override
     public boolean addCustomer() throws Exception
     {
+    	
         DateFormat dt = new SimpleDateFormat("yyyy-MM-dd");
         dto.put("lg0108", dt.format(new Date()));
         dto.put("lg2103", Tools.getMd5("0000"));
         dto.put("lg2104", this.dto.get("lg0102"));
         dto.put("lg2105", "1");
+        Map session = ActionContext.getContext().getSession();
+		Map ins = (Map)session.get("USERINFO");
+		dto.put("lg0107", ins.get("lg2101"));
+		Lg01 lg01 = new Lg01();
         lg21Dao.addUser();
         lg01Dao.addCustomer();
         return true;

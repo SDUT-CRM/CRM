@@ -84,7 +84,7 @@ public class Lg20DaoImpl extends HibernatePageDaoSupport implements Lg20Dao {
 		}
 		if(checkVal(lg2005)){
 			hql.append(" , x.lg2005 = ?");
-			args.add(this.getUDate("lg2005"));
+			args.add(this.getUDate1("lg2005"));
 		}
 		hql.append("  where x.lg2001 = ?");
 		args.add(this.getLong("lg2001"));

@@ -5,6 +5,7 @@
 %>
 <html>
 	<head>
+	<link href="<%=path%>/css/style.css" type="text/css" rel="stylesheet"/>
 	<!-- Javascript goes in the document HEAD -->
 <script type="text/javascript">
 function altRows(id){
@@ -196,8 +197,8 @@ table.altrowstable td {
 						<s:submit value="²éÑ¯" name="next" />
 						<s:submit value="Í¨¹ý" name="next" onclick="return onNext2('2')"
 							disabled="true" />
-						<s:submit value="¾Ü¾ø" name="next" onclick="return onNext2('3')"
-							disabled="true" />
+						<!--  <s:submit value="¾Ü¾ø" name="next" onclick="return onNext2('3')"
+							disabled="true" />-->
 					</TD>
 				</TR>
 			</TABLE>

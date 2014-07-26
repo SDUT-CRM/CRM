@@ -29,7 +29,7 @@
             <column name="LG0106" not-null="true" />
         </property>
         <property name="lg0107" type="java.lang.String">
-            <column name="LG0107" not-null="true" />
+            <column name="LG0107" not-null="false" />
         </property>
         <property name="lg0108" type="java.util.Date">
             <column name="LG0108" length="7" not-null="true" />
