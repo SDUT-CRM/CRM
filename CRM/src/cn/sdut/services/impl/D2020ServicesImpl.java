@@ -50,7 +50,14 @@ public class D2020ServicesImpl implements D2020Services {
 
 	@Override
 	public Map getInstance() throws Exception {
-
+		if(this.dto.get("lg0501") instanceof String[]){
+			String[]aa = (String[])this.dto.get("lg0501");
+			for(int i = 0; i < aa.length; i++){
+				if(!aa[i].equals("")){
+					this.dto.put("lg0501", aa[i]);
+				}
+			}
+		}
 		return this.lg05dao.getInstance();
 	}
 

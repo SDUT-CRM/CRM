@@ -251,7 +251,7 @@ $(document).ready(function(){
 								<a href="<%=path%>/d2020Action.action" target="WORK">业务管理</a>
 					</li>
 					<li>
-								<a href="<%=path%>/d3030Action.action" target="WORK">业务管理</a>
+								<a href="<%=path%>/d3030Action.action" target="WORK">配件管理</a>
 					</li>
 					</ul>					
 					</s:if>
