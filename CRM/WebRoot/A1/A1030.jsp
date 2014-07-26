@@ -20,7 +20,7 @@ String path = request.getContextPath();
    </caption>
    <TR>
      <TD>
-       <table border="1" width="100%">
+       <table width="100%">
          <tr>
            <td width="25%">π ’œ¿‡±</td>
            <td width="25%">

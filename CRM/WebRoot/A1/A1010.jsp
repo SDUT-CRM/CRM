@@ -79,14 +79,14 @@ table.altrowstable td {
 <br>
 <br>
 <s:form action="a1010Action">
- <TABLE border="1" width="80%" align="center">
+ <TABLE  border = "1" width="80%" align="center">
    <caption>
         业务办理
     <hr width="160">  
    </caption>
    <TR>
      <TD>
-       <table border="1" width="100%">
+       <table width="100%">
          <tr>
            <td width="25%">业务名称</td>
            <td width="25%">
@@ -114,7 +114,7 @@ table.altrowstable td {
 <s:if test="rows!=null">   
    <TR>
      <TD>
-       <table border="1" width="100%" class="altrowstable" id="alternatecolor">
+       <table  width="100%" class="altrowstable" id="alternatecolor">
          <tr>
            <td align="center">序号</td>
            <td align="center">业务名称</td>

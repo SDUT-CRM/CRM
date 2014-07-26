@@ -138,7 +138,7 @@ $(document).ready(function(){
 	a
 	{
 		font-weight:bold;
-		font-size:150%;
+		font-size:120%;
 		text-decoration:none;
 		color:#0000FF;
 	}
@@ -159,7 +159,7 @@ $(document).ready(function(){
 				</TD>
 			</TR>
 			<TR>
-				<TD height="750px" width="120px" valign="top">
+				<TD height="644px" width="120px" valign="top">
 				<!-- 目录 -->
 				
 					<s:if test="#session.USERINFO.lg2105==1">
@@ -190,7 +190,7 @@ $(document).ready(function(){
 					</li>
 					</ul>
 					</s:if>
-					
+										<!-- 员工的目录 -->
 					<s:if test="#session.USERINFO.lg2105==2">
 					<ul class="sidenav">
 					<li>
@@ -219,7 +219,6 @@ $(document).ready(function(){
 					</li>
 					</ul>				
 					</s:if>
-					<!-- 员工的目录 -->
 					<!-- 经理的目录 -->
 					<s:if test="#session.USERINFO.lg2105==3" >
 					<ul class="sidenav">
@@ -242,6 +241,19 @@ $(document).ready(function(){
 								<a href="<%=path %>/c5050Action.action" target="WORK">费用管理</a>
 					</li>
 					</ul>
+					</s:if>
+					<s:if test="#session.USERINFO.lg2105==4" >
+					<ul class="sidenav">
+					<li>
+								<a href="<%=path%>/d1010Action.action" target="WORK">人员管理</a>
+					</li>
+					<li>
+								<a href="<%=path%>/d2020Action.action" target="WORK">业务管理</a>
+					</li>
+					<li>
+								<a href="<%=path%>/d3030Action.action" target="WORK">业务管理</a>
+					</li>
+					</ul>					
 					</s:if>
 					<!-- 管理员的目录 -->
 				</TD>

@@ -100,7 +100,7 @@ table.altrowstable td {
    <TR>
      <TD>
      <s:if test="rows!=null"> 
-       <table border="1" width="100% " class="altrowstable" id="alternatecolor">
+       <table  width="100% " class="altrowstable" id="alternatecolor">
    			  
          <s:iterator value="rows" status="st">
 	         <tr>

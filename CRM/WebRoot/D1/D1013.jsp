@@ -7,7 +7,30 @@ String path = request.getContextPath();
 <head>
 <link href="<%=path%>/css/style.css" type="text/css" rel="stylesheet"/>
   <title>My JSP 'D1013.jsp' starting page</title>
-  <!-- CSS goes in the document HEAD or added to your external stylesheet -->
+  <script type="text/javascript">
+function altRows(id){
+	if(document.getElementsByTagName){  
+		
+		var table = document.getElementById(id);  
+		var rows = table.getElementsByTagName("tr"); 
+		 
+		for(i = 0; i < rows.length; i++){          
+			if(i % 2 == 0){
+				rows[i].className = "evenrowcolor";
+			}else{
+				rows[i].className = "oddrowcolor";
+			}      
+		}
+	}
+}
+
+window.onload=function(){
+	altRows('alternatecolor');
+}
+</script>
+
+
+		<!-- CSS goes in the document HEAD or added to your external stylesheet -->
 		<style type="text/css">
 table.altrowstable {
 	font-family: verdana, arial, sans-serif;

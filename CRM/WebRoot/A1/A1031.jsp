@@ -94,7 +94,7 @@ table.altrowstable td {
    </caption>
    <TR>
      <TD>
-       <table border="1" width="100%">
+       <table width="100%">
          <tr>
 			<td width="25%">故障类别</td>
            <td width="25%">
@@ -126,7 +126,7 @@ table.altrowstable td {
 <s:if test="rows!=null">   
    <TR>
      <TD>
-       <table border="1" width="100%" class="altrowstable" id="alternatecolor">
+       <table width="100%" class="altrowstable" id="alternatecolor">
          <tr>
 		   <td align="center">序号</td>
            <td align="center">故障类别</td>

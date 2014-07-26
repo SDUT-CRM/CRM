@@ -20,7 +20,7 @@ String path = request.getContextPath();
    </caption>
    <TR>
      <TD>
-       <table border="1" width="100%">
+       <table width="100%">
          <tr>
            <td>请简要描述您的问题</td>
            <td>

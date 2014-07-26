@@ -76,8 +76,6 @@ table.altrowstable td {
 </head>
 <body>
 <s:property value="msg"/>
-<br>
-<br>
 <s:form action="b1041Action">
 <TABLE border="1" width="80%" align="center">
    <caption>
