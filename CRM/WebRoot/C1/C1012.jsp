@@ -15,6 +15,7 @@
 		}
 	}
 	</script>
+	<script type="text/javascript" src="<%=path%>/js/calendar.js"></script>
 	</head>
 	<body>
 		<s:property value="msg" />
