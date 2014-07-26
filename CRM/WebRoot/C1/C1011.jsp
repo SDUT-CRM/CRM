@@ -93,7 +93,7 @@
 						入职日期
 					</TD>
 					<TD>
-						<s:textfield name="lg0208" />
+						<s:textfield name="lg0208"  onclick="calendar.show(this);"/>
 					</TD>
 				</TR>
 				<TR>
